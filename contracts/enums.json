@@ -1,0 +1,10 @@
+{
+  "snapshot": ["2025-12", "2026-04", "2026-05", "2026-06", "2026-07"],
+  "finding_type": ["EXP_DECREASE", "PROG_DECREASE", "EXP_GT_REVISED_COST", "ZERO_PROG_NONZERO_EXP", "PROG_GT_100", "DOC_BEFORE_APPROVAL", "DOC_PASSED", "DOC_UNREACHABLE", "DOC_REVISED_FILED", "COST_REVISED_FILED", "STAT_ANOMALY"],
+  "severity": ["critical", "high", "medium", "low", "info"],
+  "exit_partition": ["LAST_SEEN_GE_95", "LAST_SEEN_50_95", "LAST_SEEN_LT_50", "UNKNOWN"],
+  "parse_flag": ["MULTILINE_STATE", "NO_PMGID", "NO_LEGACY_CODE", "NO_PROJECT_CODE", "NUM_PARSE_FAIL", "DATE_PARSE_FAIL", "ROW_SPANS_PAGE"],
+  "model_id": ["LR_A", "HGB_A", "HGB_B", "HGB_B_SHUFFLED", "ZERO", "OWN_VELOCITY", "HGB", "OLS"],
+  "pair_id": ["P1", "P2", "P3", "P4"],
+  "band": ["red", "amber", "green"]
+}

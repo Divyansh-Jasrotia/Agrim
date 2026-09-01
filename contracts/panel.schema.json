@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PanelRow",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["snapshot", "source_file", "source_sha256", "page", "sl_no", "project_code", "legacy_ocms_code", "pmgid", "project_name", "agency_raw", "table_section", "state", "approval_month", "start_month", "doc_original", "doc_revised", "cost_original_cr", "cost_revised_cr", "expenditure_cum_cr", "physical_progress_pct", "parse_flags"],
+  "properties": {
+    "snapshot": {"type": "string", "enum": ["2025-12", "2026-04", "2026-05", "2026-06", "2026-07"]},
+    "source_file": {"type": "string", "minLength": 1},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "page": {"type": "integer", "minimum": 1},
+    "sl_no": {"type": "integer", "minimum": 1},
+    "project_code": {"type": ["string", "null"], "pattern": "^[0-9]{6}$"},
+    "legacy_ocms_code": {"type": ["string", "null"], "minLength": 1},
+    "pmgid": {"type": ["string", "null"], "minLength": 1},
+    "project_name": {"type": "string", "minLength": 1},
+    "agency_raw": {"type": ["string", "null"], "minLength": 1},
+    "table_section": {"type": ["string", "null"], "minLength": 1},
+    "state": {"type": ["string", "null"], "minLength": 1},
+    "approval_month": {"type": ["string", "null"], "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"},
+    "start_month": {"type": ["string", "null"], "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"},
+    "doc_original": {"type": ["string", "null"], "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"},
+    "doc_revised": {"type": ["string", "null"], "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"},
+    "cost_original_cr": {"type": ["number", "null"], "minimum": 0},
+    "cost_revised_cr": {"type": ["number", "null"], "minimum": 0},
+    "expenditure_cum_cr": {"type": ["number", "null"], "minimum": 0},
+    "physical_progress_pct": {"type": ["number", "null"], "minimum": 0},
+    "parse_flags": {"type": "string", "pattern": "^$|^[A-Z_]+(;[A-Z_]+)*$"}
+  }
+}
