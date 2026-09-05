@@ -1,0 +1,5 @@
+---
+description: AGRIM team rules — always on
+alwaysApply: true
+---
+Read AGENTS.md at the repo root and follow it. Work only on the task you were given from docs/superpowers/plans/2026-09-06-agrim-relay-plan.md. Do not edit files under contracts/ unless the task says so. Run `python tools/validate.py` and `pytest -q` before claiming completion and show the output.
