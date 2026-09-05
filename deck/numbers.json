@@ -1,0 +1,22 @@
+{
+ "contradictions_total": 967,
+ "cost_revised_total_cr": 3710641.55,
+ "count_DOC_BEFORE_APPROVAL": 8,
+ "count_EXP_DECREASE": 185,
+ "count_EXP_GT_REVISED_COST": 331,
+ "count_PROG_DECREASE": 158,
+ "count_ZERO_PROG_NONZERO_EXP": 285,
+ "coverage_pct_2025-12": 96.62,
+ "coverage_pct_2026-04": 100.0,
+ "coverage_pct_2026-05": 95.07,
+ "coverage_pct_2026-06": 100.0,
+ "coverage_pct_2026-07": 100.0,
+ "exits_total": 443,
+ "latest_snapshot": "2026-07",
+ "opener_after_cr": 2384.29,
+ "opener_before_cr": 89486.62,
+ "opener_code": "705410",
+ "overrun_total_cr": 340503.33,
+ "projects_latest": 1775,
+ "unreachable_total": 1289
+}

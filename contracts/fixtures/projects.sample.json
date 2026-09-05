@@ -1,0 +1,1241 @@
+[
+ {
+  "agency_raw": "NHAI",
+  "first_seen": "2025-12",
+  "flags": [],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100001",
+  "project_name": "Clean Road Corridor Phase I",
+  "risk": {
+   "band": "green",
+   "reasons": [],
+   "score": 0
+  },
+  "sector": "Road Transport and Highways",
+  "snapshots": [
+   {
+    "cost_original_cr": 500.0,
+    "cost_revised_cr": 520.0,
+    "doc_original": "2029-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 100.0,
+    "page": 55,
+    "physical_progress_pct": 20.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 500.0,
+    "cost_revised_cr": 520.0,
+    "doc_original": "2029-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 130.0,
+    "page": 56,
+    "physical_progress_pct": 28.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 500.0,
+    "cost_revised_cr": 520.0,
+    "doc_original": "2029-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 150.0,
+    "page": 57,
+    "physical_progress_pct": 31.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 500.0,
+    "cost_revised_cr": 520.0,
+    "doc_original": "2029-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 170.0,
+    "page": 58,
+    "physical_progress_pct": 34.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 500.0,
+    "cost_revised_cr": 520.0,
+    "doc_original": "2029-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 190.0,
+    "page": 59,
+    "physical_progress_pct": 37.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Gujarat",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "NHPC",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": 120.0,
+    "before": 620.0,
+    "detail": "Cumulative expenditure falls from ₹620.00 cr in 2026-04 to ₹120.00 cr in 2026-05; a cumulative field cannot decrease.",
+    "from_snapshot": "2026-04",
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "to_snapshot": "2026-05",
+    "type": "EXP_DECREASE"
+   },
+   {
+    "after": 70.0,
+    "before": "2026-12",
+    "detail": "At its own reported pace (1.40 pt/month), this project needs 21 months; its own stated date 2026-12 leaves 5.",
+    "from_snapshot": "2025-12",
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "DOC_UNREACHABLE"
+   }
+  ],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100002",
+  "project_name": "Hydro Power Station Unit 2",
+  "risk": {
+   "band": "red",
+   "reasons": [
+    "Cumulative expenditure falls from ₹620.00 cr in 2026-04 to ₹120.00 cr in 2026-05; a cumulative field cannot decrease.",
+    "At its own reported pace (1.40 pt/month), this project needs 21 months; its own stated date 2026-12 leaves 5."
+   ],
+   "score": 60
+  },
+  "sector": "Power",
+  "snapshots": [
+   {
+    "cost_original_cr": 900.0,
+    "cost_revised_cr": 950.0,
+    "doc_original": "2026-12",
+    "doc_revised": null,
+    "expenditure_cum_cr": 500.0,
+    "page": 55,
+    "physical_progress_pct": 60.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 900.0,
+    "cost_revised_cr": 950.0,
+    "doc_original": "2026-12",
+    "doc_revised": null,
+    "expenditure_cum_cr": 620.0,
+    "page": 56,
+    "physical_progress_pct": 64.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 900.0,
+    "cost_revised_cr": 950.0,
+    "doc_original": "2026-12",
+    "doc_revised": null,
+    "expenditure_cum_cr": 120.0,
+    "page": 57,
+    "physical_progress_pct": 66.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 900.0,
+    "cost_revised_cr": 950.0,
+    "doc_original": "2026-12",
+    "doc_revised": null,
+    "expenditure_cum_cr": 140.0,
+    "page": 58,
+    "physical_progress_pct": 68.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 900.0,
+    "cost_revised_cr": 950.0,
+    "doc_original": "2026-12",
+    "doc_revised": null,
+    "expenditure_cum_cr": 160.0,
+    "page": 59,
+    "physical_progress_pct": 70.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Himachal Pradesh",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "Railways",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": 35.0,
+    "before": 40.0,
+    "detail": "Physical progress falls from 40% in 2026-05 to 35% in 2026-06.",
+    "from_snapshot": "2026-05",
+    "severity": "high",
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     }
+    ],
+    "to_snapshot": "2026-06",
+    "type": "PROG_DECREASE"
+   },
+   {
+    "after": 41.0,
+    "before": "2027-03",
+    "detail": "At its own reported pace (1.35 pt/month), this project needs 44 months; its own stated date 2027-03 leaves 8.",
+    "from_snapshot": "2025-12",
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "DOC_UNREACHABLE"
+   }
+  ],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100003",
+  "project_name": "Doubling of Rail Line Section B",
+  "risk": {
+   "band": "amber",
+   "reasons": [
+    "Physical progress falls from 40% in 2026-05 to 35% in 2026-06.",
+    "At its own reported pace (1.35 pt/month), this project needs 44 months; its own stated date 2027-03 leaves 8."
+   ],
+   "score": 55
+  },
+  "sector": "Railways",
+  "snapshots": [
+   {
+    "cost_original_cr": 700.0,
+    "cost_revised_cr": 700.0,
+    "doc_original": "2027-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 200.0,
+    "page": 55,
+    "physical_progress_pct": 30.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 700.0,
+    "cost_revised_cr": 700.0,
+    "doc_original": "2027-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 240.0,
+    "page": 56,
+    "physical_progress_pct": 38.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 700.0,
+    "cost_revised_cr": 700.0,
+    "doc_original": "2027-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 260.0,
+    "page": 57,
+    "physical_progress_pct": 40.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 700.0,
+    "cost_revised_cr": 700.0,
+    "doc_original": "2027-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 280.0,
+    "page": 58,
+    "physical_progress_pct": 35.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 700.0,
+    "cost_revised_cr": 700.0,
+    "doc_original": "2027-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 300.0,
+    "page": 59,
+    "physical_progress_pct": 41.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Bihar",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "IOCL",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": 1200.0,
+    "before": 1000.0,
+    "detail": "Cumulative expenditure ₹1,200.00 cr exceeds the revised cost ₹1,000.00 cr in 2026-06.",
+    "from_snapshot": null,
+    "severity": "medium",
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     }
+    ],
+    "to_snapshot": "2026-06",
+    "type": "EXP_GT_REVISED_COST"
+   },
+   {
+    "after": 1250.0,
+    "before": 1000.0,
+    "detail": "Cumulative expenditure ₹1,250.00 cr exceeds the revised cost ₹1,000.00 cr in 2026-07.",
+    "from_snapshot": null,
+    "severity": "medium",
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "EXP_GT_REVISED_COST"
+   }
+  ],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100004",
+  "project_name": "Refinery Expansion",
+  "risk": {
+   "band": "green",
+   "reasons": [
+    "Cumulative expenditure ₹1,200.00 cr exceeds the revised cost ₹1,000.00 cr in 2026-06.",
+    "Cumulative expenditure ₹1,250.00 cr exceeds the revised cost ₹1,000.00 cr in 2026-07."
+   ],
+   "score": 20
+  },
+  "sector": "Petroleum",
+  "snapshots": [
+   {
+    "cost_original_cr": 1000.0,
+    "cost_revised_cr": 1000.0,
+    "doc_original": "2026-10",
+    "doc_revised": null,
+    "expenditure_cum_cr": 700.0,
+    "page": 55,
+    "physical_progress_pct": 70.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 1000.0,
+    "cost_revised_cr": 1000.0,
+    "doc_original": "2026-10",
+    "doc_revised": null,
+    "expenditure_cum_cr": 850.0,
+    "page": 56,
+    "physical_progress_pct": 78.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 1000.0,
+    "cost_revised_cr": 1000.0,
+    "doc_original": "2026-10",
+    "doc_revised": null,
+    "expenditure_cum_cr": 950.0,
+    "page": 57,
+    "physical_progress_pct": 84.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 1000.0,
+    "cost_revised_cr": 1000.0,
+    "doc_original": "2026-10",
+    "doc_revised": null,
+    "expenditure_cum_cr": 1200.0,
+    "page": 58,
+    "physical_progress_pct": 90.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 1000.0,
+    "cost_revised_cr": 1000.0,
+    "doc_original": "2026-10",
+    "doc_revised": null,
+    "expenditure_cum_cr": 1250.0,
+    "page": 59,
+    "physical_progress_pct": 92.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Odisha",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "NHAI",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2025-12.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     }
+    ],
+    "to_snapshot": "2025-12",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-04.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     }
+    ],
+    "to_snapshot": "2026-04",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-05.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "to_snapshot": "2026-05",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-06.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     }
+    ],
+    "to_snapshot": "2026-06",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": 0.0,
+    "before": "2025-06",
+    "detail": "The stated completion date 2025-06 has passed and reported progress is 0%.",
+    "from_snapshot": "2025-12",
+    "severity": "high",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "DOC_PASSED"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-07.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   }
+  ],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100005",
+  "project_name": "Stalled Bridge Works",
+  "risk": {
+   "band": "amber",
+   "reasons": [
+    "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2025-12.",
+    "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-04.",
+    "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-05.",
+    "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-06.",
+    "The stated completion date 2025-06 has passed and reported progress is 0%.",
+    "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-07."
+   ],
+   "score": 50
+  },
+  "sector": "Road Transport and Highways",
+  "snapshots": [
+   {
+    "cost_original_cr": 300.0,
+    "cost_revised_cr": 300.0,
+    "doc_original": "2025-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 30.0,
+    "page": 55,
+    "physical_progress_pct": 0.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 300.0,
+    "cost_revised_cr": 300.0,
+    "doc_original": "2025-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 30.0,
+    "page": 56,
+    "physical_progress_pct": 0.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 300.0,
+    "cost_revised_cr": 300.0,
+    "doc_original": "2025-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 30.0,
+    "page": 57,
+    "physical_progress_pct": 0.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 300.0,
+    "cost_revised_cr": 300.0,
+    "doc_original": "2025-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 30.0,
+    "page": 58,
+    "physical_progress_pct": 0.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 300.0,
+    "cost_revised_cr": 300.0,
+    "doc_original": "2025-06",
+    "doc_revised": null,
+    "expenditure_cum_cr": 30.0,
+    "page": 59,
+    "physical_progress_pct": 0.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Assam",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "DMRC",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": "2027-06",
+    "before": "2026-12",
+    "detail": "Revised completion date changed from 2026-12 to 2027-06 between 2026-04 and 2026-05.",
+    "from_snapshot": "2026-04",
+    "severity": "info",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "to_snapshot": "2026-05",
+    "type": "DOC_REVISED_FILED"
+   },
+   {
+    "after": 55.0,
+    "before": "2027-06",
+    "detail": "At its own reported pace (0.70 pt/month), this project needs 64 months; its own stated date 2027-06 leaves 11.",
+    "from_snapshot": "2025-12",
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "DOC_UNREACHABLE"
+   }
+  ],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100006",
+  "project_name": "Slow Metro Extension",
+  "risk": {
+   "band": "amber",
+   "reasons": [
+    "Revised completion date changed from 2026-12 to 2027-06 between 2026-04 and 2026-05.",
+    "At its own reported pace (0.70 pt/month), this project needs 64 months; its own stated date 2027-06 leaves 11."
+   ],
+   "score": 50
+  },
+  "sector": "Urban Development",
+  "snapshots": [
+   {
+    "cost_original_cr": 400.0,
+    "cost_revised_cr": 450.0,
+    "doc_original": "2026-06",
+    "doc_revised": "2026-12",
+    "expenditure_cum_cr": 210.0,
+    "page": 55,
+    "physical_progress_pct": 50.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 400.0,
+    "cost_revised_cr": 450.0,
+    "doc_original": "2026-06",
+    "doc_revised": "2026-12",
+    "expenditure_cum_cr": 220.0,
+    "page": 56,
+    "physical_progress_pct": 52.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 400.0,
+    "cost_revised_cr": 450.0,
+    "doc_original": "2026-06",
+    "doc_revised": "2027-06",
+    "expenditure_cum_cr": 225.0,
+    "page": 57,
+    "physical_progress_pct": 53.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 400.0,
+    "cost_revised_cr": 450.0,
+    "doc_original": "2026-06",
+    "doc_revised": "2027-06",
+    "expenditure_cum_cr": 230.0,
+    "page": 58,
+    "physical_progress_pct": 54.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 400.0,
+    "cost_revised_cr": 450.0,
+    "doc_original": "2026-06",
+    "doc_revised": "2027-06",
+    "expenditure_cum_cr": 235.0,
+    "page": 59,
+    "physical_progress_pct": 55.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Delhi",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "Port Authority",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": 97.0,
+    "before": "2026-03",
+    "detail": "The stated completion date 2026-03 has passed and reported progress is 97%.",
+    "from_snapshot": "2025-12",
+    "severity": "high",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "to_snapshot": "2026-05",
+    "type": "DOC_PASSED"
+   }
+  ],
+  "last_seen": "2026-05",
+  "ml": null,
+  "project_code": "100007",
+  "project_name": "Nearly Done Port Berth",
+  "risk": {
+   "band": "green",
+   "reasons": [
+    "The stated completion date 2026-03 has passed and reported progress is 97%."
+   ],
+   "score": 25
+  },
+  "sector": "Shipping and Ports",
+  "snapshots": [
+   {
+    "cost_original_cr": 600.0,
+    "cost_revised_cr": 640.0,
+    "doc_original": "2026-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 570.0,
+    "page": 55,
+    "physical_progress_pct": 90.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 600.0,
+    "cost_revised_cr": 640.0,
+    "doc_original": "2026-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 600.0,
+    "page": 56,
+    "physical_progress_pct": 95.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 600.0,
+    "cost_revised_cr": 640.0,
+    "doc_original": "2026-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 615.0,
+    "page": 57,
+    "physical_progress_pct": 97.0,
+    "snapshot": "2026-05"
+   }
+  ],
+  "state": "Tamil Nadu",
+  "status": "exited"
+ },
+ {
+  "agency_raw": "GAIL",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": 40.0,
+    "before": "2027-12",
+    "detail": "At its own reported pace (1.25 pt/month), this project needs 48 months; its own stated date 2027-12 leaves 20.",
+    "from_snapshot": "2025-12",
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     }
+    ],
+    "to_snapshot": "2026-04",
+    "type": "DOC_UNREACHABLE"
+   }
+  ],
+  "last_seen": "2026-04",
+  "ml": null,
+  "project_code": "100008",
+  "project_name": "Vanishing Pipeline Segment",
+  "risk": {
+   "band": "amber",
+   "reasons": [
+    "At its own reported pace (1.25 pt/month), this project needs 48 months; its own stated date 2027-12 leaves 20."
+   ],
+   "score": 40
+  },
+  "sector": "Petroleum",
+  "snapshots": [
+   {
+    "cost_original_cr": 800.0,
+    "cost_revised_cr": 800.0,
+    "doc_original": "2027-12",
+    "doc_revised": null,
+    "expenditure_cum_cr": 250.0,
+    "page": 55,
+    "physical_progress_pct": 35.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 800.0,
+    "cost_revised_cr": 800.0,
+    "doc_original": "2027-12",
+    "doc_revised": null,
+    "expenditure_cum_cr": 300.0,
+    "page": 56,
+    "physical_progress_pct": 40.0,
+    "snapshot": "2026-04"
+   }
+  ],
+  "state": "Rajasthan",
+  "status": "exited"
+ },
+ {
+  "agency_raw": "Coal India",
+  "first_seen": "2026-06",
+  "flags": [],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100009",
+  "project_name": "New Coal Handling Plant",
+  "risk": {
+   "band": "green",
+   "reasons": [],
+   "score": 0
+  },
+  "sector": "Coal",
+  "snapshots": [
+   {
+    "cost_original_cr": 450.0,
+    "cost_revised_cr": 450.0,
+    "doc_original": "2029-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 20.0,
+    "page": 58,
+    "physical_progress_pct": 5.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 450.0,
+    "cost_revised_cr": 450.0,
+    "doc_original": "2029-03",
+    "doc_revised": null,
+    "expenditure_cum_cr": 40.0,
+    "page": 59,
+    "physical_progress_pct": 9.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Jharkhand",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "SAIL",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": 1600.0,
+    "before": 800.0,
+    "detail": "Revised cost changed from ₹800.00 cr to ₹1,600.00 cr between 2026-06 and 2026-07.",
+    "from_snapshot": "2026-06",
+    "severity": "info",
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "COST_REVISED_FILED"
+   }
+  ],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100010",
+  "project_name": "Cost Revised Steel Plant",
+  "risk": {
+   "band": "green",
+   "reasons": [
+    "Revised cost changed from ₹800.00 cr to ₹1,600.00 cr between 2026-06 and 2026-07."
+   ],
+   "score": 5
+  },
+  "sector": "Steel",
+  "snapshots": [
+   {
+    "cost_original_cr": 800.0,
+    "cost_revised_cr": 800.0,
+    "doc_original": "2027-09",
+    "doc_revised": null,
+    "expenditure_cum_cr": 300.0,
+    "page": 55,
+    "physical_progress_pct": 45.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 800.0,
+    "cost_revised_cr": 800.0,
+    "doc_original": "2027-09",
+    "doc_revised": null,
+    "expenditure_cum_cr": 340.0,
+    "page": 56,
+    "physical_progress_pct": 50.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 800.0,
+    "cost_revised_cr": 800.0,
+    "doc_original": "2027-09",
+    "doc_revised": null,
+    "expenditure_cum_cr": 380.0,
+    "page": 57,
+    "physical_progress_pct": 55.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 800.0,
+    "cost_revised_cr": 800.0,
+    "doc_original": "2027-09",
+    "doc_revised": null,
+    "expenditure_cum_cr": 420.0,
+    "page": 58,
+    "physical_progress_pct": 60.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 800.0,
+    "cost_revised_cr": 1600.0,
+    "doc_original": "2027-09",
+    "doc_revised": null,
+    "expenditure_cum_cr": 460.0,
+    "page": 59,
+    "physical_progress_pct": 65.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Chhattisgarh",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "AAI",
+  "first_seen": "2025-12",
+  "flags": [
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2025-12.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     }
+    ],
+    "to_snapshot": "2025-12",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2026-04.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     }
+    ],
+    "to_snapshot": "2026-04",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2026-05.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "to_snapshot": "2026-05",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2026-06.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     }
+    ],
+    "to_snapshot": "2026-06",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2026-07.",
+    "from_snapshot": null,
+    "severity": "low",
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": 101.0,
+    "before": null,
+    "detail": "Physical progress is reported as 101% in 2026-07.",
+    "from_snapshot": null,
+    "severity": "medium",
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "PROG_GT_100"
+   }
+  ],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100011",
+  "project_name": "Overreported Airport Terminal",
+  "risk": {
+   "band": "green",
+   "reasons": [],
+   "score": 0
+  },
+  "sector": "Civil Aviation",
+  "snapshots": [
+   {
+    "cost_original_cr": 350.0,
+    "cost_revised_cr": 360.0,
+    "doc_original": "2020-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 330.0,
+    "page": 55,
+    "physical_progress_pct": 95.0,
+    "snapshot": "2025-12"
+   },
+   {
+    "cost_original_cr": 350.0,
+    "cost_revised_cr": 360.0,
+    "doc_original": "2020-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 340.0,
+    "page": 56,
+    "physical_progress_pct": 97.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 350.0,
+    "cost_revised_cr": 360.0,
+    "doc_original": "2020-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 345.0,
+    "page": 57,
+    "physical_progress_pct": 98.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 350.0,
+    "cost_revised_cr": 360.0,
+    "doc_original": "2020-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 350.0,
+    "page": 58,
+    "physical_progress_pct": 99.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 350.0,
+    "cost_revised_cr": 360.0,
+    "doc_original": "2020-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 355.0,
+    "page": 59,
+    "physical_progress_pct": 101.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Kerala",
+  "status": "ongoing"
+ },
+ {
+  "agency_raw": "Port Authority",
+  "first_seen": "2026-04",
+  "flags": [
+   {
+    "after": 27.0,
+    "before": "2027-01",
+    "detail": "At its own reported pace (3.00 pt/month), this project needs 24 months; its own stated date 2027-01 leaves 6.",
+    "from_snapshot": "2026-04",
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "DOC_UNREACHABLE"
+   }
+  ],
+  "last_seen": "2026-07",
+  "ml": null,
+  "project_code": "100012",
+  "project_name": "Island Jetty Works",
+  "risk": {
+   "band": "amber",
+   "reasons": [
+    "At its own reported pace (3.00 pt/month), this project needs 24 months; its own stated date 2027-01 leaves 6."
+   ],
+   "score": 40
+  },
+  "sector": "Shipping and Ports",
+  "snapshots": [
+   {
+    "cost_original_cr": 250.0,
+    "cost_revised_cr": 250.0,
+    "doc_original": "2027-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 60.0,
+    "page": 56,
+    "physical_progress_pct": 18.0,
+    "snapshot": "2026-04"
+   },
+   {
+    "cost_original_cr": 250.0,
+    "cost_revised_cr": 250.0,
+    "doc_original": "2027-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 70.0,
+    "page": 57,
+    "physical_progress_pct": 21.0,
+    "snapshot": "2026-05"
+   },
+   {
+    "cost_original_cr": 250.0,
+    "cost_revised_cr": 250.0,
+    "doc_original": "2027-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 80.0,
+    "page": 58,
+    "physical_progress_pct": 24.0,
+    "snapshot": "2026-06"
+   },
+   {
+    "cost_original_cr": 250.0,
+    "cost_revised_cr": 250.0,
+    "doc_original": "2027-01",
+    "doc_revised": null,
+    "expenditure_cum_cr": 90.0,
+    "page": 59,
+    "physical_progress_pct": 27.0,
+    "snapshot": "2026-07"
+   }
+  ],
+  "state": "Andaman and Nicobar Islands",
+  "status": "ongoing"
+ }
+]

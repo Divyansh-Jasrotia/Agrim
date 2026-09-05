@@ -1,0 +1,1059 @@
+{
+ "assistant": [
+  {
+   "answer": "None between 2026-06 and 2026-07.",
+   "id": 1,
+   "question": "Which projects report cumulative expenditure falling between 2026-06 and 2026-07?",
+   "sources": []
+  },
+  {
+   "answer": "7 project(s) are flagged. Worst five: 100005 (no progress); 100007 (no progress); 100006 (ratio 5.9); 100003 (ratio 5.5); 100002 (ratio 4.3)",
+   "id": 2,
+   "question": "Which projects cannot reach their stated completion date at their own reported pace?",
+   "sources": [
+    {
+     "page": 55,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 56,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 58,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 59,
+     "snapshot": "2026-07"
+    },
+    {
+     "page": 55,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 56,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 55,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 56,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 58,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 59,
+     "snapshot": "2026-07"
+    },
+    {
+     "page": 55,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 56,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 58,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 59,
+     "snapshot": "2026-07"
+    },
+    {
+     "page": 55,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 56,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 58,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 59,
+     "snapshot": "2026-07"
+    }
+   ]
+  },
+  {
+   "answer": "0 project(s) left and 0 entered. Last observed progress of those that left: . The report prints 25 commissioned in 2026-07.",
+   "id": 3,
+   "question": "What left the monitored panel between 2026-06 and 2026-07, and in what state?",
+   "sources": []
+  },
+  {
+   "answer": "Andaman and Nicobar Islands: 1 of 1 projects carry at least one flag.",
+   "id": 4,
+   "question": "Which state has the most flagged projects?",
+   "sources": []
+  },
+  {
+   "answer": "In 2026-07, 100% of reported progress values are whole numbers, 40% are multiples of 5 and 20% multiples of 10. A continuously measured field would show about 1%, 20% and 10% of whole numbers respectively.",
+   "id": 5,
+   "question": "How reliable is the Physical Progress field as filled?",
+   "sources": []
+  },
+  {
+   "answer": "2025-12: 11 rows of 1392 (0.79%); 2026-04: 11 rows of 1981 (0.56%); 2026-05: 10 rows of 1987 (0.5%); 2026-06: 10 rows of 1847 (0.54%); 2026-07: 10 rows of 1775 (0.56%)",
+   "id": 6,
+   "question": "What share of the source reports did AGRIM parse?",
+   "sources": []
+  },
+  {
+   "answer": "Score 60. Cumulative expenditure falls from ₹620.00 cr in 2026-04 to ₹120.00 cr in 2026-05; a cumulative field cannot decrease. At its own reported pace (1.40 pt/month), this project needs 21 months; its own stated date 2026-12 leaves 5. No model score is attached.",
+   "id": 7,
+   "question": "Why is project 100002 rated red?",
+   "sources": [
+    {
+     "page": 56,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 55,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 56,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 58,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 59,
+     "snapshot": "2026-07"
+    }
+   ]
+  },
+  {
+   "answer": "Models were not run in this build.",
+   "id": 8,
+   "question": "Did the model beat the conventional method on the held-out report?",
+   "sources": []
+  }
+ ],
+ "by_sector": [
+  {
+   "flagged": 1,
+   "key": "Civil Aviation",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 0,
+   "key": "Coal",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Petroleum",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Power",
+   "projects": 1,
+   "red": 1
+  },
+  {
+   "flagged": 1,
+   "key": "Railways",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Road Transport and Highways",
+   "projects": 2,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Shipping and Ports",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 0,
+   "key": "Steel",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Urban Development",
+   "projects": 1,
+   "red": 0
+  }
+ ],
+ "by_state": [
+  {
+   "flagged": 1,
+   "key": "Andaman and Nicobar Islands",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Assam",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Bihar",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 0,
+   "key": "Chhattisgarh",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Delhi",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 0,
+   "key": "Gujarat",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Himachal Pradesh",
+   "projects": 1,
+   "red": 1
+  },
+  {
+   "flagged": 0,
+   "key": "Jharkhand",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Kerala",
+   "projects": 1,
+   "red": 0
+  },
+  {
+   "flagged": 1,
+   "key": "Odisha",
+   "projects": 1,
+   "red": 0
+  }
+ ],
+ "contradictions": {
+  "by_type": [
+   {
+    "count": 5,
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "count": 1,
+    "type": "EXP_DECREASE"
+   },
+   {
+    "count": 2,
+    "type": "EXP_GT_REVISED_COST"
+   },
+   {
+    "count": 1,
+    "type": "PROG_DECREASE"
+   },
+   {
+    "count": 1,
+    "type": "PROG_GT_100"
+   },
+   {
+    "count": 5,
+    "type": "ZERO_PROG_NONZERO_EXP"
+   }
+  ],
+  "rows": [
+   {
+    "after": 120.0,
+    "before": 620.0,
+    "detail": "Cumulative expenditure falls from ₹620.00 cr in 2026-04 to ₹120.00 cr in 2026-05; a cumulative field cannot decrease.",
+    "from_snapshot": "2026-04",
+    "project_code": "100002",
+    "project_name": "Hydro Power Station Unit 2",
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "to_snapshot": "2026-05",
+    "type": "EXP_DECREASE"
+   },
+   {
+    "after": 35.0,
+    "before": 40.0,
+    "detail": "Physical progress falls from 40% in 2026-05 to 35% in 2026-06.",
+    "from_snapshot": "2026-05",
+    "project_code": "100003",
+    "project_name": "Doubling of Rail Line Section B",
+    "severity": "high",
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     }
+    ],
+    "to_snapshot": "2026-06",
+    "type": "PROG_DECREASE"
+   },
+   {
+    "after": 1200.0,
+    "before": 1000.0,
+    "detail": "Cumulative expenditure ₹1,200.00 cr exceeds the revised cost ₹1,000.00 cr in 2026-06.",
+    "from_snapshot": null,
+    "project_code": "100004",
+    "project_name": "Refinery Expansion",
+    "severity": "medium",
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     }
+    ],
+    "to_snapshot": "2026-06",
+    "type": "EXP_GT_REVISED_COST"
+   },
+   {
+    "after": 1250.0,
+    "before": 1000.0,
+    "detail": "Cumulative expenditure ₹1,250.00 cr exceeds the revised cost ₹1,000.00 cr in 2026-07.",
+    "from_snapshot": null,
+    "project_code": "100004",
+    "project_name": "Refinery Expansion",
+    "severity": "medium",
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "EXP_GT_REVISED_COST"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2025-12.",
+    "from_snapshot": null,
+    "project_code": "100005",
+    "project_name": "Stalled Bridge Works",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     }
+    ],
+    "to_snapshot": "2025-12",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-04.",
+    "from_snapshot": null,
+    "project_code": "100005",
+    "project_name": "Stalled Bridge Works",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     }
+    ],
+    "to_snapshot": "2026-04",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-05.",
+    "from_snapshot": null,
+    "project_code": "100005",
+    "project_name": "Stalled Bridge Works",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "to_snapshot": "2026-05",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-06.",
+    "from_snapshot": null,
+    "project_code": "100005",
+    "project_name": "Stalled Bridge Works",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     }
+    ],
+    "to_snapshot": "2026-06",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": 30.0,
+    "before": 0.0,
+    "detail": "Physical progress is 0% while cumulative expenditure is ₹30.00 cr in 2026-07.",
+    "from_snapshot": null,
+    "project_code": "100005",
+    "project_name": "Stalled Bridge Works",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "ZERO_PROG_NONZERO_EXP"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2025-12.",
+    "from_snapshot": null,
+    "project_code": "100011",
+    "project_name": "Overreported Airport Terminal",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     }
+    ],
+    "to_snapshot": "2025-12",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2026-04.",
+    "from_snapshot": null,
+    "project_code": "100011",
+    "project_name": "Overreported Airport Terminal",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     }
+    ],
+    "to_snapshot": "2026-04",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2026-05.",
+    "from_snapshot": null,
+    "project_code": "100011",
+    "project_name": "Overreported Airport Terminal",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "to_snapshot": "2026-05",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2026-06.",
+    "from_snapshot": null,
+    "project_code": "100011",
+    "project_name": "Overreported Airport Terminal",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     }
+    ],
+    "to_snapshot": "2026-06",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": "2020-01",
+    "before": "2021-03",
+    "detail": "Original completion date 2020-01 is before the approval month 2021-03 in 2026-07.",
+    "from_snapshot": null,
+    "project_code": "100011",
+    "project_name": "Overreported Airport Terminal",
+    "severity": "low",
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "DOC_BEFORE_APPROVAL"
+   },
+   {
+    "after": 101.0,
+    "before": null,
+    "detail": "Physical progress is reported as 101% in 2026-07.",
+    "from_snapshot": null,
+    "project_code": "100011",
+    "project_name": "Overreported Airport Terminal",
+    "severity": "medium",
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "to_snapshot": "2026-07",
+    "type": "PROG_GT_100"
+   }
+  ]
+ },
+ "disclosure_lag": {
+  "median_lag_months": 1.0,
+  "rows": [
+   {
+    "filed_at": "2026-05",
+    "first_unreachable": "2026-04",
+    "lag_months": 1,
+    "project_code": "100006"
+   }
+  ],
+  "status": "computed"
+ },
+ "early_warning": {
+  "rows": [
+   {
+    "months_needed": null,
+    "months_remaining": -13,
+    "project_code": "100005",
+    "project_name": "Stalled Bridge Works",
+    "ratio": null,
+    "severity": "high",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": -2,
+    "project_code": "100007",
+    "project_name": "Nearly Done Port Berth",
+    "ratio": null,
+    "severity": "high",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ],
+    "velocity_pct_per_month": 1.3571
+   },
+   {
+    "months_needed": 64.4118,
+    "months_remaining": 11,
+    "project_code": "100006",
+    "project_name": "Slow Metro Extension",
+    "ratio": 5.8556,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.6986
+   },
+   {
+    "months_needed": 43.7259,
+    "months_remaining": 8,
+    "project_code": "100003",
+    "project_name": "Doubling of Rail Line Section B",
+    "ratio": 5.4657,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 1.3493
+   },
+   {
+    "months_needed": 21.4706,
+    "months_remaining": 5,
+    "project_code": "100002",
+    "project_name": "Hydro Power Station Unit 2",
+    "ratio": 4.2941,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 1.3973
+   },
+   {
+    "months_needed": 24.3333,
+    "months_remaining": 6,
+    "project_code": "100012",
+    "project_name": "Island Jetty Works",
+    "ratio": 4.0556,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 3.0
+   },
+   {
+    "months_needed": 48.0,
+    "months_remaining": 20,
+    "project_code": "100008",
+    "project_name": "Vanishing Pipeline Segment",
+    "ratio": 2.4,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 55,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     }
+    ],
+    "velocity_pct_per_month": 1.25
+   }
+  ]
+ },
+ "exits": {
+  "pairs": [
+   {
+    "commissioned_printed": 9,
+    "entered": 1,
+    "exited": 0,
+    "exited_cost_revised_cr": 0,
+    "from": "2025-12",
+    "to": "2026-04"
+   },
+   {
+    "commissioned_printed": 16,
+    "entered": 0,
+    "exited": 1,
+    "exited_cost_revised_cr": 800.0,
+    "from": "2026-04",
+    "to": "2026-05"
+   },
+   {
+    "commissioned_printed": 130,
+    "entered": 1,
+    "exited": 1,
+    "exited_cost_revised_cr": 640.0,
+    "from": "2026-05",
+    "to": "2026-06"
+   },
+   {
+    "commissioned_printed": 25,
+    "entered": 0,
+    "exited": 0,
+    "exited_cost_revised_cr": 0,
+    "from": "2026-06",
+    "to": "2026-07"
+   }
+  ],
+  "rows": [
+   {
+    "last_cost_revised_cr": 800.0,
+    "last_expenditure_cr": 300.0,
+    "last_progress_pct": 40.0,
+    "last_seen": "2026-04",
+    "partition": "LAST_SEEN_LT_50",
+    "project_code": "100008",
+    "project_name": "Vanishing Pipeline Segment",
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "last_cost_revised_cr": 640.0,
+    "last_expenditure_cr": 615.0,
+    "last_progress_pct": 97.0,
+    "last_seen": "2026-05",
+    "partition": "LAST_SEEN_GE_95",
+    "project_code": "100007",
+    "project_name": "Nearly Done Port Berth",
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     }
+    ]
+   }
+  ]
+ },
+ "field_audit": {
+  "multiple_of_10_share": 0.2,
+  "multiple_of_5_share": 0.4,
+  "snapshot": "2026-07",
+  "staleness_by_agency": [],
+  "terminal_digit": [
+   {
+    "count": 2,
+    "digit": 0,
+    "share": 0.2
+   },
+   {
+    "count": 2,
+    "digit": 1,
+    "share": 0.2
+   },
+   {
+    "count": 1,
+    "digit": 2,
+    "share": 0.1
+   },
+   {
+    "count": 0,
+    "digit": 3,
+    "share": 0.0
+   },
+   {
+    "count": 0,
+    "digit": 4,
+    "share": 0.0
+   },
+   {
+    "count": 2,
+    "digit": 5,
+    "share": 0.2
+   },
+   {
+    "count": 0,
+    "digit": 6,
+    "share": 0.0
+   },
+   {
+    "count": 2,
+    "digit": 7,
+    "share": 0.2
+   },
+   {
+    "count": 0,
+    "digit": 8,
+    "share": 0.0
+   },
+   {
+    "count": 1,
+    "digit": 9,
+    "share": 0.1
+   }
+  ],
+  "whole_number_share": 1.0
+ },
+ "meta": {
+  "contract_version": "1.0.0",
+  "coverage": [
+   {
+    "pct": 0.79,
+    "rows_parsed": 11,
+    "rows_printed": 1392,
+    "snapshot": "2025-12"
+   },
+   {
+    "pct": 0.56,
+    "rows_parsed": 11,
+    "rows_printed": 1981,
+    "snapshot": "2026-04"
+   },
+   {
+    "pct": 0.5,
+    "rows_parsed": 10,
+    "rows_printed": 1987,
+    "snapshot": "2026-05"
+   },
+   {
+    "pct": 0.54,
+    "rows_parsed": 10,
+    "rows_printed": 1847,
+    "snapshot": "2026-06"
+   },
+   {
+    "pct": 0.56,
+    "rows_parsed": 10,
+    "rows_printed": 1775,
+    "snapshot": "2026-07"
+   }
+  ],
+  "generated_at": "fixture",
+  "headline": {
+   "contradictions_total": 15,
+   "cost_revised_total_cr": 6580.0,
+   "exits_total": 2,
+   "overrun_total_cr": 930.0,
+   "projects_latest": 10,
+   "unreachable_total": 5,
+   "watchlist_size": 0
+  },
+  "snapshots": [
+   "2025-12",
+   "2026-04",
+   "2026-05",
+   "2026-06",
+   "2026-07"
+  ]
+ },
+ "review_pack": [
+  {
+   "expected_delay_months": null,
+   "flag_types": "DOC_UNREACHABLE;EXP_DECREASE",
+   "page": 59,
+   "project_code": "100002",
+   "project_name": "Hydro Power Station Unit 2",
+   "risk_band": "red",
+   "risk_score": 60,
+   "sector": "Power",
+   "slip_prob": null,
+   "state": "Himachal Pradesh"
+  },
+  {
+   "expected_delay_months": null,
+   "flag_types": "DOC_UNREACHABLE;PROG_DECREASE",
+   "page": 59,
+   "project_code": "100003",
+   "project_name": "Doubling of Rail Line Section B",
+   "risk_band": "amber",
+   "risk_score": 55,
+   "sector": "Railways",
+   "slip_prob": null,
+   "state": "Bihar"
+  },
+  {
+   "expected_delay_months": null,
+   "flag_types": "DOC_PASSED;ZERO_PROG_NONZERO_EXP",
+   "page": 59,
+   "project_code": "100005",
+   "project_name": "Stalled Bridge Works",
+   "risk_band": "amber",
+   "risk_score": 50,
+   "sector": "Road Transport and Highways",
+   "slip_prob": null,
+   "state": "Assam"
+  },
+  {
+   "expected_delay_months": null,
+   "flag_types": "DOC_UNREACHABLE",
+   "page": 59,
+   "project_code": "100006",
+   "project_name": "Slow Metro Extension",
+   "risk_band": "amber",
+   "risk_score": 50,
+   "sector": "Urban Development",
+   "slip_prob": null,
+   "state": "Delhi"
+  },
+  {
+   "expected_delay_months": null,
+   "flag_types": "DOC_UNREACHABLE",
+   "page": 59,
+   "project_code": "100012",
+   "project_name": "Island Jetty Works",
+   "risk_band": "amber",
+   "risk_score": 40,
+   "sector": "Shipping and Ports",
+   "slip_prob": null,
+   "state": "Andaman and Nicobar Islands"
+  },
+  {
+   "expected_delay_months": null,
+   "flag_types": "EXP_GT_REVISED_COST",
+   "page": 59,
+   "project_code": "100004",
+   "project_name": "Refinery Expansion",
+   "risk_band": "green",
+   "risk_score": 20,
+   "sector": "Petroleum",
+   "slip_prob": null,
+   "state": "Odisha"
+  },
+  {
+   "expected_delay_months": null,
+   "flag_types": "DOC_BEFORE_APPROVAL;PROG_GT_100",
+   "page": 59,
+   "project_code": "100011",
+   "project_name": "Overreported Airport Terminal",
+   "risk_band": "green",
+   "risk_score": 0,
+   "sector": "Civil Aviation",
+   "slip_prob": null,
+   "state": "Kerala"
+  }
+ ]
+}
