@@ -4330,7 +4330,7 @@ gh pr create --title "Task 15: web scaffold + overview" --body "<paste build and
 - Consumes: `useBundle()`, `DataTable`, `useEChart`, `findings.contradictions.rows`, `projects[].snapshots|flags|risk|ml`, page images at `pages/<snapshot>/p<page>.png`.
 - Produces: route `#/ledger?type=<TYPE>` and `#/project/:code`; `Sparkline({ labels, values, forecast?, color })`; `SourcePage({ snapshot, page })` modal.
 
-- [ ] **Step 1: Sparkline and SourcePage components**
+- [x] **Step 1: Sparkline and SourcePage components**
 
 `web/src/components/Sparkline.tsx`:
 ```tsx
@@ -4381,7 +4381,7 @@ export function SourcePage({ snapshot, page }: { snapshot: string; page: number 
 }
 ```
 
-- [ ] **Step 2: Ledger screen**
+- [x] **Step 2: Ledger screen**
 
 `web/src/screens/Ledger.tsx`:
 ```tsx
@@ -4434,7 +4434,7 @@ export function Ledger() {
 }
 ```
 
-- [ ] **Step 3: Project screen**
+- [x] **Step 3: Project screen**
 
 `web/src/screens/Project.tsx`:
 ```tsx
@@ -4541,11 +4541,11 @@ export function Project() {
 }
 ```
 
-- [ ] **Step 4: Wire the routes**
+- [x] **Step 4: Wire the routes**
 
 In `web/src/App.tsx`, add `import { Ledger } from "./screens/Ledger";` and `import { Project } from "./screens/Project";`, then replace the two placeholder routes with `<Route path="/ledger" element={<Ledger />} />` and `<Route path="/project/:code" element={<Project />} />`.
 
-- [ ] **Step 5: Build, check, commit**
+- [x] **Step 5: Build, check, commit**
 
 Run: `npm run build` (in `web/`) then `python tools/validate.py` (root) → both green. Run `npm run dev`, open `#/ledger?type=EXP_DECREASE`, click the 705526 row (or the top row), open its source page image. Expected: the PDF page renders in the modal.
 
