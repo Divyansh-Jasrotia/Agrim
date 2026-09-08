@@ -47,11 +47,12 @@ def compute(panel):
     stale = [{"agency_raw": a, "projects": len(v), "share_unchanged": round(sum(v) / len(v), 4)}
              for a, v in sorted(by_agency.items()) if len(v) >= 5]
     stale.sort(key=lambda d: (-d["share_unchanged"], d["agency_raw"]))
+    wi = whipple_index(digits)
     return {"snapshot": last,
             "terminal_digit": [{"digit": d, "count": digits.get(d, 0), "share": round(digits.get(d, 0) / n, 4) if n else 0.0} for d in range(10)],
             "whole_number_share": round(len(whole) / n, 4) if n else 0.0,
             "multiple_of_5_share": round(sum(1 for v in whole if int(v) % 5 == 0) / n, 4) if n else 0.0,
             "multiple_of_10_share": round(sum(1 for v in whole if int(v) % 10 == 0) / n, 4) if n else 0.0,
-            "whipple_index": whipple_index(digits),
-            "whipple_band": whipple_band(whipple_index(digits)),
+            "whipple_index": wi,
+            "whipple_band": whipple_band(wi),
             "staleness_by_agency": stale}
