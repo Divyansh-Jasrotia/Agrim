@@ -6,7 +6,7 @@
 
 # Slide 2 — IDEA TITLE / Proposed Solution
 - AGRIM: a reporting-integrity audit and early-warning prediction layer over MoSPI's own monthly Flash Reports.
-- Across the five Flash Reports we parsed (2025-12 to 2026-07) we found 967 arithmetic impossibilities in the Ministry's own published numbers — spread over those five reports, not all inside one of them — e.g. project 705410: cumulative expenditure ₹89,486.62 crore in one report, ₹2,384.29 crore in the next (185 such projects).
+- Across the five Flash Reports we parsed (2025-12 to 2026-07) we found 967 contradictions in the Ministry's own published numbers — spread over those five reports, not all inside one of them — e.g. project 705410: cumulative expenditure ₹89,486.62 crore in one report, ₹2,384.29 crore in the next (185 such projects).
 - Audit layer (no model): contradiction ledger, exit ledger (443 projects left the panel), unreachable-date early warning (1289 projects), field-information audit, transparent risk score — the 2026-07 panel itself holds 1775 projects.
 - Prediction layer (open-source scikit-learn): slip-filing classifier tested on the report it never saw (recall@100 0.28 vs 0.15 for logistic regression), next-month progress forecaster (MAE 1.5 vs 2.3 for linear extrapolation), overrun drivers and peer benchmark (OLS vs gradient boosting), and 134 statistical outliers from an isolation forest — model output, shown beside the rule-based ledger and never counted into its total.
 - Innovation: the headline is a verifiable fact in the sponsor's own PDF; every model is shown beside the conventional method with its positives count; every number carries a page citation.

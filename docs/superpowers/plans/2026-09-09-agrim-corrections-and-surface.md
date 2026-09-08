@@ -179,7 +179,7 @@ That last fact removes the original reason for a hard numbers freeze: the deck i
 - Produces: `findings.meta.headline.contradictions_arithmetic: int`, `findings.meta.headline.statistical_anomalies: int`, `findings.meta.denominators: object`.
 - Consumes: nothing from other tasks in this plan.
 
-- [ ] **Step 1: Write the failing test for flag collapse**
+- [x] **Step 1: Write the failing test for flag collapse**
 
 Create `tests/findings/test_collapse.py`:
 
@@ -244,12 +244,12 @@ def test_output_is_sorted_like_detect():
     assert out == sorted(out, key=lambda f: (f["project_code"], f["to_snapshot"], f["type"]))
 ```
 
-- [ ] **Step 2: Run it to make sure it fails**
+- [x] **Step 2: Run it to make sure it fails**
 
 Run: `pytest tests/findings/test_collapse.py -q`
 Expected: FAIL — `ModuleNotFoundError: No module named 'findings.collapse'`
 
-- [ ] **Step 3: Implement the minimal code to make the test pass**
+- [x] **Step 3: Implement the minimal code to make the test pass**
 
 Create `findings/collapse.py`:
 
@@ -290,12 +290,12 @@ def collapse(flags):
     return out
 ```
 
-- [ ] **Step 4: Run the tests and make sure they pass**
+- [x] **Step 4: Run the tests and make sure they pass**
 
 Run: `pytest tests/findings/test_collapse.py -q`
 Expected: PASS, 6 passed
 
-- [ ] **Step 5: Write the failing test for Whipple's index**
+- [x] **Step 5: Write the failing test for Whipple's index**
 
 Create `tests/findings/test_field_audit_whipple.py`:
 
@@ -325,12 +325,12 @@ def test_bands_follow_the_un_thresholds():
     assert whipple_band(None) is None
 ```
 
-- [ ] **Step 6: Run it to make sure it fails**
+- [x] **Step 6: Run it to make sure it fails**
 
 Run: `pytest tests/findings/test_field_audit_whipple.py -q`
 Expected: FAIL — `ImportError: cannot import name 'whipple_index'`
 
-- [ ] **Step 7: Implement Whipple's index**
+- [x] **Step 7: Implement Whipple's index**
 
 In `findings/field_audit.py`, add above `compute`:
 
@@ -365,19 +365,19 @@ Then in `compute`, add both to the returned dict, after `"multiple_of_10_share"`
             "whipple_band": whipple_band(whipple_index(digits)),
 ```
 
-- [ ] **Step 8: Run the tests and make sure they pass**
+- [x] **Step 8: Run the tests and make sure they pass**
 
 Run: `pytest tests/findings/test_field_audit_whipple.py -q`
 Expected: PASS, 4 passed
 
-- [ ] **Step 9: Update the two existing assertions that the collapse changes**
+- [x] **Step 9: Update the two existing assertions that the collapse changes**
 
 `tests/findings/test_contradictions.py` asserts raw detection counts and **must keep doing so** — `detect()` is unchanged, so that file needs no edit. Confirm this by running it:
 
 Run: `pytest tests/findings/test_contradictions.py -q`
 Expected: PASS, unchanged. If it fails, you have wrongly modified `detect()` — revert that and put the logic in `collapse.py`.
 
-- [ ] **Step 10: Extend the contract, additively**
+- [x] **Step 10: Extend the contract, additively**
 
 In `contracts/findings.schema.json`:
 
@@ -405,7 +405,7 @@ In `contracts/CHANGELOG.md`, add one entry: minor bump to `1.1.0`, listing the f
 
 Set `CONTRACT_VERSION = "1.1.0"` in `findings/run.py`.
 
-- [ ] **Step 11: Wire collapse, the split headline and the denominators into run.py**
+- [x] **Step 11: Wire collapse, the split headline and the denominators into run.py**
 
 In `findings/run.py`:
 
@@ -448,7 +448,7 @@ In `deck_numbers`, add after the existing `contradictions_total` entry:
             "contradictions_arithmetic": h["contradictions_arithmetic"], "statistical_anomalies": h["statistical_anomalies"],
 ```
 
-- [ ] **Step 11b: Fix the deck slide, which currently contradicts itself**
+- [x] **Step 11b: Fix the deck slide, which currently contradicts itself**
 
 `tools/slides.py` renders `deck/slides.md` from `deck/numbers.json`. Its slide 2 template reads:
 
@@ -474,7 +474,7 @@ grep -n "impossibilit" deck/slides.md tools/slides.py deck/pitch.md
 ```
 Expected: `slides.py` writes the file, the test passes, and the grep returns **no output**. If `test_slides.py` reports a leftover `{...}` placeholder, the key is missing from `deck/numbers.json` - add it in `deck_numbers()` in Step 11, never by typing the number into the slide.
 
-- [ ] **Step 12: Run the full pipeline and both gates**
+- [x] **Step 12: Run the full pipeline and both gates**
 
 Run:
 ```bash
@@ -484,7 +484,7 @@ pytest -q
 ```
 Expected: the run prints a project count and a contradictions count; `validate.py` exits 0; all tests pass. **Paste all three outputs into the relay log.** Confirm `deck/numbers.json` now contains `contradictions_arithmetic: 967` and `statistical_anomalies: 134`. If `contradictions_arithmetic` is not 967, stop and report — do not adjust the number to match.
 
-- [ ] **Step 13: Commit**
+- [x] **Step 13: Commit**
 
 ```bash
 git add findings/collapse.py findings/field_audit.py findings/run.py tools/slides.py contracts/findings.schema.json contracts/CHANGELOG.md tests/findings/test_collapse.py tests/findings/test_field_audit_whipple.py web/public/data deck/numbers.json deck/slides.md docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md

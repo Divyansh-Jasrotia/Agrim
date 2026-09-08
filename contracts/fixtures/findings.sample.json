@@ -908,10 +908,12 @@
     "share": 0.1
    }
   ],
+  "whipple_band": "very rough",
+  "whipple_index": 200.0,
   "whole_number_share": 1.0
  },
  "meta": {
-  "contract_version": "1.0.0",
+  "contract_version": "1.1.0",
   "coverage": [
    {
     "pct": 0.79,
@@ -944,13 +946,20 @@
     "snapshot": "2026-07"
    }
   ],
+  "denominators": {
+   "cost_overrun_null": 0,
+   "cost_revised_null": 0,
+   "doc_null": 0
+  },
   "generated_at": "fixture",
   "headline": {
+   "contradictions_arithmetic": 15,
    "contradictions_total": 15,
    "cost_revised_total_cr": 6580.0,
    "exits_total": 2,
    "overrun_total_cr": 930.0,
    "projects_latest": 10,
+   "statistical_anomalies": 0,
    "unreachable_total": 5,
    "watchlist_size": 0
   },

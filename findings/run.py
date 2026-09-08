@@ -10,11 +10,11 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from findings import assistant, contradictions, disclosure_lag, early_warning, exits, field_audit, risk
+from findings import assistant, collapse, contradictions, disclosure_lag, early_warning, exits, field_audit, risk
 from findings.panel import latest, load_panel, sector_map, series, snapshots_present, source
 
 ROOT = Path(__file__).resolve().parents[1]
-CONTRACT_VERSION = "1.0.0"
+CONTRACT_VERSION = "1.1.0"
 ARITH = {"EXP_DECREASE", "PROG_DECREASE", "EXP_GT_REVISED_COST", "ZERO_PROG_NONZERO_EXP", "PROG_GT_100", "DOC_BEFORE_APPROVAL"}
 from findings.models import pipeline  # noqa: E402  (after OMP_NUM_THREADS is set)
 run_models = pipeline.run
@@ -58,7 +58,9 @@ def build_projects(panel, flags, status, sectors, ml_by_code):
                          "snapshots": [{"snapshot": r["snapshot"], "page": r["page"], "doc_original": r["doc_original"], "doc_revised": r["doc_revised"],
                                         "cost_original_cr": r["cost_original_cr"], "cost_revised_cr": r["cost_revised_cr"],
                                         "expenditure_cum_cr": r["expenditure_cum_cr"], "physical_progress_pct": r["physical_progress_pct"]} for r in rs],
-                         "flags": [_strip(f) for f in fl], "risk": risk.score(fl), "ml": (ml_by_code or {}).get(code)})
+                         "flags": [_strip(f) for f in collapse.collapse(fl)],
+                         "risk": risk.score(fl),  # raw flags: collapsing would re-score F4 (5x EXP_DECREASE would drop from 100 to 20, flipping red->green)
+                         "ml": (ml_by_code or {}).get(code)})
     return projects
 
 
@@ -107,8 +109,15 @@ def build_findings(panel, projects, flags, ex, ew, aggregates, models):
     findings = {
         "meta": {"contract_version": CONTRACT_VERSION, "generated_at": generated_at(), "snapshots": snapshots_present(panel), "coverage": coverage,
                  "headline": {"projects_latest": len(latest_rows), "cost_revised_total_cr": round(cost_rev, 2), "overrun_total_cr": round(overrun, 2),
-                              "contradictions_total": len(rule_rows), "exits_total": sum(p["exited"] for p in ex["pairs"]),
-                              "unreachable_total": sum(1 for f in flags if f["type"] == "DOC_UNREACHABLE"), "watchlist_size": len(watch)}},
+                              "contradictions_total": len(rule_rows),
+                              "contradictions_arithmetic": sum(1 for f in c_rows if f["type"] in ARITH),
+                              "statistical_anomalies": sum(1 for f in c_rows if f["type"] == "STAT_ANOMALY"),
+                              "exits_total": sum(p["exited"] for p in ex["pairs"]),
+                              "unreachable_total": sum(1 for f in flags if f["type"] == "DOC_UNREACHABLE"), "watchlist_size": len(watch)},
+                 "denominators": {
+                     "cost_revised_null": sum(1 for r in latest_rows if r["cost_revised_cr"] is None),
+                     "cost_overrun_null": sum(1 for r in latest_rows if r["cost_revised_cr"] is None or r["cost_original_cr"] is None),
+                     "doc_null": sum(1 for r in latest_rows if r["doc_revised"] is None and r["doc_original"] is None)}},
         "contradictions": {"by_type": [{"type": t, "count": n} for t, n in sorted(by_type.items())], "rows": contradiction_rows},
         "exits": {"pairs": ex["pairs"], "rows": ex["rows"]},
         "early_warning": {"rows": ew["rows"]},
@@ -143,7 +152,9 @@ def build(panel, aggregates, with_models):
 def deck_numbers(findings, models):
     h = findings["meta"]["headline"]
     nums = {"projects_latest": h["projects_latest"], "cost_revised_total_cr": h["cost_revised_total_cr"], "overrun_total_cr": h["overrun_total_cr"],
-            "contradictions_total": h["contradictions_total"], "exits_total": h["exits_total"], "unreachable_total": h["unreachable_total"],
+            "contradictions_total": h["contradictions_total"],
+            "contradictions_arithmetic": h["contradictions_arithmetic"], "statistical_anomalies": h["statistical_anomalies"],
+            "exits_total": h["exits_total"], "unreachable_total": h["unreachable_total"],
             "latest_snapshot": findings["meta"]["snapshots"][-1], "first_snapshot": findings["meta"]["snapshots"][0]}
     for c in findings["meta"]["coverage"]:
         if c["pct"] is not None:

@@ -209,6 +209,10 @@
      "snapshot": "2025-12"
     },
     {
+     "page": 161,
+     "snapshot": "2026-04"
+    },
+    {
      "page": 106,
      "snapshot": "2025-12"
     },
@@ -217,12 +221,36 @@
      "snapshot": "2026-04"
     },
     {
+     "page": 157,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 159,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 151,
+     "snapshot": "2026-07"
+    },
+    {
+     "page": 106,
+     "snapshot": "2025-12"
+    },
+    {
      "page": 161,
      "snapshot": "2026-04"
     },
     {
      "page": 157,
      "snapshot": "2026-05"
+    },
+    {
+     "page": 159,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 151,
+     "snapshot": "2026-07"
     }
    ]
   },
@@ -85102,10 +85130,12 @@
     "share": 0.1037
    }
   ],
+  "whipple_band": "rough",
+  "whipple_index": 144.507,
   "whole_number_share": 0.3538
  },
  "meta": {
-  "contract_version": "1.0.0",
+  "contract_version": "1.1.0",
   "coverage": [
    {
     "pct": 96.62,
@@ -85138,13 +85168,20 @@
     "snapshot": "2026-07"
    }
   ],
-  "generated_at": "2026-09-08T18:49:49+00:00",
+  "denominators": {
+   "cost_overrun_null": 0,
+   "cost_revised_null": 0,
+   "doc_null": 0
+  },
+  "generated_at": "2026-09-08T21:43:19+00:00",
   "headline": {
+   "contradictions_arithmetic": 967,
    "contradictions_total": 967,
    "cost_revised_total_cr": 3710641.55,
    "exits_total": 443,
    "overrun_total_cr": 340503.33,
    "projects_latest": 1775,
+   "statistical_anomalies": 134,
    "unreachable_total": 1289,
    "watchlist_size": 100
   },

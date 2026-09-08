@@ -1,4 +1,5 @@
 {
+ "contradictions_arithmetic": 967,
  "contradictions_total": 967,
  "cost_revised_total_cr": 3710641.55,
  "count_DOC_BEFORE_APPROVAL": 8,
@@ -43,5 +44,6 @@
  "opener_code": "705410",
  "overrun_total_cr": 340503.33,
  "projects_latest": 1775,
+ "statistical_anomalies": 134,
  "unreachable_total": 1289
 }

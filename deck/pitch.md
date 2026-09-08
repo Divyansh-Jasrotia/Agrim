@@ -1,7 +1,7 @@
 # AGRIM — 3-minute pitch (one presenter; operator drives the demo silently)
 
 ## 0:00–0:20 — The fact
-"In the Ministry's own April report, project {opener_code} shows cumulative expenditure falling — from ₹{opener_before_cr} crore to ₹{opener_after_cr} crore. That is a field that can only go up. Nobody flagged it. It is one of {contradictions_total} arithmetic impossibilities we found across the five reports we parsed — {count_EXP_DECREASE} of them this same kind."
+"In the Ministry's own April report, project {opener_code} shows cumulative expenditure falling — from ₹{opener_before_cr} crore to ₹{opener_after_cr} crore. That is a field that can only go up. Nobody flagged it. It is one of {contradictions_total} contradictions we found across the five reports we parsed — {count_EXP_DECREASE} of them this same kind."
 (Operator: `#/ledger?type=EXP_DECREASE`, then `#/project/{opener_code}`, then Source page. The presenter reads `opener_before_cr`, `opener_after_cr`, `contradictions_total` and `count_EXP_DECREASE` aloud in words, taken from `deck/slides.md`.)
 
 ## 0:20–1:35 — The demo
