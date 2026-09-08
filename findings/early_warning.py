@@ -36,7 +36,7 @@ def assess(rows):
                 "detail": f"The stated completion date {doc} has passed and reported progress is {prog:g}%."}
     if v is None:
         return None
-    if v <= ZERO_VELOCITY_EPS:
+    if v < ZERO_VELOCITY_EPS:
         n = months(rows[0]["snapshot"], last["snapshot"])
         return {"type": "DOC_UNREACHABLE", "severity": "critical", "velocity": v, "months_needed": None, "months_remaining": rem, "ratio": None,
                 "detail": f"No reported progress over {n} months; at this pace the stated date {doc} cannot be met."}
