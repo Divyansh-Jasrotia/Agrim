@@ -3856,7 +3856,7 @@ gh pr create --title "Task 14: full pipeline with models" --body "<paste validat
 - Produces: `useBundle()` from `src/data/store.tsx` returning `{ bundle, error, sector, setSector }` where `bundle: Bundle | null` and `Bundle = { projects, findings, models, briefs, modelCard, byCode: Map<string, Project> }`; `DataTable<T>` component; `useEChart(option, deps)` hook; `format.ts` helpers `crore`, `pct`, `num`, `monthLabel`, `sevClass`, `bandClass`; the route table in `App.tsx` (later tasks swap `Placeholder` for real screens, one line each).
 - Number rule for all TS: write pixel sizes as strings with `px` (`"520px"`), keep other numeric literals under 100 except `100`/`1000`; every displayed number comes from the JSON.
 
-- [ ] **Step 1: Scaffold and install**
+- [x] **Step 1: Scaffold and install**
 
 Run (PowerShell, from `C:\dev\agrim`):
 ```powershell
@@ -3868,7 +3868,7 @@ npm install -D json-schema-to-typescript
 ```
 Expected: `web/node_modules` exists; no peer-dependency errors. Delete the scaffold's `src/App.css` and `src/assets/react.svg`.
 
-- [ ] **Step 2: Config, scripts, styles**
+- [x] **Step 2: Config, scripts, styles**
 
 `web/vite.config.ts`:
 ```ts
@@ -3950,12 +3950,12 @@ a { color: var(--color-accent); }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 ```
 
-- [ ] **Step 3: Generate the types and check their names**
+- [x] **Step 3: Generate the types and check their names**
 
 Run: `npm run sync && npm run types`
 Expected: five files under `web/src/types/`. Open `src/types/projects.d.ts` and confirm it exports `Projects` and `Project` (json2ts names the array by the schema title and the item by the `$defs` key). Do the same for `Findings`, `Models`, `Briefs`, `ModelCard`. If a name differs, use the generated name in the imports below; do not edit the generated files.
 
-- [ ] **Step 4: Data layer**
+- [x] **Step 4: Data layer**
 
 `web/src/data/load.ts`:
 ```ts
@@ -4068,7 +4068,7 @@ export function useEChart(option: echarts.EChartsOption, deps: unknown[]) {
 }
 ```
 
-- [ ] **Step 5: Components**
+- [x] **Step 5: Components**
 
 `web/src/components/Badge.tsx`:
 ```tsx
@@ -4200,7 +4200,7 @@ export function Layout() {
 }
 ```
 
-- [ ] **Step 6: Screens, routes, entry**
+- [x] **Step 6: Screens, routes, entry**
 
 `web/src/screens/Placeholder.tsx`:
 ```tsx
@@ -4300,7 +4300,7 @@ createRoot(document.getElementById("root")!).render(<StrictMode><App /></StrictM
 
 In `web/index.html`, set `<title>AGRIM</title>` and leave the rest of the scaffold.
 
-- [ ] **Step 7: Build, run, look**
+- [x] **Step 7: Build, run, look**
 
 Run: `npm run build` → Expected: `tsc` clean, Vite bundle summary, `dist ok`. If `tsc` complains about the generated type names, fix the imports (Step 3), not the generated files.
 
@@ -4308,7 +4308,7 @@ Run: `npm run dev` and open `http://localhost:5173/#/`. Expected: KPI strip with
 
 Run (from repo root): `python tools/validate.py` → `ok   no hardcoded numbers in N files`, `RESULT: PASS`. If it flags a literal, rewrite it as a `px` string or read it from data.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```powershell
 git switch -c task/15-web-scaffold

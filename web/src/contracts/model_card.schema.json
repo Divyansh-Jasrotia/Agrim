@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ModelCard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["generated_at", "sections"],
+  "properties": {"generated_at": {"type": "string"},
+    "sections": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["title", "lines"],
+      "properties": {"title": {"type": "string"}, "lines": {"type": "array", "items": {"type": "string"}}}}}}
+}

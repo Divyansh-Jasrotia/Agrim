@@ -1,0 +1,6906 @@
+{
+ "m1_slip": {
+  "coefficients_LR_A": [
+   {
+    "feature": "cat__sector_Aviation & Aviation Infrastructure",
+    "value": 0.6364
+   },
+   {
+    "feature": "cat__sector_Coal",
+    "value": -0.6641
+   },
+   {
+    "feature": "cat__sector_Construction",
+    "value": -0.6725
+   },
+   {
+    "feature": "cat__sector_Education",
+    "value": -0.7035
+   },
+   {
+    "feature": "cat__sector_Electricity Generation",
+    "value": 0.6541
+   },
+   {
+    "feature": "cat__sector_Energy Storage",
+    "value": -0.5104
+   },
+   {
+    "feature": "cat__sector_Healthcare",
+    "value": -0.3453
+   },
+   {
+    "feature": "cat__sector_Inland Waterways",
+    "value": -0.466
+   },
+   {
+    "feature": "cat__sector_Logistics Infrastructure",
+    "value": -0.1144
+   },
+   {
+    "feature": "cat__sector_Metals & Mining",
+    "value": 0.0821
+   },
+   {
+    "feature": "cat__sector_Oil & Gas",
+    "value": 0.5367
+   },
+   {
+    "feature": "cat__sector_Railways",
+    "value": -0.8696
+   },
+   {
+    "feature": "cat__sector_Real Estate",
+    "value": 0.4265
+   },
+   {
+    "feature": "cat__sector_Roads & Highways",
+    "value": 1.9227
+   },
+   {
+    "feature": "cat__sector_Shipping",
+    "value": -0.9584
+   },
+   {
+    "feature": "cat__sector_Steel",
+    "value": 0.5091
+   },
+   {
+    "feature": "cat__sector_Telecommunication",
+    "value": 0.3682
+   },
+   {
+    "feature": "cat__sector_Tourism, Hospitality & Wellness",
+    "value": -0.5352
+   },
+   {
+    "feature": "cat__sector_Transmission & Distribution",
+    "value": 0.4659
+   },
+   {
+    "feature": "cat__sector_Urban Public Transport",
+    "value": -0.5106
+   },
+   {
+    "feature": "cat__sector_Waste & Water",
+    "value": 1.4452
+   },
+   {
+    "feature": "cat__sector_Water Resources",
+    "value": -0.951
+   },
+   {
+    "feature": "cat__state_Andaman & Nicobar",
+    "value": 0.716
+   },
+   {
+    "feature": "cat__state_Andhra Pradesh",
+    "value": 0.0572
+   },
+   {
+    "feature": "cat__state_Andhra Pradesh Project Name (Agency) (Project Code) (Legacy OCMS Code) Rehabilitation and Up-gradation of Pasarlapudi to Dhindi section from Km 105/170 to Km 126/510 of NH -214 New NH -216 to two lane with paved shoulder in the state of Andhra Pradesh under NHDP-IV (MoRTH) (618237) (N24000969) Rehabilitation and Up-gradation of Thimmapuram to Gurajanapalli section from Km 26/150 to Km 41/161 of NH - 214 New NH - 216 to two lane with paved shoulder in the state of Andhra Pradesh under NHDP-IV (MoRTH) (618238) (N24000964) Rehabilitation & Upgradation of NH214New NH-216 from Km 34/230 to Km 84/550 Losari to Machavaram Section to two lane with paved shoulder in the state of Andhrapradesh under NHDP-IV through Engineering, Procurement& Construction EPC mode. (MoRTH) (618239) (-) Construction of Paderu bypass Km 0000 to Km 13000 of 2- lane with paved shoulder on NH-516E (MoRTH) (618254) (N24002148) Two laning with paved shoulders of Lambasingi to Paderusection of NH 516E (MoRTH) (618255) (N24002142) Rehabilitation and Upgradation to 2-lane with paved should ders Sir, configuration of Chaprathipalem to Lambasingi section Km 165500 to Km 205000 of NH-516E in the State of Andhra Pradesh under Green National Highways Corridor Project GNHCP with the loan assistance of World Bank on EPC mode (MoRTH) (618256) (N24001958) Rehabilitation and Upgradation to 2-lane with paved shoulders configuration of Koyyuru to Chaprathipalem section Km 120000 to Km 165500 of NH-516E in the State of Andhra Pradesh under Green National Highways Corridor Project GNHCP with the loan assistance of World Bank on EPC mode (MoRTH) (618257) (N24001957) Two laning with paved shoulders of Gondiguda to Araku uptoBhallaguda section of NH 516E (MoRTH) (618258) (N24001956) Two laning with paved shoulders of Paderu to GundigudaSection of NH 516E (MoRTH) (618259) (N24001386) Construction of i Connecting Road from Z-Morh Tunnel to Zojila Tunnel Road Length 18.475km and ii 14.150 Km long 2-L Bi-directional single tube Zoji-la Tunnel across Zojila Pass on Sonamarg - Kargil section from Km 82 to Km 118 of NH-01 under PMDP (NHIDCL) (618412) (N24001256) Bangalore Chennai Expressway Phase-II Pkg-II from km.96.000 to Km 127.000 Baireddypalle to Bangarupalem section (National Highways Authority of India [NHAI]) (618475) (N24001985) Bangalore Chennai Expressway Phase-II Pkg-III from km.127.000 to Km 156.000 Bangarupalem to Gudipala section (National Highways Authority of India [NHAI]) (618476) (N24001821) Construction of 6 lane elevated corridor including its approaches from Km. 629880 to Km. 634470 Design Chainage of NH-16 in Ranasthalam Town portion in the state of Andhra Pradesh on EPC Mode under NHO. (National Highways Authority of India [NHAI]) (618524) (-) Construction of flyover at Gammon Junction at Km.903.265 on NH16 including vent at Diwancheruvu junction at Km.902.308 Blackspot ID No.AP03299 in Andhra Pradesh on EPC mode under NHO (National Highways Authority of India [NHAI]) (618525) (-) 6L of Gundugolanu Design km 1023.280 to Kalaparru Design km 1050.680 of NH-5 New NH-16 (National Highways Authority of India [NHAI]) (618526) (-) Six Laning of Vijayawada Bypass from Gollapudi to Chinnakakani in Vijayawada - Gundugolanu Section from km. 30.00 to km. 47.881 Pkg-IV (National Highways Authority of India [NHAI]) (618527) (N24001301) 6L of Anandapuram Pendurthi Anakapalli Section from km. 681.000 to km. 731.780 of NH-16 (National Highways Authority of India [NHAI]) (618579) (-) Nandigama Bypass and Kanchikacherla bypass (National Highways Authority of India [NHAI]) (618629) (-)",
+    "value": -0.4731
+   },
+   {
+    "feature": "cat__state_Arunachal Pradesh",
+    "value": -0.7514
+   },
+   {
+    "feature": "cat__state_Assam",
+    "value": -0.4955
+   },
+   {
+    "feature": "cat__state_Bihar",
+    "value": 0.2865
+   },
+   {
+    "feature": "cat__state_Chhattisgarh",
+    "value": -0.083
+   },
+   {
+    "feature": "cat__state_Dadra & Nagar Haveli and Daman & Diu",
+    "value": -0.1528
+   },
+   {
+    "feature": "cat__state_Delhi",
+    "value": -0.3104
+   },
+   {
+    "feature": "cat__state_Goa",
+    "value": -0.0334
+   },
+   {
+    "feature": "cat__state_Gujarat",
+    "value": 0.2368
+   },
+   {
+    "feature": "cat__state_Gujarat Project Name (Agency) (Project Code) (Legacy OCMS Code) Construction of Additional Structures including Approaches in Vadodara Surat Section of NH48 between existing Km. 108.000 to Km. 250.000 (National Highways Authority of India [NHAI]) (618508) (-) 6L with PS of Samakhiyali to Santalpur section from km. 339.700 to Km. 430.100 of NH-27 (National Highways Authority of India [NHAI]) (618564) (-) Sanchore - Santalpur from km 67.000 - km 99.000 of NH-754K AJ-RGBS-Package-3 (National Highways Authority of India [NHAI]) (618614) (N24001790) Sanchore - Santalpur from km 99.000 - km 130.073 of NH-754K AJ-RGBS-Package-4 (National Highways Authority of India [NHAI]) (618615) (N24001794) 4L of Dhrol bypass section of NH-151A Approx. length 5.7 Km & widening upto 4 laning of missing link of Amran section of NH-151A Approx. length 6.55 Km from existing Ch. 42000 to 48500 of ongoing Dhrol-Bhadra-Pipaliya section of NH-151A (National Highways Authority of India [NHAI]) (618616) (-) Pipli Bhavnagar-Package 1 from km 136.025 to km 169.328 (National Highways Authority of India [NHAI]) (618699) (-) Upgradation to 4L PS from Bhimasar, Junction of NH-41 to Anjar- Bhuj upto Airport Junction from Km 0.000 to Km 65.478 of NH-341 (National Highways Authority of India [NHAI]) (618787) (N24001785) Kodinar - Veraval Package VI from km. 221.610 to km. 263.00 of NH-8E & km. 120.900 to km. 121.150 of NH-8D (National Highways Authority of India [NHAI]) (618833) (N24000592) 4L Kodinar - Veraval Package VI from km. 222.400 to km. 230.00 Kodinar Bypass of NH-8E NH 51 new (National Highways Authority of India [NHAI]) (618834) (N24001827) 4L of Bal Works of Talaja - Mahuva from 54.990 km. to 100.450 km. of Old NH-8E Package-II (National Highways Authority of India [NHAI]) (618835) (N24001792) 4L PS Divided Carriageway from Patan Near Rajpur to Gojariya From Km 52.000 to Km 128.940 of NH-68 (National Highways Authority of India [NHAI]) (618901) (-) 4L PS from Ch. 94.030 in Jabugam Village to Ch. 132.320 in Dhamasiya Village of NH-56 Pkg-III (National Highways Authority of India [NHAI]) (618930) (-) 4L PS from Ch. 179.780 in Bitada/Movi Village to Ch. 208.900 in Nasarpore Village of NH-56 Pkg-V (National Highways Authority of India [NHAI]) (618931) (-) Construction of 4 lane with PS Idar-Badoli bypass section from design km 81/300 to km 95/500 of NH 168G in the State of Gujarat (MoRTH) (619061) (-) 6L of Chiloda-Naroda section from Km. 540.595 to Km. 555.595 of NH-8Package-VII (National Highways Authority of India [NHAI]) (619067) (-) Widening to 6L of Existing 4L Jetpur - Gondal - Rajkot Section from Km. 117.600 to Km. 185.00 on NH-27 (National Highways Authority of India [NHAI]) (619087) (N24002035) Four Laning of Una to Kodinar from km. 180.478 to km. 221.610 Package-V (National Highways Authority of India [NHAI]) (619145) (-) Kagvadar - Una Package-IV (National Highways Authority of India [NHAI]) (619146) (N24000569) 4L of Bal Works of Mahuva to Kagvadar from 100.450 Km. to 140.470 Km. of NH-8E Pkg- III (National Highways Authority of India [NHAI]) (619147) (N24001793) 4L of Bhavnagar - Talaja Package-I from Km. 6.945 to Km. 54.990 of Old NH-8E (National Highways Authority of India [NHAI]) (619148) (-) Delhi-Vadodara Greenfield Alignment NH-148N Pkg-27 Ch.729.700 to Ch.756.052 (NHAI) (619197) (-)",
+    "value": -0.3555
+   },
+   {
+    "feature": "cat__state_Haryana",
+    "value": 0.2495
+   },
+   {
+    "feature": "cat__state_Himachal Pradesh",
+    "value": 0.1709
+   },
+   {
+    "feature": "cat__state_Jammu and Kashmir",
+    "value": 0.2459
+   },
+   {
+    "feature": "cat__state_Jammu and Kashmir Project Name (Agency) (Project Code) (Legacy OCMS Code) 4L twin tube tunnel including approaches from Digdol to Khuni Nallah North Bound connecting with existing major bridge on NB and South Bound connecting with Tunnel T4 ,Single tube tunnel of Ramban to Banihal Pkg-II of Old NH-1A New NH-44 (National Highways Authority of India [NHAI]) (618544) (N24001622) 4L of Km.165.092 to Km.171.855 North Bound and from Km.166.895 to Km.173.638 South Bound, excl. certain reaches of North Bound and South Bound of Ramban to Banihal Pkg-III of Old NH-1A New NH-44 (National Highways Authority of India [NHAI]) (618545) (N24001621) 2L NH-1 from km 8.660 to km 33.775 Sumbal to Wayul to 4L dual carriageway NH standard as part of Srinagar Ring Road PhaseII [Design Ch. 41.907 to Ch. 66.609] (National Highways Authority of India [NHAI]) (618547) (N24002059) Construction of twin tube tunnels on Jammu Kashmir Ring Road NH-244A Between Design Ch. 50600 to 51700 and design Ch. 53535 to 55700 on EPC mode under residual NHDP component of Bharatmala Pariyojna (National Highways Authority of India [NHAI]) (618549) (N24001926) Corridor Efficiency Improvement including removal of black spots in Lakhanpur - Samba section of NH-44 from Chainage Km. 16.300 to Km. 74.100 (National Highways Authority of India [NHAI]) (618550) (N24001619) Upgradation and Strengthening of Chenani to Nashri Section via Patnitop of NH244 from Km 0.000 to Km 39.100 (National Highways Authority of India [NHAI]) (618967) (-) Construction/upgradation to 2-lane with paved shoulder from Design Km 95.55 Bandarkoot to Km. 111.06 Chattroo of 15.52 Km length on Khellani-Kishtwar-Chattroo section on NH-244 in UT of Jammu and Kashmir on EPC Mode Pkg-5 (NHIDCL) (619038) (N24001396) Widening and Strengthening of existing paveemnt to two lane with paved shoulders from km 116.00 to km 176.355 of NH-75E in the State of Jharkhand on EPC mode. (MoRTH) (618060) (N24001923) Construction of byepass around Lohardaga town of NH-143A in the Sate of Jharkhand under EPC mode. (MoRTH) (618083) (-) Widening to 2-lane with paved shoulder from km 0.00 to 44.00 Kuru-Ghaghra section of NH-143A including re-construction of culverts and bridges. (MoRTH) (618084) (N24001922) Widening and Strengthening/Reconstruction to Two Lane with Paved Shoulder/ Two Lane with paved shoulders with service road from km 0000 to km 42250 excluding design Ch. 03220 to 04200 & 28350 to 29060 of NH-320G in the state of Jharkhand under EPC mode (MoRTH) (618123) (N24001925) Construction of 2- Lane with paved shoulder from km 56.45 Dharampur More to 93.050 Pakur of NH-333A in the State of Jharkhand on EPC mode (MoRTH) (618127) (-) Widening and Reconstruction to 4-lane/4-lane with service road including structures from Pokharia More at Km 47.600 Ex. Km 50.230 to Govindpur at km 62.949 Ex. Km 65.325 of Nh-419 in the State of Jharkhand on EPC mode. (MoRTH) (618242) (-) Construction of Six lane elevated flyover including reconstruction/rehabilitation of existing pavement from Km 426230 to Km 430500 Length 4.27 Km at Nirsa in the Barwa Adda Panagarh section of NH-19 from Km.398.240 to Km.521.120 including Panagarh Bypass in the State of Jharkhand on EPC Mode. (National Highways Authority of India [NHAI]) (618534) (-) Construction of Six lane elevated flyover including reconstruction/rehabilitation of existing pavement from Km 406100 to Km 411150 Length 5.05 Km at Gobindpur area in the Barwa Adda Panagarh section of NH-19 from Km.398.240 to Km.521.120 including Panagarh Bypass in the State of Jharkhand on EPC Mode. (National Highways Authority of India [NHAI]) (618535) (-) 4 Lane of CG/JH Border-Gumla from km 0.000 to km 32.370 of NH-43 in the State of Jhrkhand (National Highways Authority of India [NHAI]) (618641) (-) 4L of Palma to Gumla from km. 26.00 to km. 89.170 of NH-23 (National Highways Authority of India [NHAI]) (618642) (N24001595) 4L of Ormanjhi-Gola section from Km 81.450 to Km 53.600 of NH- 320BPKG-II (National Highways Authority of India [NHAI]) (618644) (N24001854)",
+    "value": -0.1866
+   },
+   {
+    "feature": "cat__state_Jharkhand",
+    "value": 0.1443
+   },
+   {
+    "feature": "cat__state_Karnataka",
+    "value": 0.2872
+   },
+   {
+    "feature": "cat__state_Kerala",
+    "value": 0.1931
+   },
+   {
+    "feature": "cat__state_Ladakh",
+    "value": -0.4164
+   },
+   {
+    "feature": "cat__state_Madhya Pradesh",
+    "value": 0.0482
+   },
+   {
+    "feature": "cat__state_Madhya Pradesh Project Name (Agency) (Project Code) Indore - Harda Pkg-I [Indore to Raghav Garh from km. 0.25 to km. 26.903] (National Highways Authority of India [NHAI]) (618694) Indore - Harda Pkg-III [Nanasa to Pidgaon Section from km 95.000 to km 142.445] (National Highways Authority of India [NHAI]) (618695) Balance work of 4L of Nauradehi Sanctuary de-scoped stretch of Hiran River to Sindoor River from Km. 66.00 to 130.00 NH-12 New NH-45 (National Highways Authority of India [NHAI]) (618701) 4L of Chandesara to Khedakhajuriya from Km. 0.000 to - 750 & Km 0.000 to km 41.400 of NH-148NG Pkg-I (National Highways Authority of India [NHAI]) (618735) 2L PS of Hinotiya-Mehulwa section of NH-346 from Km. 27.000 to Km 75.700 Vidisha Mehulwa-Talbehat Pkg-II Section of NH- 346 (National Highways Authority of India [NHAI]) (618751) Construction of 4 Lane Flyover at Nagpur RTO Chowk To Nagpur University Campus from Ch 2/250 to 5/100 and 4 lane flyover at wadi/midc junction from km 8/360 to km, 10/300 on NH 53 in state of Maharashtra. (MoRTH) (617917) Construction of New Four Lane Bypass to Parbhani City Parwa to Asola Km 463/265 to Km 481/180 Design Ch. 19220 to Ch. 34434 Length-15.214 Km section of NH-61 on EPC mode in the State of Maharashtra. (MoRTH) (617932) Up-gradation to four lane/ Two lane with paved shoulders configuration of Kalyan - Murbad - Malshej Ghat - Nirmal Road NH- 61 km 15/200 to Km 38/00 and from Km. 58/00 to Km 84/00 Design length 48.58 km of NH-61 on EPC Mode in Thane District in the state of Maharashtra (MoRTH) (617933) Nasratpur to Barasgaon section of NH-61 2L / 4L PS from Km.514/00 to 558/200 (MoRTH) (617934) Kashedi ghat tunnel NH-66 [Bhogaon Khurd - Kashedi section] 4 lanes under NHDP on EPC mode (MoRTH) (617944) Arawali Kante section of NH-17New NH-66 4L PS from Km.241/300 to 281/300 (MoRTH) (617947) Kante - Wakad section of NH-66 4L PS from Km.281/300 to 332/200 (MoRTH) (617948) Kopargaon to Savali Vihir section (MoRTH) (617965) Rehabilitation/ Upgradation of existing Highway to four lane standards in Kurkheda town from km.413257 to km 410775, Two lane in Shankarpur Gurnuli km 42400 to km 43100 section and Reconstruction of Major Bridge at Ch. 448558 Bhuti Nallah and Ch. 411695 Sati River bridge, Minor Bridge at Ch. 411477 and Ch. 405800 Lendhari Bridge of NH 543 Bhamhapuri-wadsa-kurkheda-korchi-Deori-Amgaon road on EPC mode in the State of Maharashtra (MoRTH) (618042) Rehabilitation & Up-gradation of Sabalkhed to Ashti Section from Km 37900 to Km 55100 & Chinchpur to Jamkhed Section from km 70000 to km 72922 of NH-561 to Two lane with Paved shoulder/ Four lane configuration in the State of Maharashtra on EPC Mode Length20.122km. (MoRTH) (618046) Construction of four-lane Concrete Road from Police Headquarter Gondia City to Rawanwadi Village Birsi Airport Junction from design km 0.000 to km 15.781 existing km 39/720 of NH-753 to existing Km 8/400 of NH 543 on sections from Kohmara- Goregaon- Police HeadquarterKaranja - Collector Office Square - Balaghat T Point- Rawanwadi- Rajegaon of NH-753 and NH-543 in Gondia District in the state of Maharashtra. Total Length of the project 15.781 Km. (MoRTH) (618059) Rehabilitation/Upgradation of existing Highway to 2LPS/4 lane of Dhawali to Rajoli from Design Km.149476 to 163476 existing Km.150000 to 164000, Pandhasala to Mohadongri from design Km.170476 to 181476 existing Km.171000 to 182000, Ambeshivni Fata to Bodli from design Km.183476 to 185476 existing Km.184000 to 186000 and Made Tukum to Gadchiroli from design Km.188476 to 189476 existing Km.188000 to 18900 having length 28 km of NH-930 of Dhawali to Gadchroli road in the (MoRTH) (618065) Rehabilitation & Up-gradation of Mudkhed to Nanded section from Km. 372000 to Km 388400 of NH 161A i.e. Nanded-Bhokar-Himayatnagar-Kinwat-Mahur-Arani Road Design chainage from Km 372000 Mudkhed to Km 387650 Nanded of NH 161A Length 15.65 Km to 2/4Lane with paved shoulders configuration in the State of Maharashtra on EPC mode. (MoRTH) (618089) Sarsam - Kothari of NH-161A - 2L PS from Km.33/00 to 90/00 (MoRTH) (618090) Pen to Khopoli 2LPS (MoRTH) (618094) Guhagar - Rampur - 2L-PS - km 0/00 Guhagar to 26/230 Rampur and 40/00 Mirjoli to 53/600 Sati on NH-166E (MoRTH) (618097)",
+    "value": 0.0446
+   },
+   {
+    "feature": "cat__state_Maharashtra",
+    "value": -0.1215
+   },
+   {
+    "feature": "cat__state_Maharashtra Project Name (Agency) (Project Code) (Legacy OCMS Code) Delhi Metro Rail Phase-IV [Rithala - Kundli Corridor] (Delhi Metro Rail Corporation Limited [DMRC]) (617206) (-) Jaipur Metro Phase 1C from Badi Chaupar to Transport Nagar via Ramganj (Jaipur Metro Rail Corporation) (612066) (-) Jaipur Metro Phase 1D Project from Mansarovar to Ajmer Road Chauraha (Jaipur Metro Rail Corporation) (612068) (-) Chennai Metro Rail Phase-II Development Project (Chennai Metro Rail Limited [CMRL]) (702668) (-) Extension of Aqua Line Metro Corridor from Noida Sector-142 station to Botanical Garden, Noida of Noida Metro Rail Corporation (Noida Metro Rail Corporation Ltd. [NMRCL]) (616221) (-) LUCKNOW METRO RAIL PROJECT PHASE-1B EAST WEST CORRIDOR (Uttar Pradesh metro rail corporation [UPMRC]) (619052) (-) Kanpur Metro Rail Project (Uttar Pradesh metro rail corporation [UPMRC]) (702628) (N28000144) Agra Metro Rail Project (Uttar Pradesh metro rail corporation [UPMRC]) (702629) (N28000145)",
+    "value": 1.2155
+   },
+   {
+    "feature": "cat__state_Manipur",
+    "value": 0.1927
+   },
+   {
+    "feature": "cat__state_Meghalaya",
+    "value": -0.185
+   },
+   {
+    "feature": "cat__state_Mizoram",
+    "value": -0.7337
+   },
+   {
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Odisha, Telangana, Uttar Pradesh, West Bengal)",
+    "value": 0.4693
+   },
+   {
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Chhattisgarh, Jharkhand, Maharashtra, Odisha)",
+    "value": 0.3508
+   },
+   {
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Chhattisgarh, Odisha)",
+    "value": -0.3874
+   },
+   {
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Karnataka)",
+    "value": -0.1614
+   },
+   {
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Maharashtra, Telangana)",
+    "value": 1.3217
+   },
+   {
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Odisha)",
+    "value": 0.0404
+   },
+   {
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Tamil Nadu)",
+    "value": -0.0066
+   },
+   {
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Telangana)",
+    "value": -0.0077
+   },
+   {
+    "feature": "cat__state_Multi-States (Arunachal Pradesh, Assam)",
+    "value": -0.0597
+   },
+   {
+    "feature": "cat__state_Multi-States (Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura, West Bengal)",
+    "value": -0.0675
+   },
+   {
+    "feature": "cat__state_Multi-States (Arunachal Pradesh, Sikkim)",
+    "value": -0.6172
+   },
+   {
+    "feature": "cat__state_Multi-States (Assam, Bihar, Jharkhand, Odisha, West Bengal)",
+    "value": 0.3866
+   },
+   {
+    "feature": "cat__state_Multi-States (Assam, Bihar, West Bengal)",
+    "value": -0.1997
+   },
+   {
+    "feature": "cat__state_Multi-States (Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura)",
+    "value": -0.0645
+   },
+   {
+    "feature": "cat__state_Multi-States (Assam, Meghalaya)",
+    "value": -0.1102
+   },
+   {
+    "feature": "cat__state_Multi-States (Assam, Nagaland)",
+    "value": 0.5495
+   },
+   {
+    "feature": "cat__state_Multi-States (Bihar, Delhi, Jharkhand, Uttar Pradesh, West Bengal)",
+    "value": -0.3211
+   },
+   {
+    "feature": "cat__state_Multi-States (Bihar, Jharkhand)",
+    "value": -0.6723
+   },
+   {
+    "feature": "cat__state_Multi-States (Bihar, Jharkhand) Project Name (Agency) (Project Code) 4L of Sahibganj - Manihari Ganga Bridge including Manihari Bypass (National Highways Authority of India [NHAI]) (618952) Six Laning of Varanasi to Aurangabad from km. 786.00 to km. 978.40 of Old NH-2 (National Highways Authority of India [NHAI]) (618530) 6L of Dhanara - Hatibena Section from Km 124.611 to km 146.50 of NH-130-CD Package OD-1 (National Highways Authority of India [NHAI]) (618676) Balance work of 2L PS from Km 30.800 to Km 70.800 and 2L with Rigid Carriageway from Km 70.800 to km 84.120 of Khanapur- KA/GOA Border section of NH-4A (National Highways Authority of India [NHAI]) (618942) Bal. Works of Fagne Km. 510.000 to Maharashtra/Gujarat Border Km. 650.794 (National Highways Authority of India [NHAI]) (618637) 4L Greenfield a Malout bypass from ch. Km 44.500 to ch. Km 35.500 on NH-07 and Ch. Km 0.000 to Km 6.984 on NH-09 bMandi Dabwali Bypass from Ch. 38.450 Km to Km 27.910 Pkg-02 (National Highways Authority of India [NHAI]) (618760) 4L Ambala - Kalaamb from Km. -0.800 to Km. 33.015 of old NH-72 (National Highways Authority of India [NHAI]) (618935) Additional Structures on 6LGurgaon-Jaipur Section of NH-48 between KM 42.700 to KM 273.00 (National Highways Authority of India [NHAI]) (618505) 6L access Controlled Greenfield Highway from Ranipur Barsi to Adhoya Musalmana section of Shamli -Ambala Package-II Design Ch. Form km 45.500 to km 84.400 (National Highways Authority of India [NHAI]) (618723) 4L from Km 219.600 Khajuri to Km 260.483 Wyndhamganj on NH-75 Sec-V (National Highways Authority of India [NHAI]) (618828) Barwa Adda Km. 398.240 to Panagarh Km. 521.120 (National Highways Authority of India [NHAI]) (618533) 2L PS of JH / WB Border km. 70.524 - Purulia km.84.400 & Purulia km. 94.30 - Chandil Junction with NH-33 km. 153.705 of Old NH-32 (National Highways Authority of India [NHAI]) (618909) 6L from Belgaum to Sankeshwar Bypass from Km. 515.000 to Km. 555.017 of NH-48 Pkg-I (National Highways Authority of India [NHAI]) (618515) 6L from Sankeshwar Bypass to MH-KNT Border from Km. 555.017 to Km. 592.853 of NH-48 Pkg-II (National Highways Authority of India [NHAI]) (618516) Bangalore Ring Road STRR-NH-948A- Package-I of Phase-III from Belagondapalli TN to TN/KNT border from km 144.480 to 179.969 (National Highways Authority of India [NHAI]) (618519) Hosur to Dhamrapuri Pkg-1 [Neraluru - Thorapalli Agraharam] (National Highways Authority of India [NHAI]) (618581) 6L Access Controlled Greenfield Highway of Nandinne village to Julekal village from Km 202.900 to Km 242.200 Pkg-1 (National Highways Authority of India [NHAI]) (618632) 4L of Rajura-Korpana-Adilabad Road upto M.S. Border from km 32.910 to km 89.090 of NH-353B (National Highways Authority of India [NHAI]) (618938) Puducherry Km.29.000 to Poondiyankuppam Km.67.000 (National Highways Authority of India [NHAI]) (618845) Sattanathapuram to Nagapattinam from Km 123.800 to Km 179.555 (National Highways Authority of India [NHAI]) (618847) 6L with access control provision Saharanpur bypass to Ganeshpur section from 13.89 Km to 41.820 Km of Delhi- Dehradun Economic Corridor package-2 (National Highways Authority of India [NHAI]) (618711) Improvement & Up-gradation of NH-734 Section of Moradabad-Thakurdwara Kashipur including Moradabad & Kashipur Bypasse Package-III Kashipur Bypass Length 14.490 Km., Starts from Ch. 38770 and ends at Ch. 53260 existing Ch. 05560 (National Highways Authority of India [NHAI]) (618928) 4/6L of Spur to Haridwar Greenfield from Km. 0.000 to Km. 50.70 (National Highways Authority of India [NHAI]) (618969) Widening of existing Single lane / Intermediate lane road to 2 lane from Km 101 to Km 125 of NH 61 (MoRTH) (617886) Widening of existing single lane to intermediate lane road from Mokokchung to Chare via Dikhu in the state of Nagaland on EPC mode (MoRTH) (618002) Widening to Existing single lane /intermediate lane to 2 lane from Km185.00 to Km 220.00 of NH-61 New NH-02 in the state of Nagaland. (MoRTH) (618072)",
+    "value": 0.0233
+   },
+   {
+    "feature": "cat__state_Multi-States (Bihar, Jharkhand, Uttar Pradesh, West Bengal)",
+    "value": -0.466
+   },
+   {
+    "feature": "cat__state_Multi-States (Bihar, Madhya Pradesh, Rajasthan, Uttar Pradesh)",
+    "value": -0.043
+   },
+   {
+    "feature": "cat__state_Multi-States (Bihar, Odisha, West Bengal)",
+    "value": 0.4428
+   },
+   {
+    "feature": "cat__state_Multi-States (Bihar, Uttar Pradesh)",
+    "value": -0.0706
+   },
+   {
+    "feature": "cat__state_Multi-States (Bihar, West Bengal)",
+    "value": 0.1295
+   },
+   {
+    "feature": "cat__state_Multi-States (Chhattisgarh, Madhya Pradesh, Maharashtra, Odisha)",
+    "value": 0.2248
+   },
+   {
+    "feature": "cat__state_Multi-States (Chhattisgarh, Maharashtra)",
+    "value": -0.3608
+   },
+   {
+    "feature": "cat__state_Multi-States (Chhattisgarh, Odisha)",
+    "value": -0.8397
+   },
+   {
+    "feature": "cat__state_Multi-States (Dadra & Nagar Haveli and Daman & Diu, Gujarat, Maharashtra)",
+    "value": 0.5072
+   },
+   {
+    "feature": "cat__state_Multi-States (Delhi, Gujarat, Madhya Pradesh, Maharashtra, Rajasthan)",
+    "value": 0.585
+   },
+   {
+    "feature": "cat__state_Multi-States (Delhi, Haryana)",
+    "value": 0.5399
+   },
+   {
+    "feature": "cat__state_Multi-States (Delhi, Rajasthan)",
+    "value": 0.2333
+   },
+   {
+    "feature": "cat__state_Multi-States (Delhi, Uttar Pradesh)",
+    "value": 0.4349
+   },
+   {
+    "feature": "cat__state_Multi-States (Goa, Karnataka)",
+    "value": -0.8203
+   },
+   {
+    "feature": "cat__state_Multi-States (Gujarat, Haryana, Maharashtra, Rajasthan, Uttar Pradesh)",
+    "value": -0.3357
+   },
+   {
+    "feature": "cat__state_Multi-States (Gujarat, Haryana, Punjab, Rajasthan)",
+    "value": 1.0389
+   },
+   {
+    "feature": "cat__state_Multi-States (Gujarat, Haryana, Rajasthan)",
+    "value": -0.4648
+   },
+   {
+    "feature": "cat__state_Multi-States (Gujarat, Madhya Pradesh)",
+    "value": -0.2983
+   },
+   {
+    "feature": "cat__state_Multi-States (Gujarat, Madhya Pradesh, Uttar Pradesh)",
+    "value": 0.2587
+   },
+   {
+    "feature": "cat__state_Multi-States (Gujarat, Maharashtra)",
+    "value": -0.9671
+   },
+   {
+    "feature": "cat__state_Multi-States (Gujarat, Rajasthan)",
+    "value": -0.2251
+   },
+   {
+    "feature": "cat__state_Multi-States (Haryana, Himachal Pradesh)",
+    "value": -0.1551
+   },
+   {
+    "feature": "cat__state_Multi-States (Haryana, Punjab)",
+    "value": 0.6873
+   },
+   {
+    "feature": "cat__state_Multi-States (Haryana, Punjab, Rajasthan)",
+    "value": 0.4146
+   },
+   {
+    "feature": "cat__state_Multi-States (Haryana, Rajasthan)",
+    "value": 0.2599
+   },
+   {
+    "feature": "cat__state_Multi-States (Haryana, Uttar Pradesh)",
+    "value": -0.3573
+   },
+   {
+    "feature": "cat__state_Multi-States (Himachal Pradesh, Punjab)",
+    "value": -0.439
+   },
+   {
+    "feature": "cat__state_Multi-States (Himachal Pradesh, Uttarakhand)",
+    "value": -0.639
+   },
+   {
+    "feature": "cat__state_Multi-States (Jammu and Kashmir, Punjab)",
+    "value": -0.2595
+   },
+   {
+    "feature": "cat__state_Multi-States (Jharkhand, Odisha)",
+    "value": -0.2892
+   },
+   {
+    "feature": "cat__state_Multi-States (Jharkhand, Odisha, West Bengal)",
+    "value": -0.068
+   },
+   {
+    "feature": "cat__state_Multi-States (Jharkhand, Uttar Pradesh)",
+    "value": -0.3594
+   },
+   {
+    "feature": "cat__state_Multi-States (Jharkhand, West Bengal)",
+    "value": -1.048
+   },
+   {
+    "feature": "cat__state_Multi-States (Karnataka, Kerala)",
+    "value": 0.7166
+   },
+   {
+    "feature": "cat__state_Multi-States (Karnataka, Kerala, Tamil Nadu)",
+    "value": -0.1391
+   },
+   {
+    "feature": "cat__state_Multi-States (Karnataka, Maharashtra)",
+    "value": -0.0737
+   },
+   {
+    "feature": "cat__state_Multi-States (Karnataka, Maharashtra, Telangana, Uttar Pradesh)",
+    "value": -0.6051
+   },
+   {
+    "feature": "cat__state_Multi-States (Karnataka, Tamil Nadu)",
+    "value": -0.102
+   },
+   {
+    "feature": "cat__state_Multi-States (Karnataka, Telangana)",
+    "value": -0.0882
+   },
+   {
+    "feature": "cat__state_Multi-States (Kerala, Puducherry)",
+    "value": 0.6771
+   },
+   {
+    "feature": "cat__state_Multi-States (Kerala, Tamil Nadu)",
+    "value": 0.9073
+   },
+   {
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Maharashtra)",
+    "value": -0.6598
+   },
+   {
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Rajasthan)",
+    "value": 0.2075
+   },
+   {
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Rajasthan, Uttar Pradesh)",
+    "value": -0.3516
+   },
+   {
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Uttar Pradesh)",
+    "value": -0.6807
+   },
+   {
+    "feature": "cat__state_Multi-States (Maharashtra, Telangana)",
+    "value": -1.3123
+   },
+   {
+    "feature": "cat__state_Multi-States (Odisha, West Bengal)",
+    "value": 0.5147
+   },
+   {
+    "feature": "cat__state_Multi-States (Puducherry, Tamil Nadu)",
+    "value": 0.1983
+   },
+   {
+    "feature": "cat__state_Multi-States (Punjab, Rajasthan)",
+    "value": -0.1924
+   },
+   {
+    "feature": "cat__state_Multi-States (Rajasthan, Uttar Pradesh)",
+    "value": 0.5884
+   },
+   {
+    "feature": "cat__state_Multi-States (Sikkim, West Bengal)",
+    "value": -0.2923
+   },
+   {
+    "feature": "cat__state_Multi-States (Uttar Pradesh, Uttarakhand)",
+    "value": 0.8449
+   },
+   {
+    "feature": "cat__state_Multi-States (Uttar Pradesh, West Bengal)",
+    "value": -0.0995
+   },
+   {
+    "feature": "cat__state_Nagaland",
+    "value": -0.3642
+   },
+   {
+    "feature": "cat__state_Odisha",
+    "value": 0.1939
+   },
+   {
+    "feature": "cat__state_Offshore",
+    "value": 0.5118
+   },
+   {
+    "feature": "cat__state_PAN India",
+    "value": -0.5812
+   },
+   {
+    "feature": "cat__state_Puducherry",
+    "value": 0.6294
+   },
+   {
+    "feature": "cat__state_Punjab",
+    "value": 0.2174
+   },
+   {
+    "feature": "cat__state_Rajasthan",
+    "value": 0.2558
+   },
+   {
+    "feature": "cat__state_Sikkim",
+    "value": 0.3523
+   },
+   {
+    "feature": "cat__state_Tamil Nadu",
+    "value": 0.3114
+   },
+   {
+    "feature": "cat__state_Telangana",
+    "value": -0.1623
+   },
+   {
+    "feature": "cat__state_Tripura",
+    "value": 0.328
+   },
+   {
+    "feature": "cat__state_Uttar Pradesh",
+    "value": 0.0674
+   },
+   {
+    "feature": "cat__state_Uttar Pradesh Project Name (Agency) (Project Code) (Legacy OCMS Code) Construction of Balrampur bypass with 2L flexible pavement configuration from km.223.000 of NH-330 to km.328.300 of NH-730 under EPC mode (MoRTH) (618054) (N24002150) Construction of Pratapgarh Bypass Extension connecting NH-31 to NH-330 on EPC mode in the State of Uttar Pradesh. (MoRTH) (618055) (N24002016) Improvement and Up-gradation to two Lane with Paved Shoulder Configuration from existing km. 420.00 Shohrathgarh to km. 454.00 Uska Bazar of NH-730 in the state of Uttar Pradesh EPC basis (MoRTH) (618056) (N24002121) Construction of Shohratgarh Bypass on NH-730 under EPC mode in the State of Uttar Pradesh (MoRTH) (618057) (N24001997) Widening & Strenghteningof section from Bharthana chowk to Kodarkoot km.0.00 to km.40.00 of NH-91-A on EPC mode (MoRTH) (618063) (N24001587) Construction of Amethi bypass Part-II at km.30.050 of NH-931 under EPC mode in the state of Uttar Pradesh (MoRTH) (618066) (N24002214) Rehabilitation & Up-gradation from design Km. 0.000 to Km. 69.280 of NH-931 Pratapgarh - Amethi - Gauriganj -Musafirkhana to two lane with paved shoulder on Engineering, Procurement & Construction EpC mode in the State of Uttar Pradesh (MoRTH) (618067) (-) Construction of two lane with paved shoulder from existing Km.0.000 to Km.55.610 design km. 0.000 to km. 54.048 of NH-124D (MoRTH) (618075) (N24002031) Construction of Mariahu Bypass with four lane paved shoulder configuration Km. 53.540 to Km.59.200 of NH-135A on EPC mode in the state of Uttar Pradesh (MoRTH) (618081) (N24002115) Widening & Upgradation to four lane configuration from Km.34.900 Bhadohi to km.73.134 Jaunpur of NH-135A on EPC mode (MoRTH) (618082) (N24001479) Improvement and upgradation to two lane with Paved Shoulder configuration from existing km 55.00 to km 90.00 Design length 34.76 of NH-227A near Chhapia Village to near Sikriganj in the State of UP on EPC Mode. (MoRTH) (618110) (N24001469) Improvement and upgradation to two lane with paved shoulder configuration from existing km 90.00 to 130.00 Design length 39.15 of NH-227A near Sikriganj to Barhalganj in the State of UP on EPC Mode. (MoRTH) (618111) (N24002015) Improvement and up-gradation of NH-227B 84 Kosi Parikrama Marg Package I, from km 228.920 Jagarnathpur to Km 235.960/0.000 MakhaudaDham to Km 29.000 Sarpur in the State of Uttar Pradesh on EPC basis (MoRTH) (618112) (N24002240) Improvement and up-gradation of NH-227B 84 Kosi Parikrama Marg Package III, from Km.47.800 Gosaiganj to Km.73.300 Bikapur in the State of Uttar Pradesh on EPC basis. (MoRTH) (618113) (N24002241) Improvement and up-gradation of NH-227B 84 Kosi Parikrama Marg PackageV, from Design Km.140.960 Patranga to Km.160.200 Bahuvan Madar Majha on EPC mode in the State of Uttar Pradesh (MoRTH) (618114) (-) lmprovement and Up-gradation from Km. 73.300 Bikapur to Km.140.960 Patranga of NH-227B 84 Kosi Parikrama Marg to 2LPS along with Parikrama Path (MoRTH) (618116) (-) Rehabilitation and upgradation from km 51.600 to km 75.700 of NH-321G Nuhkhas to Etah section to two lane with paved shoulder configuration under EPC mode in the State of Uttar Pradesh (MoRTH) (618124) (N24002116) Improvement and up-gradation to 2LPS of NH-227B 84-Kosi Parikrama Marg PackageVI, Design Km 160200 Bahuvan Madar Majha to Km 224040 Jagarnathpur under HAM (MoRTH) (618162) (-)",
+    "value": 0.4477
+   },
+   {
+    "feature": "cat__state_Uttarakhand",
+    "value": -0.4187
+   },
+   {
+    "feature": "cat__state_West Bengal",
+    "value": 0.392
+   },
+   {
+    "feature": "num__physical_progress_pct",
+    "value": 0.4698
+   },
+   {
+    "feature": "num__exp_share",
+    "value": -0.095
+   },
+   {
+    "feature": "num__age_months",
+    "value": -0.2417
+   },
+   {
+    "feature": "num__months_to_doc",
+    "value": -0.6017
+   },
+   {
+    "feature": "num__log_cost_original",
+    "value": 0.0952
+   },
+   {
+    "feature": "num__cost_overrun_pct",
+    "value": -0.0107
+   },
+   {
+    "feature": "num__time_overrun_months",
+    "value": 0.1714
+   },
+   {
+    "feature": "num__has_revised_doc",
+    "value": -0.1339
+   },
+   {
+    "feature": "num__gap_months",
+    "value": 0.9587
+   }
+  ],
+  "feature_sets": {
+   "A": [
+    "physical_progress_pct",
+    "exp_share",
+    "age_months",
+    "months_to_doc",
+    "log_cost_original",
+    "cost_overrun_pct",
+    "time_overrun_months",
+    "has_revised_doc",
+    "sector",
+    "state",
+    "gap_months"
+   ],
+   "B": [
+    "physical_progress_pct",
+    "exp_share",
+    "age_months",
+    "months_to_doc",
+    "log_cost_original",
+    "cost_overrun_pct",
+    "time_overrun_months",
+    "has_revised_doc",
+    "sector",
+    "state",
+    "gap_months",
+    "velocity_pct_per_month",
+    "unreachable_ratio",
+    "n_prior_revisions",
+    "agency_prior_slip_rate",
+    "n_flags_to_t0",
+    "exp_decrease_ever"
+   ]
+  },
+  "importance_HGB_B": [
+   {
+    "feature": "months_to_doc",
+    "mean": 0.3835,
+    "std": 0.0081
+   },
+   {
+    "feature": "sector",
+    "mean": 0.09,
+    "std": 0.0183
+   },
+   {
+    "feature": "agency_prior_slip_rate",
+    "mean": 0.0504,
+    "std": 0.0176
+   },
+   {
+    "feature": "physical_progress_pct",
+    "mean": 0.0081,
+    "std": 0.0041
+   },
+   {
+    "feature": "state",
+    "mean": 0.0072,
+    "std": 0.0082
+   },
+   {
+    "feature": "has_revised_doc",
+    "mean": 0.0043,
+    "std": 0.0031
+   },
+   {
+    "feature": "unreachable_ratio",
+    "mean": 0.0029,
+    "std": 0.002
+   },
+   {
+    "feature": "velocity_pct_per_month",
+    "mean": 0.0026,
+    "std": 0.0034
+   },
+   {
+    "feature": "n_flags_to_t0",
+    "mean": 0.0001,
+    "std": 0.0001
+   },
+   {
+    "feature": "exp_decrease_ever",
+    "mean": 0.0,
+    "std": 0.0
+   },
+   {
+    "feature": "gap_months",
+    "mean": 0.0,
+    "std": 0.0
+   },
+   {
+    "feature": "log_cost_original",
+    "mean": -0.0009,
+    "std": 0.0019
+   },
+   {
+    "feature": "time_overrun_months",
+    "mean": -0.0013,
+    "std": 0.0024
+   },
+   {
+    "feature": "cost_overrun_pct",
+    "mean": -0.0014,
+    "std": 0.0014
+   },
+   {
+    "feature": "n_prior_revisions",
+    "mean": -0.003,
+    "std": 0.0012
+   },
+   {
+    "feature": "age_months",
+    "mean": -0.0039,
+    "std": 0.0032
+   },
+   {
+    "feature": "exp_share",
+    "mean": -0.0071,
+    "std": 0.0027
+   }
+  ],
+  "results": [
+   {
+    "base_rate": 0.1928,
+    "calibration": [
+     {
+      "bin": 0,
+      "mean_obs": 0.0858,
+      "mean_pred": 0.045,
+      "n": 431
+     },
+     {
+      "bin": 1,
+      "mean_obs": 0.1639,
+      "mean_pred": 0.1452,
+      "n": 183
+     },
+     {
+      "bin": 2,
+      "mean_obs": 0.1932,
+      "mean_pred": 0.255,
+      "n": 176
+     },
+     {
+      "bin": 3,
+      "mean_obs": 0.1606,
+      "mean_pred": 0.3523,
+      "n": 193
+     },
+     {
+      "bin": 4,
+      "mean_obs": 0.1086,
+      "mean_pred": 0.4517,
+      "n": 175
+     },
+     {
+      "bin": 5,
+      "mean_obs": 0.1624,
+      "mean_pred": 0.5485,
+      "n": 197
+     },
+     {
+      "bin": 6,
+      "mean_obs": 0.3502,
+      "mean_pred": 0.6524,
+      "n": 257
+     },
+     {
+      "bin": 7,
+      "mean_obs": 0.55,
+      "mean_pred": 0.7243,
+      "n": 100
+     },
+     {
+      "bin": 8,
+      "mean_obs": 0.75,
+      "mean_pred": 0.8195,
+      "n": 8
+     },
+     {
+      "bin": 9,
+      "mean_obs": 0.0,
+      "mean_pred": 0.9965,
+      "n": 12
+     }
+    ],
+    "lift_at_100": 2.541,
+    "model_id": "LR_A",
+    "n": 1732,
+    "positives": 334,
+    "pr_auc": 0.3472,
+    "pr_curve": [
+     {
+      "x": 1.0,
+      "y": 0.1928
+     },
+     {
+      "x": 0.994,
+      "y": 0.1956
+     },
+     {
+      "x": 0.988,
+      "y": 0.1986
+     },
+     {
+      "x": 0.985,
+      "y": 0.2022
+     },
+     {
+      "x": 0.979,
+      "y": 0.2054
+     },
+     {
+      "x": 0.976,
+      "y": 0.2094
+     },
+     {
+      "x": 0.9731,
+      "y": 0.2135
+     },
+     {
+      "x": 0.9641,
+      "y": 0.2167
+     },
+     {
+      "x": 0.9491,
+      "y": 0.2185
+     },
+     {
+      "x": 0.9401,
+      "y": 0.2218
+     },
+     {
+      "x": 0.9281,
+      "y": 0.2245
+     },
+     {
+      "x": 0.9102,
+      "y": 0.2259
+     },
+     {
+      "x": 0.9012,
+      "y": 0.2296
+     },
+     {
+      "x": 0.8802,
+      "y": 0.2304
+     },
+     {
+      "x": 0.8593,
+      "y": 0.2315
+     },
+     {
+      "x": 0.8443,
+      "y": 0.234
+     },
+     {
+      "x": 0.8263,
+      "y": 0.2359
+     },
+     {
+      "x": 0.8084,
+      "y": 0.2379
+     },
+     {
+      "x": 0.7874,
+      "y": 0.2391
+     },
+     {
+      "x": 0.7665,
+      "y": 0.2404
+     },
+     {
+      "x": 0.7515,
+      "y": 0.2437
+     },
+     {
+      "x": 0.7335,
+      "y": 0.2465
+     },
+     {
+      "x": 0.7066,
+      "y": 0.2461
+     },
+     {
+      "x": 0.6946,
+      "y": 0.2511
+     },
+     {
+      "x": 0.6677,
+      "y": 0.2508
+     },
+     {
+      "x": 0.6437,
+      "y": 0.2518
+     },
+     {
+      "x": 0.6317,
+      "y": 0.2576
+     },
+     {
+      "x": 0.6138,
+      "y": 0.2615
+     },
+     {
+      "x": 0.6048,
+      "y": 0.2701
+     },
+     {
+      "x": 0.5868,
+      "y": 0.2749
+     },
+     {
+      "x": 0.5719,
+      "y": 0.2817
+     },
+     {
+      "x": 0.5719,
+      "y": 0.297
+     },
+     {
+      "x": 0.5539,
+      "y": 0.3043
+     },
+     {
+      "x": 0.5479,
+      "y": 0.3194
+     },
+     {
+      "x": 0.5299,
+      "y": 0.329
+     },
+     {
+      "x": 0.512,
+      "y": 0.3406
+     },
+     {
+      "x": 0.503,
+      "y": 0.3597
+     },
+     {
+      "x": 0.491,
+      "y": 0.3796
+     },
+     {
+      "x": 0.4701,
+      "y": 0.3955
+     },
+     {
+      "x": 0.4401,
+      "y": 0.4061
+     },
+     {
+      "x": 0.4222,
+      "y": 0.4312
+     },
+     {
+      "x": 0.3892,
+      "y": 0.4452
+     },
+     {
+      "x": 0.3443,
+      "y": 0.4492
+     },
+     {
+      "x": 0.3024,
+      "y": 0.457
+     },
+     {
+      "x": 0.2635,
+      "y": 0.4731
+     },
+     {
+      "x": 0.2096,
+      "y": 0.4636
+     },
+     {
+      "x": 0.1707,
+      "y": 0.4914
+     },
+     {
+      "x": 0.1257,
+      "y": 0.5185
+     },
+     {
+      "x": 0.0569,
+      "y": 0.413
+     },
+     {
+      "x": 0.0,
+      "y": 1.0
+     }
+    ],
+    "precision_at_100": 0.49,
+    "recall_at_100": 0.1467,
+    "roc_auc": 0.6818,
+    "test_pair": "P4"
+   },
+   {
+    "base_rate": 0.1928,
+    "calibration": [
+     {
+      "bin": 0,
+      "mean_obs": 0.0957,
+      "mean_pred": 0.0474,
+      "n": 700
+     },
+     {
+      "bin": 1,
+      "mean_obs": 0.101,
+      "mean_pred": 0.147,
+      "n": 287
+     },
+     {
+      "bin": 2,
+      "mean_obs": 0.119,
+      "mean_pred": 0.2462,
+      "n": 168
+     },
+     {
+      "bin": 3,
+      "mean_obs": 0.197,
+      "mean_pred": 0.3468,
+      "n": 132
+     },
+     {
+      "bin": 4,
+      "mean_obs": 0.119,
+      "mean_pred": 0.4485,
+      "n": 84
+     },
+     {
+      "bin": 5,
+      "mean_obs": 0.194,
+      "mean_pred": 0.549,
+      "n": 67
+     },
+     {
+      "bin": 6,
+      "mean_obs": 0.1774,
+      "mean_pred": 0.6525,
+      "n": 62
+     },
+     {
+      "bin": 7,
+      "mean_obs": 0.25,
+      "mean_pred": 0.7498,
+      "n": 60
+     },
+     {
+      "bin": 8,
+      "mean_obs": 0.6364,
+      "mean_pred": 0.8584,
+      "n": 55
+     },
+     {
+      "bin": 9,
+      "mean_obs": 0.9231,
+      "mean_pred": 0.9224,
+      "n": 117
+     }
+    ],
+    "lift_at_100": 4.8745,
+    "model_id": "HGB_A",
+    "n": 1732,
+    "positives": 334,
+    "pr_auc": 0.6051,
+    "pr_curve": [
+     {
+      "x": 1.0,
+      "y": 0.1928
+     },
+     {
+      "x": 1.0,
+      "y": 0.1967
+     },
+     {
+      "x": 1.0,
+      "y": 0.2008
+     },
+     {
+      "x": 1.0,
+      "y": 0.2052
+     },
+     {
+      "x": 0.985,
+      "y": 0.2067
+     },
+     {
+      "x": 0.976,
+      "y": 0.2094
+     },
+     {
+      "x": 0.9671,
+      "y": 0.2122
+     },
+     {
+      "x": 0.9551,
+      "y": 0.2145
+     },
+     {
+      "x": 0.9461,
+      "y": 0.2178
+     },
+     {
+      "x": 0.9431,
+      "y": 0.2225
+     },
+     {
+      "x": 0.9341,
+      "y": 0.2259
+     },
+     {
+      "x": 0.9311,
+      "y": 0.2311
+     },
+     {
+      "x": 0.9162,
+      "y": 0.2334
+     },
+     {
+      "x": 0.9012,
+      "y": 0.2361
+     },
+     {
+      "x": 0.8892,
+      "y": 0.2395
+     },
+     {
+      "x": 0.8802,
+      "y": 0.244
+     },
+     {
+      "x": 0.8713,
+      "y": 0.2487
+     },
+     {
+      "x": 0.8593,
+      "y": 0.2531
+     },
+     {
+      "x": 0.8383,
+      "y": 0.255
+     },
+     {
+      "x": 0.8204,
+      "y": 0.2578
+     },
+     {
+      "x": 0.7994,
+      "y": 0.26
+     },
+     {
+      "x": 0.7904,
+      "y": 0.2661
+     },
+     {
+      "x": 0.7754,
+      "y": 0.2709
+     },
+     {
+      "x": 0.7635,
+      "y": 0.2769
+     },
+     {
+      "x": 0.7515,
+      "y": 0.2833
+     },
+     {
+      "x": 0.7395,
+      "y": 0.2902
+     },
+     {
+      "x": 0.7275,
+      "y": 0.2982
+     },
+     {
+      "x": 0.7216,
+      "y": 0.3102
+     },
+     {
+      "x": 0.7126,
+      "y": 0.3208
+     },
+     {
+      "x": 0.6976,
+      "y": 0.3296
+     },
+     {
+      "x": 0.6766,
+      "y": 0.3368
+     },
+     {
+      "x": 0.6647,
+      "y": 0.3491
+     },
+     {
+      "x": 0.6617,
+      "y": 0.3677
+     },
+     {
+      "x": 0.6497,
+      "y": 0.3841
+     },
+     {
+      "x": 0.6287,
+      "y": 0.397
+     },
+     {
+      "x": 0.6078,
+      "y": 0.4109
+     },
+     {
+      "x": 0.5808,
+      "y": 0.4227
+     },
+     {
+      "x": 0.5689,
+      "y": 0.4481
+     },
+     {
+      "x": 0.5539,
+      "y": 0.4756
+     },
+     {
+      "x": 0.5419,
+      "y": 0.5127
+     },
+     {
+      "x": 0.515,
+      "y": 0.5409
+     },
+     {
+      "x": 0.497,
+      "y": 0.5866
+     },
+     {
+      "x": 0.476,
+      "y": 0.6411
+     },
+     {
+      "x": 0.4671,
+      "y": 0.7324
+     },
+     {
+      "x": 0.4371,
+      "y": 0.8202
+     },
+     {
+      "x": 0.3832,
+      "y": 0.9014
+     },
+     {
+      "x": 0.3024,
+      "y": 0.9439
+     },
+     {
+      "x": 0.2006,
+      "y": 0.9306
+     },
+     {
+      "x": 0.0928,
+      "y": 0.8611
+     },
+     {
+      "x": 0.0,
+      "y": 1.0
+     }
+    ],
+    "precision_at_100": 0.94,
+    "recall_at_100": 0.2814,
+    "roc_auc": 0.7675,
+    "test_pair": "P4"
+   },
+   {
+    "base_rate": 0.1928,
+    "calibration": [
+     {
+      "bin": 0,
+      "mean_obs": 0.0955,
+      "mean_pred": 0.0484,
+      "n": 785
+     },
+     {
+      "bin": 1,
+      "mean_obs": 0.1059,
+      "mean_pred": 0.1408,
+      "n": 340
+     },
+     {
+      "bin": 2,
+      "mean_obs": 0.1879,
+      "mean_pred": 0.2459,
+      "n": 165
+     },
+     {
+      "bin": 3,
+      "mean_obs": 0.1782,
+      "mean_pred": 0.3485,
+      "n": 101
+     },
+     {
+      "bin": 4,
+      "mean_obs": 0.2466,
+      "mean_pred": 0.4499,
+      "n": 73
+     },
+     {
+      "bin": 5,
+      "mean_obs": 0.1633,
+      "mean_pred": 0.5473,
+      "n": 49
+     },
+     {
+      "bin": 6,
+      "mean_obs": 0.4043,
+      "mean_pred": 0.654,
+      "n": 47
+     },
+     {
+      "bin": 7,
+      "mean_obs": 0.381,
+      "mean_pred": 0.7385,
+      "n": 42
+     },
+     {
+      "bin": 8,
+      "mean_obs": 0.8557,
+      "mean_pred": 0.8669,
+      "n": 97
+     },
+     {
+      "bin": 9,
+      "mean_obs": 0.9091,
+      "mean_pred": 0.9105,
+      "n": 33
+     }
+    ],
+    "lift_at_100": 4.8745,
+    "model_id": "HGB_B",
+    "n": 1732,
+    "positives": 334,
+    "pr_auc": 0.5868,
+    "pr_curve": [
+     {
+      "x": 1.0,
+      "y": 0.1928
+     },
+     {
+      "x": 1.0,
+      "y": 0.1978
+     },
+     {
+      "x": 0.994,
+      "y": 0.2008
+     },
+     {
+      "x": 0.988,
+      "y": 0.2038
+     },
+     {
+      "x": 0.9641,
+      "y": 0.2034
+     },
+     {
+      "x": 0.9581,
+      "y": 0.207
+     },
+     {
+      "x": 0.9371,
+      "y": 0.207
+     },
+     {
+      "x": 0.9281,
+      "y": 0.21
+     },
+     {
+      "x": 0.9251,
+      "y": 0.2147
+     },
+     {
+      "x": 0.9192,
+      "y": 0.2187
+     },
+     {
+      "x": 0.9132,
+      "y": 0.2228
+     },
+     {
+      "x": 0.9012,
+      "y": 0.2256
+     },
+     {
+      "x": 0.8952,
+      "y": 0.23
+     },
+     {
+      "x": 0.8743,
+      "y": 0.2308
+     },
+     {
+      "x": 0.8593,
+      "y": 0.2333
+     },
+     {
+      "x": 0.8533,
+      "y": 0.2387
+     },
+     {
+      "x": 0.8413,
+      "y": 0.2425
+     },
+     {
+      "x": 0.8323,
+      "y": 0.2473
+     },
+     {
+      "x": 0.8323,
+      "y": 0.255
+     },
+     {
+      "x": 0.8114,
+      "y": 0.2569
+     },
+     {
+      "x": 0.7964,
+      "y": 0.2608
+     },
+     {
+      "x": 0.7934,
+      "y": 0.2701
+     },
+     {
+      "x": 0.7754,
+      "y": 0.2738
+     },
+     {
+      "x": 0.7665,
+      "y": 0.2813
+     },
+     {
+      "x": 0.7515,
+      "y": 0.2865
+     },
+     {
+      "x": 0.7365,
+      "y": 0.2925
+     },
+     {
+      "x": 0.7216,
+      "y": 0.2986
+     },
+     {
+      "x": 0.7126,
+      "y": 0.3083
+     },
+     {
+      "x": 0.6886,
+      "y": 0.3125
+     },
+     {
+      "x": 0.6766,
+      "y": 0.3219
+     },
+     {
+      "x": 0.6707,
+      "y": 0.3368
+     },
+     {
+      "x": 0.6677,
+      "y": 0.3545
+     },
+     {
+      "x": 0.6647,
+      "y": 0.3731
+     },
+     {
+      "x": 0.6377,
+      "y": 0.3804
+     },
+     {
+      "x": 0.6257,
+      "y": 0.3981
+     },
+     {
+      "x": 0.6048,
+      "y": 0.4114
+     },
+     {
+      "x": 0.5898,
+      "y": 0.432
+     },
+     {
+      "x": 0.5659,
+      "y": 0.4489
+     },
+     {
+      "x": 0.5479,
+      "y": 0.4729
+     },
+     {
+      "x": 0.524,
+      "y": 0.4986
+     },
+     {
+      "x": 0.506,
+      "y": 0.5348
+     },
+     {
+      "x": 0.479,
+      "y": 0.5674
+     },
+     {
+      "x": 0.4551,
+      "y": 0.6154
+     },
+     {
+      "x": 0.4341,
+      "y": 0.684
+     },
+     {
+      "x": 0.3952,
+      "y": 0.7458
+     },
+     {
+      "x": 0.3563,
+      "y": 0.844
+     },
+     {
+      "x": 0.2934,
+      "y": 0.9423
+     },
+     {
+      "x": 0.1976,
+      "y": 0.9429
+     },
+     {
+      "x": 0.0958,
+      "y": 0.9143
+     },
+     {
+      "x": 0.0,
+      "y": 1.0
+     }
+    ],
+    "precision_at_100": 0.94,
+    "recall_at_100": 0.2814,
+    "roc_auc": 0.7545,
+    "test_pair": "P4"
+   },
+   {
+    "base_rate": 0.1928,
+    "calibration": [
+     {
+      "bin": 0,
+      "mean_obs": null,
+      "mean_pred": null,
+      "n": 0
+     },
+     {
+      "bin": 1,
+      "mean_obs": null,
+      "mean_pred": null,
+      "n": 0
+     },
+     {
+      "bin": 2,
+      "mean_obs": null,
+      "mean_pred": null,
+      "n": 0
+     },
+     {
+      "bin": 3,
+      "mean_obs": 0.2131,
+      "mean_pred": 0.384,
+      "n": 61
+     },
+     {
+      "bin": 4,
+      "mean_obs": 0.2015,
+      "mean_pred": 0.4649,
+      "n": 918
+     },
+     {
+      "bin": 5,
+      "mean_obs": 0.1806,
+      "mean_pred": 0.5271,
+      "n": 753
+     },
+     {
+      "bin": 6,
+      "mean_obs": null,
+      "mean_pred": null,
+      "n": 0
+     },
+     {
+      "bin": 7,
+      "mean_obs": null,
+      "mean_pred": null,
+      "n": 0
+     },
+     {
+      "bin": 8,
+      "mean_obs": null,
+      "mean_pred": null,
+      "n": 0
+     },
+     {
+      "bin": 9,
+      "mean_obs": null,
+      "mean_pred": null,
+      "n": 0
+     }
+    ],
+    "lift_at_100": 1.1408,
+    "model_id": "HGB_B_SHUFFLED",
+    "n": 1732,
+    "positives": 334,
+    "pr_auc": 0.2026,
+    "pr_curve": [
+     {
+      "x": 1.0,
+      "y": 0.1928
+     },
+     {
+      "x": 0.985,
+      "y": 0.1927
+     },
+     {
+      "x": 0.9641,
+      "y": 0.1917
+     },
+     {
+      "x": 0.9611,
+      "y": 0.194
+     },
+     {
+      "x": 0.9491,
+      "y": 0.195
+     },
+     {
+      "x": 0.9431,
+      "y": 0.1969
+     },
+     {
+      "x": 0.9162,
+      "y": 0.195
+     },
+     {
+      "x": 0.9012,
+      "y": 0.1949
+     },
+     {
+      "x": 0.8922,
+      "y": 0.1967
+     },
+     {
+      "x": 0.8683,
+      "y": 0.1948
+     },
+     {
+      "x": 0.8593,
+      "y": 0.1964
+     },
+     {
+      "x": 0.8413,
+      "y": 0.1962
+     },
+     {
+      "x": 0.8204,
+      "y": 0.1963
+     },
+     {
+      "x": 0.8084,
+      "y": 0.1971
+     },
+     {
+      "x": 0.7904,
+      "y": 0.1963
+     },
+     {
+      "x": 0.7725,
+      "y": 0.1953
+     },
+     {
+      "x": 0.7635,
+      "y": 0.198
+     },
+     {
+      "x": 0.7365,
+      "y": 0.1962
+     },
+     {
+      "x": 0.7096,
+      "y": 0.1936
+     },
+     {
+      "x": 0.6826,
+      "y": 0.1916
+     },
+     {
+      "x": 0.6587,
+      "y": 0.1901
+     },
+     {
+      "x": 0.6497,
+      "y": 0.1932
+     },
+     {
+      "x": 0.6198,
+      "y": 0.1913
+     },
+     {
+      "x": 0.5958,
+      "y": 0.1892
+     },
+     {
+      "x": 0.5719,
+      "y": 0.1871
+     },
+     {
+      "x": 0.5479,
+      "y": 0.1881
+     },
+     {
+      "x": 0.5329,
+      "y": 0.1882
+     },
+     {
+      "x": 0.512,
+      "y": 0.1877
+     },
+     {
+      "x": 0.485,
+      "y": 0.1877
+     },
+     {
+      "x": 0.4611,
+      "y": 0.1853
+     },
+     {
+      "x": 0.4401,
+      "y": 0.1842
+     },
+     {
+      "x": 0.4222,
+      "y": 0.1836
+     },
+     {
+      "x": 0.3982,
+      "y": 0.1812
+     },
+     {
+      "x": 0.3772,
+      "y": 0.1813
+     },
+     {
+      "x": 0.3623,
+      "y": 0.1833
+     },
+     {
+      "x": 0.3383,
+      "y": 0.1788
+     },
+     {
+      "x": 0.3263,
+      "y": 0.182
+     },
+     {
+      "x": 0.3084,
+      "y": 0.1846
+     },
+     {
+      "x": 0.2784,
+      "y": 0.1758
+     },
+     {
+      "x": 0.2455,
+      "y": 0.1657
+     },
+     {
+      "x": 0.2365,
+      "y": 0.171
+     },
+     {
+      "x": 0.2246,
+      "y": 0.1765
+     },
+     {
+      "x": 0.2186,
+      "y": 0.1877
+     },
+     {
+      "x": 0.1976,
+      "y": 0.1859
+     },
+     {
+      "x": 0.1587,
+      "y": 0.1743
+     },
+     {
+      "x": 0.1257,
+      "y": 0.2609
+     },
+     {
+      "x": 0.0749,
+      "y": 0.2137
+     },
+     {
+      "x": 0.0569,
+      "y": 0.2603
+     },
+     {
+      "x": 0.0269,
+      "y": 0.2812
+     },
+     {
+      "x": 0.0,
+      "y": 1.0
+     }
+    ],
+    "precision_at_100": 0.22,
+    "recall_at_100": 0.0659,
+    "roc_auc": 0.4959,
+    "test_pair": "P4"
+   },
+   {
+    "base_rate": 0.1759,
+    "calibration": [
+     {
+      "bin": 0,
+      "mean_obs": 0.0268,
+      "mean_pred": 0.037,
+      "n": 522
+     },
+     {
+      "bin": 1,
+      "mean_obs": 0.0376,
+      "mean_pred": 0.1469,
+      "n": 186
+     },
+     {
+      "bin": 2,
+      "mean_obs": 0.1503,
+      "mean_pred": 0.2483,
+      "n": 173
+     },
+     {
+      "bin": 3,
+      "mean_obs": 0.1449,
+      "mean_pred": 0.3493,
+      "n": 207
+     },
+     {
+      "bin": 4,
+      "mean_obs": 0.2663,
+      "mean_pred": 0.4485,
+      "n": 199
+     },
+     {
+      "bin": 5,
+      "mean_obs": 0.3251,
+      "mean_pred": 0.5526,
+      "n": 203
+     },
+     {
+      "bin": 6,
+      "mean_obs": 0.4229,
+      "mean_pred": 0.6458,
+      "n": 201
+     },
+     {
+      "bin": 7,
+      "mean_obs": 0.5111,
+      "mean_pred": 0.7309,
+      "n": 45
+     },
+     {
+      "bin": 8,
+      "mean_obs": 0.5,
+      "mean_pred": 0.8212,
+      "n": 4
+     },
+     {
+      "bin": 9,
+      "mean_obs": null,
+      "mean_pred": null,
+      "n": 0
+     }
+    ],
+    "lift_at_100": 2.7294,
+    "model_id": "LR_A",
+    "n": 1740,
+    "positives": 306,
+    "pr_auc": 0.3981,
+    "pr_curve": [
+     {
+      "x": 1.0,
+      "y": 0.1759
+     },
+     {
+      "x": 0.9967,
+      "y": 0.1789
+     },
+     {
+      "x": 0.9902,
+      "y": 0.1814
+     },
+     {
+      "x": 0.9804,
+      "y": 0.1836
+     },
+     {
+      "x": 0.9771,
+      "y": 0.187
+     },
+     {
+      "x": 0.9706,
+      "y": 0.19
+     },
+     {
+      "x": 0.9673,
+      "y": 0.1937
+     },
+     {
+      "x": 0.9673,
+      "y": 0.1984
+     },
+     {
+      "x": 0.9673,
+      "y": 0.2032
+     },
+     {
+      "x": 0.9641,
+      "y": 0.2075
+     },
+     {
+      "x": 0.9641,
+      "y": 0.2128
+     },
+     {
+      "x": 0.9608,
+      "y": 0.2183
+     },
+     {
+      "x": 0.9608,
+      "y": 0.2243
+     },
+     {
+      "x": 0.9608,
+      "y": 0.2304
+     },
+     {
+      "x": 0.9608,
+      "y": 0.2371
+     },
+     {
+      "x": 0.9542,
+      "y": 0.2423
+     },
+     {
+      "x": 0.9542,
+      "y": 0.2496
+     },
+     {
+      "x": 0.9477,
+      "y": 0.2557
+     },
+     {
+      "x": 0.9412,
+      "y": 0.2621
+     },
+     {
+      "x": 0.9379,
+      "y": 0.27
+     },
+     {
+      "x": 0.9314,
+      "y": 0.2772
+     },
+     {
+      "x": 0.915,
+      "y": 0.2823
+     },
+     {
+      "x": 0.8987,
+      "y": 0.2874
+     },
+     {
+      "x": 0.8758,
+      "y": 0.2907
+     },
+     {
+      "x": 0.8595,
+      "y": 0.2968
+     },
+     {
+      "x": 0.8431,
+      "y": 0.3032
+     },
+     {
+      "x": 0.8333,
+      "y": 0.3129
+     },
+     {
+      "x": 0.8203,
+      "y": 0.3218
+     },
+     {
+      "x": 0.8039,
+      "y": 0.3306
+     },
+     {
+      "x": 0.7778,
+      "y": 0.3357
+     },
+     {
+      "x": 0.7582,
+      "y": 0.3442
+     },
+     {
+      "x": 0.732,
+      "y": 0.3511
+     },
+     {
+      "x": 0.6993,
+      "y": 0.3549
+     },
+     {
+      "x": 0.6863,
+      "y": 0.3704
+     },
+     {
+      "x": 0.6471,
+      "y": 0.3722
+     },
+     {
+      "x": 0.6209,
+      "y": 0.3831
+     },
+     {
+      "x": 0.5817,
+      "y": 0.3861
+     },
+     {
+      "x": 0.549,
+      "y": 0.3944
+     },
+     {
+      "x": 0.5261,
+      "y": 0.4128
+     },
+     {
+      "x": 0.4869,
+      "y": 0.4197
+     },
+     {
+      "x": 0.4412,
+      "y": 0.4232
+     },
+     {
+      "x": 0.3922,
+      "y": 0.4225
+     },
+     {
+      "x": 0.3562,
+      "y": 0.4395
+     },
+     {
+      "x": 0.3105,
+      "y": 0.446
+     },
+     {
+      "x": 0.2549,
+      "y": 0.4382
+     },
+     {
+      "x": 0.2157,
+      "y": 0.4648
+     },
+     {
+      "x": 0.1667,
+      "y": 0.4766
+     },
+     {
+      "x": 0.1078,
+      "y": 0.4648
+     },
+     {
+      "x": 0.0621,
+      "y": 0.5278
+     },
+     {
+      "x": 0.0,
+      "y": 1.0
+     }
+    ],
+    "precision_at_100": 0.48,
+    "recall_at_100": 0.1569,
+    "roc_auc": 0.7847,
+    "test_pair": "P3"
+   },
+   {
+    "base_rate": 0.1759,
+    "calibration": [
+     {
+      "bin": 0,
+      "mean_obs": 0.0628,
+      "mean_pred": 0.0519,
+      "n": 716
+     },
+     {
+      "bin": 1,
+      "mean_obs": 0.0887,
+      "mean_pred": 0.144,
+      "n": 327
+     },
+     {
+      "bin": 2,
+      "mean_obs": 0.1456,
+      "mean_pred": 0.2407,
+      "n": 158
+     },
+     {
+      "bin": 3,
+      "mean_obs": 0.2389,
+      "mean_pred": 0.3451,
+      "n": 113
+     },
+     {
+      "bin": 4,
+      "mean_obs": 0.1944,
+      "mean_pred": 0.4485,
+      "n": 72
+     },
+     {
+      "bin": 5,
+      "mean_obs": 0.1724,
+      "mean_pred": 0.5443,
+      "n": 58
+     },
+     {
+      "bin": 6,
+      "mean_obs": 0.3529,
+      "mean_pred": 0.6505,
+      "n": 68
+     },
+     {
+      "bin": 7,
+      "mean_obs": 0.3421,
+      "mean_pred": 0.7532,
+      "n": 76
+     },
+     {
+      "bin": 8,
+      "mean_obs": 0.6757,
+      "mean_pred": 0.8524,
+      "n": 111
+     },
+     {
+      "bin": 9,
+      "mean_obs": 0.8049,
+      "mean_pred": 0.919,
+      "n": 41
+     }
+    ],
+    "lift_at_100": 4.2078,
+    "model_id": "HGB_A",
+    "n": 1740,
+    "positives": 306,
+    "pr_auc": 0.5351,
+    "pr_curve": [
+     {
+      "x": 1.0,
+      "y": 0.1759
+     },
+     {
+      "x": 1.0,
+      "y": 0.183
+     },
+     {
+      "x": 1.0,
+      "y": 0.1872
+     },
+     {
+      "x": 1.0,
+      "y": 0.1914
+     },
+     {
+      "x": 1.0,
+      "y": 0.1957
+     },
+     {
+      "x": 0.9902,
+      "y": 0.1982
+     },
+     {
+      "x": 0.9902,
+      "y": 0.2028
+     },
+     {
+      "x": 0.9869,
+      "y": 0.2068
+     },
+     {
+      "x": 0.9771,
+      "y": 0.2098
+     },
+     {
+      "x": 0.9739,
+      "y": 0.2144
+     },
+     {
+      "x": 0.9641,
+      "y": 0.2177
+     },
+     {
+      "x": 0.9542,
+      "y": 0.2212
+     },
+     {
+      "x": 0.9444,
+      "y": 0.2251
+     },
+     {
+      "x": 0.9281,
+      "y": 0.2274
+     },
+     {
+      "x": 0.9118,
+      "y": 0.2296
+     },
+     {
+      "x": 0.8922,
+      "y": 0.2314
+     },
+     {
+      "x": 0.8758,
+      "y": 0.2341
+     },
+     {
+      "x": 0.8627,
+      "y": 0.2376
+     },
+     {
+      "x": 0.8627,
+      "y": 0.2456
+     },
+     {
+      "x": 0.8529,
+      "y": 0.251
+     },
+     {
+      "x": 0.8529,
+      "y": 0.2594
+     },
+     {
+      "x": 0.8431,
+      "y": 0.2657
+     },
+     {
+      "x": 0.8366,
+      "y": 0.2735
+     },
+     {
+      "x": 0.8268,
+      "y": 0.2805
+     },
+     {
+      "x": 0.817,
+      "y": 0.2884
+     },
+     {
+      "x": 0.8105,
+      "y": 0.2977
+     },
+     {
+      "x": 0.7908,
+      "y": 0.3033
+     },
+     {
+      "x": 0.781,
+      "y": 0.3128
+     },
+     {
+      "x": 0.7712,
+      "y": 0.3233
+     },
+     {
+      "x": 0.7582,
+      "y": 0.3343
+     },
+     {
+      "x": 0.7353,
+      "y": 0.3425
+     },
+     {
+      "x": 0.7222,
+      "y": 0.3547
+     },
+     {
+      "x": 0.7059,
+      "y": 0.3673
+     },
+     {
+      "x": 0.6895,
+      "y": 0.3809
+     },
+     {
+      "x": 0.6732,
+      "y": 0.3962
+     },
+     {
+      "x": 0.6536,
+      "y": 0.4124
+     },
+     {
+      "x": 0.6078,
+      "y": 0.4124
+     },
+     {
+      "x": 0.5882,
+      "y": 0.4327
+     },
+     {
+      "x": 0.5654,
+      "y": 0.4541
+     },
+     {
+      "x": 0.5425,
+      "y": 0.4784
+     },
+     {
+      "x": 0.5261,
+      "y": 0.5144
+     },
+     {
+      "x": 0.5033,
+      "y": 0.558
+     },
+     {
+      "x": 0.4641,
+      "y": 0.5868
+     },
+     {
+      "x": 0.4248,
+      "y": 0.625
+     },
+     {
+      "x": 0.3954,
+      "y": 0.6994
+     },
+     {
+      "x": 0.3203,
+      "y": 0.705
+     },
+     {
+      "x": 0.2516,
+      "y": 0.7333
+     },
+     {
+      "x": 0.1732,
+      "y": 0.7571
+     },
+     {
+      "x": 0.0948,
+      "y": 0.8056
+     },
+     {
+      "x": 0.0,
+      "y": 1.0
+     }
+    ],
+    "precision_at_100": 0.74,
+    "recall_at_100": 0.2418,
+    "roc_auc": 0.7968,
+    "test_pair": "P3"
+   },
+   {
+    "base_rate": 0.1759,
+    "calibration": [
+     {
+      "bin": 0,
+      "mean_obs": 0.0713,
+      "mean_pred": 0.052,
+      "n": 898
+     },
+     {
+      "bin": 1,
+      "mean_obs": 0.1114,
+      "mean_pred": 0.1411,
+      "n": 386
+     },
+     {
+      "bin": 2,
+      "mean_obs": 0.1056,
+      "mean_pred": 0.2461,
+      "n": 142
+     },
+     {
+      "bin": 3,
+      "mean_obs": 0.2456,
+      "mean_pred": 0.3478,
+      "n": 57
+     },
+     {
+      "bin": 4,
+      "mean_obs": 0.4146,
+      "mean_pred": 0.4439,
+      "n": 41
+     },
+     {
+      "bin": 5,
+      "mean_obs": 0.5476,
+      "mean_pred": 0.5543,
+      "n": 42
+     },
+     {
+      "bin": 6,
+      "mean_obs": 0.5349,
+      "mean_pred": 0.6449,
+      "n": 43
+     },
+     {
+      "bin": 7,
+      "mean_obs": 0.7547,
+      "mean_pred": 0.7574,
+      "n": 53
+     },
+     {
+      "bin": 8,
+      "mean_obs": 0.8592,
+      "mean_pred": 0.84,
+      "n": 71
+     },
+     {
+      "bin": 9,
+      "mean_obs": 0.8571,
+      "mean_pred": 0.914,
+      "n": 7
+     }
+    ],
+    "lift_at_100": 4.7765,
+    "model_id": "HGB_B",
+    "n": 1740,
+    "positives": 306,
+    "pr_auc": 0.5965,
+    "pr_curve": [
+     {
+      "x": 1.0,
+      "y": 0.1759
+     },
+     {
+      "x": 1.0,
+      "y": 0.1803
+     },
+     {
+      "x": 1.0,
+      "y": 0.1846
+     },
+     {
+      "x": 0.9935,
+      "y": 0.1875
+     },
+     {
+      "x": 0.9837,
+      "y": 0.1898
+     },
+     {
+      "x": 0.9804,
+      "y": 0.1934
+     },
+     {
+      "x": 0.9771,
+      "y": 0.1972
+     },
+     {
+      "x": 0.9641,
+      "y": 0.1993
+     },
+     {
+      "x": 0.9575,
+      "y": 0.2029
+     },
+     {
+      "x": 0.9477,
+      "y": 0.2058
+     },
+     {
+      "x": 0.9379,
+      "y": 0.2089
+     },
+     {
+      "x": 0.9281,
+      "y": 0.2121
+     },
+     {
+      "x": 0.9085,
+      "y": 0.2132
+     },
+     {
+      "x": 0.9085,
+      "y": 0.2191
+     },
+     {
+      "x": 0.902,
+      "y": 0.2237
+     },
+     {
+      "x": 0.8922,
+      "y": 0.2277
+     },
+     {
+      "x": 0.8889,
+      "y": 0.2337
+     },
+     {
+      "x": 0.8824,
+      "y": 0.2389
+     },
+     {
+      "x": 0.8791,
+      "y": 0.2459
+     },
+     {
+      "x": 0.8693,
+      "y": 0.2512
+     },
+     {
+      "x": 0.8595,
+      "y": 0.2568
+     },
+     {
+      "x": 0.8562,
+      "y": 0.2649
+     },
+     {
+      "x": 0.8333,
+      "y": 0.2673
+     },
+     {
+      "x": 0.8137,
+      "y": 0.2709
+     },
+     {
+      "x": 0.8072,
+      "y": 0.2794
+     },
+     {
+      "x": 0.7974,
+      "y": 0.2874
+     },
+     {
+      "x": 0.7843,
+      "y": 0.2948
+     },
+     {
+      "x": 0.7647,
+      "y": 0.3015
+     },
+     {
+      "x": 0.7582,
+      "y": 0.3131
+     },
+     {
+      "x": 0.7418,
+      "y": 0.3224
+     },
+     {
+      "x": 0.7288,
+      "y": 0.3333
+     },
+     {
+      "x": 0.719,
+      "y": 0.347
+     },
+     {
+      "x": 0.7026,
+      "y": 0.3589
+     },
+     {
+      "x": 0.683,
+      "y": 0.3706
+     },
+     {
+      "x": 0.6667,
+      "y": 0.3856
+     },
+     {
+      "x": 0.6601,
+      "y": 0.4097
+     },
+     {
+      "x": 0.6503,
+      "y": 0.4345
+     },
+     {
+      "x": 0.6405,
+      "y": 0.4634
+     },
+     {
+      "x": 0.6209,
+      "y": 0.491
+     },
+     {
+      "x": 0.6078,
+      "y": 0.5284
+     },
+     {
+      "x": 0.6013,
+      "y": 0.5823
+     },
+     {
+      "x": 0.585,
+      "y": 0.637
+     },
+     {
+      "x": 0.5458,
+      "y": 0.6789
+     },
+     {
+      "x": 0.4967,
+      "y": 0.7204
+     },
+     {
+      "x": 0.4281,
+      "y": 0.7443
+     },
+     {
+      "x": 0.3627,
+      "y": 0.7872
+     },
+     {
+      "x": 0.2876,
+      "y": 0.8302
+     },
+     {
+      "x": 0.1993,
+      "y": 0.8592
+     },
+     {
+      "x": 0.0948,
+      "y": 0.8056
+     },
+     {
+      "x": 0.0,
+      "y": 1.0
+     }
+    ],
+    "precision_at_100": 0.84,
+    "recall_at_100": 0.2745,
+    "roc_auc": 0.8016,
+    "test_pair": "P3"
+   }
+  ],
+  "watchlist": [
+   {
+    "project_code": "618758",
+    "slip_prob": 0.9677,
+    "slip_rank": 1
+   },
+   {
+    "project_code": "618850",
+    "slip_prob": 0.9671,
+    "slip_rank": 2
+   },
+   {
+    "project_code": "619301",
+    "slip_prob": 0.9664,
+    "slip_rank": 3
+   },
+   {
+    "project_code": "619222",
+    "slip_prob": 0.9621,
+    "slip_rank": 4
+   },
+   {
+    "project_code": "618862",
+    "slip_prob": 0.9617,
+    "slip_rank": 5
+   },
+   {
+    "project_code": "618680",
+    "slip_prob": 0.9615,
+    "slip_rank": 6
+   },
+   {
+    "project_code": "618499",
+    "slip_prob": 0.9606,
+    "slip_rank": 7
+   },
+   {
+    "project_code": "619152",
+    "slip_prob": 0.9595,
+    "slip_rank": 8
+   },
+   {
+    "project_code": "619118",
+    "slip_prob": 0.9594,
+    "slip_rank": 9
+   },
+   {
+    "project_code": "618599",
+    "slip_prob": 0.9593,
+    "slip_rank": 10
+   },
+   {
+    "project_code": "619109",
+    "slip_prob": 0.9592,
+    "slip_rank": 11
+   },
+   {
+    "project_code": "618852",
+    "slip_prob": 0.9589,
+    "slip_rank": 12
+   },
+   {
+    "project_code": "618610",
+    "slip_prob": 0.9582,
+    "slip_rank": 13
+   },
+   {
+    "project_code": "619213",
+    "slip_prob": 0.9581,
+    "slip_rank": 14
+   },
+   {
+    "project_code": "618678",
+    "slip_prob": 0.9575,
+    "slip_rank": 15
+   },
+   {
+    "project_code": "619162",
+    "slip_prob": 0.9575,
+    "slip_rank": 16
+   },
+   {
+    "project_code": "619136",
+    "slip_prob": 0.9573,
+    "slip_rank": 17
+   },
+   {
+    "project_code": "619168",
+    "slip_prob": 0.9566,
+    "slip_rank": 18
+   },
+   {
+    "project_code": "618861",
+    "slip_prob": 0.9563,
+    "slip_rank": 19
+   },
+   {
+    "project_code": "619097",
+    "slip_prob": 0.9562,
+    "slip_rank": 20
+   },
+   {
+    "project_code": "619306",
+    "slip_prob": 0.9551,
+    "slip_rank": 21
+   },
+   {
+    "project_code": "618668",
+    "slip_prob": 0.9548,
+    "slip_rank": 22
+   },
+   {
+    "project_code": "619218",
+    "slip_prob": 0.9547,
+    "slip_rank": 23
+   },
+   {
+    "project_code": "618600",
+    "slip_prob": 0.9544,
+    "slip_rank": 24
+   },
+   {
+    "project_code": "619128",
+    "slip_prob": 0.9541,
+    "slip_rank": 25
+   },
+   {
+    "project_code": "618925",
+    "slip_prob": 0.9541,
+    "slip_rank": 26
+   },
+   {
+    "project_code": "619217",
+    "slip_prob": 0.954,
+    "slip_rank": 27
+   },
+   {
+    "project_code": "618263",
+    "slip_prob": 0.9538,
+    "slip_rank": 28
+   },
+   {
+    "project_code": "618968",
+    "slip_prob": 0.9537,
+    "slip_rank": 29
+   },
+   {
+    "project_code": "618970",
+    "slip_prob": 0.9531,
+    "slip_rank": 30
+   },
+   {
+    "project_code": "618955",
+    "slip_prob": 0.9529,
+    "slip_rank": 31
+   },
+   {
+    "project_code": "619098",
+    "slip_prob": 0.9527,
+    "slip_rank": 32
+   },
+   {
+    "project_code": "618945",
+    "slip_prob": 0.9524,
+    "slip_rank": 33
+   },
+   {
+    "project_code": "618503",
+    "slip_prob": 0.9521,
+    "slip_rank": 34
+   },
+   {
+    "project_code": "618473",
+    "slip_prob": 0.9517,
+    "slip_rank": 35
+   },
+   {
+    "project_code": "618486",
+    "slip_prob": 0.9515,
+    "slip_rank": 36
+   },
+   {
+    "project_code": "619205",
+    "slip_prob": 0.9509,
+    "slip_rank": 37
+   },
+   {
+    "project_code": "618504",
+    "slip_prob": 0.9504,
+    "slip_rank": 38
+   },
+   {
+    "project_code": "618949",
+    "slip_prob": 0.9498,
+    "slip_rank": 39
+   },
+   {
+    "project_code": "618899",
+    "slip_prob": 0.9496,
+    "slip_rank": 40
+   },
+   {
+    "project_code": "618710",
+    "slip_prob": 0.9495,
+    "slip_rank": 41
+   },
+   {
+    "project_code": "618761",
+    "slip_prob": 0.9491,
+    "slip_rank": 42
+   },
+   {
+    "project_code": "618615",
+    "slip_prob": 0.949,
+    "slip_rank": 43
+   },
+   {
+    "project_code": "619117",
+    "slip_prob": 0.949,
+    "slip_rank": 44
+   },
+   {
+    "project_code": "618863",
+    "slip_prob": 0.9489,
+    "slip_rank": 45
+   },
+   {
+    "project_code": "618756",
+    "slip_prob": 0.9486,
+    "slip_rank": 46
+   },
+   {
+    "project_code": "618478",
+    "slip_prob": 0.9483,
+    "slip_rank": 47
+   },
+   {
+    "project_code": "618164",
+    "slip_prob": 0.9482,
+    "slip_rank": 48
+   },
+   {
+    "project_code": "618611",
+    "slip_prob": 0.9479,
+    "slip_rank": 49
+   },
+   {
+    "project_code": "619077",
+    "slip_prob": 0.9478,
+    "slip_rank": 50
+   },
+   {
+    "project_code": "618859",
+    "slip_prob": 0.9477,
+    "slip_rank": 51
+   },
+   {
+    "project_code": "618744",
+    "slip_prob": 0.9477,
+    "slip_rank": 52
+   },
+   {
+    "project_code": "618796",
+    "slip_prob": 0.9475,
+    "slip_rank": 53
+   },
+   {
+    "project_code": "618472",
+    "slip_prob": 0.9473,
+    "slip_rank": 54
+   },
+   {
+    "project_code": "618765",
+    "slip_prob": 0.9469,
+    "slip_rank": 55
+   },
+   {
+    "project_code": "618693",
+    "slip_prob": 0.9468,
+    "slip_rank": 56
+   },
+   {
+    "project_code": "618594",
+    "slip_prob": 0.9464,
+    "slip_rank": 57
+   },
+   {
+    "project_code": "618074",
+    "slip_prob": 0.9462,
+    "slip_rank": 58
+   },
+   {
+    "project_code": "619198",
+    "slip_prob": 0.9458,
+    "slip_rank": 59
+   },
+   {
+    "project_code": "618893",
+    "slip_prob": 0.9455,
+    "slip_rank": 60
+   },
+   {
+    "project_code": "618951",
+    "slip_prob": 0.9452,
+    "slip_rank": 61
+   },
+   {
+    "project_code": "618471",
+    "slip_prob": 0.9445,
+    "slip_rank": 62
+   },
+   {
+    "project_code": "618563",
+    "slip_prob": 0.9437,
+    "slip_rank": 63
+   },
+   {
+    "project_code": "618462",
+    "slip_prob": 0.9435,
+    "slip_rank": 64
+   },
+   {
+    "project_code": "619100",
+    "slip_prob": 0.9434,
+    "slip_rank": 65
+   },
+   {
+    "project_code": "618500",
+    "slip_prob": 0.9432,
+    "slip_rank": 66
+   },
+   {
+    "project_code": "618533",
+    "slip_prob": 0.9432,
+    "slip_rank": 67
+   },
+   {
+    "project_code": "618613",
+    "slip_prob": 0.9429,
+    "slip_rank": 68
+   },
+   {
+    "project_code": "618631",
+    "slip_prob": 0.9429,
+    "slip_rank": 69
+   },
+   {
+    "project_code": "618554",
+    "slip_prob": 0.942,
+    "slip_rank": 70
+   },
+   {
+    "project_code": "618470",
+    "slip_prob": 0.9404,
+    "slip_rank": 71
+   },
+   {
+    "project_code": "618883",
+    "slip_prob": 0.9403,
+    "slip_rank": 72
+   },
+   {
+    "project_code": "619197",
+    "slip_prob": 0.9401,
+    "slip_rank": 73
+   },
+   {
+    "project_code": "618681",
+    "slip_prob": 0.9395,
+    "slip_rank": 74
+   },
+   {
+    "project_code": "618632",
+    "slip_prob": 0.9395,
+    "slip_rank": 75
+   },
+   {
+    "project_code": "618884",
+    "slip_prob": 0.9394,
+    "slip_rank": 76
+   },
+   {
+    "project_code": "618521",
+    "slip_prob": 0.939,
+    "slip_rank": 77
+   },
+   {
+    "project_code": "618556",
+    "slip_prob": 0.9382,
+    "slip_rank": 78
+   },
+   {
+    "project_code": "619308",
+    "slip_prob": 0.9379,
+    "slip_rank": 79
+   },
+   {
+    "project_code": "618747",
+    "slip_prob": 0.9365,
+    "slip_rank": 80
+   },
+   {
+    "project_code": "618588",
+    "slip_prob": 0.9364,
+    "slip_rank": 81
+   },
+   {
+    "project_code": "618612",
+    "slip_prob": 0.9363,
+    "slip_rank": 82
+   },
+   {
+    "project_code": "618505",
+    "slip_prob": 0.9359,
+    "slip_rank": 83
+   },
+   {
+    "project_code": "618666",
+    "slip_prob": 0.935,
+    "slip_rank": 84
+   },
+   {
+    "project_code": "618762",
+    "slip_prob": 0.935,
+    "slip_rank": 85
+   },
+   {
+    "project_code": "619292",
+    "slip_prob": 0.9348,
+    "slip_rank": 86
+   },
+   {
+    "project_code": "618469",
+    "slip_prob": 0.9345,
+    "slip_rank": 87
+   },
+   {
+    "project_code": "618458",
+    "slip_prob": 0.9341,
+    "slip_rank": 88
+   },
+   {
+    "project_code": "618687",
+    "slip_prob": 0.9325,
+    "slip_rank": 89
+   },
+   {
+    "project_code": "619166",
+    "slip_prob": 0.9322,
+    "slip_rank": 90
+   },
+   {
+    "project_code": "618463",
+    "slip_prob": 0.9319,
+    "slip_rank": 91
+   },
+   {
+    "project_code": "618711",
+    "slip_prob": 0.9314,
+    "slip_rank": 92
+   },
+   {
+    "project_code": "619095",
+    "slip_prob": 0.9311,
+    "slip_rank": 93
+   },
+   {
+    "project_code": "618841",
+    "slip_prob": 0.927,
+    "slip_rank": 94
+   },
+   {
+    "project_code": "618507",
+    "slip_prob": 0.927,
+    "slip_rank": 95
+   },
+   {
+    "project_code": "618838",
+    "slip_prob": 0.9268,
+    "slip_rank": 96
+   },
+   {
+    "project_code": "618345",
+    "slip_prob": 0.9266,
+    "slip_rank": 97
+   },
+   {
+    "project_code": "619111",
+    "slip_prob": 0.9253,
+    "slip_rank": 98
+   },
+   {
+    "project_code": "619307",
+    "slip_prob": 0.9244,
+    "slip_rank": 99
+   },
+   {
+    "project_code": "619090",
+    "slip_prob": 0.9238,
+    "slip_rank": 100
+   }
+  ]
+ },
+ "m2_progress": {
+  "agreement_with_F3": {
+   "n": 27,
+   "share_same_direction": 1.0
+  },
+  "results": [
+   {
+    "mae": 1.6291,
+    "median_ae": 0.09,
+    "model_id": "ZERO",
+    "n": 1732,
+    "test_pair": "P4"
+   },
+   {
+    "mae": 2.3008,
+    "median_ae": 0.7508,
+    "model_id": "OWN_VELOCITY",
+    "n": 1732,
+    "test_pair": "P4"
+   },
+   {
+    "mae": 1.5047,
+    "median_ae": 0.409,
+    "model_id": "HGB",
+    "n": 1732,
+    "test_pair": "P4"
+   }
+  ],
+  "winner": "HGB"
+ },
+ "m3_drivers": {
+  "coefficients_OLS": [
+   {
+    "coef": -3.6682,
+    "feature": "cat__sector_Aviation & Aviation Infrastructure",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -14.319,
+    "feature": "cat__sector_Coal",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -13.6166,
+    "feature": "cat__sector_Construction",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -23.2405,
+    "feature": "cat__sector_Education",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 22.1339,
+    "feature": "cat__sector_Electricity Generation",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 1.5736,
+    "feature": "cat__sector_Energy Storage",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 7.7742,
+    "feature": "cat__sector_Healthcare",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -23.0518,
+    "feature": "cat__sector_Inland Waterways",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -37.0723,
+    "feature": "cat__sector_Logistics Infrastructure",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 8.2972,
+    "feature": "cat__sector_Metals & Mining",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -3.2029,
+    "feature": "cat__sector_Oil & Gas",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 4.853,
+    "feature": "cat__sector_Railways",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -8.7043,
+    "feature": "cat__sector_Real Estate",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -13.2786,
+    "feature": "cat__sector_Roads & Highways",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -1.3281,
+    "feature": "cat__sector_Shipping",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -0.13,
+    "feature": "cat__sector_Steel",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -41.2367,
+    "feature": "cat__sector_Telecommunication",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 94.3802,
+    "feature": "cat__sector_Tourism, Hospitality & Wellness",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -1.003,
+    "feature": "cat__sector_Transmission & Distribution",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -4.5601,
+    "feature": "cat__sector_Urban Public Transport",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -30.2016,
+    "feature": "cat__sector_Waste & Water",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 79.6015,
+    "feature": "cat__sector_Water Resources",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 29.4954,
+    "feature": "cat__state_Andaman & Nicobar",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -9.4997,
+    "feature": "cat__state_Andhra Pradesh",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -15.1113,
+    "feature": "cat__state_Arunachal Pradesh",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -10.7724,
+    "feature": "cat__state_Assam",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -6.5406,
+    "feature": "cat__state_Bihar",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -14.2434,
+    "feature": "cat__state_Chhattisgarh",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 13.3229,
+    "feature": "cat__state_Dadra & Nagar Haveli and Daman & Diu",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -8.3747,
+    "feature": "cat__state_Delhi",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -12.1622,
+    "feature": "cat__state_Goa",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -9.9897,
+    "feature": "cat__state_Gujarat",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 4.9255,
+    "feature": "cat__state_Haryana",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 7.7478,
+    "feature": "cat__state_Himachal Pradesh",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -9.4986,
+    "feature": "cat__state_Jammu and Kashmir",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -9.1942,
+    "feature": "cat__state_Jharkhand",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -13.1685,
+    "feature": "cat__state_Karnataka",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 3.3674,
+    "feature": "cat__state_Kerala",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -13.9401,
+    "feature": "cat__state_Ladakh",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -11.177,
+    "feature": "cat__state_Madhya Pradesh",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -1.2832,
+    "feature": "cat__state_Maharashtra",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -16.7862,
+    "feature": "cat__state_Manipur",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -16.5957,
+    "feature": "cat__state_Meghalaya",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -8.7544,
+    "feature": "cat__state_Mizoram",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -8.536,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Odisha, Telangana, Uttar Pradesh, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -25.0028,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Chhattisgarh, Jharkhand, Maharashtra, Odisha)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 1.1462,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Karnataka)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -3.3692,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Odisha)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 2.2497,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Tamil Nadu)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -1.7568,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Telangana)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 82.6323,
+    "feature": "cat__state_Multi-States (Arunachal Pradesh, Assam)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 55.3437,
+    "feature": "cat__state_Multi-States (Arunachal Pradesh, Sikkim)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -4.5233,
+    "feature": "cat__state_Multi-States (Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -59.8736,
+    "feature": "cat__state_Multi-States (Assam, Meghalaya)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 64.596,
+    "feature": "cat__state_Multi-States (Assam, Nagaland)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -21.9147,
+    "feature": "cat__state_Multi-States (Bihar, Jharkhand)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -12.6474,
+    "feature": "cat__state_Multi-States (Bihar, Jharkhand, Uttar Pradesh, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -31.7418,
+    "feature": "cat__state_Multi-States (Bihar, Madhya Pradesh, Rajasthan, Uttar Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -12.0946,
+    "feature": "cat__state_Multi-States (Bihar, Odisha, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -20.3039,
+    "feature": "cat__state_Multi-States (Bihar, Uttar Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 21.6855,
+    "feature": "cat__state_Multi-States (Bihar, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -28.4487,
+    "feature": "cat__state_Multi-States (Chhattisgarh, Maharashtra)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -15.4297,
+    "feature": "cat__state_Multi-States (Chhattisgarh, Odisha)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -2.2819,
+    "feature": "cat__state_Multi-States (Dadra & Nagar Haveli and Daman & Diu, Gujarat, Maharashtra)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -7.6416,
+    "feature": "cat__state_Multi-States (Delhi, Gujarat, Madhya Pradesh, Maharashtra, Rajasthan)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -2.5193,
+    "feature": "cat__state_Multi-States (Delhi, Haryana)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -12.066,
+    "feature": "cat__state_Multi-States (Delhi, Haryana, Rajasthan)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -17.196,
+    "feature": "cat__state_Multi-States (Delhi, Rajasthan)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -46.5869,
+    "feature": "cat__state_Multi-States (Goa, Karnataka)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 82.9155,
+    "feature": "cat__state_Multi-States (Gujarat, Haryana, Maharashtra, Rajasthan, Uttar Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -9.0549,
+    "feature": "cat__state_Multi-States (Gujarat, Haryana, Rajasthan)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 192.3184,
+    "feature": "cat__state_Multi-States (Gujarat, Madhya Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -5.3092,
+    "feature": "cat__state_Multi-States (Gujarat, Maharashtra)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -11.314,
+    "feature": "cat__state_Multi-States (Gujarat, Rajasthan)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -10.6787,
+    "feature": "cat__state_Multi-States (Haryana, Himachal Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -8.2203,
+    "feature": "cat__state_Multi-States (Haryana, Punjab)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -4.1925,
+    "feature": "cat__state_Multi-States (Haryana, Punjab, Rajasthan)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -20.448,
+    "feature": "cat__state_Multi-States (Haryana, Rajasthan)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -4.5263,
+    "feature": "cat__state_Multi-States (Haryana, Uttar Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -31.2867,
+    "feature": "cat__state_Multi-States (Himachal Pradesh, Punjab)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 17.3644,
+    "feature": "cat__state_Multi-States (Jammu and Kashmir, Punjab)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -41.3997,
+    "feature": "cat__state_Multi-States (Jharkhand, Odisha)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -14.6154,
+    "feature": "cat__state_Multi-States (Jharkhand, Odisha, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -14.305,
+    "feature": "cat__state_Multi-States (Jharkhand, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 23.9019,
+    "feature": "cat__state_Multi-States (Karnataka, Kerala)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -12.7272,
+    "feature": "cat__state_Multi-States (Karnataka, Maharashtra)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -19.8022,
+    "feature": "cat__state_Multi-States (Karnataka, Maharashtra, Telangana, Uttar Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 26.8147,
+    "feature": "cat__state_Multi-States (Karnataka, Tamil Nadu)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -8.1965,
+    "feature": "cat__state_Multi-States (Karnataka, Telangana)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 13.4753,
+    "feature": "cat__state_Multi-States (Kerala, Puducherry)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 127.4286,
+    "feature": "cat__state_Multi-States (Kerala, Tamil Nadu)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 125.6418,
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Maharashtra)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 0.0359,
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Rajasthan)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -19.6593,
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Rajasthan, Uttar Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -33.8311,
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Uttar Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 14.8033,
+    "feature": "cat__state_Multi-States (Maharashtra, Telangana)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -1.7306,
+    "feature": "cat__state_Multi-States (Odisha, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -10.2983,
+    "feature": "cat__state_Multi-States (Puducherry, Tamil Nadu)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -6.2769,
+    "feature": "cat__state_Multi-States (Rajasthan, Uttar Pradesh)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -7.0895,
+    "feature": "cat__state_Multi-States (Sikkim, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -21.754,
+    "feature": "cat__state_Multi-States (Uttar Pradesh, Uttarakhand)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 33.8015,
+    "feature": "cat__state_Multi-States (Uttar Pradesh, West Bengal)",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -5.7674,
+    "feature": "cat__state_Nagaland",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -9.6846,
+    "feature": "cat__state_Odisha",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -0.247,
+    "feature": "cat__state_Offshore",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 19.0197,
+    "feature": "cat__state_PAN India",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -47.3497,
+    "feature": "cat__state_Puducherry",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -3.1588,
+    "feature": "cat__state_Punjab",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -15.5213,
+    "feature": "cat__state_Rajasthan",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 4.4093,
+    "feature": "cat__state_Sikkim",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -7.9434,
+    "feature": "cat__state_Tamil Nadu",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -9.2348,
+    "feature": "cat__state_Telangana",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -11.4399,
+    "feature": "cat__state_Tripura",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -7.5939,
+    "feature": "cat__state_Uttar Pradesh",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -2.1366,
+    "feature": "cat__state_Uttarakhand",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -10.623,
+    "feature": "cat__state_West Bengal",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -2.5924,
+    "feature": "num__log_cost_original",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 28.9103,
+    "feature": "num__age_months",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 0.4511,
+    "feature": "num__physical_progress_pct",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 15.4058,
+    "feature": "num__approval_year",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": 0.2023,
+    "feature": "num__agency_size",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "coef": -2.2805,
+    "feature": "cat__sector_Aviation & Aviation Infrastructure",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -0.8043,
+    "feature": "cat__sector_Coal",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -11.5937,
+    "feature": "cat__sector_Construction",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -4.3803,
+    "feature": "cat__sector_Education",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 16.8559,
+    "feature": "cat__sector_Electricity Generation",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 1.4003,
+    "feature": "cat__sector_Energy Storage",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -12.9937,
+    "feature": "cat__sector_Healthcare",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -6.9871,
+    "feature": "cat__sector_Inland Waterways",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 27.3743,
+    "feature": "cat__sector_Logistics Infrastructure",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 3.9071,
+    "feature": "cat__sector_Metals & Mining",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 3.4662,
+    "feature": "cat__sector_Oil & Gas",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -9.5471,
+    "feature": "cat__sector_Railways",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 3.0044,
+    "feature": "cat__sector_Real Estate",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 2.9048,
+    "feature": "cat__sector_Roads & Highways",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.9578,
+    "feature": "cat__sector_Shipping",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.5638,
+    "feature": "cat__sector_Steel",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 14.3101,
+    "feature": "cat__sector_Telecommunication",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -22.2937,
+    "feature": "cat__sector_Tourism, Hospitality & Wellness",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 5.974,
+    "feature": "cat__sector_Transmission & Distribution",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 8.2269,
+    "feature": "cat__sector_Urban Public Transport",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -5.6836,
+    "feature": "cat__sector_Waste & Water",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.3384,
+    "feature": "cat__sector_Water Resources",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -14.744,
+    "feature": "cat__state_Andaman & Nicobar",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -0.9942,
+    "feature": "cat__state_Andhra Pradesh",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -9.0425,
+    "feature": "cat__state_Arunachal Pradesh",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -8.986,
+    "feature": "cat__state_Assam",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -1.2241,
+    "feature": "cat__state_Bihar",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -4.048,
+    "feature": "cat__state_Chhattisgarh",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -21.3164,
+    "feature": "cat__state_Dadra & Nagar Haveli and Daman & Diu",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.4329,
+    "feature": "cat__state_Delhi",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -4.5642,
+    "feature": "cat__state_Goa",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -4.9055,
+    "feature": "cat__state_Gujarat",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -1.6048,
+    "feature": "cat__state_Haryana",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -5.0309,
+    "feature": "cat__state_Himachal Pradesh",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 1.3108,
+    "feature": "cat__state_Jammu and Kashmir",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.9657,
+    "feature": "cat__state_Jharkhand",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 1.0166,
+    "feature": "cat__state_Karnataka",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 2.5257,
+    "feature": "cat__state_Kerala",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 15.4378,
+    "feature": "cat__state_Ladakh",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.6497,
+    "feature": "cat__state_Madhya Pradesh",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.8645,
+    "feature": "cat__state_Maharashtra",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 2.1982,
+    "feature": "cat__state_Manipur",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -9.2392,
+    "feature": "cat__state_Meghalaya",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -4.3389,
+    "feature": "cat__state_Mizoram",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -8.0475,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Bihar, Chhattisgarh, Jharkhand, Madhya Pradesh, Maharashtra, Odisha, Telangana, Uttar Pradesh, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 5.0078,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Chhattisgarh, Jharkhand, Maharashtra, Odisha)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 7.1114,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Karnataka)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 14.4557,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Odisha)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 8.9196,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Tamil Nadu)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -2.2106,
+    "feature": "cat__state_Multi-States (Andhra Pradesh, Telangana)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 13.5206,
+    "feature": "cat__state_Multi-States (Arunachal Pradesh, Assam)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 48.7792,
+    "feature": "cat__state_Multi-States (Arunachal Pradesh, Sikkim)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 46.5877,
+    "feature": "cat__state_Multi-States (Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 123.5953,
+    "feature": "cat__state_Multi-States (Assam, Meghalaya)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 1.1375,
+    "feature": "cat__state_Multi-States (Assam, Nagaland)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -8.4681,
+    "feature": "cat__state_Multi-States (Bihar, Jharkhand)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 10.6526,
+    "feature": "cat__state_Multi-States (Bihar, Jharkhand, Uttar Pradesh, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 6.9629,
+    "feature": "cat__state_Multi-States (Bihar, Madhya Pradesh, Rajasthan, Uttar Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -2.0556,
+    "feature": "cat__state_Multi-States (Bihar, Odisha, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 4.5895,
+    "feature": "cat__state_Multi-States (Bihar, Uttar Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 0.9765,
+    "feature": "cat__state_Multi-States (Bihar, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 3.2873,
+    "feature": "cat__state_Multi-States (Chhattisgarh, Maharashtra)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -5.2281,
+    "feature": "cat__state_Multi-States (Chhattisgarh, Odisha)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 11.1778,
+    "feature": "cat__state_Multi-States (Dadra & Nagar Haveli and Daman & Diu, Gujarat, Maharashtra)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 10.4745,
+    "feature": "cat__state_Multi-States (Delhi, Gujarat, Madhya Pradesh, Maharashtra, Rajasthan)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -1.3463,
+    "feature": "cat__state_Multi-States (Delhi, Haryana)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 1.6373,
+    "feature": "cat__state_Multi-States (Delhi, Haryana, Rajasthan)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -0.0161,
+    "feature": "cat__state_Multi-States (Delhi, Rajasthan)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 6.7518,
+    "feature": "cat__state_Multi-States (Goa, Karnataka)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -11.3867,
+    "feature": "cat__state_Multi-States (Gujarat, Haryana, Maharashtra, Rajasthan, Uttar Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -4.1212,
+    "feature": "cat__state_Multi-States (Gujarat, Haryana, Rajasthan)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -47.3757,
+    "feature": "cat__state_Multi-States (Gujarat, Madhya Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 4.579,
+    "feature": "cat__state_Multi-States (Gujarat, Maharashtra)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 3.4649,
+    "feature": "cat__state_Multi-States (Gujarat, Rajasthan)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -15.4981,
+    "feature": "cat__state_Multi-States (Haryana, Himachal Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -8.672,
+    "feature": "cat__state_Multi-States (Haryana, Punjab)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -1.8163,
+    "feature": "cat__state_Multi-States (Haryana, Punjab, Rajasthan)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -2.196,
+    "feature": "cat__state_Multi-States (Haryana, Rajasthan)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -5.012,
+    "feature": "cat__state_Multi-States (Haryana, Uttar Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -67.1718,
+    "feature": "cat__state_Multi-States (Himachal Pradesh, Punjab)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.9495,
+    "feature": "cat__state_Multi-States (Jammu and Kashmir, Punjab)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -17.632,
+    "feature": "cat__state_Multi-States (Jharkhand, Odisha)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 13.1525,
+    "feature": "cat__state_Multi-States (Jharkhand, Odisha, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 6.4423,
+    "feature": "cat__state_Multi-States (Jharkhand, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -8.1281,
+    "feature": "cat__state_Multi-States (Karnataka, Kerala)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.7464,
+    "feature": "cat__state_Multi-States (Karnataka, Maharashtra)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -9.9337,
+    "feature": "cat__state_Multi-States (Karnataka, Maharashtra, Telangana, Uttar Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -4.887,
+    "feature": "cat__state_Multi-States (Karnataka, Tamil Nadu)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -11.4896,
+    "feature": "cat__state_Multi-States (Karnataka, Telangana)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 29.3321,
+    "feature": "cat__state_Multi-States (Kerala, Puducherry)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 18.5748,
+    "feature": "cat__state_Multi-States (Kerala, Tamil Nadu)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -22.2444,
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Maharashtra)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -16.8249,
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Rajasthan)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 4.1961,
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Rajasthan, Uttar Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -7.5593,
+    "feature": "cat__state_Multi-States (Madhya Pradesh, Uttar Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -16.2269,
+    "feature": "cat__state_Multi-States (Maharashtra, Telangana)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 4.4607,
+    "feature": "cat__state_Multi-States (Odisha, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -17.9694,
+    "feature": "cat__state_Multi-States (Puducherry, Tamil Nadu)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -1.4178,
+    "feature": "cat__state_Multi-States (Rajasthan, Uttar Pradesh)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 100.2006,
+    "feature": "cat__state_Multi-States (Sikkim, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -0.294,
+    "feature": "cat__state_Multi-States (Uttar Pradesh, Uttarakhand)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -14.178,
+    "feature": "cat__state_Multi-States (Uttar Pradesh, West Bengal)",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -14.465,
+    "feature": "cat__state_Nagaland",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -5.4271,
+    "feature": "cat__state_Odisha",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 1.7773,
+    "feature": "cat__state_Offshore",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -16.5879,
+    "feature": "cat__state_PAN India",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -43.5157,
+    "feature": "cat__state_Puducherry",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -2.4567,
+    "feature": "cat__state_Punjab",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -3.923,
+    "feature": "cat__state_Rajasthan",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 5.4689,
+    "feature": "cat__state_Sikkim",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 8.6414,
+    "feature": "cat__state_Tamil Nadu",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -4.3144,
+    "feature": "cat__state_Telangana",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -0.7158,
+    "feature": "cat__state_Tripura",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -6.0769,
+    "feature": "cat__state_Uttar Pradesh",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -0.3975,
+    "feature": "cat__state_Uttarakhand",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 1.5303,
+    "feature": "cat__state_West Bengal",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -0.6152,
+    "feature": "num__log_cost_original",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 4.3951,
+    "feature": "num__age_months",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 5.3482,
+    "feature": "num__physical_progress_pct",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": -11.1292,
+    "feature": "num__approval_year",
+    "target": "time_overrun_months"
+   },
+   {
+    "coef": 2.6554,
+    "feature": "num__agency_size",
+    "target": "time_overrun_months"
+   }
+  ],
+  "n": 1775,
+  "partial_dependence": [
+   {
+    "feature": "log_cost_original",
+    "grid": [
+     5.2261,
+     5.4075,
+     5.5889,
+     5.7703,
+     5.9517,
+     6.133,
+     6.3144,
+     6.4958,
+     6.6772,
+     6.8586,
+     7.04,
+     7.2214,
+     7.4027,
+     7.5841,
+     7.7655,
+     7.9469,
+     8.1283,
+     8.3097,
+     8.4911,
+     8.6724
+    ],
+    "target": "cost_overrun_pct",
+    "values": [
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148,
+     -3.8148
+    ]
+   },
+   {
+    "feature": "age_months",
+    "grid": [
+     16.0,
+     24.9832,
+     33.9663,
+     42.9495,
+     51.9326,
+     60.9158,
+     69.8989,
+     78.8821,
+     87.8653,
+     96.8484,
+     105.8316,
+     114.8147,
+     123.7979,
+     132.7811,
+     141.7642,
+     150.7474,
+     159.7305,
+     168.7137,
+     177.6968,
+     186.68
+    ],
+    "target": "cost_overrun_pct",
+    "values": [
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274,
+     4.4274
+    ]
+   },
+   {
+    "feature": "physical_progress_pct",
+    "grid": [
+     0.316,
+     5.552,
+     10.788,
+     16.024,
+     21.26,
+     26.496,
+     31.732,
+     36.968,
+     42.204,
+     47.44,
+     52.676,
+     57.912,
+     63.148,
+     68.384,
+     73.62,
+     78.856,
+     84.092,
+     89.328,
+     94.564,
+     99.8
+    ],
+    "target": "cost_overrun_pct",
+    "values": [
+     9.7089,
+     -0.0164,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403,
+     -5.2403
+    ]
+   },
+   {
+    "feature": "log_cost_original",
+    "grid": [
+     5.2261,
+     5.4075,
+     5.5889,
+     5.7703,
+     5.9517,
+     6.133,
+     6.3144,
+     6.4958,
+     6.6772,
+     6.8586,
+     7.04,
+     7.2214,
+     7.4027,
+     7.5841,
+     7.7655,
+     7.9469,
+     8.1283,
+     8.3097,
+     8.4911,
+     8.6724
+    ],
+    "target": "time_overrun_months",
+    "values": [
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916,
+     -1.7916
+    ]
+   },
+   {
+    "feature": "age_months",
+    "grid": [
+     16.0,
+     24.9832,
+     33.9663,
+     42.9495,
+     51.9326,
+     60.9158,
+     69.8989,
+     78.8821,
+     87.8653,
+     96.8484,
+     105.8316,
+     114.8147,
+     123.7979,
+     132.7811,
+     141.7642,
+     150.7474,
+     159.7305,
+     168.7137,
+     177.6968,
+     186.68
+    ],
+    "target": "time_overrun_months",
+    "values": [
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104,
+     1.4104
+    ]
+   },
+   {
+    "feature": "physical_progress_pct",
+    "grid": [
+     0.316,
+     5.552,
+     10.788,
+     16.024,
+     21.26,
+     26.496,
+     31.732,
+     36.968,
+     42.204,
+     47.44,
+     52.676,
+     57.912,
+     63.148,
+     68.384,
+     73.62,
+     78.856,
+     84.092,
+     89.328,
+     94.564,
+     99.8
+    ],
+    "target": "time_overrun_months",
+    "values": [
+     -0.8713,
+     -1.5454,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516,
+     -2.2516
+    ]
+   }
+  ],
+  "results": [
+   {
+    "cv_mae": 19.7867,
+    "cv_r2": 0.152,
+    "model_id": "OLS",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "cv_mae": 18.0919,
+    "cv_r2": 0.1543,
+    "model_id": "HGB",
+    "target": "cost_overrun_pct"
+   },
+   {
+    "cv_mae": 12.7498,
+    "cv_r2": 0.4316,
+    "model_id": "OLS",
+    "target": "time_overrun_months"
+   },
+   {
+    "cv_mae": 9.498,
+    "cv_r2": 0.5355,
+    "model_id": "HGB",
+    "target": "time_overrun_months"
+   }
+  ],
+  "sector_effects": [
+   {
+    "effect_cost_pct": -3.6682,
+    "effect_time_months": -2.2805,
+    "n": 25,
+    "sector": "Aviation & Aviation Infrastructure"
+   },
+   {
+    "effect_cost_pct": -14.319,
+    "effect_time_months": -0.8043,
+    "n": 115,
+    "sector": "Coal"
+   },
+   {
+    "effect_cost_pct": -13.6166,
+    "effect_time_months": -11.5937,
+    "n": 2,
+    "sector": "Construction"
+   },
+   {
+    "effect_cost_pct": -23.2405,
+    "effect_time_months": -4.3803,
+    "n": 31,
+    "sector": "Education"
+   },
+   {
+    "effect_cost_pct": 22.1339,
+    "effect_time_months": 16.8559,
+    "n": 39,
+    "sector": "Electricity Generation"
+   },
+   {
+    "effect_cost_pct": 1.5736,
+    "effect_time_months": 1.4003,
+    "n": 12,
+    "sector": "Energy Storage"
+   },
+   {
+    "effect_cost_pct": 7.7742,
+    "effect_time_months": -12.9937,
+    "n": 44,
+    "sector": "Healthcare"
+   },
+   {
+    "effect_cost_pct": -23.0518,
+    "effect_time_months": -6.9871,
+    "n": 1,
+    "sector": "Inland Waterways"
+   },
+   {
+    "effect_cost_pct": -37.0723,
+    "effect_time_months": 27.3743,
+    "n": 1,
+    "sector": "Logistics Infrastructure"
+   },
+   {
+    "effect_cost_pct": 8.2972,
+    "effect_time_months": 3.9071,
+    "n": 6,
+    "sector": "Metals & Mining"
+   },
+   {
+    "effect_cost_pct": -3.2029,
+    "effect_time_months": 3.4662,
+    "n": 91,
+    "sector": "Oil & Gas"
+   },
+   {
+    "effect_cost_pct": 4.853,
+    "effect_time_months": -9.5471,
+    "n": 192,
+    "sector": "Railways"
+   },
+   {
+    "effect_cost_pct": -8.7043,
+    "effect_time_months": 3.0044,
+    "n": 15,
+    "sector": "Real Estate"
+   },
+   {
+    "effect_cost_pct": -13.2786,
+    "effect_time_months": 2.9048,
+    "n": 993,
+    "sector": "Roads & Highways"
+   },
+   {
+    "effect_cost_pct": -1.3281,
+    "effect_time_months": -3.9578,
+    "n": 4,
+    "sector": "Shipping"
+   },
+   {
+    "effect_cost_pct": -0.13,
+    "effect_time_months": -3.5638,
+    "n": 26,
+    "sector": "Steel"
+   },
+   {
+    "effect_cost_pct": -41.2367,
+    "effect_time_months": 14.3101,
+    "n": 31,
+    "sector": "Telecommunication"
+   },
+   {
+    "effect_cost_pct": 94.3802,
+    "effect_time_months": -22.2937,
+    "n": 1,
+    "sector": "Tourism, Hospitality & Wellness"
+   },
+   {
+    "effect_cost_pct": -1.003,
+    "effect_time_months": 5.974,
+    "n": 63,
+    "sector": "Transmission & Distribution"
+   },
+   {
+    "effect_cost_pct": -4.5601,
+    "effect_time_months": 8.2269,
+    "n": 30,
+    "sector": "Urban Public Transport"
+   },
+   {
+    "effect_cost_pct": -30.2016,
+    "effect_time_months": -5.6836,
+    "n": 23,
+    "sector": "Waste & Water"
+   },
+   {
+    "effect_cost_pct": 79.6015,
+    "effect_time_months": -3.3384,
+    "n": 30,
+    "sector": "Water Resources"
+   }
+  ],
+  "snapshot": "2026-07"
+ },
+ "m4_anomaly": {
+  "contamination": "auto",
+  "flagged": [
+   {
+    "pair": "P1",
+    "project_code": "705793",
+    "score": 0.7891,
+    "sources": [
+     {
+      "page": 73,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618330",
+    "score": 0.7454,
+    "sources": [
+     {
+      "page": 80,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 99,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618026",
+    "score": 0.7389,
+    "sources": [
+     {
+      "page": 100,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 147,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "705253",
+    "score": 0.7369,
+    "sources": [
+     {
+      "page": 69,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "612140",
+    "score": 0.7368,
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 64,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618429",
+    "score": 0.732,
+    "sources": [
+     {
+      "page": 104,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 158,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618352",
+    "score": 0.7309,
+    "sources": [
+     {
+      "page": 80,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 100,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618351",
+    "score": 0.7284,
+    "sources": [
+     {
+      "page": 80,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 100,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618412",
+    "score": 0.7275,
+    "sources": [
+     {
+      "page": 78,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 94,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "400188",
+    "score": 0.7223,
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 67,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618435",
+    "score": 0.7218,
+    "sources": [
+     {
+      "page": 81,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 100,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618408",
+    "score": 0.7174,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618362",
+    "score": 0.7142,
+    "sources": [
+     {
+      "page": 93,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 132,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618436",
+    "score": 0.7128,
+    "sources": [
+     {
+      "page": 81,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 100,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "617960",
+    "score": 0.7125,
+    "sources": [
+     {
+      "page": 104,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 158,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "612134",
+    "score": 0.7096,
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 66,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618353",
+    "score": 0.705,
+    "sources": [
+     {
+      "page": 80,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 100,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618410",
+    "score": 0.7043,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "701719",
+    "score": 0.703,
+    "sources": [
+     {
+      "page": 59,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 67,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "612133",
+    "score": 0.7016,
+    "sources": [
+     {
+      "page": 58,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 66,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618292",
+    "score": 0.7009,
+    "sources": [
+     {
+      "page": 95,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 137,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618416",
+    "score": 0.7006,
+    "sources": [
+     {
+      "page": 92,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 130,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618238",
+    "score": 0.6947,
+    "sources": [
+     {
+      "page": 78,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 94,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618409",
+    "score": 0.689,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618286",
+    "score": 0.6856,
+    "sources": [
+     {
+      "page": 79,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 98,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P1",
+    "project_code": "618455",
+    "score": 0.685,
+    "sources": [
+     {
+      "page": 81,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 101,
+      "snapshot": "2026-04"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "604859",
+    "score": 0.6917,
+    "sources": [
+     {
+      "page": 76,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701329",
+    "score": 0.6885,
+    "sources": [
+     {
+      "page": 73,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 71,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701324",
+    "score": 0.6874,
+    "sources": [
+     {
+      "page": 73,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 71,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "607653",
+    "score": 0.6495,
+    "sources": [
+     {
+      "page": 90,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 88,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "604791",
+    "score": 0.6123,
+    "sources": [
+     {
+      "page": 72,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 70,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "618886",
+    "score": 0.5813,
+    "sources": [
+     {
+      "page": 137,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 133,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701349",
+    "score": 0.5616,
+    "sources": [
+     {
+      "page": 72,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 70,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "617212",
+    "score": 0.5555,
+    "sources": [
+     {
+      "page": 86,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "618149",
+    "score": 0.5504,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 114,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "619008",
+    "score": 0.538,
+    "sources": [
+     {
+      "page": 128,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 125,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "617882",
+    "score": 0.5358,
+    "sources": [
+     {
+      "page": 77,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 75,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "707229",
+    "score": 0.528,
+    "sources": [
+     {
+      "page": 67,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 65,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "619317",
+    "score": 0.5202,
+    "sources": [
+     {
+      "page": 105,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 102,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701602",
+    "score": 0.5194,
+    "sources": [
+     {
+      "page": 159,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 156,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "615347",
+    "score": 0.508,
+    "sources": [
+     {
+      "page": 66,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 64,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "705489",
+    "score": 0.5066,
+    "sources": [
+     {
+      "page": 91,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701599",
+    "score": 0.5007,
+    "sources": [
+     {
+      "page": 159,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 156,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "612853",
+    "score": 0.4927,
+    "sources": [
+     {
+      "page": 75,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "618095",
+    "score": 0.4918,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 113,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "617806",
+    "score": 0.4912,
+    "sources": [
+     {
+      "page": 65,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 64,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "612748",
+    "score": 0.4885,
+    "sources": [
+     {
+      "page": 78,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 76,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "615336",
+    "score": 0.4816,
+    "sources": [
+     {
+      "page": 63,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701263",
+    "score": 0.4792,
+    "sources": [
+     {
+      "page": 72,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 70,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701597",
+    "score": 0.478,
+    "sources": [
+     {
+      "page": 159,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 156,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "617370",
+    "score": 0.4775,
+    "sources": [
+     {
+      "page": 91,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "615915",
+    "score": 0.4774,
+    "sources": [
+     {
+      "page": 89,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "400426",
+    "score": 0.4755,
+    "sources": [
+     {
+      "page": 70,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 68,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "617404",
+    "score": 0.4721,
+    "sources": [
+     {
+      "page": 90,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 88,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "618147",
+    "score": 0.4669,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 114,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701598",
+    "score": 0.4651,
+    "sources": [
+     {
+      "page": 159,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 155,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "400073",
+    "score": 0.4612,
+    "sources": [
+     {
+      "page": 57,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "618797",
+    "score": 0.461,
+    "sources": [
+     {
+      "page": 143,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 140,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "701398",
+    "score": 0.4593,
+    "sources": [
+     {
+      "page": 161,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 157,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "617730",
+    "score": 0.457,
+    "sources": [
+     {
+      "page": 61,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "705497",
+    "score": 0.4554,
+    "sources": [
+     {
+      "page": 85,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "400188",
+    "score": 0.4468,
+    "sources": [
+     {
+      "page": 67,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 65,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "618031",
+    "score": 0.4447,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 113,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P2",
+    "project_code": "617836",
+    "score": 0.4429,
+    "sources": [
+     {
+      "page": 73,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 71,
+      "snapshot": "2026-05"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618406",
+    "score": 0.7291,
+    "sources": [
+     {
+      "page": 110,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 114,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618397",
+    "score": 0.7212,
+    "sources": [
+     {
+      "page": 110,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 114,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618706",
+    "score": 0.6496,
+    "sources": [
+     {
+      "page": 114,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 118,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618601",
+    "score": 0.6466,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618602",
+    "score": 0.6454,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618933",
+    "score": 0.639,
+    "sources": [
+     {
+      "page": 120,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 124,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618533",
+    "score": 0.6337,
+    "sources": [
+     {
+      "page": 132,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 135,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618893",
+    "score": 0.631,
+    "sources": [
+     {
+      "page": 151,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 153,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618441",
+    "score": 0.6232,
+    "sources": [
+     {
+      "page": 98,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 103,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "701396",
+    "score": 0.622,
+    "sources": [
+     {
+      "page": 157,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 159,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619096",
+    "score": 0.6048,
+    "sources": [
+     {
+      "page": 115,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 119,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "706775",
+    "score": 0.585,
+    "sources": [
+     {
+      "page": 156,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 157,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618442",
+    "score": 0.5835,
+    "sources": [
+     {
+      "page": 98,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 103,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618438",
+    "score": 0.5831,
+    "sources": [
+     {
+      "page": 98,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 103,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618606",
+    "score": 0.5827,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618597",
+    "score": 0.5756,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618599",
+    "score": 0.5753,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618444",
+    "score": 0.5746,
+    "sources": [
+     {
+      "page": 98,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 103,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619150",
+    "score": 0.5721,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619208",
+    "score": 0.5718,
+    "sources": [
+     {
+      "page": 117,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 121,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619103",
+    "score": 0.5625,
+    "sources": [
+     {
+      "page": 104,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 108,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618607",
+    "score": 0.5615,
+    "sources": [
+     {
+      "page": 117,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 121,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619118",
+    "score": 0.5615,
+    "sources": [
+     {
+      "page": 137,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 139,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618530",
+    "score": 0.5607,
+    "sources": [
+     {
+      "page": 131,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 134,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618886",
+    "score": 0.5605,
+    "sources": [
+     {
+      "page": 133,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 136,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618603",
+    "score": 0.554,
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618325",
+    "score": 0.5538,
+    "sources": [
+     {
+      "page": 97,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 102,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619317",
+    "score": 0.5529,
+    "sources": [
+     {
+      "page": 102,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 107,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619206",
+    "score": 0.552,
+    "sources": [
+     {
+      "page": 117,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 121,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619120",
+    "score": 0.5517,
+    "sources": [
+     {
+      "page": 115,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 119,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "400150",
+    "score": 0.5515,
+    "sources": [
+     {
+      "page": 56,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 61,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618909",
+    "score": 0.5509,
+    "sources": [
+     {
+      "page": 132,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 135,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619152",
+    "score": 0.5486,
+    "sources": [
+     {
+      "page": 102,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 107,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "618440",
+    "score": 0.5471,
+    "sources": [
+     {
+      "page": 98,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 103,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P3",
+    "project_code": "619069",
+    "score": 0.5449,
+    "sources": [
+     {
+      "page": 125,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 128,
+      "snapshot": "2026-06"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705457",
+    "score": 0.6827,
+    "sources": [
+     {
+      "page": 92,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705366",
+    "score": 0.6736,
+    "sources": [
+     {
+      "page": 85,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705419",
+    "score": 0.6735,
+    "sources": [
+     {
+      "page": 92,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705526",
+    "score": 0.6724,
+    "sources": [
+     {
+      "page": 85,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "400223",
+    "score": 0.6711,
+    "sources": [
+     {
+      "page": 92,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "400247",
+    "score": 0.6673,
+    "sources": [
+     {
+      "page": 95,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705410",
+    "score": 0.6553,
+    "sources": [
+     {
+      "page": 91,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705610",
+    "score": 0.6534,
+    "sources": [
+     {
+      "page": 90,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "706759",
+    "score": 0.6471,
+    "sources": [
+     {
+      "page": 85,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "617252",
+    "score": 0.6452,
+    "sources": [
+     {
+      "page": 95,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 88,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "612845",
+    "score": 0.6452,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705453",
+    "score": 0.6428,
+    "sources": [
+     {
+      "page": 91,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705358",
+    "score": 0.6266,
+    "sources": [
+     {
+      "page": 93,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "701745",
+    "score": 0.6231,
+    "sources": [
+     {
+      "page": 72,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 68,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "617245",
+    "score": 0.6197,
+    "sources": [
+     {
+      "page": 91,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705661",
+    "score": 0.6167,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "618299",
+    "score": 0.6153,
+    "sources": [
+     {
+      "page": 129,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 121,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "602797",
+    "score": 0.6136,
+    "sources": [
+     {
+      "page": 92,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705385",
+    "score": 0.6107,
+    "sources": [
+     {
+      "page": 90,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705424",
+    "score": 0.6093,
+    "sources": [
+     {
+      "page": 91,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705588",
+    "score": 0.6063,
+    "sources": [
+     {
+      "page": 95,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "400273",
+    "score": 0.6055,
+    "sources": [
+     {
+      "page": 95,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705638",
+    "score": 0.5997,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705494",
+    "score": 0.5974,
+    "sources": [
+     {
+      "page": 90,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705663",
+    "score": 0.5965,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "709813",
+    "score": 0.5943,
+    "sources": [
+     {
+      "page": 87,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 82,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705490",
+    "score": 0.5928,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705933",
+    "score": 0.5926,
+    "sources": [
+     {
+      "page": 88,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "400022",
+    "score": 0.5917,
+    "sources": [
+     {
+      "page": 91,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705514",
+    "score": 0.591,
+    "sources": [
+     {
+      "page": 93,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705392",
+    "score": 0.5836,
+    "sources": [
+     {
+      "page": 90,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705373",
+    "score": 0.5835,
+    "sources": [
+     {
+      "page": 85,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "618239",
+    "score": 0.58,
+    "sources": [
+     {
+      "page": 97,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 90,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "617934",
+    "score": 0.5791,
+    "sources": [
+     {
+      "page": 124,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 116,
+      "snapshot": "2026-07"
+     }
+    ]
+   },
+   {
+    "pair": "P4",
+    "project_code": "705515",
+    "score": 0.5772,
+    "sources": [
+     {
+      "page": 93,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-07"
+     }
+    ]
+   }
+  ],
+  "n": 6619
+ },
+ "meta": {
+  "contract_version": "1.0.0",
+  "generated_at": "2026-09-08T07:35:36+00:00",
+  "omp_threads": 1,
+  "pairs": [
+   {
+    "censored_exits": 56,
+    "from": "2025-12",
+    "gap_months": 4,
+    "id": "P1",
+    "n": 1289,
+    "positives": 649,
+    "to": "2026-04"
+   },
+   {
+    "censored_exits": 123,
+    "from": "2026-04",
+    "gap_months": 1,
+    "id": "P2",
+    "n": 1858,
+    "positives": 413,
+    "to": "2026-05"
+   },
+   {
+    "censored_exits": 149,
+    "from": "2026-05",
+    "gap_months": 1,
+    "id": "P3",
+    "n": 1740,
+    "positives": 306,
+    "to": "2026-06"
+   },
+   {
+    "censored_exits": 115,
+    "from": "2026-06",
+    "gap_months": 1,
+    "id": "P4",
+    "n": 1732,
+    "positives": 334,
+    "to": "2026-07"
+   }
+  ],
+  "random_state": 0,
+  "sklearn_version": "1.9.0",
+  "test_pair": "P4",
+  "train_pairs": [
+   "P1",
+   "P2",
+   "P3"
+  ]
+ }
+}
