@@ -61,17 +61,27 @@ _PROJECT_CODE_RE = re.compile(r"(?<=^Project )\d[\d,]*\.?\d*(?=:)", re.MULTILINE
 _PAGE_RE = re.compile(r"(?<=\(page )\d[\d,]*\.?\d*(?=\))")
 
 
-def _identifier_numbers(facts):
-    out = set()
+# The exclusion must be POSITIONAL, not by value: subtracting identifier VALUES from the
+# whole allowed set (the earlier, wrong approach) bans that value everywhere in the fact
+# sheet, so a real quantity elsewhere that merely happens to equal an identifier (e.g. a
+# progress percentage that equals a page number) gets wrongly rejected too. Instead, mask
+# the identifier substrings out of the fact-sheet TEXT first, then compute numbers_in()
+# over the masked text -- an identifier occurrence stops licensing a claim only at its own
+# position; the same value occurring elsewhere as a genuine quantity still counts.
+def _mask_identifiers(facts):
+    text = facts or ""
     for rx in (_PROJECT_CODE_RE, _PAGE_RE):
-        for m in rx.findall(facts or ""):
-            out |= numbers_in(m)
-    return out
+        # Replace with the SAME NUMBER of a non-digit, non-comma, non-period filler
+        # character. Same length keeps every other character's position untouched (so
+        # nothing before/after the match can be mis-tokenised); a non-numeric filler
+        # means numbers_in() can never re-match across the masked span, so it cannot
+        # accidentally splice two neighbouring numbers into a new one.
+        text = rx.sub(lambda m: "#" * len(m.group(0)), text)
+    return text
 
 
 def grounded(brief, facts):
-    allowed = numbers_in(facts) - _identifier_numbers(facts)
-    return numbers_in(brief) <= allowed
+    return numbers_in(brief) <= numbers_in(_mask_identifiers(facts))
 
 
 def template_brief(p):
@@ -96,8 +106,9 @@ def brief_for(p, model, template_only=False):
     facts = fact_sheet(p)
     h = hashlib.sha256(facts.encode("utf-8")).hexdigest()
     if template_only:
-        return {"project_code": p["project_code"], "brief": template_brief(p), "model": "template", "seed": SEED,
-                "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "grounded": True, "attempts": 0, "facts_hash": h}
+        text = template_brief(p)
+        return {"project_code": p["project_code"], "brief": text, "model": "template", "seed": SEED,
+                "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "grounded": grounded(text, facts), "attempts": 0, "facts_hash": h}
     prompt = f"{SYSTEM}\n\nFACTS:\n{facts}\n\nBRIEF:"
     attempts, text = 0, ""
     for attempts in range(1, 4):
@@ -105,7 +116,11 @@ def brief_for(p, model, template_only=False):
         if text and grounded(text, facts):
             return {"project_code": p["project_code"], "brief": text, "model": model, "seed": SEED,
                     "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "grounded": True, "attempts": attempts, "facts_hash": h}
-        bad = sorted(numbers_in(text) - numbers_in(facts))
+        # Feedback must list what the check actually rejected: numbers masked as identifiers
+        # (project code, page numbers) are not "in the facts" as far as grounded() is
+        # concerned, so this uses the same masked view grounded() itself uses -- otherwise a
+        # model that invented an identifier-shaped number would never be told to remove it.
+        bad = sorted(numbers_in(text) - numbers_in(_mask_identifiers(facts)))
         prompt = f"{SYSTEM}\n\nFACTS:\n{facts}\n\nYour previous brief contained numbers not in the facts: {', '.join(bad)}. Remove them and write the brief again.\n\nBRIEF:"
     return {"project_code": p["project_code"], "brief": template_brief(p), "model": "template", "seed": SEED,
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "grounded": False, "attempts": attempts, "facts_hash": h}
