@@ -25,6 +25,11 @@ async function fetchJson(path: string): Promise<unknown | null> {
   const r = await fetch(path);
   if (r.status === 404) return null;
   if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
+  // An optional file (briefs.json) is absent until its task runs. The static demo
+  // server answers that with 404, but the dev server answers any unknown path with
+  // the SPA fallback: 200 and index.html. Content-type is the one absence signal
+  // both servers agree on, so check it before parsing.
+  if (!(r.headers.get("content-type") ?? "").includes("application/json")) return null;
   return r.json();
 }
 
