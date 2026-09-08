@@ -3478,7 +3478,7 @@ gh pr create --title "Task 12: M2" --body "<paste outputs>"
 - Consumes: Task 10.
 - Produces: `findings.models.m3_drivers.run(panel, flags) -> (m3_json, per_project)` with `per_project[code] = {"peer_expected_cost_overrun_pct", "cost_overrun_residual_pct", "peer_expected_time_overrun_months", "time_overrun_residual_months"}`; `findings.models.m4_anomaly.run(panel) -> (m4_json, per_project, extra_flags)` with `per_project[code] = {"anomaly_score", "anomaly_flag"}` and `extra_flags` = `STAT_ANOMALY` flag dicts (with `project_code`).
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/models/test_m3_m4.py`:
 ```python
@@ -3505,11 +3505,11 @@ def test_m4_flags_about_two_percent(synth):
     assert any(p["anomaly_flag"] for p in per.values()) and all(p["anomaly_score"] is not None for p in per.values())
 ```
 
-- [ ] **Step 2: Run to verify failure**
+- [x] **Step 2: Run to verify failure**
 
 Run: `pytest tests/models/test_m3_m4.py -q` → import error.
 
-- [ ] **Step 3: Write `findings/models/m3_drivers.py`**
+- [x] **Step 3: Write `findings/models/m3_drivers.py`**
 
 ```python
 """M3: what drives cost and time overrun across the panel (OLS vs gradient boosting) and how each project compares with its peers."""
@@ -3602,7 +3602,7 @@ def run(panel, flags):
             "sector_effects": effects, "coefficients_OLS": coefs}, per
 ```
 
-- [ ] **Step 4: Write `findings/models/m4_anomaly.py`**
+- [x] **Step 4: Write `findings/models/m4_anomaly.py`**
 
 ```python
 """M4: month-to-month changes that are unusual even when arithmetically possible. Never re-labels F1's impossibilities."""
@@ -3658,7 +3658,7 @@ def run(panel):
     return {"n": int(len(rows)), "contamination": "auto", "flagged": flagged}, per, extra
 ```
 
-- [ ] **Step 5: Run tests, gate, commit**
+- [x] **Step 5: Run tests, gate, commit**
 
 Run: `pytest tests/models/test_m3_m4.py -q` → 2 passed. `python tools/validate.py` → PASS.
 
