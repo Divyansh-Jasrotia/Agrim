@@ -69,7 +69,14 @@ def test_brief_for_fallback_records_model_as_template(monkeypatch):
     # attribute the brief to "template", matching the --template-only path.
     monkeypatch.setattr(briefs_module, "_ollama_generate", lambda model, prompt: "an invented number 999999 not in the facts")
     result = brief_for(PROJECT, "qwen2.5:3b")
-    assert result["grounded"] is False
+    # This assertion was hardcoded to `is False` before fix round 3, which coincidentally
+    # matched the pre-fix bug this same branch had (see
+    # test_brief_for_exhausted_attempts_records_real_grounded_result below). Now that
+    # brief_for() calls grounded() on the shipped text instead of hardcoding False, this
+    # fixture's template_brief() output -- which is groundable by construction -- must be
+    # reported as grounded here too.
+    assert result["grounded"] == grounded(template_brief(PROJECT), fact_sheet(PROJECT))
+    assert result["grounded"] is True
     assert result["attempts"] == 3
     assert result["model"] == "template"
     assert result["brief"] == template_brief(PROJECT)
@@ -175,6 +182,40 @@ def test_brief_for_template_only_records_real_grounded_result(monkeypatch):
     monkeypatch.setattr(briefs_module, "template_brief",
                          lambda proj: "An invented distance of 999999 meters appears here.")
     fabricated = brief_for(PROJECT, "qwen2.5:3b", template_only=True)
+    assert fabricated["model"] == "template"
+    assert fabricated["grounded"] is False
+
+
+# --- Fix round 3 regression test --------------------------------------------------
+
+def test_brief_for_exhausted_attempts_records_real_grounded_result(monkeypatch):
+    # Finding: after exhausting all 3 LLM attempts, brief_for() ships template_brief(p)
+    # text but hardcoded "grounded": False without ever calling grounded() on it. That was
+    # roughly harmless while template_brief() often failed grounding, but the round-2 fix
+    # that made template_brief() grounded-by-construction for real projects (see
+    # test_template_brief_grounded_for_all_real_projects) turned this into a false negative
+    # almost every time this branch fires. The final fallback must call grounded() on the
+    # text it actually ships, exactly like the --template-only branch already does -- and
+    # the "model" field must stay "template" regardless, since template text is what is
+    # actually shipped (provenance and verification are separate facts).
+    monkeypatch.setattr(briefs_module, "_ollama_generate", lambda model, prompt: "an invented number 999999 not in the facts")
+
+    # Positive control: template_brief(PROJECT) is groundable (see
+    # test_template_brief_is_grounded_by_construction above), so the record must say so --
+    # not just happen to be True, but match an independent call to grounded().
+    result = brief_for(PROJECT, "qwen2.5:3b")
+    assert result["attempts"] == 3
+    assert result["model"] == "template"
+    assert result["grounded"] == grounded(template_brief(PROJECT), fact_sheet(PROJECT))
+    assert result["grounded"] is True
+
+    # Negative control, constructed explicitly (not relying on a real project happening to
+    # fail grounding): force template_brief() itself to emit a number absent from the
+    # facts, so the exhausted-attempts branch must honestly report False rather than True.
+    monkeypatch.setattr(briefs_module, "template_brief",
+                         lambda proj: "An invented distance of 999999 meters appears here.")
+    fabricated = brief_for(PROJECT, "qwen2.5:3b")
+    assert fabricated["attempts"] == 3
     assert fabricated["model"] == "template"
     assert fabricated["grounded"] is False
 

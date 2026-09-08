@@ -122,8 +122,16 @@ def brief_for(p, model, template_only=False):
         # model that invented an identifier-shaped number would never be told to remove it.
         bad = sorted(numbers_in(text) - numbers_in(_mask_identifiers(facts)))
         prompt = f"{SYSTEM}\n\nFACTS:\n{facts}\n\nYour previous brief contained numbers not in the facts: {', '.join(bad)}. Remove them and write the brief again.\n\nBRIEF:"
-    return {"project_code": p["project_code"], "brief": template_brief(p), "model": "template", "seed": SEED,
-            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "grounded": False, "attempts": attempts, "facts_hash": h}
+    # Ships template_brief(p) text after exhausting all LLM attempts. This must record the
+    # REAL grounded() result on that text, exactly like the --template-only branch above --
+    # not a hardcoded False. That hardcoding was roughly harmless while template_brief()
+    # often failed grounding, but the fix that made template_brief() grounded-by-construction
+    # (see test_template_brief_grounded_for_all_real_projects) turned this into a false
+    # negative almost every time the branch fires: text that is genuinely grounded, mislabelled
+    # as unverified.
+    fallback_text = template_brief(p)
+    return {"project_code": p["project_code"], "brief": fallback_text, "model": "template", "seed": SEED,
+            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "grounded": grounded(fallback_text, facts), "attempts": attempts, "facts_hash": h}
 
 
 def main(argv=None):

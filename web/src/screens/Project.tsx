@@ -87,7 +87,7 @@ export function Project() {
             </ul> : <div className="text-muted">Only one report has this project.</div>}</details>
         </div>
         <div className="rounded border border-line bg-surface p-3 text-sm">
-          <div className="mb-2 flex items-center gap-2 text-xs uppercase tracking-wide text-muted">Brief {brief && <Badge text={`LLM · ${brief.model} · ${brief.grounded ? "verified against ledger" : "template fallback"}`} className="bg-line text-muted" />}</div>
+          <div className="mb-2 flex items-center gap-2 text-xs uppercase tracking-wide text-muted">Brief {brief && <Badge text={`${brief.model === "template" ? "Template" : `LLM · ${brief.model}`} · ${brief.grounded ? "verified against ledger" : "not verified"}`} className="bg-line text-muted" />}</div>
           {brief ? <p>{brief.brief}</p> : <p className="text-muted">No cached brief for this project.</p>}
         </div>
       </div>
