@@ -44,7 +44,83 @@
 | `tools/routes.py` | **Create.** Serve `web/dist` and print every route URL for screenshot review. No new dependency. | 24 |
 | `docs/SCREEN-CHECKLIST.md` | **Create.** The six pass conditions a screen must meet before its task is done. | 24 |
 | `docs/FRONTEND-BRIEF.md` | **Create.** The full-context brief handed to the external AI frontend tool. | 22 |
+| `docs/mockups/agrim-reference.html` | **Create.** Corrected, offline, honest reference mockup — Overview, Project evidence, Exit Ledger. The canonical visual target for the port. | 22 |
 | `web/**` | **Replace.** Output of the external tool, integrated and verified. | 22 |
+
+---
+
+## Mockup corrections
+
+Three HTML mockups were produced by an external tool (Overview, Evidence Inspection, Exit Ledger). Their layout ideas are good and are kept. Their defects fall into six classes, all fixed in `docs/mockups/agrim-reference.html`, which is now the design target.
+
+### Kept, because they are better than the current build
+
+- **The two-panel evidence cockpit** on the project screen — source document left, structured reconciliation right. Stronger than the spec's original single evidence block; adopted.
+- **The abbreviated-plus-full currency tile** — `₹ 37.10 L cr` large with `₹ 37,10,641.55 cr` beneath. This solves the three-line wrapping defect from §2.4 elegantly. Adopted.
+- **Splitting arithmetic contradictions from statistical anomalies** into two separate tiles with distinct labels. This is exactly what Task 21 does in the data. Adopted.
+- **The Exit Ledger's explanatory paragraph** stating that rows are classified only by last observed progress and never presumed cancelled. Good audit writing; kept nearly verbatim.
+- **The panel-presence chronology timeline** on the project screen. Adopted, bound to `projects[].snapshots[]`.
+- **Overall density, mono numerics, small radii, institutional chrome.** The direction is right.
+
+### Class 1 — Breaks the offline demo (blocking)
+
+| Defect | Fix |
+|---|---|
+| `<script src="https://cdn.tailwindcss.com">` | Tailwind v4 via `@tailwindcss/vite`, compiled at build time |
+| Three `fonts.googleapis.com` stylesheet links | `@fontsource/ibm-plex-sans` + `@fontsource/ibm-plex-mono`, bundled |
+| Material Symbols icon font from Google | Inline SVG sprite, or Phosphor (primary) / Heroicons (fallback) via npm — both tree-shaken and offline |
+| JetBrains Mono substituted for IBM Plex Mono | Revert to IBM Plex Mono. D22 already decided it, the woff2 files are already committed in `web/dist/assets`, and switching costs a dependency for no gain |
+
+The corrected reference makes **one** network request — itself. Verified with the browser network panel.
+
+### Class 2 — Fabricated institutional authority (credibility-fatal)
+
+The mockups invent a government system AGRIM is not: *"Auditor General / Senior Analyst #771"*, *"Gov Node #AGR-88021"*, *"TLS 1.3 / Air-Gapped Sync"*, *"Session Key #0x9F41C90B"*, *"National Node DEL-CP-08"*, *"v4.8-PROD"*, *"Air-Gap Batch #8819"*, *"OCR SHA256: 8f9a2..c3"*, *"AUDIT BOUNDING BOX #COORD-X412-Y778 [CONFIDENCE 99.8%]"*, *"SHA-VERIFIED"*, *"Rule #A-409"*, *"IPMD Taxonomy v3.4"*, *"RECORD ARCHIVE CLASS B-1"*, *"SECRECY CLASS: OFFICIAL USE ONLY"*, *"PRINTED BY GOVT PRESS"*.
+
+**All removed.** AGRIM is a hackathon prototype reading five public PDFs. Claiming air-gapped government infrastructure, OCR confidence scores and secrecy classifications to a panel that may include MoSPI officials destroys the honesty the entire pitch rests on. The header now reads `AGRIM / IPMD / prototype`.
+
+Two specific instances deserve naming:
+
+- **The fake PDF page.** The mockup renders an *HTML emulation* of a government letterhead with an invented table. AGRIM has the real rendered page images at `/pages/<snapshot>/p<page>.png`. Showing a reconstruction instead of the real page throws away the single strongest asset in the project. The corrected version shows two real page images side by side — December 2025 page 74 and April 2026 page 88.
+- **The "Agency Portal" column.** The reconciliation table compares *"Source PDF"* against *"Agency Portal"* and computes a variance. **AGRIM has no agency portal data** — the CUF is behind a login, which BUILD.md states as a known limitation and the model card declares. That column is a fabricated capability. The corrected version keeps the two-column reconciliation idea but the second column is **the previous month's published report**, which is what F1 actually compares and is honest.
+
+### Class 3 — Token and colour-discipline violations
+
+| Defect | Fix |
+|---|---|
+| `primary: #000000`, `secondary: #0051d5`, `error: #ba1a1a` | The BUILD.md §8 tokens exactly: ink `#0E1A2B`, accent `#1F5FA8`, critical `#B42318` |
+| **`#5B4B9A` absent entirely.** Model output rendered in `secondary` blue (same as links) and an unrelated `tertiary` purple | Every model-derived value in `--model: #5B4B9A`, with the word "model" beside it. Used 12 times in the corrected reference |
+| `bg-[#16a34a]`, `bg-[#dcfce7]`, `bg-amber-500`, `bg-blue-500`, `from-blue-300 via-amber-400 to-red-700` | Removed. Severity tokens only |
+| Exit partition `≥95% when last seen` coloured green as "good" | Neutral. A project last seen at 98% that vanished is arguably the *most* suspicious row on the screen — colouring it as success is colour used decoratively and inverts the finding |
+| `borderRadius.full: 0.75rem` overrides `rounded-full`, so every status dot renders as a rounded square | Radii 2–3px on containers, true circles for dots |
+| Severity conveyed by colour alone in several chips | Severity encoded twice — colour **and** word — per BUILD.md §8 and the `ux` domain's `Color Only` rule (severity: High) |
+
+### Class 4 — Fabricated data and hardcoded numbers
+
+Invented and presented as real: `Total Flagged: 1,489`, `17 Sectors` (actual: 22), the entire sector table (`Roads & Highways 786/993` etc.), every per-state map figure, every exit-pair count (`50/690/10`), `₹ 8,87,388.66 cr`, `190` early-warning badge (actual unreachable: 1,289), the six exit roster rows, `IF-v2.1`, anomaly score `0.942`, `+16 mos drift`.
+
+This violates AGENTS.md rule 4 directly. In the corrected reference **every number carries `data-bind="<json path>"`**; values verified in this session are shown, and anything unverified renders as an em dash with its bind path attached — never as a plausible-looking invention. The mockup doubles as binding documentation for the port.
+
+One thing the mockups got *right*: the header chip `5 reports · 8837 rows · 98.3% parsed` is accurate. Mean of the five coverage percentages is 98.338.
+
+### Class 5 — React, SVG and correctness bugs
+
+| Defect | Fix |
+|---|---|
+| Lowercased SVG attributes: `viewbox`, `preserveaspectratio`, `lineargradient`, `radialgradient`, `fegaussianblur`, `fecomposite`, `stop-color` | JSX requires camelCase: `viewBox`, `preserveAspectRatio`, `linearGradient`, `radialGradient`, `feGaussianBlur`, `feComposite`, `stopColor`. These fail silently or throw in React |
+| Four duplicated DOM ids (`zoom-out-btn`, `zoom-readout`, `zoom-in-btn`, `fullscreen-doc-btn` in both toolbars) | Unique ids. Verified: zero duplicates in the corrected reference |
+| `class="px- space-sm"` — typo with an embedded space | Fixed |
+| Inline `<script>` rewriting `aside nav a` classNames to set the active tab | `NavLink` with `isActive`. Imperative DOM edits fight React's reconciler |
+| Hand-drawn India polygons with approximated boundaries | DataMeet GeoJSON via ECharts `registerMap`, post-2019 J&K/Ladakh verified (D18). An approximated India outline in a government room is a serious problem |
+| `::-webkit-scrollbar{display:none}` globally | Removed. Hiding scrollbars removes the only cue that content scrolls |
+| Static `<div>` with a caret acting as the persona switch | A real `<select>` with a label |
+| Icon-only buttons with no accessible name | `aria-label` or visible text on every control |
+
+### Class 6 — Motion
+
+`laserScan` (4.5s infinite scanning laser over the document), `pulseRadar`, `shimmerSweep`, `pathStrokeDraw`, and roughly a dozen `animate-ping` / `animate-pulse` instances. BUILD.md §8 permits nothing beyond a 150–200 ms fade, and the `ux` domain flags decorative-only animation. All removed; the corrected reference has one transition, a 150 ms button hover, plus a `prefers-reduced-motion` block.
+
+A scanning laser over an evidence document reads as theatre. The evidence is the argument; it does not need a special effect.
 
 **Why `collapse.py` is its own file:** `contradictions.detect()` must stay pure so the existing fixture tests keep asserting raw detection counts, and because `findings/models/features.py` consumes the **raw** flag list to build `n_flags_to_t0` and `exp_decrease_ever` for feature set B. Collapsing before model scoring would change M1's features and silently invalidate the frozen PR-AUC numbers already on the Predictions screen and in `deck/numbers.json`.
 
@@ -881,6 +957,7 @@ git commit -m "task 24: route enumerator and the screen checklist"
 
 **Files:**
 - Create: `docs/FRONTEND-BRIEF.md`
+- Create: `docs/mockups/agrim-reference.html`
 - Modify: `web/src/**` (replaced by the external tool's output)
 - Modify: `web/dist/**` (rebuilt and committed, per the layout note in BUILD.md)
 
@@ -888,15 +965,21 @@ git commit -m "task 24: route enumerator and the screen checklist"
 - Consumes: `web/public/data/{projects,findings,models,model_card}.json` frozen by Task 25, and `contracts/*.schema.json`.
 - Produces: a `web/dist` that serves from `python -m http.server` with no network.
 
-**The handoff is one-way.** The external tool does not have the repo, the contracts, the tokens or the offline constraint. `docs/FRONTEND-BRIEF.md` carries all of it. Everything the tool cannot be trusted to preserve is checked mechanically in Step 4.
+**The handoff is one-way.** The external tool does not have the repo, the contracts, the tokens or the offline constraint. `docs/FRONTEND-BRIEF.md` carries all of it and `docs/mockups/agrim-reference.html` shows it. Everything the tool cannot be trusted to preserve is checked mechanically in Step 4.
 
-- [ ] **Step 1: Write the brief**
+- [ ] **Step 1: Confirm the brief and the reference mockup**
 
-`docs/FRONTEND-BRIEF.md` is written in full in this session — see the file. Before handing it over, confirm it states: the ten routes; the exact token hex values; the exact JSON field names for `projects.json`, `findings.json` and `models.json`; the offline and no-CDN constraints; hash routing; Indian number formatting; the "contradictions" wording; the six checklist conditions; and the three reference sites.
+Both are written in this session. Before handing them over, confirm `docs/FRONTEND-BRIEF.md` states: the ten routes; the exact token hex values; the exact JSON field names for `projects.json`, `findings.json` and `models.json`; the offline and no-CDN constraints; hash routing; Indian number formatting; the "contradictions" wording; the six checklist conditions; and the three reference sites.
 
-- [ ] **Step 2: Give the tool the brief and the real data**
+Then open `docs/mockups/agrim-reference.html` and walk `#/`, `#/project/705410`, `#/exits`. It is the visual target: correct tokens, honest content, zero external requests, `data-bind` on every figure.
 
-Hand over `docs/FRONTEND-BRIEF.md` plus the four JSON files from `web/public/data/`. Do not hand over a synthetic sample — the layout defects this task exists to fix (three-line currency wrapping, a constant risk column) only appear on real values.
+- [ ] **Step 2: Give the tool the brief, the mockup and the real data**
+
+Hand over three things: `docs/FRONTEND-BRIEF.md`, `docs/mockups/agrim-reference.html`, and the four JSON files from `web/public/data/`.
+
+Do not hand over a synthetic sample — the layout defects this task exists to fix (three-line currency wrapping, a constant risk column) only appear on real values.
+
+**Say explicitly to the tool:** match the reference mockup's structure and density; keep the two-panel evidence layout, the abbreviated-plus-full currency tile, and the exit-ledger caveat paragraph; every `data-bind` attribute names the JSON path that value must read from, and an em dash means the value was never verified — wire it, never invent it. And name the six defect classes from §Mockup corrections above so they are not reintroduced.
 
 - [ ] **Step 3: Bring the output back into the repo**
 
@@ -933,6 +1016,18 @@ grep -rEn "1775|1101|967|443|1289|3710641|340503" web/src/ | grep -v "\.json"
 ```
 Expected: **no output**. Every number comes from JSON at runtime.
 
+```bash
+# 5. No fabricated institutional authority reintroduced. See Mockup corrections, class 2.
+grep -rniE "air.?gap|auditor general|gov node|session key|sha-?verified|secrecy|official use only|national node|bounding box|OCR|taxonomy v|PROD\b|agency portal" web/src/
+```
+Expected: **no output**. AGRIM reads five public PDFs; it does not run on government infrastructure and must never imply it does.
+
+```bash
+# 6. Lowercased SVG attributes that break in JSX. See class 5.
+grep -rnE "viewbox=|preserveaspectratio=|lineargradient|radialgradient|fegaussianblur|fecomposite|stop-color=" web/src/
+```
+Expected: **no output**.
+
 - [ ] **Step 5: Run the screen checklist**
 
 Run `python tools/routes.py`, screenshot all ten routes at 1440×900, and check each against `docs/SCREEN-CHECKLIST.md`. Attach the screenshots to the task. A route failing any of the six conditions goes back to the external tool with the specific condition quoted.
@@ -958,6 +1053,7 @@ git commit -m "task 22: rebuilt surface, contract guard and offline build verifi
 
 - **Spec coverage.** §2.1 → Task 21 Steps 10–11. §2.2 → Task 21 Steps 1–4. §2.3, §2.4 → Task 22 via the brief and checklist conditions 1, 2, 3, 5. §2.5 preserved: `detect()` is untouched and Task 21 Step 9 asserts it. §5 Task 21 items 1–4 → Task 21. §5 Task 22 → Task 22. §5 Task 23 → Task 23. §5 Task 24 → Task 24. §5 Task 25 → Task 25. §6 order → §Order. §7 → the gate step of every task. §8, §9, §10 are Window 2 and reference material, no task.
 - **Deviation from the spec, recorded.** The spec's Task 24 called for `tools/shots.py` capturing screenshots. That needs a headless browser, which means a runtime download (AGENTS.md rule 7) and a lock re-freeze (rule 9). Replaced with `tools/routes.py`, which serves and enumerates while a human or agent screenshots. Same arbiter, no dependency.
-- **Deviation from the spec, recorded.** The spec's Task 22 built the surface in-repo. Ranvir is using an external AI frontend tool, so Task 22 became brief-plus-integration with four mechanical acceptance checks standing in for the in-repo review.
+- **Deviation from the spec, recorded.** The spec's Task 22 built the surface in-repo. Ranvir is using an external AI frontend tool, so Task 22 became brief-plus-mockup-plus-integration with six mechanical acceptance checks standing in for the in-repo review.
+- **Added after the spec, recorded.** Three external mockups were reviewed; see §Mockup corrections. Their layout ideas are adopted (two-panel evidence cockpit, abbreviated-plus-full currency tile, contradictions/anomalies split, exit-ledger caveat paragraph, panel chronology). Six defect classes are fixed in `docs/mockups/agrim-reference.html`, which becomes the visual target for Task 22.
 - **Type consistency.** `classify(doc_original, doc_revised, snapshot)` is defined in Task 23 Step 3 and consumed with the same signature in Task 25 Step 3. `collapse(flags)` is defined in Task 21 Step 3 and consumed in Task 21 Step 11 only. `whipple_index`/`whipple_band` are defined and consumed inside Task 21.
 - **Contract version chain.** 1.0.0 → 1.1.0 (Task 21) → 1.2.0 (Task 23) → 1.3.0 (Task 25). Each task bumps `CONTRACT_VERSION` in `findings/run.py` and adds a `CHANGELOG.md` entry.
