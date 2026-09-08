@@ -4876,7 +4876,7 @@ gh pr create --title "Task 17: analysis screens" --body "<paste outputs>"
 - Consumes: everything above; `findings.assistant`, `findings.review_pack`, `findings.by_state`, `modelCard.sections`.
 - Produces: the last two routes; `RUN_DEMO.bat` that serves `web/dist` on port 8080 with Python only.
 
-- [ ] **Step 1: The map data (one-time download, then offline forever)**
+- [x] **Step 1: The map data (one-time download, then offline forever)**
 
 Run (PowerShell, in `web/`):
 ```powershell
@@ -4885,7 +4885,7 @@ node -e "const g=require('./src/assets/india_states.geojson');console.log(g.feat
 ```
 Expected: about 36 features and a property key that carries the state name (in DataMeet's file it is `ST_NM`). The printed name list must include `Ladakh`. If the URL 404s, open https://github.com/datameet/maps/tree/master/States and pick the states GeoJSON present there; the license is CC BY 4.0 — add the line `Map: DataMeet India maps (CC BY 4.0)` to the Model Card screen footer (Step 4). Set `NAME_PROP` in the component below to the key you saw.
 
-- [ ] **Step 2: IndiaMap and ExportButton**
+- [x] **Step 2: IndiaMap and ExportButton**
 
 `web/src/components/IndiaMap.tsx`:
 ```tsx
@@ -4959,7 +4959,7 @@ In `web/src/screens/Overview.tsx`, replace `<div id="overview-map" />` with:
 ```
 and add `import { IndiaMap } from "../components/IndiaMap";`.
 
-- [ ] **Step 3: Assistant**
+- [x] **Step 3: Assistant**
 
 `web/src/screens/Assistant.tsx`:
 ```tsx
@@ -5024,7 +5024,7 @@ export function Assistant() {
 }
 ```
 
-- [ ] **Step 4: Model Card**
+- [x] **Step 4: Model Card**
 
 `web/src/screens/ModelCard.tsx`:
 ```tsx
@@ -5051,7 +5051,7 @@ export function ModelCard() {
 
 Wire `Assistant` and `ModelCard` routes in `App.tsx`.
 
-- [ ] **Step 5: Demo runner and the committed build**
+- [x] **Step 5: Demo runner and the committed build**
 
 `RUN_DEMO.bat` at the repo root:
 ```bat
@@ -5070,7 +5070,7 @@ Run (in `web/`): `npm run build`. Then from the root: `RUN_DEMO.bat`. Expected: 
 
 Run: `python tools/validate.py` → PASS.
 
-- [ ] **Step 6: Commit (including `web/dist`)**
+- [x] **Step 6: Commit (including `web/dist`)**
 
 ```powershell
 git switch -c task/18-assistant-map-demo
@@ -5092,11 +5092,11 @@ gh pr create --title "Task 18: assistant, map, export, demo runner" --body "<pas
 - Consumes: `web/public/data/projects.json`, `findings.json`; a local Ollama with `qwen2.5:3b` pulled (only on the machine that runs this task).
 - Produces: `findings.briefs.fact_sheet(project: dict) -> str`, `findings.briefs.numbers_in(text: str) -> set[str]`, `findings.briefs.grounded(brief: str, facts: str) -> bool`, `findings.briefs.template_brief(project) -> str`, CLI `python -m findings.briefs [--top 60] [--codes 705526,...]` writing `briefs.json` matching `briefs.schema.json`.
 
-- [ ] **Step 0: Human prerequisite (P's laptop, ≥ 8 GB RAM)**
+- [x] **Step 0: Human prerequisite (P's laptop, ≥ 8 GB RAM)**
 
 Install Ollama from https://ollama.com (Windows installer), then run `ollama pull qwen2.5:3b` (about 2 GB). Check: `curl http://localhost:11434/` prints `Ollama is running`. If Ollama cannot be installed on any team laptop, skip to Step 5 with `--template-only`: the briefs file is still produced from templates with `grounded: false` and `model: "template"`, and the pitch says so.
 
-- [ ] **Step 1: Write the failing tests (no Ollama needed)**
+- [x] **Step 1: Write the failing tests (no Ollama needed)**
 
 Create `tests/findings/test_briefs.py`:
 ```python
@@ -5128,11 +5128,11 @@ def test_template_brief_is_grounded_by_construction():
     assert grounded(template_brief(PROJECT), fact_sheet(PROJECT))
 ```
 
-- [ ] **Step 2: Run to verify failure**
+- [x] **Step 2: Run to verify failure**
 
 Run: `pytest tests/findings/test_briefs.py -q` → import error.
 
-- [ ] **Step 3: Write `findings/briefs.py`**
+- [x] **Step 3: Write `findings/briefs.py`**
 
 ```python
 """LLM project briefs, generated ONCE at build time from a fact sheet, verified number-by-number, cached to briefs.json.
@@ -5260,18 +5260,18 @@ if __name__ == "__main__":
     sys.exit(main())
 ```
 
-- [ ] **Step 4: Run the tests**
+- [x] **Step 4: Run the tests**
 
 Run: `pytest tests/findings/test_briefs.py -q` → 3 passed.
 
-- [ ] **Step 5: Generate the briefs**
+- [x] **Step 5: Generate the briefs**
 
 Run (with Ollama running): `python -m findings.briefs --top 60 --codes <opener_code from deck/numbers.json>`
 Expected: sixty-plus lines ending `grounded` or `TEMPLATE FALLBACK`, then `wrote ...briefs.json: N briefs, M grounded`. Ten minutes or so on CPU. Without Ollama: add `--template-only` to the same command.
 
 Run: `python tools/validate.py` → `ok   briefs: valid`, `RESULT: PASS`. Open `#/project/<opener_code>` (after `npm run build` in `web/`): the brief card shows the verified chip.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```powershell
 cd web; npm run build; cd ..
@@ -5294,7 +5294,7 @@ gh pr create --title "Task 19: LLM briefs" --body "<paste the last line of the b
 - Consumes: `deck/numbers.json`, `web/public/data/findings.json`, `models.json`.
 - Produces: `deck/slides.md` — the exact text for each of the six template slides with every number substituted from `numbers.json`; the pitch script with timings; the tagged release `v0.1-internal-round`.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/tools/test_slides.py`:
 ```python
@@ -5318,7 +5318,7 @@ def test_slides_render_all_six_and_use_only_known_numbers():
     assert str(nums["projects_latest"]) in text
 ```
 
-- [ ] **Step 2: Write `tools/slides.py`**
+- [x] **Step 2: Write `tools/slides.py`**
 
 ```python
 """Render deck/slides.md: the text of the six official-template slides with every number from deck/numbers.json.
@@ -5386,7 +5386,7 @@ Run: `python tools/slides.py` then `pytest tests/tools/test_slides.py -q`. If th
 
 Download https://www.sih.gov.in/letters/2026/SIH2026-IDEA-Presentation-Format.pptx to `deck/AGRIM-SIH26103.pptx`. For each slide, paste the bullets from `deck/slides.md` into the template's existing text boxes without changing the headings or pointer text; delete slide 7 ("IMPORTANT INSTRUCTIONS"); keep six slides. On slide 3 draw the flow as boxes and arrows (the template allows diagrams). Add one screenshot of the Contradiction Ledger and the comparison table from Predictions on slide 4 (not a gallery of UI). Export as PDF to `deck/AGRIM-SIH26103.pdf`.
 
-- [ ] **Step 4: Write the pitch**
+- [x] **Step 4: Write the pitch**
 
 Create `deck/pitch.md` (numbers are written as `{key}` placeholders read aloud from `deck/slides.md`; the validator forbids typed numbers here):
 ```markdown
@@ -5423,7 +5423,7 @@ Why this PS · How is this different from an AI dashboard · Isn't a revised dat
 
 On a second laptop: `git clone <repo> C:\dev\agrim`, no `npm install`, no Python packages, Wi-Fi off, run `RUN_DEMO.bat`. Expected: the app loads and the whole demo path works from the committed `web/dist` and `web/public/data`. Time the pitch three times; record the times at the bottom of `deck/pitch.md` as `Rehearsal: <date> <m:ss>, <m:ss>, <m:ss>` (these are the only numbers allowed there, under two digits each).
 
-- [ ] **Step 6: Gate, commit, tag**
+- [x] **Step 6: Gate, commit, tag**
 
 Run: `python tools/validate.py` → PASS (checks `deck/numbers.json` traceability and `deck/pitch.md`).
 
