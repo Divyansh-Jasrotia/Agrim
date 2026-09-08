@@ -516,7 +516,7 @@ git commit -m "task 21: split the contradictions headline, collapse repeat flags
 
 This is the literal reading of "delayed against the stated original schedule". Leave a `# SPEC?` comment on the unrevised-but-overdue branch, per AGENTS.md rule 10.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/findings/test_delay_series.py`:
 
@@ -571,12 +571,12 @@ def test_null_doc_is_counted_not_dropped():
         assert isinstance(row["doc_null"], int)
 ```
 
-- [ ] **Step 2: Run it to make sure it fails**
+- [x] **Step 2: Run it to make sure it fails**
 
 Run: `pytest tests/findings/test_delay_series.py -q`
 Expected: FAIL — `ModuleNotFoundError: No module named 'findings.delay_series'`
 
-- [ ] **Step 3: Implement the minimal code to make the test pass**
+- [x] **Step 3: Implement the minimal code to make the test pass**
 
 Create `findings/delay_series.py`:
 
@@ -635,12 +635,12 @@ def compute(panel):
     return {"bands": BANDS, "rows": rows}
 ```
 
-- [ ] **Step 4: Run the tests and make sure they pass**
+- [x] **Step 4: Run the tests and make sure they pass**
 
 Run: `pytest tests/findings/test_delay_series.py -q`
 Expected: PASS, 8 passed
 
-- [ ] **Step 5: Extend the contract**
+- [x] **Step 5: Extend the contract**
 
 In `contracts/findings.schema.json`, add to `properties`:
 
@@ -665,7 +665,7 @@ In `contracts/findings.schema.json`, add to `properties`:
 
 Add `"delay_series"` to the schema's top-level `required` array. Bump to `1.2.0` in `contracts/CHANGELOG.md` and in `findings/run.py`'s `CONTRACT_VERSION`.
 
-- [ ] **Step 6: Wire it into run.py**
+- [x] **Step 6: Wire it into run.py**
 
 Add `delay_series` to the `from findings import ...` line. In `build_findings`, add to the `findings` dict after `"field_audit"`:
 
@@ -681,7 +681,7 @@ In `deck_numbers`, add after the coverage loop:
         nums[f"delay_{k}"] = last_delay[k]
 ```
 
-- [ ] **Step 7: Run the full pipeline and both gates**
+- [x] **Step 7: Run the full pipeline and both gates**
 
 Run:
 ```bash
@@ -691,7 +691,7 @@ pytest -q
 ```
 Expected: all three succeed. **Paste the output.** Read the reconstructed bands out loud as a sentence — "of N classifiable projects in July 2026, X are more than 60 months past their original date, and M have no original date at all". If that sentence is not one you would say to a MoSPI officer, invoke the Wednesday 22:00 cut rather than shipping it.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add findings/delay_series.py tests/findings/test_delay_series.py findings/run.py contracts/findings.schema.json contracts/CHANGELOG.md web/public/data deck/numbers.json docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md

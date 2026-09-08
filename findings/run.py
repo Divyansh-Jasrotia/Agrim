@@ -10,11 +10,11 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from findings import assistant, collapse, contradictions, disclosure_lag, early_warning, exits, field_audit, risk
+from findings import assistant, collapse, contradictions, delay_series, disclosure_lag, early_warning, exits, field_audit, risk
 from findings.panel import latest, load_panel, sector_map, series, snapshots_present, source
 
 ROOT = Path(__file__).resolve().parents[1]
-CONTRACT_VERSION = "1.1.0"
+CONTRACT_VERSION = "1.2.0"
 ARITH = {"EXP_DECREASE", "PROG_DECREASE", "EXP_GT_REVISED_COST", "ZERO_PROG_NONZERO_EXP", "PROG_GT_100", "DOC_BEFORE_APPROVAL"}
 from findings.models import pipeline  # noqa: E402  (after OMP_NUM_THREADS is set)
 run_models = pipeline.run
@@ -122,6 +122,7 @@ def build_findings(panel, projects, flags, ex, ew, aggregates, models):
         "exits": {"pairs": ex["pairs"], "rows": ex["rows"]},
         "early_warning": {"rows": ew["rows"]},
         "field_audit": field_audit.compute(panel),
+        "delay_series": delay_series.compute(panel),
         "disclosure_lag": disclosure_lag.compute(panel),
         "by_state": sorted(groups["state"].values(), key=lambda g: g["key"]),
         "by_sector": sorted(groups["sector"].values(), key=lambda g: g["key"]),
@@ -159,6 +160,9 @@ def deck_numbers(findings, models):
     for c in findings["meta"]["coverage"]:
         if c["pct"] is not None:
             nums[f"coverage_pct_{c['snapshot']}"] = c["pct"]
+    last_delay = findings["delay_series"]["rows"][-1]
+    for k in ["on_schedule", "d_1_12", "d_13_24", "d_25_60", "d_61_plus", "classifiable", "doc_null"]:
+        nums[f"delay_{k}"] = last_delay[k]
     for t in findings["contradictions"]["by_type"]:
         nums[f"count_{t['type']}"] = t["count"]
     drops = [r for r in findings["contradictions"]["rows"] if r["type"] == "EXP_DECREASE"

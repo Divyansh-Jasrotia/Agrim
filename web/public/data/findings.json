@@ -21616,6 +21616,67 @@
    }
   ]
  },
+ "delay_series": {
+  "bands": [
+   "on_schedule",
+   "d_1_12",
+   "d_13_24",
+   "d_25_60",
+   "d_61_plus"
+  ],
+  "rows": [
+   {
+    "classifiable": 1345,
+    "d_13_24": 232,
+    "d_1_12": 367,
+    "d_25_60": 209,
+    "d_61_plus": 85,
+    "doc_null": 0,
+    "on_schedule": 452,
+    "snapshot": "2025-12"
+   },
+   {
+    "classifiable": 1981,
+    "d_13_24": 367,
+    "d_1_12": 401,
+    "d_25_60": 382,
+    "d_61_plus": 176,
+    "doc_null": 0,
+    "on_schedule": 655,
+    "snapshot": "2026-04"
+   },
+   {
+    "classifiable": 1878,
+    "d_13_24": 361,
+    "d_1_12": 372,
+    "d_25_60": 375,
+    "d_61_plus": 159,
+    "doc_null": 11,
+    "on_schedule": 611,
+    "snapshot": "2026-05"
+   },
+   {
+    "classifiable": 1847,
+    "d_13_24": 322,
+    "d_1_12": 359,
+    "d_25_60": 388,
+    "d_61_plus": 157,
+    "doc_null": 0,
+    "on_schedule": 621,
+    "snapshot": "2026-06"
+   },
+   {
+    "classifiable": 1775,
+    "d_13_24": 307,
+    "d_1_12": 331,
+    "d_25_60": 369,
+    "d_61_plus": 149,
+    "doc_null": 0,
+    "on_schedule": 619,
+    "snapshot": "2026-07"
+   }
+  ]
+ },
  "disclosure_lag": {
   "median_lag_months": 2.0,
   "rows": [
@@ -85135,7 +85196,7 @@
   "whole_number_share": 0.3538
  },
  "meta": {
-  "contract_version": "1.1.0",
+  "contract_version": "1.2.0",
   "coverage": [
    {
     "pct": 96.62,
@@ -85173,7 +85234,7 @@
    "cost_revised_null": 0,
    "doc_null": 0
   },
-  "generated_at": "2026-09-08T21:43:19+00:00",
+  "generated_at": "2026-09-08T22:22:14+00:00",
   "headline": {
    "contradictions_arithmetic": 967,
    "contradictions_total": 967,

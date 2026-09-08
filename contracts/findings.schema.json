@@ -3,7 +3,7 @@
   "title": "Findings",
   "type": "object",
   "additionalProperties": false,
-  "required": ["meta", "contradictions", "exits", "early_warning", "field_audit", "disclosure_lag", "by_state", "by_sector", "review_pack", "assistant"],
+  "required": ["meta", "contradictions", "exits", "early_warning", "field_audit", "delay_series", "disclosure_lag", "by_state", "by_sector", "review_pack", "assistant"],
   "$defs": {
     "Source": {"type": "object", "additionalProperties": false, "required": ["snapshot", "page"],
       "properties": {"snapshot": {"type": "string"}, "page": {"type": "integer"}}},
@@ -64,6 +64,22 @@
         "whipple_index": {"type": ["number", "null"]}, "whipple_band": {"type": ["string", "null"]},
         "staleness_by_agency": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["agency_raw", "projects", "share_unchanged"],
           "properties": {"agency_raw": {"type": "string"}, "projects": {"type": "integer"}, "share_unchanged": {"type": "number"}}}}}},
+    "delay_series": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bands", "rows"],
+      "properties": {
+        "bands": {"type": "array", "items": {"type": "string"}},
+        "rows": {"type": "array", "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["snapshot", "on_schedule", "d_1_12", "d_13_24", "d_25_60", "d_61_plus", "classifiable", "doc_null"],
+          "properties": {
+            "snapshot": {"type": "string"}, "on_schedule": {"type": "integer"},
+            "d_1_12": {"type": "integer"}, "d_13_24": {"type": "integer"},
+            "d_25_60": {"type": "integer"}, "d_61_plus": {"type": "integer"},
+            "classifiable": {"type": "integer"}, "doc_null": {"type": "integer"}}}}
+      }
+    },
     "disclosure_lag": {"type": "object", "additionalProperties": false, "required": ["status", "median_lag_months", "rows"],
       "properties": {"status": {"type": "string", "enum": ["computed", "not_computed"]}, "median_lag_months": {"type": ["number", "null"]},
         "rows": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["project_code", "filed_at", "first_unreachable", "lag_months"],
