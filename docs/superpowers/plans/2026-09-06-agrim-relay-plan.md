@@ -3094,7 +3094,7 @@ gh pr create --title "Task 10: feature builder" --body "<paste outputs>"
 - Consumes: Task 10.
 - Produces: `findings.models.metrics.summarize(model_id, test_pair, y, s) -> dict` (one `m1_slip.results` row); `findings.models.m1_slip.run(panel, flags, frames: dict[str, DataFrame], pair_list: list[tuple], test_pair="P4") -> (m1_json: dict, per_project: dict[str, dict], pairs_meta: list[dict])` where `per_project[code] = {"slip_prob", "slip_rank", "slip_top_factors"}` for every project present at the latest snapshot.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/models/test_m1.py`:
 ```python
@@ -3131,11 +3131,11 @@ def test_m1_beats_base_rate_and_shuffle_and_is_deterministic(synth):
     assert json.dumps(m1, sort_keys=True) == json.dumps(m1b, sort_keys=True)
 ```
 
-- [ ] **Step 2: Run to verify failure**
+- [x] **Step 2: Run to verify failure**
 
 Run: `pytest tests/models/test_m1.py -q` → Expected: import error.
 
-- [ ] **Step 3: Write `findings/models/metrics.py`**
+- [x] **Step 3: Write `findings/models/metrics.py`**
 
 ```python
 """Ranking metrics for an officer's decision: which 100 projects to review this month. No accuracy, ever."""
@@ -3188,7 +3188,7 @@ def summarize(model_id, test_pair, y, s):
             "calibration": calibration(y, s), "pr_curve": pr_curve_points(y, s) if 0 < positives < n else []}
 ```
 
-- [ ] **Step 4: Write `findings/models/m1_slip.py`**
+- [x] **Step 4: Write `findings/models/m1_slip.py`**
 
 ```python
 """M1: will this project file a revised completion date in the next report? Out-of-time validation; baseline always shown."""
@@ -3308,7 +3308,7 @@ def run(panel, flags, frames, pair_list, test_pair="P4"):
     return m1, per_project, pairs_meta
 ```
 
-- [ ] **Step 5: Run tests, gate, commit**
+- [x] **Step 5: Run tests, gate, commit**
 
 Run: `pytest tests/models/test_m1.py -q` → 1 passed (about a minute). If the shuffle assertion fails by a small margin, the synthetic base rate is very low; do not loosen the test — raise `n_projects` in `conftest.py` to 900 and re-run. `python tools/validate.py` → PASS.
 
