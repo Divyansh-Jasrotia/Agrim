@@ -3,6 +3,12 @@ import numpy as np
 
 from findings.panel import months, series, source
 
+# JSON output rounds floats to 4 decimals (Global Constraints), so a slope below
+# this magnitude rounds to 0.0000 and is not a real reported pace. np.polyfit on
+# flat progress returns a floating-point denormal (~1e-16) instead of exact 0.0;
+# without this guard that denormal slips past `v <= 0` and produces a ~1e17 ratio.
+ZERO_VELOCITY_EPS = 5e-5
+
 
 def velocity(rows):
     pts = [(months(rows[0]["snapshot"], r["snapshot"]), r["physical_progress_pct"]) for r in rows if r["physical_progress_pct"] is not None]
@@ -30,7 +36,7 @@ def assess(rows):
                 "detail": f"The stated completion date {doc} has passed and reported progress is {prog:g}%."}
     if v is None:
         return None
-    if v <= 0:
+    if v <= ZERO_VELOCITY_EPS:
         n = months(rows[0]["snapshot"], last["snapshot"])
         return {"type": "DOC_UNREACHABLE", "severity": "critical", "velocity": v, "months_needed": None, "months_remaining": rem, "ratio": None,
                 "detail": f"No reported progress over {n} months; at this pace the stated date {doc} cannot be met."}

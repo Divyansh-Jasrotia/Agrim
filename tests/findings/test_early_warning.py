@@ -23,6 +23,25 @@ def test_assess_classes():
     assert assess(ser["100011"]) is None      # already >= 100
 
 
+def test_assess_flat_progress_denormal_slope_is_unreachable_not_astronomical_ratio():
+    # Regression for BUGFIX-EW: identical progress across snapshots makes the true
+    # slope 0, but np.polyfit returns a floating-point denormal (e.g. ~1e-16) instead
+    # of an exact zero. That tiny positive residue must not slip past the zero-pace
+    # guard in assess() and produce a ~1e17 ratio.
+    rows = [
+        {"snapshot": "2025-12", "physical_progress_pct": 20.0, "doc_original": "2027-01", "doc_revised": None},
+        {"snapshot": "2026-04", "physical_progress_pct": 20.0, "doc_original": "2027-01", "doc_revised": None},
+        {"snapshot": "2026-07", "physical_progress_pct": 20.0, "doc_original": "2027-01", "doc_revised": None},
+    ]
+    v = velocity(rows)
+    assert v is not None and 0 < v < 5e-5  # confirm this is the denormal case, not exact 0.0
+    a = assess(rows)
+    assert a is not None
+    assert a["type"] == "DOC_UNREACHABLE"
+    assert a["ratio"] is None
+    assert a["months_needed"] is None
+
+
 def test_compute_rows_and_flags():
     out = compute(load_panel(FIX))
     codes = {r["project_code"] for r in out["rows"]}
