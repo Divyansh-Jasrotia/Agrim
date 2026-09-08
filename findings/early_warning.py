@@ -3,6 +3,20 @@ import numpy as np
 
 from findings.panel import months, series, source
 
+# JSON output rounds floats to 4 decimals (Global Constraints), so a slope below
+# this magnitude rounds to 0.0000 and is not a real reported pace. np.polyfit on
+# flat progress returns a floating-point denormal (~1e-16) instead of exact 0.0;
+# without this guard that denormal slips past `v <= 0` and produces a ~1e17 ratio.
+ZERO_VELOCITY_EPS = 5e-5
+
+# A projection is only a schedule statement while it stays inside a horizon a reader
+# can act on. Dividing the progress still to do by a pace of ~0.001 pt/month is
+# arithmetically valid but produces tens of thousands of months (project 615191:
+# 65,029 months, i.e. 5,400 years) from a pace that the reported precision cannot
+# support. Past this horizon we say the date cannot be met at this pace and print no
+# figure at all, rather than printing a precise-looking one.
+MAX_PROJECTION_MONTHS = 600  # 50 years
+
 
 def velocity(rows):
     pts = [(months(rows[0]["snapshot"], r["snapshot"]), r["physical_progress_pct"]) for r in rows if r["physical_progress_pct"] is not None]
@@ -30,14 +44,26 @@ def assess(rows):
                 "detail": f"The stated completion date {doc} has passed and reported progress is {prog:g}%."}
     if v is None:
         return None
-    if v <= 0:
-        n = months(rows[0]["snapshot"], last["snapshot"])
+    n = months(rows[0]["snapshot"], last["snapshot"])
+    if v <= -ZERO_VELOCITY_EPS:
+        # Progress reported going backwards is a different (stronger) statement than no
+        # progress at all, and is also flagged on its own as PROG_DECREASE. Saying "no
+        # reported progress" here would contradict the negative pace printed beside it.
+        # The bound is -EPS, not 0: np.polyfit on flat progress returns a denormal of
+        # either sign, and a slope of -1e-16 is flat, not backwards.
+        return {"type": "DOC_UNREACHABLE", "severity": "critical", "velocity": v, "months_needed": None, "months_remaining": rem, "ratio": None,
+                "detail": f"Reported progress moved backwards over {n} months ({v:.4g} pt/month); the stated date {doc} cannot be met at a negative pace."}
+    if v < ZERO_VELOCITY_EPS:
         return {"type": "DOC_UNREACHABLE", "severity": "critical", "velocity": v, "months_needed": None, "months_remaining": rem, "ratio": None,
                 "detail": f"No reported progress over {n} months; at this pace the stated date {doc} cannot be met."}
     need = (100 - prog) / v
     ratio = need / rem
     if ratio <= 1:
         return None
+    if need > MAX_PROJECTION_MONTHS:
+        return {"type": "DOC_UNREACHABLE", "severity": "critical", "velocity": v, "months_needed": None, "months_remaining": rem, "ratio": None,
+                "detail": f"At its own reported pace ({v:.4g} pt/month) the stated date {doc} cannot be met: finishing would take more than "
+                          f"{MAX_PROJECTION_MONTHS // 12} years, so no meaningful completion month is projected."}
     sev = "critical" if ratio >= 2.0 else "high" if ratio >= 1.25 else "medium"
     return {"type": "DOC_UNREACHABLE", "severity": sev, "velocity": v, "months_needed": need, "months_remaining": rem, "ratio": ratio,
             "detail": f"At its own reported pace ({v:.2f} pt/month), this project needs {need:.0f} months; its own stated date {doc} leaves {rem}."}

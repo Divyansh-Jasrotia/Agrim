@@ -48,80 +48,52 @@
    ]
   },
   {
-   "answer": "1634 project(s) are flagged. Worst five: 702833 (ratio 881123338737831296.0); 705396 (ratio 116671750609059072.0); 705505 (ratio 60772669118205432.0); 611943 (ratio 49884831990485328.0); 709770 (ratio 29119986642770704.0)",
+   "answer": "1289 project(s) cannot reach the date they state at the pace they report, of which 309 report no usable pace at all (flat, backwards, or too slow to project a completion month). Separately, 345 project(s) are already past the completion date they state. Worst five with a measurable pace: 709856 (needs 524.3x the time it has left); 618224 (needs 225.7x the time it has left); 400203 (needs 221.0x the time it has left); 618490 (needs 206.9x the time it has left); 618153 (needs 159.3x the time it has left)",
    "id": 2,
    "question": "Which projects cannot reach their stated completion date at their own reported pace?",
    "sources": [
     {
-     "page": 60,
+     "page": 71,
      "snapshot": "2025-12"
-    },
-    {
-     "page": 69,
-     "snapshot": "2026-04"
-    },
-    {
-     "page": 73,
-     "snapshot": "2026-06"
-    },
-    {
-     "page": 69,
-     "snapshot": "2026-07"
-    },
-    {
-     "page": 86,
-     "snapshot": "2026-04"
     },
     {
      "page": 84,
-     "snapshot": "2026-05"
-    },
-    {
-     "page": 89,
-     "snapshot": "2026-06"
-    },
-    {
-     "page": 72,
-     "snapshot": "2025-12"
-    },
-    {
-     "page": 86,
      "snapshot": "2026-04"
-    },
-    {
-     "page": 83,
-     "snapshot": "2026-05"
-    },
-    {
-     "page": 89,
-     "snapshot": "2026-06"
-    },
-    {
-     "page": 84,
-     "snapshot": "2026-07"
-    },
-    {
-     "page": 70,
-     "snapshot": "2025-12"
-    },
-    {
-     "page": 83,
-     "snapshot": "2026-04"
-    },
-    {
-     "page": 81,
-     "snapshot": "2026-05"
-    },
-    {
-     "page": 86,
-     "snapshot": "2026-06"
     },
     {
      "page": 82,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 87,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 83,
      "snapshot": "2026-07"
     },
     {
-     "page": 66,
+     "page": 107,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 162,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 158,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 159,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 152,
+     "snapshot": "2026-07"
+    },
+    {
+     "page": 65,
      "snapshot": "2025-12"
     },
     {
@@ -129,7 +101,7 @@
      "snapshot": "2026-04"
     },
     {
-     "page": 74,
+     "page": 73,
      "snapshot": "2026-05"
     },
     {
@@ -137,7 +109,47 @@
      "snapshot": "2026-06"
     },
     {
-     "page": 75,
+     "page": 74,
+     "snapshot": "2026-07"
+    },
+    {
+     "page": 51,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 56,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 61,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-07"
+    },
+    {
+     "page": 52,
+     "snapshot": "2025-12"
+    },
+    {
+     "page": 58,
+     "snapshot": "2026-04"
+    },
+    {
+     "page": 57,
+     "snapshot": "2026-05"
+    },
+    {
+     "page": 62,
+     "snapshot": "2026-06"
+    },
+    {
+     "page": 58,
      "snapshot": "2026-07"
     }
    ]
@@ -176,7 +188,7 @@
    "sources": []
   },
   {
-   "answer": "In 2026-07, 35% of reported progress values are whole numbers, 17% are multiples of 5 and 12% multiples of 10. A continuously measured field would show about 1%, 20% and 10% of whole numbers respectively.",
+   "answer": "In 2026-07, 35% of reported progress values are whole numbers; a continuously measured percentage would show about 1%. Of those whole numbers, 47% are multiples of 5 and 33% are multiples of 10, against about 20% and 10% if their last digit carried information.",
    "id": 5,
    "question": "How reliable is the Physical Progress field as filled?",
    "sources": []
@@ -32061,721 +32073,6 @@
  "early_warning": {
   "rows": [
    {
-    "months_needed": 8.811233387378313e+17,
-    "months_remaining": 1,
-    "project_code": "702833",
-    "project_name": "Kalyan-Dombivali Water Supply Infrastructure Project",
-    "ratio": 8.811233387378313e+17,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 60,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 69,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 73,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 69,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1.0500457554815316e+18,
-    "months_remaining": 9,
-    "project_code": "705396",
-    "project_name": "Byrnihat-Shillong New Rail Line- 108 km",
-    "ratio": 1.1667175060905907e+17,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 86,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 89,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1.823180073546163e+17,
-    "months_remaining": 3,
-    "project_code": "705505",
-    "project_name": "Wardha-Nagpur - 4th line 78.70 km",
-    "ratio": 6.077266911820543e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 72,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 86,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 83,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 89,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 9.478118078192212e+17,
-    "months_remaining": 19,
-    "project_code": "611943",
-    "project_name": "New BG line between Naliya - Jakhau Port 24.88 Km",
-    "ratio": 4.988483199048533e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 70,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 83,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 81,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 86,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 82,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 2.5043188512782807e+18,
-    "months_remaining": 86,
-    "project_code": "709770",
-    "project_name": "City Gas Distribution Project at Pathankot District",
-    "ratio": 2.9119986642770704e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 66,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 76,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 74,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 79,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 75,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1.995393279619413e+17,
-    "months_remaining": 8,
-    "project_code": "615818",
-    "project_name": "Jawahar Khani Open Cast Mine",
-    "ratio": 2.4942415995242664e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 54,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 60,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 64,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 60,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 5.001800449774304e+17,
-    "months_remaining": 21,
-    "project_code": "617406",
-    "project_name": "RATLAM- DUNGARPUR VIA BANSWARA NEW LINE PROJECT",
-    "ratio": 2.381809737987764e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 74,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 88,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 86,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 92,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1.0406728656309658e+17,
-    "months_remaining": 5,
-    "project_code": "618012",
-    "project_name": "Widening & strengthenlng to 2LPS from km 0,000 to 40.000 Dhaugaon- Podamari section of NH 326 in the State of Odisha under Annual Plan 2021.22.",
-    "ratio": 2.0813457312619316e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 96,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 139,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 136,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 138,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 131,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1.2670607489106828e+16,
-    "months_remaining": 1,
-    "project_code": "702674",
-    "project_name": "ESR - 8 nos., distribution system - 216 Km, new house service connections - 38760 nos. upgrading of feeder mains, pumping station etc. - Phase II",
-    "ratio": 1.2670607489106828e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 60,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 69,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 72,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 68,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 2.2609735013188406e+17,
-    "months_remaining": 19,
-    "project_code": "617997",
-    "project_name": "Widening of existing 2 lane to 4 lane with paved shoulder from Designed km 25.15 to km 56.70 Except Km 52.70 to 53.50 of NH-169 Nellisara Camp to Thirthahalli of NH- 169 on Shimoga-Mangalore section in the state of Karnataka on EPC mode under Annual plan 2022-23 NH-169-KNT-2022-23-978 dated 08.03.2023",
-    "ratio": 1.1899860533257056e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 113,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 117,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 109,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 6.530147054483344e+16,
-    "months_remaining": 6,
-    "project_code": "400271",
-    "project_name": "Wardha-Nanded Via Yavatmal New BG Line",
-    "ratio": 1.0883578424138906e+16,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 71,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 85,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 83,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 88,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 2.935380804228462e+17,
-    "months_remaining": 54,
-    "project_code": "706777",
-    "project_name": "Baranagar-Barrackpore and Dakshineshwar- Construction of Metro Railway",
-    "ratio": 5435890378200856.0,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 77,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 92,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 90,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 96,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1.3103788719245213e+17,
-    "months_remaining": 42,
-    "project_code": "705730",
-    "project_name": "Joka-BBD Bag new metro project",
-    "ratio": 3119949695058384.0,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 77,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 92,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 90,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 95,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 2368883218477101.0,
-    "months_remaining": 1,
-    "project_code": "619291",
-    "project_name": "4L Poanta SahebMednipur from Km. 435.65 to km. 458.65 of NH-07Pkg-1",
-    "ratio": 2368883218477101.0,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 135,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 132,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 135,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 4608638140495360.0,
-    "months_remaining": 2,
-    "project_code": "702734",
-    "project_name": "Sewerage Management Scheme Part-3 Implementation",
-    "ratio": 2304319070247680.0,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 60,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 69,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 72,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 68,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 2306997632146976.5,
-    "months_remaining": 2,
-    "project_code": "616691",
-    "project_name": "Upgradation & Extension of ESIC Hospital and Construction of PG Hostel / Staff Housing for ESIC Hospital at Andheri, Mumbai",
-    "ratio": 1153498816073488.2,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 67,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 78,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 76,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 82,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 78,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 658358997267173.2,
-    "months_remaining": 1,
-    "project_code": "703057",
-    "project_name": "Patiala Water Supply Infrastructure Part-2 Project",
-    "ratio": 658358997267173.2,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 60,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 69,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 73,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 69,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1303966855707291.2,
-    "months_remaining": 2,
-    "project_code": "618025",
-    "project_name": "Rehabiitation and upgradation from km 121/000 to 154/000 Nakrekal to Mallampally section of NH-365 to 2 lane with paved shoulders in the state of Telangana in the EPC mode",
-    "ratio": 651983427853645.6,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 99,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 147,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 144,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 145,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 138,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1833126005344383.0,
-    "months_remaining": 3,
-    "project_code": "400119",
-    "project_name": "Life Extension of 48 well platforms of Mumbai High & Heera Fields",
-    "ratio": 611042001781461.0,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 65,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 76,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 73,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 79,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 74,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1574381183792302.5,
-    "months_remaining": 6,
-    "project_code": "611452",
-    "project_name": "MUMBAI CENTRAL VIRAR VADODARA AHMEDABAAD TRAIN PROTECTION SYSTEM 500 RKM",
-    "ratio": 262396863965383.75,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 74,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 88,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 85,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 91,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 1226598954587786.2,
-    "months_remaining": 5,
-    "project_code": "400103",
-    "project_name": "Indiramma Flood Flow Canal Project",
-    "ratio": 245319790917557.25,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 107,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 162,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 158,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 159,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 152,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 385855233652307.9,
-    "months_remaining": 2,
-    "project_code": "709859",
-    "project_name": "SETTING UP OF PHYSICAL INFRASTRUCTURE FOR THE NATIONAL INSTITUTE OF COMMUNICATION FINANCE [NICF] AT GHITORNI",
-    "ratio": 192927616826153.94,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 104,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 159,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 155,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 157,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 149,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 957910679278520.4,
-    "months_remaining": 5,
-    "project_code": "616616",
-    "project_name": "Sewer Networks, SPS and STP at Hajipur",
-    "ratio": 191582135855704.06,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 105,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 160,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 156,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 158,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 151,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 667225545800877.8,
-    "months_remaining": 5,
-    "project_code": "616600",
-    "project_name": "Interception and Diversion and STP works in Bhagalpur under Hybrid annuity based PPP mode-Namami Gange Programme",
-    "ratio": 133445109160175.55,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 105,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 160,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 156,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 158,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 150,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
-    "months_needed": 667225545800877.8,
-    "months_remaining": 5,
-    "project_code": "616615",
-    "project_name": "Sewer Network, SPS and STP at Begusarai",
-    "ratio": 133445109160175.55,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 105,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 160,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 156,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 158,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 151,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0
-   },
-   {
     "months_needed": null,
     "months_remaining": 0,
     "project_code": "400010",
@@ -32805,6 +32102,37 @@
      }
     ],
     "velocity_pct_per_month": 1.1986
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 44,
+    "project_code": "400023",
+    "project_name": "Construction of New BG line between Hassan to Belur [27 Km]",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 71,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 82,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0678
    },
    {
     "months_needed": null,
@@ -32966,6 +32294,37 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 5,
+    "project_code": "400103",
+    "project_name": "Indiramma Flood Flow Canal Project",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 107,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 162,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 158,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 159,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 152,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
     "months_remaining": -1,
     "project_code": "400111",
     "project_name": "Kelo Irrigation Project",
@@ -33028,6 +32387,68 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 3,
+    "project_code": "400119",
+    "project_name": "Life Extension of 48 well platforms of Mumbai High & Heera Fields",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 65,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 76,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 79,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 74,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 68,
+    "project_code": "400136",
+    "project_name": "SANGHMITRA OC",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 51,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 61,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.116
+   },
+   {
+    "months_needed": null,
     "months_remaining": -1,
     "project_code": "400141",
     "project_name": "Expansion of Alumina Refinery Plant with addition of 5th Stream having capacity enhancement of 1.0 Million Tonee Per Annum",
@@ -33056,6 +32477,37 @@
      }
     ],
     "velocity_pct_per_month": 2.333
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 8,
+    "project_code": "400148",
+    "project_name": "AMADAND OCP[4.0MTY]",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0226
    },
    {
     "months_needed": null,
@@ -33233,6 +32685,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 6,
+    "project_code": "400271",
+    "project_name": "Wardha-Nanded Via Yavatmal New BG Line",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 71,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 88,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
     "months_remaining": -5,
     "project_code": "400273",
     "project_name": "Tarakeswar-Bishnupur with extension upto Dhaniakhali, Arambagh-Irphala, Irphala- Ghatal 11.2 km, Arambagh-Champadanga 23.3 km & Bishnupur-Uparsol 31.8 km and new material modification for Mynapur-Kamarpukur via Birsha 19 km",
@@ -33385,6 +32864,37 @@
      }
     ],
     "velocity_pct_per_month": -4.5671
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 20,
+    "project_code": "400353",
+    "project_name": "DHUPTALA OC [SASTI UG TO OC ]",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.003
    },
    {
     "months_needed": null,
@@ -33771,6 +33281,60 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 6,
+    "project_code": "611452",
+    "project_name": "MUMBAI CENTRAL VIRAR VADODARA AHMEDABAAD TRAIN PROTECTION SYSTEM 500 RKM",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 74,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 88,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 91,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 62,
+    "project_code": "611716",
+    "project_name": "700 MW Tato-II HE Project",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 62,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 66,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.063
+   },
+   {
+    "months_needed": null,
     "months_remaining": -7,
     "project_code": "611751",
     "project_name": "Aurangabad-Ankai 98.25 km",
@@ -33915,6 +33479,37 @@
      },
      {
       "page": 88,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 19,
+    "project_code": "611943",
+    "project_name": "New BG line between Naliya - Jakhau Port 24.88 Km",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 70,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 82,
       "snapshot": "2026-07"
      }
     ],
@@ -34092,6 +33687,37 @@
      }
     ],
     "velocity_pct_per_month": 1.4075
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 11,
+    "project_code": "612513",
+    "project_name": "Construction of 100 Bedded ESI Hospital at Duburi, Odisha.",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 67,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 78,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 76,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 82,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 78,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0301
    },
    {
     "months_needed": null,
@@ -34401,6 +34027,37 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 20,
+    "project_code": "613793",
+    "project_name": "SHYAMSUNDARPUR UG INCLUDING SA",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 54,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 61,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 65,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 61,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.119
+   },
+   {
+    "months_needed": null,
     "months_remaining": -4,
     "project_code": "613798",
     "project_name": "AMERA OC RCE [1.0 MTY]",
@@ -34460,6 +34117,285 @@
      }
     ],
     "velocity_pct_per_month": 0.1296
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 20,
+    "project_code": "613802",
+    "project_name": "KANCHAN OC EXP",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0301
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 32,
+    "project_code": "613803",
+    "project_name": "JHIRIA WEST OCP [1.5 MTY]",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0437
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 8,
+    "project_code": "613804",
+    "project_name": "RPR TAWA-III UG 0.84 MTY",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.1175
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 32,
+    "project_code": "615187",
+    "project_name": "RPR OF VISHNUPURI UG TO OC",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0301
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 8,
+    "project_code": "615188",
+    "project_name": "NEW MAJRI UG TO OC 3 MTY COST",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 63,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0256
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 32,
+    "project_code": "615191",
+    "project_name": "KATKONA RO UG MINE",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 51,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 55,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0015
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 8,
+    "project_code": "615192",
+    "project_name": "GOKUL EXTENSION OC MINE",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 53,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 63,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0663
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 20,
+    "project_code": "615195",
+    "project_name": "SHARDA UG MINE",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 57,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0588
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 8,
+    "project_code": "615818",
+    "project_name": "Jawahar Khani Open Cast Mine",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 54,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 64,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
    },
    {
     "months_needed": null,
@@ -34699,6 +34635,37 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 128,
+    "project_code": "616225",
+    "project_name": "CHUPERBHITA SIMLONG OCP MDO 6",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 52,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 62,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0075
+   },
+   {
+    "months_needed": null,
     "months_remaining": 38,
     "project_code": "616227",
     "project_name": "3rd line between Chandil - Anara- Damodar section 121.26 km",
@@ -34727,6 +34694,37 @@
      }
     ],
     "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 128,
+    "project_code": "616230",
+    "project_name": "PARASCOLE JAMBAD OCP",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 54,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 61,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 65,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 61,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0348
    },
    {
     "months_needed": null,
@@ -34819,6 +34817,37 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 5,
+    "project_code": "616600",
+    "project_name": "Interception and Diversion and STP works in Bhagalpur under Hybrid annuity based PPP mode-Namami Gange Programme",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 105,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 160,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 156,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 158,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 150,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
     "months_remaining": -7,
     "project_code": "616612",
     "project_name": "Sewage Treatment Plant 50MLD and Sewerage Network 150 km in Kankarbagh Patna under Hybrid annuity based PPP mode Namami Gange Programme",
@@ -34847,6 +34876,130 @@
      }
     ],
     "velocity_pct_per_month": 0.1438
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 5,
+    "project_code": "616615",
+    "project_name": "Sewer Network, SPS and STP at Begusarai",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 105,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 160,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 156,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 158,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 151,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 5,
+    "project_code": "616616",
+    "project_name": "Sewer Networks, SPS and STP at Hajipur",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 105,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 160,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 156,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 158,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 151,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 2,
+    "project_code": "616691",
+    "project_name": "Upgradation & Extension of ESIC Hospital and Construction of PG Hostel / Staff Housing for ESIC Hospital at Andheri, Mumbai",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 67,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 78,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 76,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 82,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 78,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 24,
+    "project_code": "616694",
+    "project_name": "Flyover between Siju & Paradeep coaching yard 7 km PB73/2023-24/NR",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 75,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 93,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0377
    },
    {
     "months_needed": null,
@@ -34939,6 +35092,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 34,
+    "project_code": "616856",
+    "project_name": "Doubling between Bhadrachalam Road and Dornakal",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 76,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 91,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 94,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0107
+   },
+   {
+    "months_needed": null,
     "months_remaining": -5,
     "project_code": "616950",
     "project_name": "PRP-VIII [Group-A]",
@@ -35024,6 +35204,157 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 33,
+    "project_code": "617210",
+    "project_name": "Tirupati-Pakala-Katpadi Doubling 104.39 Km Item83/NR/2024-25",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 69,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 79,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0038
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 33,
+    "project_code": "617211",
+    "project_name": "Doubling of Guntur Bibinagar 239 Km",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 73,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 90,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.1072
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 8,
+    "project_code": "617214",
+    "project_name": "South Central Railway- Rail connectivity to Amaravati, Capital of Andhra Pradesh Errupalem- Amaravati- Namburu New line 57 km PB7/WR/2023-24",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 73,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 90,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0106
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 20,
+    "project_code": "617215",
+    "project_name": "Doubling between Parbhani-Parli Vaijnath stations 64.71 km PB34/CR/2023-24",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 72,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.1015
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 8,
+    "project_code": "617216",
+    "project_name": "South Central Railway- 3rd line between Gudur-Renigunta stations 83.17 km PB34/CR/2023-24",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 69,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 79,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 81,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0106
+   },
+   {
+    "months_needed": null,
     "months_remaining": 23,
     "project_code": "617231",
     "project_name": "East Central Railway - Construction of Bulb line at Nabinagar Ankorah 17.49Km PB45/ECoR/2024-25.",
@@ -35052,6 +35383,37 @@
      }
     ],
     "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 44,
+    "project_code": "617233",
+    "project_name": "WAGHODA UG MINE [1.02 MTY]",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 53,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 63,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0159
    },
    {
     "months_needed": null,
@@ -35164,6 +35526,99 @@
      }
     ],
     "velocity_pct_per_month": 4.7671
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 44,
+    "project_code": "617278",
+    "project_name": "KOLARPIMPRI EXPANSION OC [2.5",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 53,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 58,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 63,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 59,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0605
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 32,
+    "project_code": "617288",
+    "project_name": "MANIKPUR OC EXPANSION PROJECT",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 51,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 55,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 56,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0437
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 7,
+    "project_code": "617333",
+    "project_name": "Construction of surface traingle between Bhadaura and new crossing station Karma Dildarnagar-Taraghat line 11.1 km PB72/NR/2022-23",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 76,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 91,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 95,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0384
    },
    {
     "months_needed": null,
@@ -35306,6 +35761,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 21,
+    "project_code": "617406",
+    "project_name": "RATLAM- DUNGARPUR VIA BANSWARA NEW LINE PROJECT",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 74,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 88,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 92,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
     "months_remaining": -4,
     "project_code": "617409",
     "project_name": "Railway Manufacturing Unit",
@@ -35361,6 +35843,37 @@
      }
     ],
     "velocity_pct_per_month": -0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 47,
+    "project_code": "617819",
+    "project_name": "City Gas Distribution [CGD] Project in Kondagaon, Bastar, Sukma, Narayanpur, Bijapur & Dantewada GA",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 63,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 71,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 77,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0301
    },
    {
     "months_needed": null,
@@ -36435,6 +36948,29 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 19,
+    "project_code": "617997",
+    "project_name": "Widening of existing 2 lane to 4 lane with paved shoulder from Designed km 25.15 to km 56.70 Except Km 52.70 to 53.50 of NH-169 Nellisara Camp to Thirthahalli of NH- 169 on Shimoga-Mangalore section in the state of Karnataka on EPC mode under Annual plan 2022-23 NH-169-KNT-2022-23-978 dated 08.03.2023",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 113,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 117,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 109,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
     "months_remaining": -1,
     "project_code": "618001",
     "project_name": "Construction of 4-lane flyover at Amberpet-X road, Hyderabad on NH-202 in the State of Telangana",
@@ -36536,6 +37072,37 @@
    {
     "months_needed": null,
     "months_remaining": 5,
+    "project_code": "618012",
+    "project_name": "Widening & strengthenlng to 2LPS from km 0,000 to 40.000 Dhaugaon- Podamari section of NH 326 in the State of Odisha under Annual Plan 2021.22.",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 96,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 139,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 136,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 138,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 131,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 5,
     "project_code": "618017",
     "project_name": "Upgradation of Keonchi - Ratanpur Road of NH 45 Package-II, from design chainage km 278.75 to km 321.348 of length 42.598 km to two lane with paved shoulders under Corridor scheme on EPC mode in the state of Chhattisgarh.",
     "ratio": null,
@@ -36559,6 +37126,37 @@
      }
     ],
     "velocity_pct_per_month": -0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 2,
+    "project_code": "618025",
+    "project_name": "Rehabiitation and upgradation from km 121/000 to 154/000 Nakrekal to Mallampally section of NH-365 to 2 lane with paved shoulders in the state of Telangana in the EPC mode",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 99,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 147,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 144,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 145,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 138,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
    },
    {
     "months_needed": null,
@@ -37770,6 +38368,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 27,
+    "project_code": "618207",
+    "project_name": "Widening to 2-lane with Hard Shoulder configuration of Mana Ch. 0.00 to Mana Pass Ch. 50.987 road on NH-07 under Bharatmala Pariyojna in the state of Uttarakhand under Annual Plan 2022-23 length 50.987",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 156,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 153,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 154,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 146,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.1
+   },
+   {
+    "months_needed": null,
     "months_remaining": -55,
     "project_code": "618208",
     "project_name": "Construction and upgradation of existing road to 2-lane with paved shoulder from existing chainage Km 509.725 to Km 528.000 design chainage Km 490.550 to Km 507.850 of NH-58 new NH-07 Benakuli bend to Mana Village in EPC mode under Chardham Programme in the State of Uttarakhand.",
@@ -38178,6 +38803,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 5,
+    "project_code": "618301",
+    "project_name": "Widening/Improvement of existing 2-lane to 4-Lane Divided Highway from Kuraopokpi to Sekmai section of Imphal-Kohima Road Design Ch. km 287.00 to 297.700 of NH-39 New NH-02 in state of Manipur on EPC mode Pkg-5A",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 129,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 126,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 129,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 122,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.072
+   },
+   {
+    "months_needed": null,
     "months_remaining": -6,
     "project_code": "618307",
     "project_name": "Rehabilitation and up-gradation of road from km 16.077 to km 43.935 total length 27.858 km of Lalchara-Kanchanpur section via Shivbari on NH-44A to 2 lane with paved shoulder in the state of Tripura on EPC Mode Pkg-2 under BharatMala Pariyojana Manu-Simlung -2",
@@ -38549,6 +39201,33 @@
      }
     ],
     "velocity_pct_per_month": 0.6525
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 6,
+    "project_code": "618339",
+    "project_name": "Widening/Improvement to 2-Lane Lane with Paved Shoulder from km 16900 Bogapani to km 27150 Golai Goan on existing Dibrugarh to Ledo section with proposed Digboi Bypass Green Field and Brownfield 2-LanePS of NH-315 OLD NH-38 in Tinsukia District under NHO- NE Package-4",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 80,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 100,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 97,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 102,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0813
    },
    {
     "months_needed": null,
@@ -39697,6 +40376,60 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 6,
+    "project_code": "618488",
+    "project_name": "Delhi-Amritsar-Katra Expressway Phase-I Pkg-VIII from Junction with Ludhiana- Malerkotla SH-11 near Bhogiwal village to Junction with Ludhiana-Moga road NH-5 near Mullanpur Dakha Km 225770 to km 260860",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 96,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 141,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 137,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 140,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0145
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 6,
+    "project_code": "618491",
+    "project_name": "Delhi-Amritsar-Katra Expressway Phase-I Pkg-XI from Junction with Jalandhar - Kapurthala road NH-703A near khojewal village to Junction with Amritsar-Mehta- SriHargobindpur-Tanda road NH-503A near SriHargobindpur Km 319400 to km 362420",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 97,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 141,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 137,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 140,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0813
+   },
+   {
+    "months_needed": null,
     "months_remaining": -1,
     "project_code": "618498",
     "project_name": "6L Greenfield Kanpur - Lucknow Expressway Pkg II from km. 28.500 to km. 73.744",
@@ -39867,6 +40600,29 @@
      }
     ],
     "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 22,
+    "project_code": "618542",
+    "project_name": "4L of existing Wayul Ganderbal Pandach Soura section of old NH-1 as a part of Srinagar Ring Road Phase IIA",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 110,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 114,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 107,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.01
    },
    {
     "months_needed": null,
@@ -40303,6 +41059,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 5,
+    "project_code": "618653",
+    "project_name": "Loha-Waranga Section of NH-361 from km 187.800 to km 244.369",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 128,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 125,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 128,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 120,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.006
+   },
+   {
+    "months_needed": null,
     "months_remaining": -1,
     "project_code": "618676",
     "project_name": "6L of Dhanara - Hatibena Section from Km 124.611 to km 146.50 of NH-130-CD Package OD-1",
@@ -40467,6 +41250,25 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 24,
+    "project_code": "618733",
+    "project_name": "6L Greenfield Varanasi- Ranchi- Kolkata Highway from junction with NH-20 in Bongabar village to junction with NH-30 in Lepo village from km 325.500 to km 358.500 Pkg -12",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 116,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 108,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.1
+   },
+   {
+    "months_needed": null,
     "months_remaining": 2,
     "project_code": "618735",
     "project_name": "4L of Chandesara to Khedakhajuriya from Km. 0.000 to - 750 & Km 0.000 to km 41.400 of NH-148NG Pkg-I",
@@ -40545,6 +41347,33 @@
      }
     ],
     "velocity_pct_per_month": -0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 11,
+    "project_code": "618757",
+    "project_name": "6L access controlled Highway from Km 40080 to Km 86513 Mator to Barodameo Section",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 143,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 140,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 142,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 134,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.009
    },
    {
     "months_needed": null,
@@ -40787,6 +41616,29 @@
      }
     ],
     "velocity_pct_per_month": -0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 22,
+    "project_code": "618814",
+    "project_name": "4L Access Controlled Greenfield Highway section on NH163G Warangal-Khammam from Oorugonda village in Hanamkonda District at Design Ch. 112.240 Km to Venkatpur village in Warangal District at Design Ch. 150.240 KmPackage-I",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 149,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 147,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 139,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.1429
    },
    {
     "months_needed": null,
@@ -41405,6 +42257,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 52,
+    "project_code": "618978",
+    "project_name": "Gondia - Dongargarh 4th line [84 Km]",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 73,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 91,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.1084
+   },
+   {
+    "months_needed": null,
     "months_remaining": 20,
     "project_code": "618981",
     "project_name": "810 MW Solar Power Project - Rajasthan",
@@ -41487,6 +42366,37 @@
      }
     ],
     "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 5,
+    "project_code": "618992",
+    "project_name": "100 MW SPP part of SECI 150 MW Hybrid",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 54,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 61,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 60,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 65,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 61,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0301
    },
    {
     "months_needed": null,
@@ -41730,6 +42640,33 @@
      }
     ],
     "velocity_pct_per_month": -0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 29,
+    "project_code": "619031",
+    "project_name": "Delhi Metro Rail Phase V A",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 67,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 66,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 71,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 67,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.101
    },
    {
     "months_needed": null,
@@ -42553,6 +43490,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 32,
+    "project_code": "619139",
+    "project_name": "Construction of New Double Tier 4L Elevated Corridor from Chennai Port to Maduravoyal in Chennai District from km -0.342 to Km 20.593 and Package III from Km 9.700 to Km 14.185",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 146,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 143,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 145,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 137,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.108
+   },
+   {
+    "months_needed": null,
     "months_remaining": -4,
     "project_code": "619141",
     "project_name": "Construction of four lane access controlled highway from Chillakuru cross road to Turpu KanupurPart 1 of Package - II km 0.000 131.500 of NH - 16 to km 23.770 on New NH-516W including six lane flyover and approaches on NH-16 length km 1.050 and six lane access controlled from Turpu Kanupur to Port South Gate Part 2 of Package - II km 23.770 to km 35.015 on New NH-516W in the state of Andhra Pradesh on HAM Mode under Bharatmala Pariyojana Phase I",
@@ -42877,6 +43841,33 @@
      }
     ],
     "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 5,
+    "project_code": "619186",
+    "project_name": "Construction of Balance works of Major Bridge over Middle Strait Creek between Km.106.590 to km108.553 of NH-04 connecting South Andaman & Baratang Island in the Union Territory of Andaman & Nicobar Islands on EPC basis",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 92,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 90,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 96,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.136
    },
    {
     "months_needed": null,
@@ -43300,6 +44291,29 @@
    {
     "months_needed": null,
     "months_remaining": 1,
+    "project_code": "619291",
+    "project_name": "4L Poanta SahebMednipur from Km. 435.65 to km. 458.65 of NH-07Pkg-1",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 135,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 132,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 135,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 1,
     "project_code": "619292",
     "project_name": "4L Medinipur to Ballupur from Km. 458.65 to Km. 487.65 of NH-07Pkg-2",
     "ratio": null,
@@ -43580,6 +44594,37 @@
      }
     ],
     "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 36,
+    "project_code": "701172",
+    "project_name": "AIIMS Darbhanga",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 66,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 77,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 74,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 80,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 76,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0997
    },
    {
     "months_needed": null,
@@ -44499,6 +45544,33 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 1,
+    "project_code": "702674",
+    "project_name": "ESR - 8 nos., distribution system - 216 Km, new house service connections - 38760 nos. upgrading of feeder mains, pumping station etc. - Phase II",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 60,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 69,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 72,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 68,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
     "months_remaining": -1,
     "project_code": "702699",
     "project_name": "Muzaffarpur Storm Water Drainage Phase-I Project",
@@ -44523,6 +45595,33 @@
      }
     ],
     "velocity_pct_per_month": 0.3043
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 2,
+    "project_code": "702734",
+    "project_name": "Sewerage Management Scheme Part-3 Implementation",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 60,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 69,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 72,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 68,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
    },
    {
     "months_needed": null,
@@ -44689,6 +45788,33 @@
    {
     "months_needed": null,
     "months_remaining": 1,
+    "project_code": "702833",
+    "project_name": "Kalyan-Dombivali Water Supply Infrastructure Project",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 60,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 69,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 69,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 1,
     "project_code": "702840",
     "project_name": "Mira-Bhayandar Water Supply Infrastructure Project",
     "ratio": null,
@@ -44731,6 +45857,33 @@
      }
     ],
     "velocity_pct_per_month": -0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 1,
+    "project_code": "703057",
+    "project_name": "Patiala Water Supply Infrastructure Part-2 Project",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 60,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 69,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 69,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
    },
    {
     "months_needed": null,
@@ -45125,6 +46278,29 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 9,
+    "project_code": "705396",
+    "project_name": "Byrnihat-Shillong New Rail Line- 108 km",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 86,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
     "months_remaining": -5,
     "project_code": "705419",
     "project_name": "Gwalior-Sheorpurkalan with extension to Kota 284 km",
@@ -45427,6 +46603,37 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 6,
+    "project_code": "705495",
+    "project_name": "Bagalkot-Kudachi 142 km",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 71,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 82,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 88,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0952
+   },
+   {
+    "months_needed": null,
     "months_remaining": 5,
     "project_code": "705497",
     "project_name": "Wardha - Yavatmal Nanded Railway Line Project",
@@ -45513,6 +46720,37 @@
      }
     ],
     "velocity_pct_per_month": 0.2671
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 3,
+    "project_code": "705505",
+    "project_name": "Wardha-Nagpur - 4th line 78.70 km",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 72,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 83,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 89,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 84,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
    },
    {
     "months_needed": null,
@@ -46383,6 +47621,64 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 42,
+    "project_code": "705730",
+    "project_name": "Joka-BBD Bag new metro project",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 77,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 92,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 90,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 95,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 41,
+    "project_code": "705741",
+    "project_name": "Jeypore - Navarangpur 38 km",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 75,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 90,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 93,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 87,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0718
+   },
+   {
+    "months_needed": null,
     "months_remaining": 84,
     "project_code": "705742",
     "project_name": "Jeypore - Malkangiri 130 km",
@@ -46925,6 +48221,60 @@
      }
     ],
     "velocity_pct_per_month": 2.7581
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 33,
+    "project_code": "706776",
+    "project_name": "Noapara-Barasat via Bimanbandar - Construction of Metro railway [18 km]",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 77,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 92,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 90,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 96,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0337
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 54,
+    "project_code": "706777",
+    "project_name": "Baranagar-Barrackpore and Dakshineshwar- Construction of Metro Railway",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 77,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 92,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 90,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 96,
+      "snapshot": "2026-06"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
    },
    {
     "months_needed": null,
@@ -47925,6 +49275,130 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 86,
+    "project_code": "709770",
+    "project_name": "City Gas Distribution Project at Pathankot District",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 66,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 76,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 74,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 79,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 75,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 62,
+    "project_code": "709771",
+    "project_name": "City Gas Distribution Project at Beed, Jalgaon and Jalna Districts",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 64,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 75,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 78,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 74,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0603
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 59,
+    "project_code": "709772",
+    "project_name": "City Gas Distribution Project at East Mednipore, West Mednipore & Jhargram Districts",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 66,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 77,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 74,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 80,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 76,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.1438
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 98,
+    "project_code": "709773",
+    "project_name": "City Gas Distribution Project at Jammu, Udhampur, Reasi, Samba and Kathua Districts",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 64,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 74,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 72,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 77,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 73,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0904
+   },
+   {
+    "months_needed": null,
     "months_remaining": -2,
     "project_code": "709797",
     "project_name": "POL & LOBS Installations with Receipt Pipelines at Rasayani",
@@ -47953,6 +49427,37 @@
      }
     ],
     "velocity_pct_per_month": 0.9993
+   },
+   {
+    "months_needed": null,
+    "months_remaining": 7,
+    "project_code": "709816",
+    "project_name": "4th line - Bhilai-Bhilai nagar 8.8 km PB72/NR/2022-23",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 70,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 82,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 80,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 86,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 85,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0548
    },
    {
     "months_needed": null,
@@ -48122,6 +49627,37 @@
    },
    {
     "months_needed": null,
+    "months_remaining": 2,
+    "project_code": "709859",
+    "project_name": "SETTING UP OF PHYSICAL INFRASTRUCTURE FOR THE NATIONAL INSTITUTE OF COMMUNICATION FINANCE [NICF] AT GHITORNI",
+    "ratio": null,
+    "severity": "critical",
+    "sources": [
+     {
+      "page": 104,
+      "snapshot": "2025-12"
+     },
+     {
+      "page": 159,
+      "snapshot": "2026-04"
+     },
+     {
+      "page": 155,
+      "snapshot": "2026-05"
+     },
+     {
+      "page": 157,
+      "snapshot": "2026-06"
+     },
+     {
+      "page": 149,
+      "snapshot": "2026-07"
+     }
+    ],
+    "velocity_pct_per_month": 0.0
+   },
+   {
+    "months_needed": null,
     "months_remaining": 0,
     "project_code": "900808",
     "project_name": "Transmission System for Kurnool Wind Energy Zone/ Solar Energy Zone Part-A and Part-B",
@@ -48144,104 +49680,11 @@
     "velocity_pct_per_month": 0.3621
    },
    {
-    "months_needed": 65029.7273,
-    "months_remaining": 32,
-    "project_code": "615191",
-    "project_name": "KATKONA RO UG MINE",
-    "ratio": 2032.179,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 51,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 56,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 55,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 60,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 56,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0015
-   },
-   {
-    "months_needed": 26870.6364,
-    "months_remaining": 20,
-    "project_code": "400353",
-    "project_name": "DHUPTALA OC [SASTI UG TO OC ]",
-    "ratio": 1343.5318,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.003
-   },
-   {
-    "months_needed": 9419.3548,
-    "months_remaining": 8,
-    "project_code": "617214",
-    "project_name": "South Central Railway- Rail connectivity to Amaravati, Capital of Andhra Pradesh Errupalem- Amaravati- Namburu New line 57 km PB7/WR/2023-24",
-    "ratio": 1177.4194,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 73,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 86,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 90,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0106
-   },
-   {
-    "months_needed": 9419.3548,
-    "months_remaining": 8,
-    "project_code": "617216",
-    "project_name": "South Central Railway- 3rd line between Gudur-Renigunta stations 83.17 km PB34/CR/2023-24",
-    "ratio": 1177.4194,
+    "months_needed": null,
+    "months_remaining": 42,
+    "project_code": "900874",
+    "project_name": "Jhajha - Batia 20 km Umbrella work PB23/2018-19/NR",
+    "ratio": null,
     "severity": "critical",
     "sources": [
      {
@@ -48249,15 +49692,15 @@
       "snapshot": "2025-12"
      },
      {
-      "page": 81,
+      "page": 82,
       "snapshot": "2026-04"
      },
      {
-      "page": 79,
+      "page": 80,
       "snapshot": "2026-05"
      },
      {
-      "page": 84,
+      "page": 85,
       "snapshot": "2026-06"
      },
      {
@@ -48265,123 +49708,7 @@
       "snapshot": "2026-07"
      }
     ],
-    "velocity_pct_per_month": 0.0106
-   },
-   {
-    "months_needed": 4766.9667,
-    "months_remaining": 6,
-    "project_code": "618488",
-    "project_name": "Delhi-Amritsar-Katra Expressway Phase-I Pkg-VIII from Junction with Ludhiana- Malerkotla SH-11 near Bhogiwal village to Junction with Ludhiana-Moga road NH-5 near Mullanpur Dakha Km 225770 to km 260860",
-    "ratio": 794.4944,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 96,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 141,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 137,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 140,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0145
-   },
-   {
-    "months_needed": 26071.4286,
-    "months_remaining": 33,
-    "project_code": "617210",
-    "project_name": "Tirupati-Pakala-Katpadi Doubling 104.39 Km Item83/NR/2024-25",
-    "ratio": 790.0433,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 69,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 81,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 79,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0038
-   },
-   {
-    "months_needed": 3278.3636,
-    "months_remaining": 5,
-    "project_code": "618992",
-    "project_name": "100 MW SPP part of SECI 150 MW Hybrid",
-    "ratio": 655.6727,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 54,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 61,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 60,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 65,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 61,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0301
-   },
-   {
-    "months_needed": 6970.0,
-    "months_remaining": 11,
-    "project_code": "618757",
-    "project_name": "6L access controlled Highway from Km 40080 to Km 86513 Mator to Barodameo Section",
-    "ratio": 633.6364,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 143,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 140,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 142,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 134,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.009
+    "velocity_pct_per_month": 0.0062
    },
    {
     "months_needed": 524.2727,
@@ -48413,211 +49740,6 @@
      }
     ],
     "velocity_pct_per_month": 0.0151
-   },
-   {
-    "months_needed": 9998.0,
-    "months_remaining": 22,
-    "project_code": "618542",
-    "project_name": "4L of existing Wayul Ganderbal Pandach Soura section of old NH-1 as a part of Srinagar Ring Road Phase IIA",
-    "ratio": 454.4545,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 110,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 114,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 107,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.01
-   },
-   {
-    "months_needed": 16222.2222,
-    "months_remaining": 42,
-    "project_code": "900874",
-    "project_name": "Jhajha - Batia 20 km Umbrella work PB23/2018-19/NR",
-    "ratio": 386.2434,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 69,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 82,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 80,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 85,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 81,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0062
-   },
-   {
-    "months_needed": 2607.1429,
-    "months_remaining": 7,
-    "project_code": "617333",
-    "project_name": "Construction of surface traingle between Bhadaura and new crossing station Karma Dildarnagar-Taraghat line 11.1 km PB72/NR/2022-23",
-    "ratio": 372.449,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 76,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 91,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 89,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 95,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 85,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0384
-   },
-   {
-    "months_needed": 2960.2086,
-    "months_remaining": 8,
-    "project_code": "615188",
-    "project_name": "NEW MAJRI UG TO OC 3 MTY COST",
-    "ratio": 370.0261,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 63,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0256
-   },
-   {
-    "months_needed": 3079.2727,
-    "months_remaining": 11,
-    "project_code": "612513",
-    "project_name": "Construction of 100 Bedded ESI Hospital at Duburi, Odisha.",
-    "ratio": 279.9339,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 67,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 78,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 76,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 82,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 78,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0301
-   },
-   {
-    "months_needed": 9320.2472,
-    "months_remaining": 34,
-    "project_code": "616856",
-    "project_name": "Doubling between Bhadrachalam Road and Dornakal",
-    "ratio": 274.1249,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 76,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 91,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 89,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 94,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0107
-   },
-   {
-    "months_needed": 1770.25,
-    "months_remaining": 7,
-    "project_code": "709816",
-    "project_name": "4th line - Bhilai-Bhilai nagar 8.8 km PB72/NR/2022-23",
-    "ratio": 252.8929,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 70,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 82,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 80,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 86,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 85,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0548
    },
    {
     "months_needed": 225.7143,
@@ -48705,64 +49827,6 @@
     "velocity_pct_per_month": 0.1789
    },
    {
-    "months_needed": 1380.9669,
-    "months_remaining": 8,
-    "project_code": "615192",
-    "project_name": "GOKUL EXTENSION OC MINE",
-    "ratio": 172.6209,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 53,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 63,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0663
-   },
-   {
-    "months_needed": 978.1704,
-    "months_remaining": 6,
-    "project_code": "618339",
-    "project_name": "Widening/Improvement to 2-Lane Lane with Paved Shoulder from km 16900 Bogapani to km 27150 Golai Goan on existing Dibrugarh to Ledo section with proposed Digboi Bypass Green Field and Brownfield 2-LanePS of NH-315 OLD NH-38 in Tinsukia District under NHO- NE Package-4",
-    "ratio": 163.0284,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 80,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 100,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 97,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 102,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0813
-   },
-   {
     "months_needed": 159.2727,
     "months_remaining": 1,
     "project_code": "618153",
@@ -48792,95 +49856,6 @@
      }
     ],
     "velocity_pct_per_month": 0.0121
-   },
-   {
-    "months_needed": 717.3611,
-    "months_remaining": 5,
-    "project_code": "618301",
-    "project_name": "Widening/Improvement of existing 2-lane to 4-Lane Divided Highway from Kuraopokpi to Sekmai section of Imphal-Kohima Road Design Ch. km 287.00 to 297.700 of NH-39 New NH-02 in state of Manipur on EPC mode Pkg-5A",
-    "ratio": 143.4722,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 129,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 126,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 129,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 122,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.072
-   },
-   {
-    "months_needed": 6286.181,
-    "months_remaining": 44,
-    "project_code": "617233",
-    "project_name": "WAGHODA UG MINE [1.02 MTY]",
-    "ratio": 142.8678,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 53,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 63,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0159
-   },
-   {
-    "months_needed": 1099.4242,
-    "months_remaining": 8,
-    "project_code": "400148",
-    "project_name": "AMADAND OCP[4.0MTY]",
-    "ratio": 137.428,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0226
    },
    {
     "months_needed": 133.0766,
@@ -48914,87 +49889,6 @@
     "velocity_pct_per_month": 0.0286
    },
    {
-    "months_needed": 639.8529,
-    "months_remaining": 5,
-    "project_code": "619186",
-    "project_name": "Construction of Balance works of Major Bridge over Middle Strait Creek between Km.106.590 to km108.553 of NH-04 connecting South Andaman & Baratang Island in the Union Territory of Andaman & Nicobar Islands on EPC basis",
-    "ratio": 127.9706,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 92,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 90,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 96,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 89,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.136
-   },
-   {
-    "months_needed": 630.0,
-    "months_remaining": 5,
-    "project_code": "618653",
-    "project_name": "Loha-Waranga Section of NH-361 from km 187.800 to km 244.369",
-    "ratio": 126.0,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 128,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 125,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 128,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 120,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.006
-   },
-   {
-    "months_needed": 695.3556,
-    "months_remaining": 6,
-    "project_code": "618491",
-    "project_name": "Delhi-Amritsar-Katra Expressway Phase-I Pkg-XI from Junction with Jalandhar - Kapurthala road NH-703A near khojewal village to Junction with Amritsar-Mehta- SriHargobindpur-Tanda road NH-503A near SriHargobindpur Km 319400 to km 362420",
-    "ratio": 115.8926,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 97,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 141,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 137,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 140,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0813
-   },
-   {
     "months_needed": 114.6735,
     "months_remaining": 1,
     "project_code": "618173",
@@ -49024,68 +49918,6 @@
      }
     ],
     "velocity_pct_per_month": 0.1401
-   },
-   {
-    "months_needed": 682.7338,
-    "months_remaining": 6,
-    "project_code": "705495",
-    "project_name": "Bagalkot-Kudachi 142 km",
-    "ratio": 113.789,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 71,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 82,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 88,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 83,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0952
-   },
-   {
-    "months_needed": 2654.5455,
-    "months_remaining": 24,
-    "project_code": "616694",
-    "project_name": "Flyover between Siju & Paradeep coaching yard 7 km PB73/2023-24/NR",
-    "ratio": 110.6061,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 75,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 89,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 87,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 93,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 87,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0377
    },
    {
     "months_needed": 541.0588,
@@ -49119,37 +49951,6 @@
     "velocity_pct_per_month": 0.1164
    },
    {
-    "months_needed": 13266.0909,
-    "months_remaining": 128,
-    "project_code": "616225",
-    "project_name": "CHUPERBHITA SIMLONG OCP MDO 6",
-    "ratio": 103.6413,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 56,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0075
-   },
-   {
     "months_needed": 192.8254,
     "months_remaining": 2,
     "project_code": "400109",
@@ -49167,37 +49968,6 @@
      }
     ],
     "velocity_pct_per_month": 0.1575
-   },
-   {
-    "months_needed": 2946.5455,
-    "months_remaining": 32,
-    "project_code": "615187",
-    "project_name": "RPR OF VISHNUPURI UG TO OC",
-    "ratio": 92.0795,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0301
    },
    {
     "months_needed": 547.8,
@@ -49225,37 +49995,6 @@
      }
     ],
     "velocity_pct_per_month": 0.0904
-   },
-   {
-    "months_needed": 699.5408,
-    "months_remaining": 8,
-    "project_code": "613804",
-    "project_name": "RPR TAWA-III UG 0.84 MTY",
-    "ratio": 87.4426,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.1175
    },
    {
     "months_needed": 416.9613,
@@ -49347,37 +50086,6 @@
     "velocity_pct_per_month": 0.1267
    },
    {
-    "months_needed": 1541.8485,
-    "months_remaining": 20,
-    "project_code": "615195",
-    "project_name": "SHARDA UG MINE",
-    "ratio": 77.0924,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0588
-   },
-   {
     "months_needed": 76.4762,
     "months_remaining": 1,
     "project_code": "618500",
@@ -49457,68 +50165,6 @@
      }
     ],
     "velocity_pct_per_month": 0.0753
-   },
-   {
-    "months_needed": 1387.0,
-    "months_remaining": 20,
-    "project_code": "613802",
-    "project_name": "KANCHAN OC EXP",
-    "ratio": 69.35,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0301
-   },
-   {
-    "months_needed": 3245.1818,
-    "months_remaining": 47,
-    "project_code": "617819",
-    "project_name": "City Gas Distribution [CGD] Project in Kondagaon, Bastar, Sukma, Narayanpur, Bijapur & Dantewada GA",
-    "ratio": 69.0464,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 63,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 73,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 71,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 77,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 73,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0301
    },
    {
     "months_needed": 500.0607,
@@ -49612,33 +50258,6 @@
      }
     ],
     "velocity_pct_per_month": 0.3767
-   },
-   {
-    "months_needed": 2009.7857,
-    "months_remaining": 33,
-    "project_code": "706776",
-    "project_name": "Noapara-Barasat via Bimanbandar - Construction of Metro railway [18 km]",
-    "ratio": 60.9026,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 77,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 92,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 90,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 96,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.0337
    },
    {
     "months_needed": 485.5606,
@@ -49815,37 +50434,6 @@
     "velocity_pct_per_month": 0.4
    },
    {
-    "months_needed": 1801.2006,
-    "months_remaining": 32,
-    "project_code": "617288",
-    "project_name": "MANIKPUR OC EXPANSION PROJECT",
-    "ratio": 56.2875,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 51,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 56,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 55,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 60,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 56,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0437
-   },
-   {
     "months_needed": 432.3636,
     "months_remaining": 8,
     "project_code": "400105",
@@ -49956,37 +50544,6 @@
      }
     ],
     "velocity_pct_per_month": 0.0853
-   },
-   {
-    "months_needed": 975.3036,
-    "months_remaining": 20,
-    "project_code": "617215",
-    "project_name": "Doubling between Parbhani-Parli Vaijnath stations 64.71 km PB34/CR/2023-24",
-    "ratio": 48.7652,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 72,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 85,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 83,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 89,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.1015
    },
    {
     "months_needed": 95.4819,
@@ -50153,56 +50710,6 @@
      }
     ],
     "velocity_pct_per_month": 0.2877
-   },
-   {
-    "months_needed": 1343.5204,
-    "months_remaining": 32,
-    "project_code": "613803",
-    "project_name": "JHIRIA WEST OCP [1.5 MTY]",
-    "ratio": 41.985,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 52,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0437
-   },
-   {
-    "months_needed": 999.0,
-    "months_remaining": 24,
-    "project_code": "618733",
-    "project_name": "6L Greenfield Varanasi- Ranchi- Kolkata Highway from junction with NH-20 in Bongabar village to junction with NH-30 in Lepo village from km 325.500 to km 358.500 Pkg -12",
-    "ratio": 41.625,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 116,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 108,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.1
    },
    {
     "months_needed": 40.9806,
@@ -50410,37 +50917,6 @@
     "velocity_pct_per_month": 0.1356
    },
    {
-    "months_needed": 1644.9774,
-    "months_remaining": 44,
-    "project_code": "617278",
-    "project_name": "KOLARPIMPRI EXPANSION OC [2.5",
-    "ratio": 37.3858,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 53,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 58,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 63,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 59,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0605
-   },
-   {
     "months_needed": 297.5303,
     "months_remaining": 8,
     "project_code": "400424",
@@ -50470,37 +50946,6 @@
      }
     ],
     "velocity_pct_per_month": 0.0723
-   },
-   {
-    "months_needed": 699.0023,
-    "months_remaining": 20,
-    "project_code": "613793",
-    "project_name": "SHYAMSUNDARPUR UG INCLUDING SA",
-    "ratio": 34.9501,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 54,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 61,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 60,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 65,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 61,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.119
    },
    {
     "months_needed": 383.738,
@@ -50563,68 +51008,6 @@
      }
     ],
     "velocity_pct_per_month": 0.0786
-   },
-   {
-    "months_needed": 1377.8837,
-    "months_remaining": 41,
-    "project_code": "705741",
-    "project_name": "Jeypore - Navarangpur 38 km",
-    "ratio": 33.6069,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 75,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 90,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 87,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 93,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 87,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0718
-   },
-   {
-    "months_needed": 1467.3737,
-    "months_remaining": 44,
-    "project_code": "400023",
-    "project_name": "Construction of New BG line between Hassan to Belur [27 Km]",
-    "ratio": 33.3494,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 71,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 82,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 87,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 83,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0678
    },
    {
     "months_needed": 32.809,
@@ -50720,33 +51103,6 @@
     "velocity_pct_per_month": 0.0844
    },
    {
-    "months_needed": 934.1584,
-    "months_remaining": 29,
-    "project_code": "619031",
-    "project_name": "Delhi Metro Rail Phase V A",
-    "ratio": 32.2124,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 67,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 66,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 71,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 67,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.101
-   },
-   {
     "months_needed": 159.2727,
     "months_remaining": 5,
     "project_code": "618764",
@@ -50776,29 +51132,6 @@
      }
     ],
     "velocity_pct_per_month": 0.1507
-   },
-   {
-    "months_needed": 696.5,
-    "months_remaining": 22,
-    "project_code": "618814",
-    "project_name": "4L Access Controlled Greenfield Highway section on NH163G Warangal-Khammam from Oorugonda village in Hanamkonda District at Design Ch. 112.240 Km to Venkatpur village in Warangal District at Design Ch. 150.240 KmPackage-I",
-    "ratio": 31.6591,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 149,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 147,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 139,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.1429
    },
    {
     "months_needed": 435.7879,
@@ -50917,33 +51250,6 @@
     "velocity_pct_per_month": 0.4079
    },
    {
-    "months_needed": 789.7,
-    "months_remaining": 27,
-    "project_code": "618207",
-    "project_name": "Widening to 2-lane with Hard Shoulder configuration of Mana Ch. 0.00 to Mana Pass Ch. 50.987 road on NH-07 under Bharatmala Pariyojna in the state of Uttarakhand under Annual Plan 2022-23 length 50.987",
-    "ratio": 29.2481,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 156,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 153,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 154,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 146,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.1
-   },
-   {
     "months_needed": 29.0462,
     "months_remaining": 1,
     "project_code": "618758",
@@ -50996,64 +51302,6 @@
      }
     ],
     "velocity_pct_per_month": 0.293
-   },
-   {
-    "months_needed": 991.5165,
-    "months_remaining": 36,
-    "project_code": "701172",
-    "project_name": "AIIMS Darbhanga",
-    "ratio": 27.5421,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 66,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 77,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 74,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 80,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 76,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0997
-   },
-   {
-    "months_needed": 908.3371,
-    "months_remaining": 33,
-    "project_code": "617211",
-    "project_name": "Doubling of Guntur Bibinagar 239 Km",
-    "ratio": 27.5254,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 73,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 86,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 84,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 90,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.1072
    },
    {
     "months_needed": 53.7824,
@@ -51143,37 +51391,6 @@
      }
     ],
     "velocity_pct_per_month": 0.0308
-   },
-   {
-    "months_needed": 1602.6818,
-    "months_remaining": 62,
-    "project_code": "709771",
-    "project_name": "City Gas Distribution Project at Beed, Jalgaon and Jalna Districts",
-    "ratio": 25.8497,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 64,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 75,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 73,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 78,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 74,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0603
    },
    {
     "months_needed": 438.0,
@@ -51350,60 +51567,6 @@
     "velocity_pct_per_month": 0.1703
    },
    {
-    "months_needed": 766.2963,
-    "months_remaining": 32,
-    "project_code": "619139",
-    "project_name": "Construction of New Double Tier 4L Elevated Corridor from Chennai Port to Maduravoyal in Chennai District from km -0.342 to Km 20.593 and Package III from Km 9.700 to Km 14.185",
-    "ratio": 23.9468,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 146,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 143,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 145,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 137,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.108
-   },
-   {
-    "months_needed": 1482.6984,
-    "months_remaining": 62,
-    "project_code": "611716",
-    "project_name": "700 MW Tato-II HE Project",
-    "ratio": 23.9145,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 62,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 60,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 66,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 62,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.063
-   },
-   {
     "months_needed": 189.4508,
     "months_remaining": 8,
     "project_code": "618569",
@@ -51522,37 +51685,6 @@
      }
     ],
     "velocity_pct_per_month": 1.0141
-   },
-   {
-    "months_needed": 2867.4055,
-    "months_remaining": 128,
-    "project_code": "616230",
-    "project_name": "PARASCOLE JAMBAD OCP",
-    "ratio": 22.4016,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 54,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 61,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 60,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 65,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 61,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0348
    },
    {
     "months_needed": 175.5319,
@@ -52396,33 +52528,6 @@
      }
     ],
     "velocity_pct_per_month": 0.1842
-   },
-   {
-    "months_needed": 913.0,
-    "months_remaining": 52,
-    "project_code": "618978",
-    "project_name": "Gondia - Dongargarh 4th line [84 Km]",
-    "ratio": 17.5577,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 73,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 87,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 85,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 91,
-      "snapshot": "2026-06"
-     }
-    ],
-    "velocity_pct_per_month": 0.1084
    },
    {
     "months_needed": 330.0,
@@ -54126,37 +54231,6 @@
     "velocity_pct_per_month": 0.4421
    },
    {
-    "months_needed": 674.381,
-    "months_remaining": 59,
-    "project_code": "709772",
-    "project_name": "City Gas Distribution Project at East Mednipore, West Mednipore & Jhargram Districts",
-    "ratio": 11.4302,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 66,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 77,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 74,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 80,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 76,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.1438
-   },
-   {
     "months_needed": 360.9039,
     "months_remaining": 32,
     "project_code": "400315",
@@ -54217,37 +54291,6 @@
      }
     ],
     "velocity_pct_per_month": 0.911
-   },
-   {
-    "months_needed": 1099.4242,
-    "months_remaining": 98,
-    "project_code": "709773",
-    "project_name": "City Gas Distribution Project at Jammu, Udhampur, Reasi, Samba and Kathua Districts",
-    "ratio": 11.2186,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 64,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 74,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 72,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 77,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 73,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.0904
    },
    {
     "months_needed": 167.4706,
@@ -54546,37 +54589,6 @@
      }
     ],
     "velocity_pct_per_month": 0.6233
-   },
-   {
-    "months_needed": 717.3306,
-    "months_remaining": 68,
-    "project_code": "400136",
-    "project_name": "SANGHMITRA OC",
-    "ratio": 10.549,
-    "severity": "critical",
-    "sources": [
-     {
-      "page": 51,
-      "snapshot": "2025-12"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-04"
-     },
-     {
-      "page": 56,
-      "snapshot": "2026-05"
-     },
-     {
-      "page": 61,
-      "snapshot": "2026-06"
-     },
-     {
-      "page": 57,
-      "snapshot": "2026-07"
-     }
-    ],
-    "velocity_pct_per_month": 0.116
    },
    {
     "months_needed": 167.0779,
@@ -85126,9 +85138,9 @@
     "snapshot": "2026-07"
    }
   ],
-  "generated_at": "2026-09-08T07:35:36+00:00",
+  "generated_at": "2026-09-08T18:49:49+00:00",
   "headline": {
-   "contradictions_total": 1101,
+   "contradictions_total": 967,
    "cost_revised_total_cr": 3710641.55,
    "exits_total": 443,
    "overrun_total_cr": 340503.33,

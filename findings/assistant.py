@@ -20,9 +20,19 @@ def build(findings, projects, models=None):
                 "answer": (f"{len(exp_rows)} project(s). " + "; ".join(f"{r['project_code']} {r['project_name']}: {_fmt(r['before'])} → {_fmt(r['after'])} (page {r['sources'][-1]['page']})" for r in exp_rows[:5])) if exp_rows else f"None between {t0} and {t1}.",
                 "sources": [s for r in exp_rows[:5] for s in r["sources"]]})
     ew = findings["early_warning"]["rows"]
+    # A row with months_remaining <= 0 is the DOC_PASSED case: the stated date is already
+    # behind us, which is a different statement from "too slow to get there in time".
+    # Reporting the 1634 rows as one number contradicted the headline (1289) — I7.
+    passed = [r for r in ew if r["months_remaining"] <= 0]
+    unreach = [r for r in ew if r["months_remaining"] > 0]
+    paced = sorted((r for r in unreach if r["ratio"] is not None), key=lambda r: (-r["ratio"], r["project_code"]))[:5]
+    nopace = [r for r in unreach if r["ratio"] is None]
     out.append({"id": 2, "question": "Which projects cannot reach their stated completion date at their own reported pace?",
-                "answer": f"{len(ew)} project(s) are flagged. Worst five: " + "; ".join(f"{r['project_code']} (ratio {r['ratio']:.1f})" if r['ratio'] else f"{r['project_code']} (no progress)" for r in ew[:5]) if ew else "None flagged.",
-                "sources": [s for r in ew[:5] for s in r["sources"]]})
+                "answer": (f"{len(unreach)} project(s) cannot reach the date they state at the pace they report"
+                           + (f", of which {len(nopace)} report no usable pace at all (flat, backwards, or too slow to project a completion month)" if nopace else "")
+                           + f". Separately, {len(passed)} project(s) are already past the completion date they state."
+                           + ((" Worst five with a measurable pace: " + "; ".join(f"{r['project_code']} (needs {r['ratio']:.1f}x the time it has left)" for r in paced)) if paced else "")) if ew else "None flagged.",
+                "sources": [s for r in unreach[:5] for s in r["sources"]]})
     pair = next((p for p in findings["exits"]["pairs"] if p["from"] == t0 and p["to"] == t1), None)
     ex_rows = [r for r in findings["exits"]["rows"] if r["last_seen"] == t0]
     parts = {}
@@ -35,8 +45,15 @@ def build(findings, projects, models=None):
     out.append({"id": 4, "question": "Which state has the most flagged projects?",
                 "answer": f"{st[0]['key']}: {st[0]['flagged']} of {st[0]['projects']} projects carry at least one flag." if st else "No state data.", "sources": []})
     fa = findings["field_audit"]
+    # multiple_of_5_share / multiple_of_10_share are shares of ALL reported values, but
+    # "about 20% and 10%" is the expectation among WHOLE numbers. Restate both on the
+    # whole-number denominator so the observed and expected figures are comparable — C4.
+    w = fa["whole_number_share"]
+    m5 = fa["multiple_of_5_share"] / w if w else 0.0
+    m10 = fa["multiple_of_10_share"] / w if w else 0.0
     out.append({"id": 5, "question": "How reliable is the Physical Progress field as filled?",
-                "answer": f"In {fa['snapshot']}, {fa['whole_number_share']:.0%} of reported progress values are whole numbers, {fa['multiple_of_5_share']:.0%} are multiples of 5 and {fa['multiple_of_10_share']:.0%} multiples of 10. A continuously measured field would show about 1%, 20% and 10% of whole numbers respectively.", "sources": []})
+                "answer": f"In {fa['snapshot']}, {w:.0%} of reported progress values are whole numbers; a continuously measured percentage would show about 1%. "
+                          f"Of those whole numbers, {m5:.0%} are multiples of 5 and {m10:.0%} are multiples of 10, against about 20% and 10% if their last digit carried information.", "sources": []})
     cov = findings["meta"]["coverage"]
     out.append({"id": 6, "question": "What share of the source reports did AGRIM parse?",
                 "answer": "; ".join(f"{c['snapshot']}: {c['rows_parsed']} rows" + (f" of {c['rows_printed']} ({c['pct']}%)" if c["rows_printed"] else "") for c in cov), "sources": []})
