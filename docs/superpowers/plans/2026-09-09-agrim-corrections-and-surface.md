@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Correct three defects in published numbers, add two findings modules nobody else has built, and rebuild the dashboard surface through an external AI frontend tool without breaking the offline demo.
+**Goal:** Correct three defects in published numbers, add two findings modules nobody else has built, and restructure the dashboard surface to the corrected reference mockup without breaking the offline demo.
 
-**Architecture:** No architectural change. D11 holds — no server, no API. New findings modules run at build time inside `findings/run.py` and write additive nullable fields into `web/public/data/*.json`. The frontend is rebuilt by an external tool against a written brief and integrated back into the existing Vite build, which must still produce a `web/dist` that runs from `python -m http.server` with Wi-Fi off.
+**Architecture:** No architectural change. D11 holds - no server, no API. New findings modules run at build time inside `findings/run.py` and write additive nullable fields into `web/public/data/*.json`. The frontend is restructured **in this repo**, in the existing Vite app: all ten screens already exist from tasks 16-18, so this is targeted rework of three of them plus shared components, not a rebuild. `web/dist` must keep serving from `python -m http.server` with Wi-Fi off.
 
 **Tech Stack:** Python 3.12, pandas, scikit-learn (already wired, not touched here). Vite 8 + React + TypeScript + Tailwind v4, TanStack Table v8, ECharts 6, react-router-dom v6 hash routing, Ajv contract validation, `@fontsource` IBM Plex.
 
@@ -43,9 +43,21 @@
 | `contracts/CHANGELOG.md` | **Modify.** One minor bump entry per task. | 21, 23, 25 |
 | `tools/routes.py` | **Create.** Serve `web/dist` and print every route URL for screenshot review. No new dependency. | 24 |
 | `docs/SCREEN-CHECKLIST.md` | **Create.** The six pass conditions a screen must meet before its task is done. | 24 |
-| `docs/FRONTEND-BRIEF.md` | **Create.** The full-context brief handed to the external AI frontend tool. | 22 |
-| `docs/mockups/agrim-reference.html` | **Create.** Corrected, offline, honest reference mockup — Overview, Project evidence, Exit Ledger. The canonical visual target for the port. | 22 |
-| `web/**` | **Replace.** Output of the external tool, integrated and verified. | 22 |
+| `docs/FRONTEND-BRIEF.md` | **Create.** Internal reference: the data contract, the route table, the tokens, the demo path. Read it before touching a screen. | 22 |
+| `docs/mockups/agrim-reference.html` | **Create.** Corrected, offline, honest reference mockup — Overview, Project evidence, Exit Ledger. The visual target every screen task is checked against. | 22 |
+| `web/src/lib/format.ts` | **Modify.** Add `croreShort` for the abbreviated tile value. | 22 |
+| `web/src/components/KPI.tsx` | **Modify.** Accept a `sub` line: abbreviated figure large, exact figure beneath. Drops the font-size clamp workaround. | 22 |
+| `web/src/components/Caveat.tsx` | **Create.** The fixed “a contradiction is not an allegation” line, so the wording cannot drift. | 22 |
+| `web/src/components/CsvButton.tsx` | **Create.** Download-this-table-as-CSV. No new dependency. | 22 |
+| `web/src/screens/Overview.tsx` | **Modify.** Verdict sentence, corrected tiles, contradiction bars with anomalies split out, sector table labelled a rollup, sort by model probability. | 22 |
+| `web/src/components/ShapBars.tsx` | **Create.** Diverging SHAP bars about a zero line, replacing the magic-pixel-width divs. | 26 |
+| `web/src/components/Sparkline.tsx` | **Modify.** Severity-neutral ink; never the `ok` token for a trend line. | 26 |
+| `web/src/components/SourcePage.tsx` | **Modify.** Add an inline variant rendering the page image at readable size, not behind a chip. | 26 |
+| `web/src/screens/Project.tsx` | **Modify.** Promote the worst flag into a full-width evidence block with both source pages side by side. | 26 |
+| `web/src/screens/Exits.tsx` | **Modify.** Caveat paragraph, neutral partition chips, pair bars scaled to the real maximum. | 27 |
+| `web/src/screens/Warning.tsx` | **Modify.** Surface the reconstructed delay series from Task 23. | 27 |
+| `web/src/screens/Drivers.tsx` | **Modify.** Surface the escalation matrix from Task 25. | 27 |
+| `web/src/screens/Fields.tsx` | **Modify.** Call out Whipple's index and its band as a named statistic. | 27 |
 
 ---
 
@@ -137,14 +149,14 @@ That last fact removes the original reason for a hard numbers freeze: the deck i
 | When | Tasks | Gate |
 |---|---|---|
 | Wed 9 | 21 -> 23 -> 25 | Full run, `validate.py` + `pytest -q` pasted, `deck/numbers.json` regenerated, `python tools/slides.py` re-run |
-| Wed 9 evening | 24 | Checklist written; hand the brief, the mockup and the JSON to the external frontend tool |
-| Thu 10 | 22 | Every route passes the checklist; no external URL in `web/dist` |
+| Wed 9 evening | 24 | Checklist and route enumerator working |
+| Thu 10 | 22 -> 26 -> 27 | Every touched route screenshot-checked against the six conditions; the four guard greps return nothing |
 | Thu 10 evening | Re-run `tools/slides.py`, fill the official PPTX by hand, export to PDF once | Relay plan Task 20 Step 3 |
 | Fri 11 | Cold-machine rehearsal twice, Wi-Fi off, fresh clone, `RUN_DEMO.bat`. Three timed pitch runs. | Relay plan Task 20 Step 5. Bug fixes only |
 
-**Cut line.** Wednesday 22:00: if Task 23 or 25 is not producing a number you would defend to a MoSPI officer, drop it and make it a "next step" line on the slide. Thursday 22:00: Task 22's CSV-export affordance. **Never cut:** Task 21, Task 22's Project evidence block, the PPTX, the rehearsal.
+**Cut line.** Wednesday 22:00: if Task 23 or 25 is not producing a number you would defend to a MoSPI officer, drop it and make it a "next step" line on the slide. Thursday 22:00: the CSV-export affordance in Task 22 Step 4. **Never cut:** Task 21, Task 26 (the Project evidence block), the PPTX, the rehearsal. Task 27 sheds work cleanly - its four steps are independent screens, so drop steps rather than the task.
 
-**Task 22 now carries the only real risk.** Tasks 18-20 already shipped a working, committed `web/dist` that runs offline. Replacing `web/src` with external output can regress a demo that currently works. Do Task 22 on its own branch, keep the working build recoverable with `git checkout main -- web/dist`, and do not merge until all six acceptance checks in Step 4 pass.
+**The screen tasks carry the only real risk.** Tasks 16-18 already shipped a working, committed `web/dist` that runs offline. Tasks 22, 26 and 27 edit that working surface, so each ends with a build, a screenshot check and the four guard greps before it is called done. `git checkout main -- web/dist` restores a working build if one goes wrong.
 
 ---
 
@@ -986,99 +998,213 @@ git commit -m "task 24: route enumerator and the screen checklist"
 
 ---
 
-### Task 22: Frontend rebuild via an external AI tool
+### Task 22: Shared primitives and the Overview verdict
 
-**Files:**
-- Create: `docs/FRONTEND-BRIEF.md`
-- Create: `docs/mockups/agrim-reference.html`
-- Modify: `web/src/**` (replaced by the external tool's output)
-- Modify: `web/dist/**` (rebuilt and committed, per the layout note in BUILD.md)
+**Files:** `web/src/lib/format.ts`, `web/src/components/KPI.tsx`, `web/src/components/Caveat.tsx` (create), `web/src/components/CsvButton.tsx` (create), `web/src/screens/Overview.tsx`.
 
 **Interfaces:**
-- Consumes: `web/public/data/{projects,findings,models,model_card}.json` frozen by Task 25, and `contracts/*.schema.json`.
-- Produces: a `web/dist` that serves from `python -m http.server` with no network.
+- Consumes: `findings.meta.headline.contradictions_arithmetic`, `.statistical_anomalies`, and `findings.meta.denominators` from Task 21.
+- Produces: `croreShort(v: number | null) => string`; `<KPI label value sub? hint? model? />`; `<Caveat />`; `<CsvButton rows filename />`.
 
-**The handoff is one-way.** The external tool does not have the repo, the contracts, the tokens or the offline constraint. `docs/FRONTEND-BRIEF.md` carries all of it and `docs/mockups/agrim-reference.html` shows it. Everything the tool cannot be trusted to preserve is checked mechanically in Step 4.
+Open `docs/mockups/agrim-reference.html` at `#/` first. It is the target.
 
-- [ ] **Step 1: Confirm the brief and the reference mockup**
+- [ ] **Step 1: Add the abbreviated crore formatter**
 
-Both are written in this session. Before handing them over, confirm `docs/FRONTEND-BRIEF.md` states: the ten routes; the exact token hex values; the exact JSON field names for `projects.json`, `findings.json` and `models.json`; the offline and no-CDN constraints; hash routing; Indian number formatting; the "contradictions" wording; the six checklist conditions; and the three reference sites.
+In `web/src/lib/format.ts`:
 
-Then open `docs/mockups/agrim-reference.html` and walk `#/`, `#/project/705410`, `#/exits`. It is the visual target: correct tokens, honest content, zero external requests, `data-bind` on every figure.
-
-- [ ] **Step 2: Give the tool the brief, the mockup and the real data**
-
-Hand over three things: `docs/FRONTEND-BRIEF.md`, `docs/mockups/agrim-reference.html`, and the four JSON files from `web/public/data/`.
-
-Do not hand over a synthetic sample — the layout defects this task exists to fix (three-line currency wrapping, a constant risk column) only appear on real values.
-
-**Say explicitly to the tool:** match the reference mockup's structure and density; keep the two-panel evidence layout, the abbreviated-plus-full currency tile, and the exit-ledger caveat paragraph; every `data-bind` attribute names the JSON path that value must read from, and an em dash means the value was never verified — wire it, never invent it. And name the six defect classes from §Mockup corrections above so they are not reintroduced.
-
-- [ ] **Step 3: Bring the output back into the repo**
-
-Replace `web/src/` with the tool's output. Keep `web/public/data/` exactly as Task 25 froze it — if the tool changed any JSON file, restore it with `git checkout -- web/public/data`. Then:
-
-```bash
-cd web && npm ci && npm run build
+```ts
+// A 12-digit crore figure does not fit a tile. Show it abbreviated, exact value beneath.
+export const croreShort = (v: number | null | undefined) => {
+  if (v == null) return "—";
+  if (v >= 100000) return `₹ ${(v / 100000).toFixed(2)} L cr`;
+  if (v >= 1000) return `₹ ${(v / 1000).toFixed(2)} K cr`;
+  return crore(v);
+};
 ```
-Expected: build succeeds and writes `web/dist`.
 
-- [ ] **Step 4: Run the acceptance checks — all four must pass**
+- [ ] **Step 2: Give KPI a sub line and drop the font clamp**
+
+`KPI.tsx` currently shrinks the figure with `[font-size:clamp(1rem,1.4vw,1.5rem)]` so a long number fits. Replace that workaround: hold the display size and add an optional `sub` line beneath.
+
+```tsx
+export function KPI({ label, value, sub, hint, model = false }:
+  { label: string; value: string; sub?: string; hint?: string; model?: boolean }) {
+  return (
+    <div className={`rounded border bg-surface px-4 py-3 ${model ? "border-model" : "border-line"}`}>
+      <div className="text-xs uppercase tracking-wide text-muted">{label}{model ? " · model" : ""}</div>
+      <div className={`num text-2xl font-medium whitespace-nowrap ${model ? "text-model" : ""}`}>{value}</div>
+      {sub && <div className="num text-xs text-muted overflow-hidden text-ellipsis whitespace-nowrap">{sub}</div>}
+      {hint && <div className="text-xs text-muted">{hint}</div>}
+    </div>
+  );
+}
+```
+
+- [ ] **Step 3: Create the caveat component**
+
+`web/src/components/Caveat.tsx`. One component, so the wording cannot drift between screens.
+
+```tsx
+export function Caveat() {
+  return (
+    <p className="text-xs text-muted">
+      A contradiction is not an allegation. These are differences between two published
+      documents; the reason for a difference is not stated in either of them.
+    </p>
+  );
+}
+```
+
+- [ ] **Step 4: Create the CSV download button**
+
+`web/src/components/CsvButton.tsx`. Takes already-shaped rows, builds a Blob, triggers a download. No new dependency.
+
+```tsx
+export function CsvButton({ rows, filename }: { rows: Record<string, unknown>[]; filename: string }) {
+  function download() {
+    if (!rows.length) return;
+    const cols = Object.keys(rows[0]);
+    const esc = (v: unknown) => {
+      if (v == null) return "";                  // NULL stays empty. Never 0, never "NA".
+      const s = String(v);
+      return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+    };
+    const csv = [cols.join(","), ...rows.map((r) => cols.map((c) => esc(r[c])).join(","))].join("\n");
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url; a.download = filename; a.click();
+    URL.revokeObjectURL(url);
+  }
+  return <button type="button" onClick={download}
+    className="rounded border border-line px-2 py-1 text-xs hover:bg-ground">Download this table (CSV)</button>;
+}
+```
+
+- [ ] **Step 5: Restructure Overview**
+
+Match `#/` in the reference mockup:
+
+1. **Verdict block first**, above the tiles: an eyebrow naming the snapshot range, a sentence built from `findings.meta.headline.contradictions_arithmetic`, then `<Caveat />`. The number comes from JSON; only the sentence is a template.
+2. **Eight tiles** using `croreShort` for `value` and `crore` for `sub` on the two currency tiles. `Statistical anomalies` and `Watchlist` pass `model`.
+3. **Contradiction-type bars** from `findings.contradictions.by_type`: arithmetic types first sorted by count, `STAT_ANOMALY` separated below a rule, drawn in the model colour, carrying the word "model".
+4. **Sector table** from `findings.by_sector`, with a footnote stating it is an agency-string rollup, not the 17 official ministries.
+5. **Top-20 table sorted by `p.ml.slip_prob` descending**, with the rule band as a badge rather than a numeric column. This kills the twenty-identical-`100` column from spec section 2.3.
+6. `<CsvButton>` on the table.
+
+- [ ] **Step 6: Build, screenshot, check**
 
 ```bash
-# 1. Nothing external. The demo runs with Wi-Fi off.
+cd web && npm run build && cd .. && python tools/routes.py
+```
+
+Screenshot `#/` at 1440x900 and check all six conditions in `docs/SCREEN-CHECKLIST.md`. Attach the screenshot to the task.
+
+- [ ] **Step 7: Gates and commit**
+
+```bash
+python tools/validate.py && pytest -q
+git add web/src web/dist docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
+git commit -m "task 22: overview verdict, corrected tiles, shared caveat and CSV export"
+```
+
+Paste both outputs. `validate.py` enforces the web-code literal allowlist (`100`, `1000`, `200`, `404` only; pixel sizes written with `px`), so a failure here means a magic number crept in.
+
+---
+
+### Task 26: The Project evidence screen
+
+**Files:** `web/src/components/ShapBars.tsx` (create), `web/src/components/Sparkline.tsx`, `web/src/components/SourcePage.tsx`, `web/src/screens/Project.tsx`.
+
+**Interfaces:**
+- Consumes: `projects[].flags[]` with `first_snapshot` and `occurrences` from Task 21; `projects[].ml.slip_top_factors[]`.
+- Produces: `<ShapBars factors />`; `<SourcePage snapshot page inline? />`.
+
+Open `#/project/705410` in the reference mockup first. This screen gets 30 of the 95 demo seconds and is the one thing no rival entry has.
+
+- [ ] **Step 1: Fix the sparkline colour**
+
+`Project.tsx` calls `Sparkline` with `color="#1E7B4F"` for expenditure. That is the `ok` token, so project 705410's collapse from ₹89,486.62 cr to ₹2,384.29 cr currently renders in the reassuring green. Use the ink token for the trend line and mark the two contradicting points in `--color-critical`. Colour encodes severity only; a trend line is not a severity.
+
+- [ ] **Step 2: Give SourcePage an inline variant**
+
+Add `inline?: boolean`. When true, render a `<figure>` containing `<img src={`/pages/${snapshot}/p${page}.png`} alt="...">` at full container width, plus a `<figcaption>` naming the report, the page and the value read off it. Keep the existing chip as the default so other screens are untouched.
+
+- [ ] **Step 3: Create ShapBars**
+
+Replace the inline `Math.min(96, Math.abs(f.contribution) * 60)}px` divs. Bars diverge about a zero line: positive right, negative left, widths normalised to the largest absolute contribution in the set, all in `--color-model`. Caption: right increases the predicted probability, left decreases it.
+
+- [ ] **Step 4: Promote the evidence block**
+
+Pick the highest-severity flag (`critical` > `high` > `medium` > `low` > `info`, ties broken by earliest `first_snapshot`) and render it **full width above everything else**: the `detail` sentence in display type, `<Caveat />`, then both `sources[]` page images side by side via `<SourcePage inline />`. Everything currently on the page moves below it at lower visual weight. One focal point, not six equal cards.
+
+- [ ] **Step 5: Show collapsed flags honestly**
+
+A flag with `occurrences > 1` renders its month range — `2026-04 → 2026-07 · 4 reports` — and lists every page in `sources[]`. One persisting condition, one row.
+
+- [ ] **Step 6: Build, screenshot, check, commit**
+
+```bash
+cd web && npm run build && cd .. && python tools/routes.py
+python tools/validate.py && pytest -q
+git commit -am "task 26: project evidence block, shap bars, severity-neutral sparklines"
+```
+
+Screenshot `#/project/705410` and check the six conditions. Paste both gate outputs.
+
+---
+
+### Task 27: Exits, and surfacing the new findings
+
+**Files:** `web/src/screens/Exits.tsx`, `web/src/screens/Warning.tsx`, `web/src/screens/Drivers.tsx`, `web/src/screens/Fields.tsx`.
+
+**Interfaces:**
+- Consumes: `findings.delay_series` (Task 23), `findings.escalation` (Task 25), `findings.field_audit.whipple_index` and `.whipple_band` (Task 21).
+- Produces: nothing other tasks depend on.
+
+Open `#/exits` in the reference mockup first.
+
+- [ ] **Step 1: Exit Ledger**
+
+Add the explanatory paragraph from the mockup: rows are classified only by the last physical progress the reports actually showed, and no row is described as cancelled. Make the partition chips **neutral** — a project last seen at 98% that then vanished is arguably the most suspicious row on the screen, so no band may be coloured as success. Scale the pair bars to `max(exited, entered, commissioned_printed)` across `findings.exits.pairs`, never to a hardcoded ceiling. Add `<CsvButton>`.
+
+- [ ] **Step 2: Early Warning gains the reconstructed delay series**
+
+Render `findings.delay_series.rows` as a small multiple across the five snapshots with the five bands, and print `doc_null` beside every row as the excluded-for-NULL denominator. One interpretive sentence above it: these are the bands the Flash Reports used to publish, recomputed from the fields they still publish. Continuity-of-series reconstruction, never an accusation.
+
+- [ ] **Step 3: Drivers gains the escalation matrix**
+
+Render `findings.escalation.rows` as a table: rollup key, classifiable, delayed, delay rate, direction of travel, escalate flag. Read the threshold from `findings.escalation.threshold_pct`, never typed in. Footnote that the key is an agency-string rollup, not the 17 official ministries. **Cite no committee report number or date** — the attribution is unresolved per spec section 3.4, and the finding stands on the counts.
+
+- [ ] **Step 4: Field Audit names its statistic**
+
+Call out `whipple_index` and `whipple_band` beside the terminal-digit histogram, with one line explaining that Benford's Law does not apply to a bounded 0–100 progress field and that Whipple's index is the conventional measure for digit heaping.
+
+- [ ] **Step 5: Build, screenshot all four, check, commit**
+
+```bash
+cd web && npm run build && cd .. && python tools/routes.py
+python tools/validate.py && pytest -q
+git commit -am "task 27: exit ledger caveats, delay series, escalation matrix, whipple index"
+```
+
+Screenshot `#/exits`, `#/warning`, `#/drivers` and `#/fields`. Check the six conditions on each. Paste both gate outputs.
+
+---
+
+### Guard for every screen task
+
+Tasks 16–18 shipped a `web/dist` that runs offline today. A screen task can regress a working demo, so before starting one, note the current commit; `git checkout main -- web/dist` restores a working build. Run these before calling any screen task done:
+
+```bash
 grep -rEoh "https?://[^\"' )]+" web/dist/assets/*.js web/dist/assets/*.css web/dist/index.html | sort -u
-```
-Expected: **no output**, or only URLs inside comments you have read and confirmed are never fetched. Any `fonts.googleapis.com`, `cdn.`, or `unpkg` hit is a failure — the fonts must come from bundled `@fontsource`.
-
-```bash
-# 2. Every route renders. Serve and walk all ten.
-python tools/routes.py
-```
-Expected: all ten URLs render without a blank screen or a console error.
-
-```bash
-# 3. The contract guard still works. Break a file on purpose.
-cp web/dist/data/findings.json /tmp/findings.bak && echo '{"meta":{}}' > web/dist/data/findings.json
-```
-Expected: the app refuses to render and names the failing key (D20). Then restore: `cp /tmp/findings.bak web/dist/data/findings.json`. If the app renders anyway, contract validation was dropped and must be restored before this task is done.
-
-```bash
-# 4. No hardcoded data numbers. AGENTS.md rule 4.
 grep -rEn "1775|1101|967|443|1289|3710641|340503" web/src/ | grep -v "\.json"
+grep -rniE "air.?gap|auditor general|gov node|session key|sha-?verified|secrecy|official use only|agency portal" web/src/
+grep -rnE "viewbox=|preserveaspectratio=|lineargradient|radialgradient|stop-color=" web/src/
 ```
-Expected: **no output**. Every number comes from JSON at runtime.
 
-```bash
-# 5. No fabricated institutional authority reintroduced. See Mockup corrections, class 2.
-grep -rniE "air.?gap|auditor general|gov node|session key|sha-?verified|secrecy|official use only|national node|bounding box|OCR|taxonomy v|PROD\b|agency portal" web/src/
-```
-Expected: **no output**. AGRIM reads five public PDFs; it does not run on government infrastructure and must never imply it does.
+Every one must return **no output**. The first proves the demo still runs with Wi-Fi off; the second enforces AGENTS.md rule 4; the third keeps the fabricated institutional authority from the mockups out of the build; the fourth catches lowercased SVG attributes that fail silently in JSX.
 
-```bash
-# 6. Lowercased SVG attributes that break in JSX. See class 5.
-grep -rnE "viewbox=|preserveaspectratio=|lineargradient|radialgradient|fegaussianblur|fecomposite|stop-color=" web/src/
-```
-Expected: **no output**.
-
-- [ ] **Step 5: Run the screen checklist**
-
-Run `python tools/routes.py`, screenshot all ten routes at 1440×900, and check each against `docs/SCREEN-CHECKLIST.md`. Attach the screenshots to the task. A route failing any of the six conditions goes back to the external tool with the specific condition quoted.
-
-- [ ] **Step 6: Run the repo gates**
-
-```bash
-python tools/validate.py
-pytest -q
-```
-Expected: both pass. **Paste the output.** `validate.py` enforces the web-code literal allowlist (`100`, `1000`, `200`, `404` only, pixel sizes written with `px`), so a violation here means the external tool introduced a magic number.
-
-- [ ] **Step 7: Commit**
-
-```bash
-git add web/ docs/FRONTEND-BRIEF.md docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
-git commit -m "task 22: rebuilt surface, contract guard and offline build verified"
-```
+Then confirm the contract guard still fires: corrupt `web/dist/data/findings.json`, reload, and the app must refuse to render and name the failing key (D20). Restore it afterwards.
 
 ---
 
@@ -1086,7 +1212,7 @@ git commit -m "task 22: rebuilt surface, contract guard and offline build verifi
 
 - **Spec coverage.** §2.1 → Task 21 Steps 10–11. §2.2 → Task 21 Steps 1–4. §2.3, §2.4 → Task 22 via the brief and checklist conditions 1, 2, 3, 5. §2.5 preserved: `detect()` is untouched and Task 21 Step 9 asserts it. §5 Task 21 items 1–4 → Task 21. §5 Task 22 → Task 22. §5 Task 23 → Task 23. §5 Task 24 → Task 24. §5 Task 25 → Task 25. §6 order → §Order. §7 → the gate step of every task. §8, §9, §10 are Window 2 and reference material, no task.
 - **Deviation from the spec, recorded.** The spec's Task 24 called for `tools/shots.py` capturing screenshots. That needs a headless browser, which means a runtime download (AGENTS.md rule 7) and a lock re-freeze (rule 9). Replaced with `tools/routes.py`, which serves and enumerates while a human or agent screenshots. Same arbiter, no dependency.
-- **Deviation from the spec, recorded.** The spec's Task 22 built the surface in-repo. Ranvir is using an external AI frontend tool, so Task 22 became brief-plus-mockup-plus-integration with six mechanical acceptance checks standing in for the in-repo review.
+- **Deviation from the spec, recorded.** The spec's Task 22 was one task covering the whole surface. Because tasks 16-18 already built all ten screens, and because the work is done in-repo rather than handed out, it is split into three subagent-sized tasks: 22 (shared primitives and Overview), 26 (Project evidence screen), 27 (Exits plus surfacing the Task 21/23/25 fields).  stays as internal reference for the data contract and route table.
 - **Added after the spec, recorded.** Three external mockups were reviewed; see §Mockup corrections. Their layout ideas are adopted (two-panel evidence cockpit, abbreviated-plus-full currency tile, contradictions/anomalies split, exit-ledger caveat paragraph, panel chronology). Six defect classes are fixed in `docs/mockups/agrim-reference.html`, which becomes the visual target for Task 22.
 - **Type consistency.** `classify(doc_original, doc_revised, snapshot)` is defined in Task 23 Step 3 and consumed with the same signature in Task 25 Step 3. `collapse(flags)` is defined in Task 21 Step 3 and consumed in Task 21 Step 11 only. `whipple_index`/`whipple_band` are defined and consumed inside Task 21.
 - **Contract version chain.** 1.0.0 → 1.1.0 (Task 21) → 1.2.0 (Task 23) → 1.3.0 (Task 25). Each task bumps `CONTRACT_VERSION` in `findings/run.py` and adds a `CHANGELOG.md` entry.
