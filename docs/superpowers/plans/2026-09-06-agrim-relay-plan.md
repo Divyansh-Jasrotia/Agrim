@@ -3683,7 +3683,7 @@ gh pr create --title "Task 13: M3 and M4" --body "<paste outputs>"
 - Consumes: Tasks 9–13.
 - Produces: `findings.models.pipeline.run(panel, flags, sectors) -> (models_json, ml_by_code, extra_flags, model_card)`; `findings.models.model_card.build(models_json, panel) -> dict`. After this task `python -m findings.run` (without `--no-models`) writes all five JSON files.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/models/test_pipeline.py`:
 ```python
@@ -3724,11 +3724,11 @@ def test_full_pipeline_on_synthetic_validates_and_is_deterministic(synth_path, t
     assert "m1_HGB_B_recall_at_100" in nums and "m2_HGB_mae" in nums
 ```
 
-- [ ] **Step 2: Run to verify failure**
+- [x] **Step 2: Run to verify failure**
 
 Run: `pytest tests/models/test_pipeline.py -q` → FAIL (`models are not wired yet`).
 
-- [ ] **Step 3: Write `findings/models/pipeline.py`**
+- [x] **Step 3: Write `findings/models/pipeline.py`**
 
 ```python
 """Runs M1-M4 once, assembles models.json, the per-project ml blocks, extra flags and the model card."""
@@ -3772,7 +3772,7 @@ def run(panel, flags, sectors):
     return models, ml, extra, model_card.build(models, panel)
 ```
 
-- [ ] **Step 4: Write `findings/models/model_card.py`**
+- [x] **Step 4: Write `findings/models/model_card.py`**
 
 ```python
 """Outcome (i): the model card, generated from models.json so it can never drift from the numbers."""
@@ -3811,7 +3811,7 @@ def build(models, panel):
     return {"generated_at": m["generated_at"], "sections": sections}
 ```
 
-- [ ] **Step 5: Wire the hook in `findings/run.py`**
+- [x] **Step 5: Wire the hook in `findings/run.py`**
 
 Edit `findings/run.py`: replace the line `run_models = None  # Task 14 assigns findings.models.pipeline.run here` with:
 ```python
@@ -3819,7 +3819,7 @@ from findings.models import pipeline  # noqa: E402  (after OMP_NUM_THREADS is se
 run_models = pipeline.run
 ```
 
-- [ ] **Step 6: Run the test, then the real data**
+- [x] **Step 6: Run the test, then the real data**
 
 Run: `pytest tests/models/test_pipeline.py -q` → 1 passed (two full synthetic runs, a few minutes).
 
@@ -3833,7 +3833,7 @@ Expected: `wrote web\public\data: ...`; validator `ok   models: valid`, `ok   mo
 
 Read `web/public/data/model_card.json` section "M1 results on the held-out pair" and post the four lines in the group chat. If `positives` on P4 is under 30, the model beat in the pitch leads with M2 and M3 (BUILD.md §12 row 13); write that decision in the PR.
 
-- [ ] **Step 7: Commit the outputs**
+- [x] **Step 7: Commit the outputs**
 
 ```powershell
 git switch -c task/14-pipeline

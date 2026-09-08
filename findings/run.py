@@ -16,7 +16,8 @@ from findings.panel import latest, load_panel, sector_map, series, snapshots_pre
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT_VERSION = "1.0.0"
 ARITH = {"EXP_DECREASE", "PROG_DECREASE", "EXP_GT_REVISED_COST", "ZERO_PROG_NONZERO_EXP", "PROG_GT_100", "DOC_BEFORE_APPROVAL"}
-run_models = None  # Task 14 assigns findings.models.pipeline.run here
+from findings.models import pipeline  # noqa: E402  (after OMP_NUM_THREADS is set)
+run_models = pipeline.run
 
 
 def _round(x):

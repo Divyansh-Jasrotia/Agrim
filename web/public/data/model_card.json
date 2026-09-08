@@ -1,0 +1,79 @@
+{
+ "generated_at": "2026-09-08T07:35:36+00:00",
+ "sections": [
+  {
+   "lines": [
+    "5 public MoSPI Flash Reports: 2025-12 (1345 rows), 2026-04 (1981 rows), 2026-05 (1889 rows), 2026-06 (1847 rows), 2026-07 (1775 rows)",
+    "Nine public fields per project; the Common Upload Form itself is behind role-based login and is not seen by any model."
+   ],
+   "title": "Data"
+  },
+  {
+   "lines": [
+    "Pair P1 (2025-12 → 2026-04, gap 4 months): n=1289, positives=649, exits excluded from labels=56",
+    "Pair P2 (2026-04 → 2026-05, gap 1 months): n=1858, positives=413, exits excluded from labels=123",
+    "Pair P3 (2026-05 → 2026-06, gap 1 months): n=1740, positives=306, exits excluded from labels=149",
+    "Pair P4 (2026-06 → 2026-07, gap 1 months): n=1732, positives=334, exits excluded from labels=115"
+   ],
+   "title": "Universe and censoring"
+  },
+  {
+   "lines": [
+    "M1: a revised completion date is filed in the next report (a reporting event, not a physical outcome).",
+    "M2: next-month reported physical progress (points).",
+    "M3: cross-sectional cost and time overrun on the latest report (drivers and peer benchmark, not a forecast).",
+    "Cost escalation is not a forecast target: too few revision events in the window to train anything defensible."
+   ],
+   "title": "Targets"
+  },
+  {
+   "lines": [
+    "A (public table fields): physical_progress_pct, exp_share, age_months, months_to_doc, log_cost_original, cost_overrun_pct, time_overrun_months, has_revised_doc, sector, state, gap_months",
+    "B = A + audit-derived and history features: velocity_pct_per_month, unreachable_ratio, n_prior_revisions, agency_prior_slip_rate, n_flags_to_t0, exp_decrease_ever"
+   ],
+   "title": "Feature sets"
+  },
+  {
+   "lines": [
+    "Out-of-time: trained on P1, P2, P3, tested on P4. No random splits. Label-shuffle control included.",
+    "random_state=0, OMP_NUM_THREADS=1, scikit-learn 1.9.0."
+   ],
+   "title": "Validation"
+  },
+  {
+   "lines": [
+    "LR_A: PR-AUC 0.347, precision@100 49.0%, recall@100 14.7%, lift@100 2.54 (n=1732, positives=334, base rate 19.3%)",
+    "HGB_A: PR-AUC 0.605, precision@100 94.0%, recall@100 28.1%, lift@100 4.87 (n=1732, positives=334, base rate 19.3%)",
+    "HGB_B: PR-AUC 0.587, precision@100 94.0%, recall@100 28.1%, lift@100 4.87 (n=1732, positives=334, base rate 19.3%)",
+    "HGB_B_SHUFFLED: PR-AUC 0.203, precision@100 22.0%, recall@100 6.6%, lift@100 1.14 (n=1732, positives=334, base rate 19.3%)"
+   ],
+   "title": "M1 results on the held-out pair"
+  },
+  {
+   "lines": [
+    "ZERO: MAE 1.63 points (median 0.09, n=1732)",
+    "OWN_VELOCITY: MAE 2.30 points (median 0.75, n=1732)",
+    "HGB: MAE 1.50 points (median 0.41, n=1732)",
+    "Winner: HGB"
+   ],
+   "title": "M2 results"
+  },
+  {
+   "lines": [
+    "cost_overrun_pct / OLS: R² 0.152, MAE 19.79",
+    "cost_overrun_pct / HGB: R² 0.154, MAE 18.09",
+    "time_overrun_months / OLS: R² 0.432, MAE 12.75",
+    "time_overrun_months / HGB: R² 0.536, MAE 9.50"
+   ],
+   "title": "M3 results (5-fold CV)"
+  },
+  {
+   "lines": [
+    "Labels are reporting events filtered through each agency's incentive to delay bad news.",
+    "The panel is survivor-selected: projects that leave are excluded from labels and counted above.",
+    "Nine fields; no milestones, contracts or site data. With PAIMANA access the same pipeline would consume the full CUF."
+   ],
+   "title": "Known limitations"
+  }
+ ]
+}

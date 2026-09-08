@@ -14,3 +14,4 @@ Task 10 — Agent — 2026-09-07 22:56 — completed (feature builder sets A & B
 Task 11 — Agent — 2026-09-08 12:27 — completed (M1 slip classifier: HGB vs LR, sets A/B, shuffle control, SHAP factors, watchlist, 47 tests green, validate PASS)
 Task 12 — Agent — 2026-09-08 12:47 — completed (M2 progress forecaster vs ZERO/OWN_VELOCITY baselines, simulation outlook, agreement with F3, 48 tests green, validate PASS)
 Task 13 — Agent — 2026-09-08 12:57 — completed (M3 overrun drivers OLS/HGB, peer benchmark, PDPs; M4 isolation-forest anomalies, 50 tests green, validate PASS)
+Task 14 — Agent — 2026-09-08 13:07 — completed (models wired into pipeline, model card, full real run models.json/model_card.json committed, 51 tests green, validate PASS)
