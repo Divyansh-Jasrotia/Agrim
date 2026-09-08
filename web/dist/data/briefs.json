@@ -1,0 +1,602 @@
+[
+ {
+  "attempts": 3,
+  "brief": "Bargi Diversion Project Phase - III [km. 104 to km 154] (400116) is monitored under Water Resources-MP in Madhya Pradesh. In the 2026-07 report it stands at 81.52% physical progress with cumulative expenditure of 2,270.96 crore against a revised cost of 1,399.70 crore. Cumulative expenditure ₹1,993.52 cr exceeds the revised cost ₹1,399.70 cr in 2025-12. The rule-based risk score is 100 (red).",
+  "facts_hash": "92f9e3a35e1db9e75001f8d70a7b1a9ad8b819f252073508e134fa0b1c458b78",
+  "generated_at": "2026-09-08T15:39:19+00:00",
+  "grounded": false,
+  "model": "qwen2.5:3b",
+  "project_code": "400116",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The NORTH URIMARI EXPANSION OCP project, under the Ministry of Coal in Jharkhand, has been ongoing since 2025-12. The project's cumulative expenditure has decreased from ₹696.05 crore in December 2025 to ₹605.70 crore in April 2026, which is a critical flag as cumulative expenditure cannot decrease. There has also been a medium-level flag due to a drop in physical progress from 71.38% in April 2026 to 68.75% in May 2026. Additionally, the revised cost has dropped from ₹778.80 crore to ₹634.30 crore between May 2026 and June 2026, which is a high-level flag. Given the current expenditure and progress, the project is expected to take 316 months to complete at its current rate, leaving only 32 months until the stated completion date of March 2029. The model predicts a 1% chance of a revised completion date in the next report, and there is a significant cost overrun of 6.34 percentage points compared to similar projects. The current risk score is at 100 (red), indicating a critical situation.",
+  "facts_hash": "f17f1118b191eeec4e006729f46a035707c12d826acc559584b6c874facfeb29",
+  "generated_at": "2026-09-08T15:39:23+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "400151",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The RAJRAPPA RCE OCP project, under the CCL - CIL agency in Jharkhand's coal sector, has been ongoing since 2025-12. The project's progress has fluctuated, with a notable drop from 78.25% in 2026-04 to 76.99% in 2026-05, and then to 75.61% in 2026-06. Despite these setbacks, the cumulative expenditure has remained stable at ₹488.71 crore, which is slightly below the original cost of ₹510.85 crore. However, the risk score is at a critical level of 90 (red), indicating that the project is not on track to meet its revised completion date of 2027-03. There is also a high risk flag due to a cumulative expenditure decrease from ₹489.20 crore in 2026-06 to ₹488.71 crore in 2026-07. The probability of a revised completion date being filed in the next report is only 2%, and the cost overrun is at 11.74 percentage points above comparable projects. These factors highlight the need for immediate attention and intervention to ensure the project's timely completion.",
+  "facts_hash": "e10c571d05879f5ed208ea7d1b62cde1004ed52ade775a5b2631a193866d9f47",
+  "generated_at": "2026-09-08T15:41:53+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "400160",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The 2G Ethanol Biorefinery at Bathinda, a project under the supervision of Hindustan Petroleum Corporation Limited in the Oil & Gas sector of Punjab, is currently ongoing. The project's progress has been steadily improving, reaching 95.80% in the latest reports from 2026-05 and 2026-06. However, there has been a slight dip in physical progress, dropping to 94.00% in 2026-06. Despite this, the project remains on track with its revised completion date of 2026-12, which is 5 months behind the original schedule. The project has seen a significant reduction in cumulative expenditure, dropping from ₹1,293.34 crore in 2026-06 to ₹1,291.35 crore in 2026-07, a decrease of ₹2.00 crore. The risk score for this project is at 85, indicating a red alert. The probability of the revised completion date being filed in the next report is 18%, and the project is facing a cost overrun of 19.29% compared to similar projects.",
+  "facts_hash": "d3daed1aa8219a435a461587d943cb2c85554d87de652da641479af5def0bc47",
+  "generated_at": "2026-09-08T15:42:46+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "400171",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing project 400232, a fly-over connection for joining down line in Brundamal, is in the state of Odisha, under the Railways sector. The project is 55% complete as of the 2026-07 report, which is a significant drop from the 67% reported in the 2026-06 report. The cumulative expenditure has also decreased from ₹237.83 crore in 2026-06 to ₹46.39 crore in 2026-07, which is concerning as a cumulative field cannot decrease. The project is facing multiple flags, including a critical flag for physical progress falling from 67% to 55%, and a critical flag for the revised cost dropping from ₹297.00 crore to ₹296.51 crore. The model predicts a 5% chance of a revised completion date being filed in the next report, and there is a 46.78 percentage point cost overrun compared to similar projects. Given the critical flags and the significant drop in progress and expenditure, immediate attention is required to address these issues and ensure the project stays on track.",
+  "facts_hash": "d48c162978d84eb97da8100fbef199a5d1a2132921fd7f3625d3a8fb2dd0cbe8",
+  "generated_at": "2026-09-08T15:41:19+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "400232",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The infrastructure project 400247, covering various rail segments in West Bengal, is currently in the ongoing phase. Since 2025-12, the project has seen significant progress, with cumulative expenditure reaching 1,066.85 crore, which exceeds the revised cost of 1,000.00 crore. The revised completion date has been adjusted from 2027-02 to 2028-03, a change noted in the 2026-04 report. However, the project faces several challenges. Cumulative expenditure has surpassed the revised cost multiple times, including in 2026-04 and 2026-05, with the latest figure reaching 1,066.85 crore. Additionally, there has been a significant drop in physical progress from 76% in 2026-06 to 49% in 2026-07, which is concerning. The project also faces a critical risk due to a drop in cumulative expenditure from 1,066.85 crore in 2026-06 to 925.70 crore in 2026-07, a decrease that is not acceptable. Furthermore, the project has a high risk due to a significant drop in physical progress, and a critical risk due to the project not meeting the revised completion date of 2028-03. Given these factors, the risk score is at 100, indicating a red alert. The probability of the revised completion date being met in the next report is only 5%, and the project is 74.86 percentage points over budget compared to similar projects.",
+  "facts_hash": "66134828159f007698d5701409d3ca340eaa04eb52c7febfe96b469de6a8288c",
+  "generated_at": "2026-09-08T15:39:28+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "400247",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Tindivanam-Nagari project, spanning 179.2 kilometers and managed by CAOC/SR SR, is currently in the ongoing phase. Since December 2025, the project has seen a gradual decline in progress, dropping from 19.00% in December 2025 to 16.50% in April 2026. Despite this, the cumulative expenditure has increased from 1,176.55 crore in December 2025 to 1,259.70 crore in April 2026. However, the physical progress has also decreased, from 16.85% in June 2026 to 16.50% in July 2026. Given the current trends, the project's revised completion date of March 2028 appears to be at risk, as the cumulative expenditure has not increased and the physical progress has fallen. Additionally, there are critical flags indicating a significant drop in progress and expenditure, and a risk score of 95 (red) from the model, suggesting a high likelihood of cost overruns. The probability of the revised completion date being met in the next report is only 2%, and the project is facing a significant cost overrun of 135.83 percentage points compared to similar projects.",
+  "facts_hash": "1f8fbb52869b7ef4b94b18e674cc1650c3057e34937f8e17e19ba9a6e217b7df",
+  "generated_at": "2026-09-08T15:41:22+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "400275",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Kirandul-Jagdalpur railway project, a 150 km stretch under the jurisdiction of CAO/C/ECOR ECoR mor in Chhattisgarh's Railways sector, has been progressing steadily since 2025-12. The project's revised completion date has been adjusted from 2025-12 to 2027-04, as reported in the latest reports. Despite this delay, the project has maintained a high level of progress, with cumulative expenditures reaching 1,691.27 crore in 2026-06. However, there are several flags indicating potential issues. Physical progress has fallen from 97.6% in 2026-05 to 96.17% in 2026-06, and the cumulative expenditure has decreased from 1,691.27 crore in 2026-06 to 1,369.01 crore in 2026-07, which is a significant drop. Additionally, physical progress has dropped from 96.17% in 2026-06 to 89% in 2026-07. Given these flags, the risk score is at 100 (red), indicating a critical situation. The probability of the revised completion date being filed in the next report is only 3%, and the project is facing a cost overrun of 21.91 percentage points compared to similar projects. These factors highlight the need for immediate attention and intervention to ensure the project's timely completion and adherence to budget constraints.",
+  "facts_hash": "e597a596dcb1afee59757a76999352f3c5ef0507cefa206df311a938dd0256fd",
+  "generated_at": "2026-09-08T15:39:32+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "400291",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Tapovan-Vishnugad HEP project, a 4x130 MW project under the jurisdiction of the National Thermal Power Corporation in Uttarakhand, is currently in the ongoing phase. The project's progress has been steady at 77% since December 2025, with cumulative expenditures reaching 7,827.81 crore in July 2026. However, there are several flags to note. The revised completion date has been adjusted from 2029-04 to 2029-07, which is a significant change. Additionally, there is a flag indicating a cumulative expenditure decrease from ₹7,791.33 crore in May 2026 to ₹7,766.24 crore in June 2026, which is not acceptable. Physical progress has also fallen from 77% in May 2026 to 75.81% in June 2026. The risk score for this project is at 100, indicating a critical situation. The probability of the revised completion date being adjusted again in the next report is 65%, and the project is facing a 150.92 percentage point cost overrun compared to similar projects. Given these factors, it is critical to address the issues of progress and expenditure to ensure the project meets its revised completion date of 2029-07.",
+  "facts_hash": "ec386f2038efaff4c62b976bdca17d814ab6ff02041c8bd043a7bc360fb654ac",
+  "generated_at": "2026-09-08T15:39:36+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "602185",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The project 602538, which involves the installation of FGD for 4x210 MW and 2x250 MW MTPS units at U1-6, is currently in the ongoing stage. The project has seen significant progress, with cumulative expenditure reaching 1,143.06 crore in 2026-07, which exceeds the revised cost of 1,106.00 crore. This is a critical flag, as the project is running behind schedule and is expected to need an additional 5 months to complete at its current pace. The revised completion date has been adjusted from 2026-05 to 2026-09, which is still a significant deviation from the original schedule. Additionally, there are ongoing cost overruns, with cumulative expenditure exceeding the revised cost in multiple reports. Given these factors, the project faces a high risk, with a rule-based risk score of 100, indicating a red alert. The probability of the revised completion date being filed in the next report is only 26%, suggesting a high likelihood of further delays.",
+  "facts_hash": "9224144adea014a5fc1d00b85c61693f16d6b3643a3cd37a2828abe7ded2a9b3",
+  "generated_at": "2026-09-08T15:39:40+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "602538",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Integrated Para Xylene [PX] and Purified Terephthalic Acid [PTA] Project at Paradip Refinery, under the Indian Oil Corporation Limited (IOCL) in Odisha, is currently ongoing. The project's progress has been steadily improving, with cumulative expenditure reaching 8,870.29 crore in 2026-07, which is still below the revised cost of 11,783.00 crore. However, there are several flags indicating potential issues. The cumulative expenditure has fallen from 8,613.21 crore in 2025-12 to 8,450.45 crore in 2026-04, which is a significant drop and cannot be allowed. Additionally, the cumulative expenditure in 2026-05 exceeds the revised cost by 70,637.31 crore, and the expenditure in 2026-06 exceeds the revised cost by 70,820.19 crore. These exceedances are flagged as critical, as the project needs to meet its revised completion date of August 2026. Furthermore, the project's cost overrun is at 39.48 percentage points above the average for similar projects. Given these flags and the model predictions, the project faces significant risks, with a model-based risk score of 100 (red), indicating a critical situation. The project's expected completion date is projected to be in 2032-06, which is 70 months beyond the stated completion date.",
+  "facts_hash": "d507024b2c88acb40e5af1fc3ea060feb522f55fa7db9f0b5df0701483d4e5c1",
+  "generated_at": "2026-09-08T15:39:44+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "604859",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing Project 610315 at IISER Berhampur, under the Indian Institutes of Science Education and Research, Behrampur agency in Odisha, is currently in its final stages. The project's cumulative expenditure as of the latest reports has reached ₹874.09 crore, which exceeds the revised cost of ₹843.09 crore. This situation is marked by several flags, including a cumulative expenditure exceeding the revised cost in reports from 2026-04, 2026-05, and 2026-06. Additionally, the revised completion date has been adjusted from 2026-06 to 2026-09 in 2026-04 and then to 2026-06 in 2026-05. The latest report from 2026-07 shows that the cumulative expenditure is still ₹874.09 crore, exceeding the revised cost. The project's progress is at 98.5%, but the stated completion date of 2026-06 has already passed. The model predicts a 49% probability of the revised completion date being filed in the next report, with a rank of 300. The cost overrun is at -69.10 percentage points above comparable projects, indicating a significant deviation from the original plan. Given these factors, the risk score is at 85, which is considered red.",
+  "facts_hash": "051fc76a009e1a38545058c721b4746f49a21397952e83c70a7b82c4952aa6b8",
+  "generated_at": "2026-09-08T15:42:50+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "610315",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The infrastructure project 611751, which involves the construction of a rail link between Aurangabad and Ankai, is currently in the ongoing status. The project has seen significant progress and expenditure, with cumulative expenditure reaching ₹1,375.55 crore as of the report in 2026-06. However, the project faces several challenges. The cumulative expenditure has exceeded the revised cost of ₹960.64 crore multiple times, as flagged with medium severity. Additionally, the project has missed its original completion date of 2025-12, with reported progress dropping to 0% in 2026-07. There are also concerns about the physical progress, which has fallen from 2.03% in 2026-06 to 0% in 2026-07. The model predicts a 4% chance of a revised completion date being filed in the next report, and there is a significant cost overrun of 21.07 percentage points compared to similar projects. Given these factors, the risk score is at 95 (red), indicating a critical situation that requires immediate attention and intervention.",
+  "facts_hash": "49f11ff053cac5cb1e37cda2765b53cdadee2df3772c9ea1f5cdf8977517d356",
+  "generated_at": "2026-09-08T15:41:26+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "611751",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing Project 611752, which involves doubling between Gooty-Pendakallu, is currently in the state of Andhra Pradesh under the Railways sector. The project, which was expected to be completed by March 2027, has seen a significant drop in physical progress from 25% in December 2025 to just 0% in July 2026. This decline is accompanied by a substantial drop in cumulative expenditure from ₹347.98 crore in May 2026 to ₹149.34 crore in July 2026. Given these flags, including critical ones, the project faces a high risk of not meeting its original completion date. The model predicts a 2% chance of a revised completion date being filed in the next report, and there is a 4.66 percentage point cost overrun compared to similar projects. These factors necessitate immediate attention and intervention to ensure the project stays on track.",
+  "facts_hash": "09f76eb8f3551e4dfce1109bd773a676518d20923850c836b8e6c0050a5bd6f0",
+  "generated_at": "2026-09-08T15:41:29+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "611752",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing construction of the 300-bedded hospital at Haridwar, Project 612259, is currently in the status of being ongoing. The project is funded by the Employee State Insurance Company [ESIC] and falls under the Healthcare sector in the state of Uttarakhand. The project's progress has been steadily increasing, with the cumulative expenditure reaching ₹340.30 crore in the latest report, which is 177.05% above the revised cost of ₹297.63 crore. There are several flags indicating issues, including a cumulative expenditure exceeding the revised cost in multiple reports, a change in the revised completion date from 2026-03 to 2026-07, and a cumulative expenditure exceeding the revised cost in the most recent reports. The model predicts a 59% chance of a revised completion date being filed in the next report and a cost overrun of 177.05 percentage points above comparable projects. Given the high risk score of 85 (red), it is crucial to closely monitor the project's progress and expenditure to ensure it stays within the revised cost and completion timeline.",
+  "facts_hash": "4e8f1b812fe5bbbb669e0e1ea5c871cd3c342d7229922b3e983a7c6700e38e1f",
+  "generated_at": "2026-09-08T15:42:54+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "612259",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The SIRKA OC project, under the CCL - CIL agency in Jharkhand's coal sector, has been ongoing since 2025-12. The project's progress has fluctuated, with a notable drop from 63.52% in 2026-04 to 56.02% in 2026-05, indicating a potential issue with physical progress. Cumulative expenditure has surpassed the revised cost by ₹280.03 crore in 2026-06, which is a significant concern. Additionally, the revised cost was reduced to ₹183.18 crore in 2026-07, a change that could affect the project's financial health. Given the current pace, the project is expected to take 104 months to complete, leaving only 20 months from the stated completion date of 2028-03. Moreover, cumulative expenditure has decreased from ₹280.03 crore in 2026-06 to ₹89.92 crore in 2026-07, which is not feasible. The project currently has four flags: high for physical progress, medium for cumulative expenditure, and critical for both cost reduction and cost overrun. The model predicts a 1% chance of a revised completion date in the next report, and the project is facing a cost overrun of 3.60 percentage points compared to similar projects.",
+  "facts_hash": "b294f0916e559a0491d1c2ca38786de406e4829136c18330db3856ecaca1d910",
+  "generated_at": "2026-09-08T15:41:58+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "615822",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing Project 616227, which involves the 3rd line between Chandil, Anara, and Damodar sections in a multi-state area including Jharkhand and West Bengal, is currently in an ongoing status. Since the last reports, the progress remains at 0%, with cumulative expenditures ranging from ₹0.49 crore in December 2025 to ₹9.07 crore in July 2026. The project's original completion date was set for September 2029, but this seems increasingly unlikely given the current expenditure levels and lack of progress. There are several flags indicating issues, including a critical flag where cumulative expenditure has decreased from ₹4.51 crore in April 2026 to ₹3.97 crore in May 2026, which is a significant drop. Additionally, there are multiple low flags indicating that physical progress remains at 0% despite increasing cumulative expenditures. The risk score for this project is 85, which is considered high, and the model predicts a 3% chance of a revised completion date being filed in the next report, with a rank of 1558. The project is also facing a cost overrun of 0.85 percentage points compared to similar projects. These factors highlight the urgent need for intervention to address the current issues and ensure the project's timely completion.",
+  "facts_hash": "05e6c11084f0711d833bde29feb11aa7d7b976589e1dbdf90dcd842c75d8e8c7",
+  "generated_at": "2026-09-08T15:42:58+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "616227",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Sewer Network, SPS and STP project in Begusarai is currently under the National Mission for Clean Ganga, a government initiative in Bihar. The project, which began in 2025, is progressing well with 97.00% completion as of the latest reports. The cumulative expenditure stands at ₹261.82 crore, which is slightly exceeding the revised cost of ₹230.06 crore. There are several flags indicating issues: the cumulative expenditure has exceeded the revised cost in multiple reports, including those from 2025-12, 2026-04, 2026-05, 2026-06, and 2026-07. Additionally, the revised completion date has been changed from 2025-12 to 2026-12, which is already past the current reporting period. The risk score for this project is at 100 (red), indicating a critical situation. The probability of the revised completion date being filed in the next report is only 8%, and the cost overrun is 2.23 percentage points above comparable projects. Given the current pace, the project's target completion date of 2026-12 cannot be met.",
+  "facts_hash": "a24cc47f15d8d17ed1cb1e5eca909282e518aa9cedf4f24f502c6151b379e555",
+  "generated_at": "2026-09-08T15:39:48+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "616615",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Sewer Networks, SPS and STP project at Hajipur is currently under the National Mission for Clean Ganga in Bihar, a sector focused on Waste & Water. The project has been progressing steadily with 95.00% completion and cumulative expenditure of 346.46 crore, which exceeds the revised cost of 305.19 crore. Flags indicate that the cumulative expenditure has exceeded the revised cost in several reports, including those from 2025-12, 2026-04, 2026-05, 2026-06, and 2026-07. Additionally, there is a critical flag indicating no reported progress over the past seven months, suggesting that the stated completion date of 2026-12 may not be met. The model predicts a 9% chance of the revised completion date being filed in the next report and indicates a 1.72 percentage point cost overrun compared to similar projects. Given these flags and the risk score of 100 (red), it is crucial to address the cost overrun and ensure that the project progresses to meet the revised completion date.",
+  "facts_hash": "821c282df1eb1bfdaa93c04cf5c925c2f8cad6653335e8afb1f54822852e3c44",
+  "generated_at": "2026-09-08T15:39:51+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "616616",
+  "seed": 0
+ },
+ {
+  "attempts": 3,
+  "brief": "South Central Railway- Rail connectivity to Amaravati, Capital of Andhra Pradesh Errupalem- Amaravati- Namburu New line 57 km PB7/WR/2023-24 (617214) is monitored under CAO/C/SCoR SCoR mor in Multi-States (Andhra Pradesh, Telangana). In the 2026-07 report it stands at 0.00% physical progress with cumulative expenditure of 155.00 crore against a revised cost of 2,047.40 crore. Physical progress is 0% while cumulative expenditure is ₹28.44 cr in 2025-12. The rule-based risk score is 100 (red).",
+  "facts_hash": "d9c782f754dc01fc18444f4ba4815cdb655b2154fbf6be19e45e7b4f34d49313",
+  "generated_at": "2026-09-08T15:40:04+00:00",
+  "grounded": false,
+  "model": "qwen2.5:3b",
+  "project_code": "617214",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The South Central Railway's 3rd line between Gudur and Renneunta stations, a project under Project 617216, is currently in the ongoing phase. The project, which is located in the state of Andhra Pradesh and falls under the Railways sector, has seen significant progress issues. From the reports dated 2025-12 to 2026-07, the project's progress remains at 0.00%, despite cumulative expenditure reaching 53.46 crore. This is concerning, as the original completion date was set for March 2027, and the project has not made any physical progress. The cumulative expenditure has also decreased from 206.02 crore in 2026-06 to 53.46 crore in 2026-07, which is not aligned with the expected trajectory. These issues are flagged as critical, and the project's risk score is at 85, indicating a red alert. The probability of a revised completion date being filed in the next report is only 5%, and the project is facing a significant cost overrun of 3.72 percentage points compared to similar projects. These factors highlight the urgent need for intervention to ensure the project's timely completion and adherence to its original cost and schedule.",
+  "facts_hash": "f1fd13fe0b3964c8f9384737bc3951e7ec6def57557926a89b842b311fb8c75b",
+  "generated_at": "2026-09-08T15:43:01+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "617216",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing project Bodwad Parisar Sinchan Yojna, under the Department of Water Resources-MH in Maharashtra, is currently at a progress of 49.60% as of the 2026-07 report. The cumulative expenditure stands at ₹1,949.56 crore, which exceeds the revised cost of ₹1,923.81 crore. This project faces significant challenges, including a flag (critical) for cumulative expenditure exceeding the revised cost in 2026-06 and a flag (critical) for a cumulative expenditure drop from ₹1,949.56 crore in 2026-06 to ₹338.91 crore in 2026-07. The model predicts a 90% risk score, indicating a critical situation. The project's own stated completion date of 2027-07 is now 12 months away, and there is a 2% probability that the revised completion date will be filed in the next report. Additionally, the project is facing a cost overrun of 111.56 percentage points compared to similar projects.",
+  "facts_hash": "5ceddcb7129fd6840934be23f9061d3d11bfe33968a89a2362ba80a24739c4c3",
+  "generated_at": "2026-09-08T15:42:01+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "617422",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The City Gas Distribution (CGD) Project in Gajapati, Kandhamal, Boudh, and Sonepur, managed by GAIL Gas, is currently in the ongoing phase. The project, with an original cost of 514.91 crore and a revised cost of the same amount, was initially scheduled to be completed by February 2030. However, the revised completion date has been adjusted to December 2031. Since December 2025, the cumulative expenditure has fluctuated but remains within the original cost range. Notably, the cumulative expenditure decreased from 22.08 crore in December 2026 to 21.98 crore in May 2026, which is a significant drop. Additionally, the physical progress of the project has slightly declined from 5.9% in June 2026 to 5.8% in July 2026. Given the current pace, the project is expected to take 340 months to complete, leaving only 65 months until the original completion date. The risk score for this project is at a critical level, indicating a high risk of cost overruns and delays. There is a 30% probability that the revised completion date will be updated in the next report, and the project is facing a 3.49 percentage point cost overrun compared to similar projects.",
+  "facts_hash": "43553241d5ddfb559b23737b126957071ad72eaa9ba6d96c95905e6de2e92bc6",
+  "generated_at": "2026-09-08T15:41:33+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "617818",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing construction and widening project on NH 109 in Uttarakhand, including the Augustmuni Bypass, is progressing well with a cumulative expenditure of ₹422.72 crore as of 2026-05. However, there are several flags indicating potential issues. The revised completion date has been changed from 2021-07 to 2024-03, which is a significant change. Additionally, the cumulative expenditure has exceeded the revised cost in multiple reports, including 2026-04, 2026-05, and 2026-06. In 2026-06, the cumulative expenditure fell to ₹0.00 crore, which is a critical issue as a cumulative field cannot decrease. The project is also over budget, with a cost overrun of 8.75 percentage points compared to similar projects. The model predicts a 15% chance of the revised completion date being filed in the next report, and the rank is 846, indicating a high risk. The project is currently at 95% progress, but the original completion date of 2020-02 has already passed. These factors necessitate a thorough review and potential intervention to ensure the project stays on track and within budget.",
+  "facts_hash": "8a4d91fcb9ee701028a573e676b160edef86a95346ef595c8d5e28ba57492cdf",
+  "generated_at": "2026-09-08T15:43:05+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "617968",
+  "seed": 0
+ },
+ {
+  "attempts": 2,
+  "brief": "The ongoing rehabilitation and upgradation of New NH 544DD from Chainage Km. 56/000 to 102/20 of Kalyandrg - Molakalmuru Section is under the supervision of MoRTH in Andhra Pradesh. The project was initiated in December 2025 and is expected to be completed by September 2025 based on the revised completion date. However, there are several flags indicating issues with the project. The cumulative expenditure in December 2025 exceeded the revised cost by ₹287.94 crore, which has since increased to ₹312.40 crore in July 2026, exceeding the revised cost by ₹285.29 crore. Additionally, the revised completion date was changed from November 2021 to September 2025, which is now past. The model predicts a 10% chance of the revised completion date being filed in the next report, and the cost overrun is 2.77 percentage points above comparable projects. These flags and the model suggest a high risk level for the project, indicated by a rule-based risk score of 85 (red).",
+  "facts_hash": "7408b081b9976b24f65d2ced847c08b7fbf80ca5a5f5b4e20b38ca8add11e0be",
+  "generated_at": "2026-09-08T15:43:12+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618194",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Project 618298, which involves widening and improving an existing 2-lane road to a 4-lane divided highway from Sekmai to Nilakuthi section of Imphal-Kohima Road in Manipur, is currently ongoing. The project is expected to be completed by June 2026, but there have been recent changes to the revised completion date, which is now set for August 2026. The cumulative expenditure has exceeded the revised cost multiple times, with the latest report showing a cumulative expenditure of ₹272.30 crore, which is 2.02% above the revised cost. Given the current expenditure rate, the project is expected to be completed by August 2026, leaving only one month to meet the revised completion date. There are also flags indicating that the cumulative expenditure has exceeded the revised cost in several reports, and the probability of the revised completion date being filed in the next report is high. The risk score for this project is at 100, indicating a critical situation.",
+  "facts_hash": "41ef1ffd65a12c7273496c04eb43d3f6dfbd705542f0daff4f4b3ab463ed7921",
+  "generated_at": "2026-09-08T15:40:07+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618298",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Project 618337, which involves widening a 2-lane section of NH-37 from Imphal to Jiribam in Manipur, is currently in the ongoing phase. The project's status has seen significant progress, with cumulative expenditure reaching ₹593.79 crore in 2026-07, which exceeds the revised cost of ₹467.00 crore. This is a cause for concern, as the project's original completion date was revised to 2026-03, but the progress has not met this revised timeline. Additionally, the cumulative expenditure in 2026-04, 2026-05, and 2026-06 also exceeded the revised cost. The model predicts a 12% chance of the revised completion date being pushed further in the next report, indicating a potential risk. The risk score is at 85, which is considered red. The probability of cost overrun is at 1.17 percentage points above the average for similar projects, suggesting that the project may face further cost overruns.",
+  "facts_hash": "ad4086aabb0ef517e24de8fe73a4f98e205ddcd63d03cd00245556d744ba787e",
+  "generated_at": "2026-09-08T15:43:15+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618337",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Vadodara Mumbai Expressway Phase II - Pkg XVI project, under the supervision of the NHAI in Maharashtra, is currently in the ongoing phase. The project's progress has been steadily improving, with the latest reports showing a 95.50% completion rate as of 2026-07. The cumulative expenditure has reached ₹952.69 crore, which is a slight decrease from the previous report. However, this is concerning as there should not be a cumulative expenditure decrease. The revised completion date has been adjusted multiple times, from 2025-06 to 2026-06, and then to 2026-07, and now to 2026-08. Given the current expenditure and the need for the project to reach its own stated completion date by 2026-08, there is only a month left. The risk score for this project is at 90 (red), indicating a critical situation. The probability of the revised completion date being updated in the next report is 95%, and the cost overrun is 4.40 percentage points above the average for similar projects. These factors highlight the need for immediate attention and intervention to ensure the project stays on track.",
+  "facts_hash": "2a304257beccc256524144491c25ed4ca860c59e0e02ab2324344b72e036a537",
+  "generated_at": "2026-09-08T15:42:05+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618472",
+  "seed": 0
+ },
+ {
+  "attempts": 2,
+  "brief": "The project 618507 is currently ongoing, having seen progress increase from 84.15% in 2026-04 to 91.83% in 2026-07. The cumulative expenditure has surpassed the revised cost by significant amounts, with flags indicating that the cumulative expenditure in 2026-04 and 2026-05 exceeded the revised cost. The revised completion date was changed from 2026-06 to 2026-07 between 2026-04 and 2026-05, and again from 2026-07 to 2026-08 between 2026-06 and 2026-07. At its current pace, the project needs 3 more months to reach its own stated completion date of 2026-08, leaving only 1 month. The model predicts a 93% chance that the revised completion date will be filed in the next report, and the cost overrun is 24.13 percentage points above comparable projects. The project is currently flagged with medium and critical risks, and the rule-based risk score is at 100 (red).",
+  "facts_hash": "0c2c5fcecc7a9de516ed8ae1bc2cf63742a36ecd1d8f2573197db34b9763397a",
+  "generated_at": "2026-09-08T15:40:15+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618507",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Project 618516 from Sankeshwar Bypass to MH-KNT Border, spanning across multiple states in India, is currently in an ongoing status. The project, managed by NHAI, has seen significant progress with cumulative expenditures reaching ₹1,183.98 crore in 2026-07, which is above the revised cost of ₹1,066.86 crore. This project faces several flags, including a cumulative expenditure exceeding the revised cost in 2026-04, 2026-05, and 2026-06. The revised completion date has been adjusted from 2026-11 to 2027-05, indicating a delay. The project's own pace suggests it needs 25 more months to complete, leaving only 10 months until the revised completion date. The model predicts a 14% chance of the revised completion date being filed in the next report, with a cost overrun of 16.00 percentage points compared to similar projects. Given the current status and risks, the project requires close monitoring and potential intervention to ensure timely completion and cost management.",
+  "facts_hash": "1a15a406545e291cc881a674faf6c123fbb8c9bdd8d88b7a95d215debf112ef9",
+  "generated_at": "2026-09-08T15:42:08+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618516",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The infrastructure project Project 618613, located near the Deogarh border between Rajasthan and Gujarat, is under the jurisdiction of the NHAI. The project's status has been ongoing since 2025-12. The latest reports indicate that the cumulative expenditure has reached 561.75 crore out of an original cost of 662.08 crore, with a revised cost of 597.77 crore. The original completion date was set for July 2023, but it has been revised multiple times. The most recent revisions have pushed the completion date to August 2026. There have been flags indicating that the physical progress has fallen from 100% in December 2025 to 99.2% in April 2026. The model predicts a 94% chance that the revised completion date will be further delayed in the next report, and there is a 9.87% cost overrun compared to similar projects. Given the critical risk score of 95 (red), it is clear that the project is facing significant challenges and the stated completion date of August 2026 is under threat.",
+  "facts_hash": "ed7e82dcf88e73a72ac88b9749154aecbd117be580e5431f7fcb8c2752de518a",
+  "generated_at": "2026-09-08T15:41:37+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618613",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The infrastructure project Bangalore-Nidagatta Pkg. I, under the jurisdiction of NHAI in Karnataka, has been ongoing since 2026-04. The project's progress has reached 99.19% in all reports from 2026-04 to 2026-07, with cumulative expenditures ranging from 604.66 crore in 2026-04 to 4,315.21 crore in 2026-07. The original completion date was set for November 2021, but it was revised to June 2026 in 2026-04, and then to July 2026 in 2026-05. There is a flag indicating that the cumulative expenditure has fallen slightly from 2026-04 to 2026-05, which is not expected. In 2026-06, the cumulative expenditure reached 4,315.22 crore, which exceeds the revised cost of 4,087.42 crore. The project is currently flagged as critical due to the cumulative expenditure exceeding the revised cost in 2026-07, and the probability of the revised completion date being met is only 59%. Additionally, the model indicates a cost overrun of 11.01 percentage points compared to similar projects.",
+  "facts_hash": "350802ad488bf9575257046781786a648d51eee865f65df86fd6c02303d54fba",
+  "generated_at": "2026-09-08T15:40:19+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618706",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Amritsar Bypass Project Pkg III, a government infrastructure project under the NHAI in Punjab, is currently in the ongoing stage. The project covers a section from km. 71.496 to km. 105.158. Progress has been steadily increasing, with the latest report showing an 82.88% completion rate and cumulative expenditure of ₹1,222.67 crore. The original completion date was set for August 2024, but this has been revised to December 2026. There are several flags indicating potential issues, including a cumulative expenditure that has not decreased, and a risk score of 90, which is considered red. The model predicts a 33% chance that the revised completion date will be filed in the next report, and there is a significant cost overrun compared to similar projects.",
+  "facts_hash": "85d884c71a3b5aa24414f26e22677fd823c260c0835e5910c8bdf43ec14a4fef",
+  "generated_at": "2026-09-08T15:42:11+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618795",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing project 618799, Belakeri Port to Kumta - Sirsi road, is progressing well with a current status of 95.23% completion. The revised completion date has been adjusted to 2026-11, reflecting the need for further monitoring. However, there are concerns regarding the cumulative expenditure, which has reached ₹471.12 crore in the latest report, exceeding the revised cost of ₹456.79 crore. This is a significant concern, as cumulative expenditures should not decrease. The model predicts a 41% chance of the revised completion date being adjusted again in the next report, and there is a 7.05 percentage point cost overrun compared to similar projects. These factors highlight the need for continued oversight and potential adjustments to ensure the project stays on track.",
+  "facts_hash": "853e970a977b7fe028b3d1ed8e3b020ff0199af661580bdf7ddc4de1bca87a7f",
+  "generated_at": "2026-09-08T15:42:13+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "618799",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The rehabilitation and upgradation of NH-221 from km 121/0 to 165/0, Rudrampur to Bhadrachalam section, under Project 619193, is currently ongoing and has seen significant progress. The cumulative expenditure as of the latest reports is ₹375.14 crore, which exceeds the revised cost of ₹334.82 crore. This situation is marked by several flags, including cumulative expenditure exceeding the revised cost in 2026-04, 2026-05, 2026-06, and 2026-07. Additionally, there have been changes in the revised completion date, moving from 2026-05 to 2026-06, then to 2026-07, and finally to 2026-08. Given the current pace, the project is at risk of not meeting the stated completion date of 2026-08. The risk score is at 100 (red), indicating a critical situation. There is also a model-based risk, with an 84 percent probability that the revised completion date will be filed in the next report, and a cost overrun of 3.02 percentage points above comparable projects. These factors necessitate immediate attention and intervention to ensure the project stays on track.",
+  "facts_hash": "09645c89aee6263d170fe3ebd1bdde9e7b4fc2640fe75ab4ba8519fab2df0c59",
+  "generated_at": "2026-09-08T15:40:23+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "619193",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The infrastructure project Project 619210, which involves the Dharampuri-Lonand section of the Mohol-Alandi road in Maharashtra, is currently in the ongoing status. The project's progress has been consistently at 97.40% since 2026-04, with cumulative expenditures reaching ₹1,474.28 crore in 2026-07. The original completion date was set for September 2023, but it has been revised multiple times, most recently to September 2026. There are several flags indicating issues, including a cumulative expenditure exceeding the revised cost in 2026-06 and 2026-07, and a risk score of 90 (red), indicating critical issues. The probability of the revised completion date being filed in the next report is 56%, and the model predicts a cost overrun of 24.17 percentage points compared to similar projects. Given the current expenditure and the risk score, the project is facing significant challenges and may not meet its revised completion date of September 2026.",
+  "facts_hash": "5f157236cd10fdae3a3f0d03896b96e898d2f4aa747dff4f02045351d197c720",
+  "generated_at": "2026-09-08T15:42:16+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "619210",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Project 701289, aimed at expanding the Panipat Refinery's capacity from 15 to 25 MMTPA, is currently under the jurisdiction of the Indian Oil Corporation Limited (IOCL) in the state of Haryana, within the Oil & Gas sector. The project, which began in 2025, is expected to be completed by June 2026. However, the revised completion date has been pushed back to December 2026. As of December 2025, the project is 91.00% complete with cumulative expenditures of ₹27,829.24 crore, which has now dropped to ₹27,035.45 crore by April 2026. This is a significant drop and a cumulative field cannot decrease. The expenditure has further decreased to ₹27,014.44 crore by May 2026. At its current pace, the project needs 12 more months to complete, which is a critical risk given the stated completion date of December 2026. The risk score for this project is at 90, indicating a red alert. There is an 8% probability that the revised completion date will be updated in the next report, and the project is facing a cost overrun of 16.97 percentage points compared to similar projects.",
+  "facts_hash": "8489dfa79a2e082e963eead78dfbf09714cb3ac544ea4a2ac19f098e22f29615",
+  "generated_at": "2026-09-08T15:42:20+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "701289",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Barauni Refinery Capacity Expansion project, managed by the Indian Oil Corporation Limited (IOCL) in Bihar, has been steadily progressing since 2025. The project aims to increase the refinery's capacity from 6.0 to 9.0 MMTPA. As of the latest reports, the project is currently at 91.80% completion with cumulative expenditures reaching ₹13,089.84 crore. The project is currently on track to meet its revised completion date of 2026-12, but there are several flags indicating potential issues. The cumulative expenditure has exceeded the revised cost in several reports, with the most recent exceeding by ₹74,990.30 crore in 2026-06. Additionally, the revised completion date was changed from 2026-08 to 2026-12 between 2026-06 and 2026-07. Given these flags and the model predictions, the project faces significant challenges and risks, with a model-based risk score of 90 indicating a red alert. The project is expected to be delayed by 81 months and is projected to incur a cost overrun of 2.82 percentage points above comparable projects.",
+  "facts_hash": "45f9e78a29d8b59b1234b6771dd23c3650af7d34a17fc8a54f570506ab21a67b",
+  "generated_at": "2026-09-08T15:42:24+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "701324",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Petrochemical and Lube Integration Project at Gujarat Refinery, managed by the Indian Oil Corporation Limited (IOCL) in Gujarat, is currently in an ongoing status. The project's progress has been steadily improving, with the cumulative expenditure reaching 75,182.67 crore in 2026-06, which exceeds the revised cost of 17,825.00 crore. This is a significant concern, as the project's own stated completion date is set for 2026-11, leaving only 4 months. There are also flags indicating that the cumulative expenditure has exceeded the revised cost in both 2026-05 and 2026-06, and the month-to-month change between 2026-04 and 2026-05 is in the top 2% most unusual for that period. Additionally, the project's risk score is at 90, which is considered critical. The model predicts a 18% chance of the revised completion date being filed in the next report, and the project is facing a significant cost overrun of 31.35 percentage points compared to similar projects.",
+  "facts_hash": "7a49b72909b4135c3562fb0a14fa0e7848512c518548e4f8d657f8fa26cc5791",
+  "generated_at": "2026-09-08T15:42:27+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "701329",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Gosikhurd Project, under the Department of Water Resources-MH II, is currently in the ongoing state in the state of Maharashtra. The project's progress has been steady, with cumulative expenditures reaching 14,439.46 crore in the July 2026 report, which is still within the revised cost of 12,770.10 crore. However, the project faces several flags, including a medium flag for cumulative expenditure exceeding the revised cost in July 2026, and a critical flag for the project needing 279 months to complete at its current pace, leaving only 23 months until the stated completion date of June 2028. Additionally, the model predicts a 152.45 percentage point cost overrun compared to similar projects. The project's risk score is at 90, indicating a red alert. The probability of the project's revised completion date being filed in the next report is only 2 percent, ranking it as the 1574th out of all projects.",
+  "facts_hash": "2ef3889ffaa009e3d9755a25d1fd0c6811442d4bfd058199874c9249c8f5e8b4",
+  "generated_at": "2026-09-08T15:42:30+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "701386",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Thoubal Multipurpose Project, under the Water Resources Department-MN, is currently in an ongoing status. The project's progress has been consistently high, with cumulative expenditures reaching 1,848.17 crore in the latest reports, which exceeds the revised cost of 1,822.24 crore. There are several flags indicating potential issues: cumulative expenditure in 2025-12 and 2026-04 exceeds the revised cost, and the revised completion date was changed from 2026-03 to 2026-12 between 2026-04 and 2026-05. Additionally, cumulative expenditure in 2026-05 and 2026-06 also exceeds the revised cost. Based on these flags, the project is facing significant cost overruns. The model predicts a 1% chance of the revised completion date being filed in the next report, and the project's own stated completion date is 2026-12, leaving only 5 months. The risk score is at 85, indicating a red alert.",
+  "facts_hash": "91ee206f1f971bccc5cfb1008a4429d3e568bface49771ea1b8f76e368a92786",
+  "generated_at": "2026-09-08T15:43:19+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "701400",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing project 701602, aimed at providing 4G based mobile services in 7,287 uncovered villages across five states of Andhra Pradesh, Chhattisgarh, Jharkhand, Maharashtra, and Odisha, is currently in its fifth report. The project has seen a significant drop in cumulative expenditure from ₹1,457.51 crore in the 2026-04 report to ₹1,100.41 crore in the 2026-05 report. This is concerning as the cumulative expenditure cannot decrease. Additionally, the physical progress has also fallen from 83% in the 2026-04 report to 81.2% in the 2026-05 report. These issues, coupled with the revised completion date being pushed back from 2026-05 to 2027-01, indicate a critical risk. The project's cost has also seen a significant change, dropping from ₹3,685.00 crore to ₹1,448.61 crore. Given the current pace, the project's completion date of 2027-01 is under threat. The risk score is at 90, which is red, indicating a high level of risk. The probability of the revised completion date being met in the next report is only 4%, and the cost overrun is 49.77 percentage points above the average for similar projects. These factors highlight the urgent need for intervention to ensure the project's successful completion.",
+  "facts_hash": "027a4bcf1a67c95c2304bf94dd748c0684399af1361739e8bff5f5142fce3578",
+  "generated_at": "2026-09-08T15:42:34+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "701602",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The rehabilitation project in the Junavadaj Area under the Smart City Project is currently ongoing. The project, managed by the Ministry of Housing and Urban Affairs in Gujarat, has seen significant progress and cost management. From the reports, it's clear that the project has progressed from 50.00% in December 2025 to 98.50% in July 2026. The cumulative expenditure has also increased from 39.63 crore in December 2025 to 623.44 crore in July 2026, which is above the revised cost of 539.00 crore. There have been some adjustments to the revised completion date, which has moved from none in December 2025 to 2026-05 in April 2026, and then to 2026-07 in May 2026. The project is now at 98.50% completion, but the original completion date of July 2022 has already passed. The cost overrun is significant, with cumulative expenditure exceeding the revised cost in multiple reports. The risk score is at 85, indicating a high risk level. The probability of the revised completion date being filed in the next report is 44%, and the project is 17.26 percentage points over budget compared to similar projects.",
+  "facts_hash": "d24c3927a111974ad61b1fdc68f4ad43a966d49113b25ced4bd6255e649a2440",
+  "generated_at": "2026-09-08T15:43:23+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "701719",
+  "seed": 0
+ },
+ {
+  "attempts": 2,
+  "brief": "The Ahmednagar - Beed - Parli - Vaijnath New Broad Gauge Line Railway Project is currently under the CAOC/CR CR mor agency in Maharashtra. The project, which spans 261.3 km, is in an ongoing status. From 2025-12 to 2026-07, the project has been progressing steadily with 98.00% completion. The cumulative expenditure has reached 5,183.23 crore, which exceeds the revised cost of 4,957.27 crore reported in the 2025-12 report. \n\nIn the 2026-04 report, the cumulative expenditure dropped to 5,180.78 crore, still exceeding the revised cost. The 2026-05 report shows a cumulative expenditure of 5,210.08 crore, which again exceeds the revised cost. The 2026-06 report indicates a cumulative expenditure of 5,233.20 crore, exceeding the revised cost once more. \n\nThe 2026-07 report shows a cumulative expenditure of 5,054.69 crore, which is now below the revised cost of 5,942.48 crore. However, this is not a positive development as the cumulative expenditure has fallen from the previous year. \n\nThere are several flags to note: the cumulative expenditure in 2025-12 exceeds the revised cost, and the cumulative expenditure in 2026-04 also exceeds the revised cost. Additionally, the physical progress has fallen from 98% in 2026-04 to 93% in 2026-05. \n\nThe revised cost has increased from 4,957.27 crore to 5,942.48 crore between 2026-06 and 2026-07. The project's original completion date was set for 2026-03, but the reported progress is now at 93%, which is below the original completion date. \n\nThe model predicts a 63.60 percentage point cost overrun and a 2% probability of the revised completion date being filed in the next report. The risk score is at 100 (red), indicating a high-risk situation.",
+  "facts_hash": "1541e285100a6f657d2bf26464d33ba441b2a6a629b6866ac2aaba23fa5bcf95",
+  "generated_at": "2026-09-08T15:40:34+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705356",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Khurda Road-Bolangir project, a critical rail infrastructure in Odisha, is currently in the ongoing phase. Since 2025-12, the project has made significant progress, with cumulative expenditure reaching ₹5,789.53 crore, which is slightly above the revised cost of ₹5,089.00 crore. However, there are several flags indicating potential issues. In 2026-07, cumulative expenditure dropped to ₹4,825.28 crore, which is a significant decrease from the previous quarter. This drop is concerning as it violates the rule that cumulative expenditure should not decrease. Additionally, the revised cost of ₹6,221.98 crore for 2026-07 is a substantial increase from the original and revised costs of ₹5,089.00 crore. The model predicts a revised completion date of 2031-02, which is 50 months beyond the stated completion date of 2026-12. The risk score is at 100, indicating a critical situation. The probability of the revised completion date being filed in the next report is only 4%, and the expected delay is 50 months. Therefore, it is crucial to closely monitor the project's expenditure and progress to ensure it stays on track and does not exceed the revised cost.",
+  "facts_hash": "fa76f9f4d90987b031c708a9e17e3714de429bc4d3ff9b9fc8cfa0a898724910",
+  "generated_at": "2026-09-08T15:40:38+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705358",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Talcher-Bimlagarh railway project, spanning 154 km in Odisha, is currently in the ongoing phase. Since December 2025, the project has seen significant progress, with cumulative expenditure reaching 2,164.01 crore in July 2026. However, the project faces several challenges. The cumulative expenditure has exceeded the revised cost multiple times, with the latest flag indicating an expenditure of 2,164.01 crore against a revised cost of 4,546.84 crore. This has led to a revised completion date being pushed from 2029-03 to 2029-03, despite the project's own stated date being 2029-03. Additionally, physical progress has slightly declined from 57% in June 2026 to 56% in July 2026. Given these factors, the project's risk score is at 95, indicating a high level of risk. The probability of a revised completion date being filed in the next report is only 2%, and the cost overrun is 61.20 percentage points above comparable projects.",
+  "facts_hash": "33f79afb4e4893d041ed5bc5c9da9eb06399d1db50e2b07e55e8eefdab4d18d3",
+  "generated_at": "2026-09-08T15:41:40+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705359",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Hajipur-Sagauli via Vaishali project, a 148.3 km rail infrastructure in Bihar, is currently in the ongoing phase. The project's progress has been steadily improving, with a cumulative expenditure of ₹2,843.39 crore as of 2026-07, which is significantly higher than the revised cost of ₹3,991.33 crore. The revised completion date has been adjusted from 2026-12 to 2027-06, and there are several flags indicating potential issues. The cumulative expenditure in 2026-05 and 2026-06 exceeds the revised cost, and the physical progress has dropped from 75.6% in 2026-06 to 74% in 2026-07. Additionally, the month-to-month change between these two reports is in the top 2% most unusual for that period. The project's risk score is at 90, which is considered critical. The probability of a revised completion date being filed in the next report is only 7%, and the project is facing a significant cost overrun of 65.68%. These factors highlight the need for closer monitoring and potential intervention to ensure the project stays on track.",
+  "facts_hash": "819016318471e7af6bee851e932b2d8847454ac086e2bda2ae7bd50838be4283",
+  "generated_at": "2026-09-08T15:42:38+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705366",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Dimapur-Kohima railway project, spanning 88 kilometers, is currently under the jurisdiction of the CAO/C-1/NFR NFR mor agency in multiple states including Assam and Nagaland. The project has been ongoing since 2025-12, with the most recent reports indicating a significant drop in progress and expenditure. From the report in December 2025, the project was at 81% progress and had spent 5,828.35 crore, with an original completion date of March 2025. By April 2026, the progress had dropped to 43%, and cumulative expenditure had reached 6,282.30 crore. This trend continued, with the expenditure increasing to 6,522.69 crore by May 2026, and reaching 6,748.90 crore by June 2026. The revised completion date was initially set for December 2025 but was adjusted to December 2029. The project faces multiple flags, including a critical issue with no progress reported over a seven-month period, a cumulative expenditure exceeding the revised cost, and a physical progress drop from 46.5% to 45% between June and July 2026. The risk score is at 100, indicating a red alert, and the probability of the revised completion date being pushed further is only 3%. Additionally, the project is experiencing a cost overrun of 10.81 percentage points compared to similar projects.",
+  "facts_hash": "312f4a9eb5447aca6ae585315afbb80576fde179df37ee8f37e6f34a80bfdc11",
+  "generated_at": "2026-09-08T15:40:43+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705392",
+  "seed": 0
+ },
+ {
+  "attempts": 2,
+  "brief": "The Nangal Dam-Talwara project, which includes a new broad gauge line and taking over a siding, is under the jurisdiction of the Railways sector. The project covers a distance of 705410 meters and spans across multiple states including Himachal Pradesh and Punjab. The project is currently ongoing, with progress reported from December 2025 to July 2026.\n\nReports from December 2025 and April 2026 indicate that the project is making progress, with cumulative expenditures reaching 89,486.62 crore and 2,384.29 crore respectively. The original cost and revised cost remain at 2,018.00 crore. The project is flagged with medium and critical issues. The cumulative expenditure in December 2025 exceeds the revised cost, and in April 2026, it exceeds the revised cost again. Additionally, the cumulative expenditure in April 2026 exceeds the revised cost, and in May 2026, it exceeds the revised cost. The revised cost was changed to 4,076.15 crore in July 2026, which is a significant increase.\n\nThe project is also facing a critical issue where cumulative expenditure fell from 89,486.62 crore in December 2025 to 2,384.29 crore in April 2026, which is not acceptable. The physical progress has also fallen from 85.5% in May 2026 to 84% in July 2026, indicating a decline. The project's own stated completion date is December 2027, but at its current pace, it will take 61 months, leaving only 17 months. The month-to-month change between May 2026 and July 2026 is in the top 2% most unusual for that period, with an isolation score of 0.655.\n\nThe risk score for the project is 100, which is considered red. The probability of the revised completion date being filed in the next report is 1%, and the model predicts a cost overrun of 11.50 percentage points compared to similar projects.",
+  "facts_hash": "f8b24d581cf472467eed560651c67d3de0da8f894316860ec764bab03eb2c63e",
+  "generated_at": "2026-09-08T15:40:54+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705410",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Dahod-Indore railway project, spanning 200.97 km with modifications and involving multiple states, is currently ongoing. The project's cumulative expenditure has surpassed the revised cost multiple times, with flags indicating significant deviations from the revised cost. The latest reports show that the cumulative expenditure has reached ₹4,509.30 crore, which is ₹9,217.23 crore above the revised cost. This project is facing a critical risk, as it needs 68 more months to complete at its current pace, leaving only 7 months until the stated completion date. Additionally, the month-to-month change between 2026-06 and 2026-07 is in the top 2% most unusual for that period. The model predicts a 5% probability of the revised completion date being filed in the next report, and a cost overrun of 421.39 percentage points compared to similar projects. These factors contribute to a model-based risk score of 85, indicating a red alert.",
+  "facts_hash": "e424f5ca5b2e81c784c1b796e4092e5641a6def0c73b6ed73a9417f54d5703b5",
+  "generated_at": "2026-09-08T15:43:26+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705453",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Chhota Udepur-Dhar project, spanning 157 km and managed by CAOCWR WR mor, is currently in the ongoing phase. The project's cumulative expenditure has surpassed the revised cost in several reports, including those from 2025-12, 2026-04, 2026-05, and 2026-06. The revised cost remains at ₹1,794.00 crore, despite a significant increase to ₹1,993.65 crore in the 2026-07 report. The project's progress has also declined from 80.5% in 2026-06 to 58% in 2026-07, which is below the stated completion date of 2025-12. Given these factors, including the high risk score of 85 (red) and the probability of a revised completion date being filed in the next report, it is crucial to closely monitor the project's progress and expenditure to ensure compliance with the revised cost and completion date.",
+  "facts_hash": "6aeffc553300c5a22260b81254164978871ffe6249f9975ea632127de181996a",
+  "generated_at": "2026-09-08T15:43:30+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705454",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Gadag-Wadi project, a critical rail infrastructure in Karnataka, is currently in the ongoing phase. Since the last reports, the cumulative expenditure has slightly decreased from ₹1,613.49 crore in 2026-05 to ₹1,604.89 crore in 2026-06, which is a flag of concern as cumulative expenditure should not decrease. Physical progress has also fallen from 40% in 2026-05 to 36.5% in 2026-06, indicating a flag of medium severity. Additionally, the revised cost has dropped from ₹6,700.00 crore to ₹3,668.17 crore between 2026-06 and 2026-07, which is a flag of information. The project is behind schedule at its current pace, needing 69 months to complete, leaving only 17 months until the stated completion date of 2027-12. There is also a flag of medium severity for physical progress falling from 36.5% in 2026-06 to 35% in 2026-07. Furthermore, the month-to-month change between 2026-06 and 2026-07 is in the top 2% most unusual for that period, with an isolation score of 0.593. The rule-based risk score is at 95, indicating a red alert. The probability of a revised completion date being filed in the next report is only 3%, and the cost overrun is 18.59 percentage points above comparable projects.",
+  "facts_hash": "ce4dde7439404b75c44077a134e6253d751fec5250b64b3f6f03a0b0ed488988",
+  "generated_at": "2026-09-08T15:41:45+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705490",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Bhadrak-Nergundi 3rd line project, a government infrastructure initiative in Odisha, is currently in the ongoing phase. The project, which spans 80 km, has been overseen by CAO/C/ECOR ECoR mor. Monitoring from December 2025 to July 2026 indicates that the project is progressing well, with cumulative expenditure reaching 1,395.78 crore, which is 87% of the revised cost of 1,600 crore. However, there are several flags to note. The cumulative expenditure in 2026-07 has exceeded the revised cost, and the physical progress has also fallen from 95.8% in 2026-06 to 87% in 2026-07. Additionally, the revised completion date of January 2026 has already passed, and the reported progress is only 87%. There is also a flag indicating that the revised cost has changed from 1,284 crore to 1,600 crore between 2026-06 and 2026-07. Given these flags and the model's predictions, the risk score is at 85, which is considered red. The probability of a revised completion date being filed in the next report is only 3%, and the cost overrun is 64.09 percentage points above comparable projects.",
+  "facts_hash": "44960f06d68b33659b5e98373a2ddf6cd033c0db0b03b53559d2288dc62e3307",
+  "generated_at": "2026-09-08T15:43:34+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705510",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Jagdalpur-Koraput project, spanning 110.22 km and managed by CAO/C/ECOR ECoR mor, is currently in the ongoing phase. The project's progress has been steadily improving, with cumulative expenditure reaching 1,382.17 crore out of an original cost of 1,547.38 crore, revised cost remains unchanged at 1,547.38 crore. The original completion date was set for March 2024, but has been revised to December 2026. However, there are several flags indicating potential issues. Physical progress has fallen from 94.94% in 2026-05 to 90% in 2026-07, which is concerning. Additionally, cumulative expenditure has decreased from 1,403.90 crore in 2026-06 to 1,382.17 crore in 2026-07, a significant drop. The project also faces a medium-level flag due to physical progress falling from 92.55% in 2026-06 to 90% in 2026-07. The risk score is at 95, indicating a red alert. The probability of a revised completion date being filed in the next report is only 2%, and the model predicts a cost overrun of 56.66 percentage points compared to similar projects. These factors suggest that the project may face challenges in meeting its revised completion date and cost targets.",
+  "facts_hash": "7be15939aba02c40976112f04fa9c1520be5c64b6270afc9250d69c3c23323d0",
+  "generated_at": "2026-09-08T15:41:50+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705511",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The infrastructure project Janghai - Pratapgarh - Amethi, a 87 km rail line in Uttar Pradesh, is currently ongoing. The project's cumulative expenditure has consistently exceeded its revised cost, reaching ₹1,729.27 crore in 2026-06, which is ₹1,194.00 crore above the revised cost. This trend has continued in the subsequent reports, with cumulative expenditure reaching ₹1,729.27 crore in 2026-06 and ₹1,216.52 crore in 2026-07, despite the revised cost being adjusted to ₹1,528.83 crore in the same period. The project's progress has reached 80% in 2026-07, but the original completion date of March 2026 has already passed. Additionally, the cumulative expenditure has decreased from ₹1,729.27 crore in 2026-06 to ₹1,216.52 crore in 2026-07, which is a significant drop and falls outside the expected range. These issues, including the cost overrun and the decrease in cumulative expenditure, have led to a model-based risk score of 90, indicating a critical risk. The probability of the revised completion date being filed in the next report is only 10%, and the project is facing a cost overrun of 60.17 percentage points compared to similar projects.",
+  "facts_hash": "fefde888d67a69a7b83193bdaea9bd354c84adbdbd2e319356487e6819bb410f",
+  "generated_at": "2026-09-08T15:42:42+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705588",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The infrastructure project Renigunta 9.60 km, Wadi 7.60 km, and Gooty 3.8 km bypass is currently in the ongoing phase, with the latest reports showing significant progress and cost overruns. The project's status has seen a revised completion date change from 2025-12 to 2026-03, which is already past. Cumulative expenditures have exceeded the revised cost multiple times, reaching ₹636.74 crore in 2026-06 and ₹421.36 crore in 2026-07. Physical progress has also fallen from 89.04% in 2026-06 to 50% in 2026-07, indicating a significant drop. The project is facing multiple flags, including a high risk of cumulative expenditure falling further, a critical risk of the progress falling, and a high risk of the revised completion date not being met. The model predicts a 11% probability of the revised completion date being filed in the next report, with a cost overrun of 141.48 percentage points compared to similar projects. Given these factors, the project requires immediate attention to address the cost overruns and ensure the project stays on track.",
+  "facts_hash": "b033310f215de305cc434dc5d45f49aacc94b5cf1e3de7c4f631624056756cfb",
+  "generated_at": "2026-09-08T15:40:58+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705610",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Rajnandgaon-Nagpur 3rd line project, spanning 228 km between Chhattisgarh and Maharashtra, is currently in the ongoing phase. The project's cumulative expenditure has reached ₹3,678.97 crore in 2026-06, which exceeds the revised cost of ₹3,545.00 crore. This is a significant flag (medium) issue. The project's original completion date was set for December 2024, but the revised completion date is June 2026. As of 2026-07, the cumulative expenditure has dropped to ₹3,143.54 crore, which is a critical flag (high) issue as it falls below the revised cost. Additionally, the reported progress has dropped from 96% in 2026-06 to 95% in 2026-07, which is a physical progress flag (medium). The risk score for this project is 100 (red), indicating a high level of risk. The probability of a revised completion date being filed in the next report is only 2%, and the cost overrun is 11.52 percentage points above comparable projects.",
+  "facts_hash": "05ae65b5355c229e8161fed5e73eaecb395ae83b046f06bd6744c21188b5ccca",
+  "generated_at": "2026-09-08T15:41:02+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705617",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The ongoing project 705632 for the Vijayawada and Kazipet bypass line is currently in the state of Andhra Pradesh and Telangana, under the jurisdiction of the Railways sector. The project has seen significant progress, with cumulative expenditure reaching ₹1,249.39 crore as of 2026-05, which exceeds the revised cost of ₹904.00 crore. However, there are several flags indicating potential issues. The cumulative expenditure has surpassed the revised cost in multiple reports, including those from 2026-04, 2026-05, and 2026-06. Additionally, the physical progress has fallen from 95.01% in 2026-04 to 93.6% in 2026-05. The revised cost was reduced from ₹904.00 crore to ₹827.46 crore between 2026-06 and 2026-07, which could affect the project's financial health. The project's completion date of 2025-12 has already passed, and the reported progress is now at 90%. There is also a critical flag indicating that cumulative expenditure has decreased from ₹1,249.39 crore in 2026-06 to ₹705.66 crore in 2026-07, which is not acceptable. The risk score for this project is 100, indicating a high level of risk. The probability of a revised completion date being filed in the next report is only 2%, and the cost overrun is 88.17 percentage points above comparable projects. These factors highlight the need for immediate attention and intervention to address the financial and progress issues.",
+  "facts_hash": "7755f8730acb3f77c45a1b7d6504a94aaca176e6096f3be3ae05d8b6fcf64aef",
+  "generated_at": "2026-09-08T15:41:07+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705632",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The Katni - Grade separator / bypass project, a critical infrastructure project in Madhya Pradesh, is currently in the ongoing phase. The project, initiated by GM IRCON KATNI WCR, is a 21.50 km rail project. The cumulative expenditure as of 2026-07 is ₹1,839.46 crore, which exceeds the revised cost of ₹1,248.00 crore. There are several flags indicating issues with the project. The cumulative expenditure has exceeded the revised cost in multiple reports, including 2025-12, 2026-04, 2026-05, and 2026-06. Additionally, the revised completion date was changed from 2026-03 to 2026-09, and the revised cost was changed from ₹1,248.00 crore to ₹2,300.00 crore between 2026-06 and 2026-07. The project also faces a critical flag due to no reported progress over a seven-month period, and the physical progress has fallen from 95% in 2026-06 to 84% in 2026-07. The model predicts a 3% probability of the revised completion date being filed in the next report, and the cost overrun is 20.59 percentage points above comparable projects. Given these factors, the risk score is at 100 (red), indicating a high level of risk.",
+  "facts_hash": "e7004ddc228e617554f5d2440100af9804f748eec13545bd9576388d51d0b0a3",
+  "generated_at": "2026-09-08T15:41:12+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705661",
+  "seed": 0
+ },
+ {
+  "attempts": 1,
+  "brief": "The infrastructure project Project 705782, which covers the Barabanki-Malaur 3rd & 4th Line in Uttar Pradesh, is currently ongoing. The project's status has seen a revision in its completion date from 2025-03 to 2026-08, which is a significant change from the initial plan. Cumulative expenditures have surpassed the revised cost multiple times, reaching ₹417.22 crore in 2026-06 and ₹444.11 crore in 2026-07, indicating a need for closer monitoring. The project's physical progress has also declined from 78% in 2026-06 to 77% in 2026-07, suggesting a potential slowdown. Given the current circumstances, the project faces a critical risk score of 100, with a 4% probability of the revised completion date being revised again in the next report. The model also indicates a cost overrun of 40.89 percentage points compared to similar projects. These factors highlight the need for enhanced oversight and potential adjustments to the project's timeline and budget.",
+  "facts_hash": "ef5aa0e8b0ab60e66b6827a9801ada3a847c540fb0a79c142103bb6a9437e147",
+  "generated_at": "2026-09-08T15:41:15+00:00",
+  "grounded": true,
+  "model": "qwen2.5:3b",
+  "project_code": "705782",
+  "seed": 0
+ }
+]
