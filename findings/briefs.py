@@ -45,18 +45,42 @@ def fact_sheet(p):
         if ml.get("expected_completion"):
             lines.append(f"Model: expected completion {ml['expected_completion']}, expected delay {_n(ml['expected_delay_months'])} months versus the stated date.")
         if ml.get("cost_overrun_residual_pct") is not None:
-            lines.append(f"Model: cost overrun {_n(ml['cost_overrun_residual_pct'])} percentage points above comparable projects.")
+            resid = ml["cost_overrun_residual_pct"]
+            direction = "above" if resid >= 0 else "below"
+            lines.append(f"Model: cost overrun {_n(abs(resid))} percentage points {direction} comparable projects.")
     return "\n".join(lines)
 
 
+# Digits that identify the record rather than measure anything about the project (the
+# project code, a source-document page number) must not license a numeric claim in a
+# brief: a model can otherwise dress an identifier up as a fabricated measurement (e.g.
+# quoting the project code as if it were a distance in meters) and still pass the
+# subset check below. These patterns match fact_sheet()'s own formatting, so they stay
+# correct for any project/page without hardcoding a specific value.
+_PROJECT_CODE_RE = re.compile(r"(?<=^Project )\d[\d,]*\.?\d*(?=:)", re.MULTILINE)
+_PAGE_RE = re.compile(r"(?<=\(page )\d[\d,]*\.?\d*(?=\))")
+
+
+def _identifier_numbers(facts):
+    out = set()
+    for rx in (_PROJECT_CODE_RE, _PAGE_RE):
+        for m in rx.findall(facts or ""):
+            out |= numbers_in(m)
+    return out
+
+
 def grounded(brief, facts):
-    return numbers_in(brief) <= numbers_in(facts)
+    allowed = numbers_in(facts) - _identifier_numbers(facts)
+    return numbers_in(brief) <= allowed
 
 
 def template_brief(p):
     last = p["snapshots"][-1]
     first = p["flags"][0]["detail"] if p["flags"] else "No contradictions were found in its record."
-    return (f"{p['project_name']} ({p['project_code']}) is monitored under {p['agency_raw'] or 'an unnamed agency'} in {p['state'] or 'an unstated location'}. "
+    # The project code is an identifier, not a fact-sheet quantity (see grounded()); it is
+    # not woven into this sentence as a bare number so the template stays grounded by
+    # construction under the stricter, identifier-aware check.
+    return (f"{p['project_name']} is monitored under {p['agency_raw'] or 'an unnamed agency'} in {p['state'] or 'an unstated location'}. "
             f"In the {last['snapshot']} report it stands at {_n(last['physical_progress_pct'])}% physical progress with cumulative expenditure of {_n(last['expenditure_cum_cr'])} crore against a revised cost of {_n(last['cost_revised_cr'])} crore. "
             f"{first} "
             f"The rule-based risk score is {p['risk']['score']} ({p['risk']['band']}).")
@@ -83,7 +107,7 @@ def brief_for(p, model, template_only=False):
                     "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "grounded": True, "attempts": attempts, "facts_hash": h}
         bad = sorted(numbers_in(text) - numbers_in(facts))
         prompt = f"{SYSTEM}\n\nFACTS:\n{facts}\n\nYour previous brief contained numbers not in the facts: {', '.join(bad)}. Remove them and write the brief again.\n\nBRIEF:"
-    return {"project_code": p["project_code"], "brief": template_brief(p), "model": model, "seed": SEED,
+    return {"project_code": p["project_code"], "brief": template_brief(p), "model": "template", "seed": SEED,
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "grounded": False, "attempts": attempts, "facts_hash": h}
 
 
