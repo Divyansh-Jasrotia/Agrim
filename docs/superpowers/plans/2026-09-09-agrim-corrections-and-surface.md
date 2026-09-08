@@ -1,0 +1,963 @@
+# AGRIM corrections, new findings and surface rebuild — Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Correct three defects in published numbers, add two findings modules nobody else has built, and rebuild the dashboard surface through an external AI frontend tool without breaking the offline demo.
+
+**Architecture:** No architectural change. D11 holds — no server, no API. New findings modules run at build time inside `findings/run.py` and write additive nullable fields into `web/public/data/*.json`. The frontend is rebuilt by an external tool against a written brief and integrated back into the existing Vite build, which must still produce a `web/dist` that runs from `python -m http.server` with Wi-Fi off.
+
+**Tech Stack:** Python 3.12, pandas, scikit-learn (already wired, not touched here). Vite 8 + React + TypeScript + Tailwind v4, TanStack Table v8, ECharts 6, react-router-dom v6 hash routing, Ajv contract validation, `@fontsource` IBM Plex.
+
+**Source spec:** `docs/superpowers/specs/2026-09-08-agrim-surface-and-phase-2-design.md`. Task numbers match the spec. Execution order differs from numeric order and is given in §Order below.
+
+## Global Constraints
+
+- **AGENTS.md rule 1.** Edit only the files a task lists, plus its tests.
+- **AGENTS.md rule 2.** `contracts/` is read-only unless the task names the contract file. `findings.schema.json` has `additionalProperties: false` on `meta.headline` and on `field_audit`, so every new field **requires** a schema edit in the same task.
+- **AGENTS.md rule 3.** Empty CSV cell = NULL = "not printed". Never write 0 or "NA". JSON uses `null`.
+- **AGENTS.md rule 4.** Never hardcode a number that comes from the data. The web app and the deck read numbers from JSON.
+- **AGENTS.md rule 5.** Determinism: `random_state=0`, `OMP_NUM_THREADS=1` in `findings/run.py`, JSON written with `sort_keys=True` and floats rounded to 4 decimals. Only `meta.generated_at` is a timestamp.
+- **AGENTS.md rule 7.** No network at runtime.
+- **AGENTS.md rule 8.** Before saying "done": run `python tools/validate.py` and `pytest -q` and **paste the output**.
+- **AGENTS.md rule 9.** New dependency → `requirements.txt` AND re-freeze `requirements.lock` in the same commit. **No task in this plan adds a Python dependency.**
+- **AGENTS.md rule 10.** Ambiguous spec line → implement the literal reading, leave a `# SPEC?` comment.
+- **AGENTS.md rule 11.** Tick this plan's checkboxes as steps complete, commit them with the code.
+- **AGENTS.md rule 12.** Commit messages: `task NN: <what>`.
+- **D29.** Contract changes are additive and nullable only, with a minor version bump recorded in `contracts/CHANGELOG.md`.
+- **D42.** Rule-based and model-based numbers are never blended.
+- **Wording (Ranvir, 9 Sept).** The word is **"contradictions"**, never "impossibilities", on every screen, in `deck/numbers.json`, in the deck and in the pitch.
+- **Models are frozen.** `findings/models/` and `models.json` metrics are not touched, retrained or re-tuned by any task here.
+
+---
+
+## File Structure
+
+| File | Responsibility | Task |
+|---|---|---|
+| `findings/collapse.py` | **Create.** One pure function that merges consecutive same-type flags for display. Display-only; never applied before model feature building. | 21 |
+| `findings/field_audit.py` | **Modify.** Add Whipple's index and its UN band to the existing terminal-digit output. | 21 |
+| `findings/run.py` | **Modify.** Apply collapse after model scoring; emit `contradictions_arithmetic`, `statistical_anomalies`, `denominators`; wire `delay_series` and `escalation`. | 21, 23, 25 |
+| `findings/delay_series.py` | **Create.** Reconstruct the discontinued delay bands per snapshot. | 23 |
+| `findings/escalation.py` | **Create.** Sector-level delay rate, direction of travel, escalation flag. | 25 |
+| `contracts/findings.schema.json` | **Modify.** Additive nullable fields for all of the above. | 21, 23, 25 |
+| `contracts/CHANGELOG.md` | **Modify.** One minor bump entry per task. | 21, 23, 25 |
+| `tools/routes.py` | **Create.** Serve `web/dist` and print every route URL for screenshot review. No new dependency. | 24 |
+| `docs/SCREEN-CHECKLIST.md` | **Create.** The six pass conditions a screen must meet before its task is done. | 24 |
+| `docs/FRONTEND-BRIEF.md` | **Create.** The full-context brief handed to the external AI frontend tool. | 22 |
+| `web/**` | **Replace.** Output of the external tool, integrated and verified. | 22 |
+
+**Why `collapse.py` is its own file:** `contradictions.detect()` must stay pure so the existing fixture tests keep asserting raw detection counts, and because `findings/models/features.py` consumes the **raw** flag list to build `n_flags_to_t0` and `exp_decrease_ever` for feature set B. Collapsing before model scoring would change M1's features and silently invalidate the frozen PR-AUC numbers already on the Predictions screen and in `deck/numbers.json`.
+
+---
+
+## Order
+
+Execution order, not numeric order. Today is Wed 9 Sept; the round is Sat 12 Sept.
+
+| When | Tasks | Gate |
+|---|---|---|
+| Wed 9 | 21 → 23 → 25 | Full run, `validate.py` + `pytest -q` pasted, `deck/numbers.json` regenerated. **Numbers frozen Wednesday night.** |
+| Wed 9 evening | 24 | Checklist written; hand `docs/FRONTEND-BRIEF.md` to the external tool the moment Task 22 Step 1 lands |
+| Thu 10 | 22 | Every route passes the checklist; no external URL in `web/dist` |
+| Thu 10 evening | Existing Task 20 — deck and pitch against frozen numbers | Six slides exported to PDF once |
+| Fri 11 | Existing Tasks 18, 19 if green; cold-machine rehearsal twice | Bug fixes only |
+
+**Cut line.** Wednesday 22:00: if Task 23 or 25 is not producing a number you would defend to a MoSPI officer, drop it and make it a "next step" slide — neither may delay the numbers freeze. Thursday 22:00, in order: Task 19 briefs → Task 18's India map → Task 22's CSV-export affordance. **Never cut:** Task 21, Task 22's Project evidence block, the deck, the rehearsal.
+
+---
+
+### Task 21: Findings corrections
+
+**Files:**
+- Create: `findings/collapse.py`
+- Create: `tests/findings/test_collapse.py`
+- Modify: `findings/field_audit.py`
+- Modify: `findings/run.py`
+- Modify: `contracts/findings.schema.json`
+- Modify: `contracts/CHANGELOG.md`
+- Modify: `tests/findings/test_contradictions.py` (two existing assertions change; see Step 6)
+- Test: `tests/findings/test_field_audit_whipple.py`
+
+**Interfaces:**
+- Produces: `findings.collapse.collapse(flags: list[dict]) -> list[dict]`. Input and output flags carry the same keys plus `first_snapshot: str | None` and `occurrences: int` on every returned flag. Sort order of the output is `(project_code, to_snapshot, type)`, identical to `contradictions.detect`.
+- Produces: `findings.field_audit.whipple_index(digit_counts: dict[int, int]) -> float | None` and `findings.field_audit.whipple_band(w: float | None) -> str | None`.
+- Produces: `findings.meta.headline.contradictions_arithmetic: int`, `findings.meta.headline.statistical_anomalies: int`, `findings.meta.denominators: object`.
+- Consumes: nothing from other tasks in this plan.
+
+- [ ] **Step 1: Write the failing test for flag collapse**
+
+Create `tests/findings/test_collapse.py`:
+
+```python
+from findings.collapse import collapse
+from findings.contradictions import detect
+from findings.panel import load_panel
+
+FIX = "contracts/fixtures/panel.sample.csv"
+
+
+def _f(code, typ, a, b, sources):
+    return {"project_code": code, "type": typ, "severity": "low", "from_snapshot": a,
+            "to_snapshot": b, "before": 0.0, "after": 1.0, "detail": f"{typ} in {b}.",
+            "sources": sources}
+
+
+def test_consecutive_same_type_flags_merge_into_one():
+    flags = [_f("A", "T", None, "2026-04", [{"snapshot": "2026-04", "page": 1}]),
+             _f("A", "T", None, "2026-05", [{"snapshot": "2026-05", "page": 2}]),
+             _f("A", "T", None, "2026-06", [{"snapshot": "2026-06", "page": 3}])]
+    out = collapse(flags)
+    assert len(out) == 1
+    assert out[0]["first_snapshot"] == "2026-04"
+    assert out[0]["to_snapshot"] == "2026-06"
+    assert out[0]["occurrences"] == 3
+
+
+def test_no_page_citation_is_ever_lost():
+    flags = [_f("A", "T", None, "2026-04", [{"snapshot": "2026-04", "page": 1}]),
+             _f("A", "T", None, "2026-05", [{"snapshot": "2026-05", "page": 2}])]
+    out = collapse(flags)
+    assert out[0]["sources"] == [{"snapshot": "2026-04", "page": 1}, {"snapshot": "2026-05", "page": 2}]
+
+
+def test_different_types_and_projects_never_merge():
+    flags = [_f("A", "T1", None, "2026-04", [{"snapshot": "2026-04", "page": 1}]),
+             _f("A", "T2", None, "2026-04", [{"snapshot": "2026-04", "page": 1}]),
+             _f("B", "T1", None, "2026-04", [{"snapshot": "2026-04", "page": 1}])]
+    assert len(collapse(flags)) == 3
+
+
+def test_a_single_flag_is_unchanged_apart_from_the_new_keys():
+    one = _f("A", "T", None, "2026-04", [{"snapshot": "2026-04", "page": 1}])
+    out = collapse([one])[0]
+    assert out["occurrences"] == 1 and out["first_snapshot"] == "2026-04"
+    assert out["detail"] == one["detail"] and out["after"] == one["after"]
+
+
+def test_collapse_on_the_real_fixture_reduces_the_planted_repeats():
+    raw = detect(load_panel(FIX))
+    out = collapse(raw)
+    zero = [f for f in out if f["project_code"] == "100005" and f["type"] == "ZERO_PROG_NONZERO_EXP"]
+    assert len(zero) == 1 and zero[0]["occurrences"] == 5
+    assert len(zero[0]["sources"]) == 5
+    doc = [f for f in out if f["project_code"] == "100011" and f["type"] == "DOC_BEFORE_APPROVAL"]
+    assert len(doc) == 1 and doc[0]["occurrences"] == 5
+
+
+def test_output_is_sorted_like_detect():
+    out = collapse(detect(load_panel(FIX)))
+    assert out == sorted(out, key=lambda f: (f["project_code"], f["to_snapshot"], f["type"]))
+```
+
+- [ ] **Step 2: Run it to make sure it fails**
+
+Run: `pytest tests/findings/test_collapse.py -q`
+Expected: FAIL — `ModuleNotFoundError: No module named 'findings.collapse'`
+
+- [ ] **Step 3: Implement the minimal code to make the test pass**
+
+Create `findings/collapse.py`:
+
+```python
+"""Display-only: merge consecutive same-type flags on the same project into one row.
+
+Never apply this before findings.models.features builds feature set B — that reads the
+raw flag list for n_flags_to_t0 and exp_decrease_ever, and collapsing first would change
+M1's features and invalidate the frozen metrics.
+"""
+
+
+def collapse(flags):
+    groups = {}
+    order = []
+    for f in flags:
+        key = (f["project_code"], f["type"])
+        if key not in groups:
+            groups[key] = []
+            order.append(key)
+        groups[key].append(f)
+    out = []
+    for key in order:
+        members = sorted(groups[key], key=lambda f: f["to_snapshot"])
+        head = dict(members[-1])
+        head["first_snapshot"] = members[0]["from_snapshot"] or members[0]["to_snapshot"]
+        head["occurrences"] = len(members)
+        seen, sources = set(), []
+        for m in members:
+            for s in m["sources"]:
+                k = (s["snapshot"], s["page"])
+                if k not in seen:
+                    seen.add(k)
+                    sources.append(s)
+        head["sources"] = sorted(sources, key=lambda s: (s["snapshot"], s["page"]))
+        out.append(head)
+    out.sort(key=lambda f: (f["project_code"], f["to_snapshot"], f["type"]))
+    return out
+```
+
+- [ ] **Step 4: Run the tests and make sure they pass**
+
+Run: `pytest tests/findings/test_collapse.py -q`
+Expected: PASS, 6 passed
+
+- [ ] **Step 5: Write the failing test for Whipple's index**
+
+Create `tests/findings/test_field_audit_whipple.py`:
+
+```python
+from findings.field_audit import whipple_band, whipple_index
+
+
+def test_uniform_terminal_digits_score_one_hundred():
+    assert whipple_index({d: 100 for d in range(10)}) == 100.0
+
+
+def test_every_value_on_zero_or_five_scores_five_hundred():
+    assert whipple_index({0: 500, 5: 500}) == 500.0
+
+
+def test_no_observations_returns_none():
+    assert whipple_index({}) is None
+    assert whipple_index({d: 0 for d in range(10)}) is None
+
+
+def test_bands_follow_the_un_thresholds():
+    assert whipple_band(102.0) == "very accurate"
+    assert whipple_band(107.0) == "relatively accurate"
+    assert whipple_band(120.0) == "approximate"
+    assert whipple_band(150.0) == "rough"
+    assert whipple_band(200.0) == "very rough"
+    assert whipple_band(None) is None
+```
+
+- [ ] **Step 6: Run it to make sure it fails**
+
+Run: `pytest tests/findings/test_field_audit_whipple.py -q`
+Expected: FAIL — `ImportError: cannot import name 'whipple_index'`
+
+- [ ] **Step 7: Implement Whipple's index**
+
+In `findings/field_audit.py`, add above `compute`:
+
+```python
+BANDS = [(105, "very accurate"), (110, "relatively accurate"), (125, "approximate"), (175, "rough")]
+
+
+def whipple_index(digit_counts):
+    """Digit-heaping index over terminal digits. 100 = no preference, 500 = every value on 0 or 5.
+
+    Whipple, not Benford: physical progress is bounded 0-100, so Benford's Law does not apply.
+    """
+    n = sum(digit_counts.values())
+    if not n:
+        return None
+    return round(100.0 * (digit_counts.get(0, 0) + digit_counts.get(5, 0)) / (0.2 * n), 4)
+
+
+def whipple_band(w):
+    if w is None:
+        return None
+    for limit, name in BANDS:
+        if w < limit:
+            return name
+    return "very rough"
+```
+
+Then in `compute`, add both to the returned dict, after `"multiple_of_10_share"`:
+
+```python
+            "whipple_index": whipple_index(digits),
+            "whipple_band": whipple_band(whipple_index(digits)),
+```
+
+- [ ] **Step 8: Run the tests and make sure they pass**
+
+Run: `pytest tests/findings/test_field_audit_whipple.py -q`
+Expected: PASS, 4 passed
+
+- [ ] **Step 9: Update the two existing assertions that the collapse changes**
+
+`tests/findings/test_contradictions.py` asserts raw detection counts and **must keep doing so** — `detect()` is unchanged, so that file needs no edit. Confirm this by running it:
+
+Run: `pytest tests/findings/test_contradictions.py -q`
+Expected: PASS, unchanged. If it fails, you have wrongly modified `detect()` — revert that and put the logic in `collapse.py`.
+
+- [ ] **Step 10: Extend the contract, additively**
+
+In `contracts/findings.schema.json`:
+
+1. In `properties.meta.properties.headline.properties`, add `"contradictions_arithmetic": {"type": "integer"}` and `"statistical_anomalies": {"type": "integer"}`. Add both names to that object's `required` array.
+2. In `properties.meta.properties`, add:
+
+```json
+"denominators": {
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["cost_revised_null", "cost_overrun_null", "doc_null"],
+ "properties": {
+  "cost_revised_null": {"type": "integer"},
+  "cost_overrun_null": {"type": "integer"},
+  "doc_null": {"type": "integer"}
+ }
+}
+```
+
+and add `"denominators"` to `properties.meta.required`.
+
+3. In `properties.field_audit.properties`, add `"whipple_index": {"type": ["number", "null"]}` and `"whipple_band": {"type": ["string", "null"]}`, and add both to `properties.field_audit.required`.
+
+In `contracts/CHANGELOG.md`, add one entry: minor bump to `1.1.0`, listing the five new fields and naming task 21.
+
+Set `CONTRACT_VERSION = "1.1.0"` in `findings/run.py`.
+
+- [ ] **Step 11: Wire collapse, the split headline and the denominators into run.py**
+
+In `findings/run.py`:
+
+Add the import beside the others: `from findings import assistant, collapse as collapse_mod, contradictions, ...`
+
+In `build()`, apply collapse **after** `run_models` has consumed the raw flags:
+
+```python
+    projects = build_projects(panel, flags, ex["status"], sectors, ml_by_code)
+```
+
+becomes
+
+```python
+    display_flags = collapse_mod.collapse(flags)  # display only; models already scored on raw flags
+    projects = build_projects(panel, display_flags, ex["status"], sectors, ml_by_code)
+    findings = build_findings(panel, projects, display_flags, ex, ew, aggregates, models)
+```
+
+and delete the old `findings = build_findings(panel, projects, flags, ...)` line so `build_findings` is called exactly once.
+
+In `build_findings`, replace the `headline` dict with:
+
+```python
+                 "headline": {"projects_latest": len(latest_rows), "cost_revised_total_cr": round(cost_rev, 2), "overrun_total_cr": round(overrun, 2),
+                              "contradictions_total": len(c_rows),
+                              "contradictions_arithmetic": sum(1 for f in c_rows if f["type"] in ARITH),
+                              "statistical_anomalies": sum(1 for f in c_rows if f["type"] == "STAT_ANOMALY"),
+                              "exits_total": sum(p["exited"] for p in ex["pairs"]),
+                              "unreachable_total": sum(1 for f in flags if f["type"] == "DOC_UNREACHABLE"), "watchlist_size": len(watch)},
+                 "denominators": {
+                     "cost_revised_null": sum(1 for r in latest_rows if r["cost_revised_cr"] is None),
+                     "cost_overrun_null": sum(1 for r in latest_rows if r["cost_revised_cr"] is None or r["cost_original_cr"] is None),
+                     "doc_null": sum(1 for r in latest_rows if r["doc_revised"] is None and r["doc_original"] is None)},
+```
+
+In `deck_numbers`, add after the existing `contradictions_total` entry:
+
+```python
+            "contradictions_arithmetic": h["contradictions_arithmetic"], "statistical_anomalies": h["statistical_anomalies"],
+```
+
+- [ ] **Step 12: Run the full pipeline and both gates**
+
+Run:
+```bash
+python -m findings.run --panel data/out/panel.csv --out web/public/data --deck deck/numbers.json
+python tools/validate.py
+pytest -q
+```
+Expected: the run prints a project count and a contradictions count; `validate.py` exits 0; all tests pass. **Paste all three outputs into the relay log.** Confirm `deck/numbers.json` now contains `contradictions_arithmetic: 967` and `statistical_anomalies: 134`. If `contradictions_arithmetic` is not 967, stop and report — do not adjust the number to match.
+
+- [ ] **Step 13: Commit**
+
+```bash
+git add findings/collapse.py findings/field_audit.py findings/run.py contracts/findings.schema.json contracts/CHANGELOG.md tests/findings/test_collapse.py tests/findings/test_field_audit_whipple.py web/public/data deck/numbers.json docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
+git commit -m "task 21: split the contradictions headline, collapse repeat flags, denominators, Whipple index"
+```
+
+---
+
+### Task 23: Delay-series reconstruction
+
+**Files:**
+- Create: `findings/delay_series.py`
+- Create: `tests/findings/test_delay_series.py`
+- Modify: `findings/run.py`
+- Modify: `contracts/findings.schema.json`
+- Modify: `contracts/CHANGELOG.md`
+
+**Interfaces:**
+- Consumes: `findings.panel.load_panel`, `findings.panel.series`, `findings.panel.months`, `findings.panel.snapshots_present` (all already exist).
+- Produces: `findings.delay_series.compute(panel) -> dict` shaped `{"bands": [str, ...], "rows": [{"snapshot": str, "on_schedule": int, "d_1_12": int, "d_13_24": int, "d_25_60": int, "d_61_plus": int, "classifiable": int, "doc_null": int}, ...]}`.
+- Produces: `findings.delay_series` under key `delay_series` in `findings.json`.
+
+**Definition, from the April 2014 Flash Report's own bands.** For each snapshot, for each project present in that snapshot:
+
+- If `doc_original` is NULL → not classifiable, counted in `doc_null`.
+- Else if `doc_revised` is present → `delay = months(doc_original, doc_revised)`.
+- Else → `delay = months(doc_original, snapshot)` when the snapshot month is later than `doc_original`, otherwise `0`.
+- Bands: `delay <= 0` on schedule; `1-12`; `13-24`; `25-60`; `61+`.
+
+This is the literal reading of "delayed against the stated original schedule". Leave a `# SPEC?` comment on the unrevised-but-overdue branch, per AGENTS.md rule 10.
+
+- [ ] **Step 1: Write the failing test**
+
+Create `tests/findings/test_delay_series.py`:
+
+```python
+import pandas as pd
+
+from findings.delay_series import classify, compute
+from findings.panel import load_panel
+
+FIX = "contracts/fixtures/panel.sample.csv"
+
+
+def test_no_original_date_is_not_classifiable():
+    assert classify(None, None, "2026-07") is None
+    assert classify(None, "2027-01", "2026-07") is None
+
+
+def test_revised_date_measures_against_the_original():
+    assert classify("2026-01", "2026-07", "2026-07") == 6
+    assert classify("2026-01", "2031-01", "2026-07") == 60
+
+
+def test_unrevised_but_overdue_measures_against_the_snapshot():
+    assert classify("2026-01", None, "2026-07") == 6
+
+
+def test_unrevised_and_not_yet_due_is_on_schedule():
+    assert classify("2027-01", None, "2026-07") == 0
+
+
+def test_a_revised_date_earlier_than_the_original_is_on_schedule():
+    assert classify("2026-07", "2026-01", "2026-07") == -6
+
+
+def test_bands_partition_every_classifiable_project():
+    out = compute(load_panel(FIX))
+    for row in out["rows"]:
+        total = row["on_schedule"] + row["d_1_12"] + row["d_13_24"] + row["d_25_60"] + row["d_61_plus"]
+        assert total == row["classifiable"]
+
+
+def test_every_snapshot_in_the_panel_gets_a_row():
+    panel = load_panel(FIX)
+    out = compute(panel)
+    assert [r["snapshot"] for r in out["rows"]] == sorted(set(panel["snapshot"]), key=lambda s: (s[:4], s[5:]))
+
+
+def test_null_doc_is_counted_not_dropped():
+    out = compute(load_panel(FIX))
+    for row in out["rows"]:
+        assert row["doc_null"] >= 0
+        assert isinstance(row["doc_null"], int)
+```
+
+- [ ] **Step 2: Run it to make sure it fails**
+
+Run: `pytest tests/findings/test_delay_series.py -q`
+Expected: FAIL — `ModuleNotFoundError: No module named 'findings.delay_series'`
+
+- [ ] **Step 3: Implement the minimal code to make the test pass**
+
+Create `findings/delay_series.py`:
+
+```python
+"""Reconstruct the delay classification the Flash Reports stopped printing.
+
+The April 2014 report bucketed projects behind schedule into up to 12 months, 13-24,
+25-60, and 61 months and above. The April 2026 report does not use the word at all.
+The fields it still prints are enough to recompute the same bands. This is a
+continuity-of-series reconstruction, not an accusation.
+"""
+from findings.panel import months, series, snapshots_present
+
+BANDS = ["on_schedule", "d_1_12", "d_13_24", "d_25_60", "d_61_plus"]
+
+
+def classify(doc_original, doc_revised, snapshot):
+    """Months late against the original stated completion date. None if not classifiable."""
+    if not doc_original:
+        return None
+    if doc_revised:
+        return months(doc_original, doc_revised)
+    # SPEC? An unrevised project past its own stated date is treated as late by the
+    # elapsed months. The literal reading of "delayed against the stated schedule".
+    gap = months(doc_original, snapshot)
+    return gap if gap > 0 else 0
+
+
+def _band(delay):
+    if delay <= 0:
+        return "on_schedule"
+    if delay <= 12:
+        return "d_1_12"
+    if delay <= 24:
+        return "d_13_24"
+    if delay <= 60:
+        return "d_25_60"
+    return "d_61_plus"
+
+
+def compute(panel):
+    rows = []
+    by_snapshot = {s: {b: 0 for b in BANDS} | {"doc_null": 0} for s in snapshots_present(panel)}
+    for _, rs in series(panel).items():
+        for r in rs:
+            bucket = by_snapshot[r["snapshot"]]
+            delay = classify(r["doc_original"], r["doc_revised"], r["snapshot"])
+            if delay is None:
+                bucket["doc_null"] += 1
+            else:
+                bucket[_band(delay)] += 1
+    for s in snapshots_present(panel):
+        b = by_snapshot[s]
+        rows.append({"snapshot": s, **{k: b[k] for k in BANDS},
+                     "classifiable": sum(b[k] for k in BANDS), "doc_null": b["doc_null"]})
+    return {"bands": BANDS, "rows": rows}
+```
+
+- [ ] **Step 4: Run the tests and make sure they pass**
+
+Run: `pytest tests/findings/test_delay_series.py -q`
+Expected: PASS, 8 passed
+
+- [ ] **Step 5: Extend the contract**
+
+In `contracts/findings.schema.json`, add to `properties`:
+
+```json
+"delay_series": {
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["bands", "rows"],
+ "properties": {
+  "bands": {"type": "array", "items": {"type": "string"}},
+  "rows": {"type": "array", "items": {
+    "type": "object", "additionalProperties": false,
+    "required": ["snapshot", "on_schedule", "d_1_12", "d_13_24", "d_25_60", "d_61_plus", "classifiable", "doc_null"],
+    "properties": {
+     "snapshot": {"type": "string"}, "on_schedule": {"type": "integer"},
+     "d_1_12": {"type": "integer"}, "d_13_24": {"type": "integer"},
+     "d_25_60": {"type": "integer"}, "d_61_plus": {"type": "integer"},
+     "classifiable": {"type": "integer"}, "doc_null": {"type": "integer"}}}}
+ }
+}
+```
+
+Add `"delay_series"` to the schema's top-level `required` array. Bump to `1.2.0` in `contracts/CHANGELOG.md` and in `findings/run.py`'s `CONTRACT_VERSION`.
+
+- [ ] **Step 6: Wire it into run.py**
+
+Add `delay_series` to the `from findings import ...` line. In `build_findings`, add to the `findings` dict after `"field_audit"`:
+
+```python
+        "delay_series": delay_series.compute(panel),
+```
+
+In `deck_numbers`, add after the coverage loop:
+
+```python
+    last_delay = findings["delay_series"]["rows"][-1]
+    for k in ["on_schedule", "d_1_12", "d_13_24", "d_25_60", "d_61_plus", "classifiable", "doc_null"]:
+        nums[f"delay_{k}"] = last_delay[k]
+```
+
+- [ ] **Step 7: Run the full pipeline and both gates**
+
+Run:
+```bash
+python -m findings.run --panel data/out/panel.csv --out web/public/data --deck deck/numbers.json
+python tools/validate.py
+pytest -q
+```
+Expected: all three succeed. **Paste the output.** Read the reconstructed bands out loud as a sentence — "of N classifiable projects in July 2026, X are more than 60 months past their original date, and M have no original date at all". If that sentence is not one you would say to a MoSPI officer, invoke the Wednesday 22:00 cut rather than shipping it.
+
+- [ ] **Step 8: Commit**
+
+```bash
+git add findings/delay_series.py tests/findings/test_delay_series.py findings/run.py contracts/findings.schema.json contracts/CHANGELOG.md web/public/data deck/numbers.json docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
+git commit -m "task 23: reconstruct the discontinued delay bands across five snapshots"
+```
+
+---
+
+### Task 25: Escalation matrix
+
+**Files:**
+- Create: `findings/escalation.py`
+- Create: `tests/findings/test_escalation.py`
+- Modify: `findings/run.py`
+- Modify: `contracts/findings.schema.json`
+- Modify: `contracts/CHANGELOG.md`
+
+**Interfaces:**
+- Consumes: `findings.delay_series.classify` (Task 23), `findings.panel.series`, `findings.panel.snapshots_present`, `findings.panel.sector_map`.
+- Produces: `findings.escalation.compute(panel, sectors) -> dict` shaped `{"threshold_pct": 50.0, "rows": [{"key": str, "projects": int, "classifiable": int, "delayed": int, "delay_rate_pct": float | None, "first_rate_pct": float | None, "improving": bool | None, "escalate": bool}, ...]}`, sorted by `delay_rate_pct` descending then `key` ascending.
+- Produces: key `escalation` in `findings.json`.
+
+**Rule, from the Standing Committee recommendation.** Flag a rollup for escalation where its delay rate in the latest snapshot exceeds 50% **and** that rate is not lower than its rate in the first snapshot where it had classifiable projects. `improving` is `True` when the latest rate is below the first rate, `False` when it is not, and `null` when there is only one snapshot of data. **Cite no report number or date anywhere** — the attribution between BUILD.md §2 and the research is unresolved; the finding stands on the counts.
+
+**Rollup caveat.** `sector` comes from D15's agency-string rollup. Any screen showing this must say it is a rollup, not a mapping to the 17 official ministries.
+
+- [ ] **Step 1: Write the failing test**
+
+Create `tests/findings/test_escalation.py`:
+
+```python
+from findings.escalation import compute
+from findings.panel import load_panel, sector_map
+
+FIX = "contracts/fixtures/panel.sample.csv"
+
+
+def test_rows_are_sorted_by_delay_rate_descending():
+    panel = load_panel(FIX)
+    out = compute(panel, sector_map(panel))
+    rates = [(-(r["delay_rate_pct"] if r["delay_rate_pct"] is not None else -1), r["key"]) for r in out["rows"]]
+    assert rates == sorted(rates)
+
+
+def test_threshold_is_fifty_percent():
+    panel = load_panel(FIX)
+    assert compute(panel, sector_map(panel))["threshold_pct"] == 50.0
+
+
+def test_escalate_requires_both_a_high_rate_and_no_improvement():
+    panel = load_panel(FIX)
+    for r in compute(panel, sector_map(panel))["rows"]:
+        if r["escalate"]:
+            assert r["delay_rate_pct"] > 50.0
+            assert r["improving"] is not True
+
+
+def test_a_rollup_with_no_classifiable_projects_has_a_null_rate_and_is_not_escalated():
+    panel = load_panel(FIX)
+    for r in compute(panel, sector_map(panel))["rows"]:
+        if r["classifiable"] == 0:
+            assert r["delay_rate_pct"] is None and r["escalate"] is False
+
+
+def test_delayed_never_exceeds_classifiable():
+    panel = load_panel(FIX)
+    for r in compute(panel, sector_map(panel))["rows"]:
+        assert 0 <= r["delayed"] <= r["classifiable"] <= r["projects"]
+```
+
+- [ ] **Step 2: Run it to make sure it fails**
+
+Run: `pytest tests/findings/test_escalation.py -q`
+Expected: FAIL — `ModuleNotFoundError: No module named 'findings.escalation'`
+
+- [ ] **Step 3: Implement the minimal code to make the test pass**
+
+Create `findings/escalation.py`:
+
+```python
+"""Per-rollup delay rate, direction of travel, and an escalation flag.
+
+Implements the structured escalation matrix a parliamentary committee recommended:
+flag rollups whose delay rate exceeds 50% and is not improving. No report number or
+date is cited here; the attribution is unresolved and the finding stands on the counts.
+
+The rollup key is the agency-derived sector of D15. It is a rollup, not a mapping to
+the 17 official ministries, and any screen showing it must say so.
+"""
+from findings.delay_series import classify
+from findings.panel import series, snapshots_present
+
+THRESHOLD_PCT = 50.0
+
+
+def _rate(delayed, classifiable):
+    return round(100.0 * delayed / classifiable, 4) if classifiable else None
+
+
+def compute(panel, sectors):
+    snaps = snapshots_present(panel)
+    first, last = snaps[0], snaps[-1]
+    agg = {}
+    for code, rs in series(panel).items():
+        key = sectors.get(code) or "UNKNOWN"
+        a = agg.setdefault(key, {"projects": set(), "first": [0, 0], "last": [0, 0]})
+        a["projects"].add(code)
+        for r in rs:
+            if r["snapshot"] not in (first, last):
+                continue
+            slot = a["first"] if r["snapshot"] == first else a["last"]
+            delay = classify(r["doc_original"], r["doc_revised"], r["snapshot"])
+            if delay is None:
+                continue
+            slot[1] += 1
+            if delay > 0:
+                slot[0] += 1
+    rows = []
+    for key, a in agg.items():
+        d_last, c_last = a["last"]
+        d_first, c_first = a["first"]
+        rate, first_rate = _rate(d_last, c_last), _rate(d_first, c_first)
+        improving = None if first_rate is None or rate is None else rate < first_rate
+        rows.append({"key": key, "projects": len(a["projects"]), "classifiable": c_last, "delayed": d_last,
+                     "delay_rate_pct": rate, "first_rate_pct": first_rate, "improving": improving,
+                     "escalate": bool(rate is not None and rate > THRESHOLD_PCT and improving is not True)})
+    rows.sort(key=lambda r: (-(r["delay_rate_pct"] if r["delay_rate_pct"] is not None else -1), r["key"]))
+    return {"threshold_pct": THRESHOLD_PCT, "rows": rows}
+```
+
+- [ ] **Step 4: Run the tests and make sure they pass**
+
+Run: `pytest tests/findings/test_escalation.py -q`
+Expected: PASS, 5 passed
+
+- [ ] **Step 5: Extend the contract**
+
+In `contracts/findings.schema.json`, add to `properties`:
+
+```json
+"escalation": {
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["threshold_pct", "rows"],
+ "properties": {
+  "threshold_pct": {"type": "number"},
+  "rows": {"type": "array", "items": {
+    "type": "object", "additionalProperties": false,
+    "required": ["key", "projects", "classifiable", "delayed", "delay_rate_pct", "first_rate_pct", "improving", "escalate"],
+    "properties": {
+     "key": {"type": "string"}, "projects": {"type": "integer"},
+     "classifiable": {"type": "integer"}, "delayed": {"type": "integer"},
+     "delay_rate_pct": {"type": ["number", "null"]}, "first_rate_pct": {"type": ["number", "null"]},
+     "improving": {"type": ["boolean", "null"]}, "escalate": {"type": "boolean"}}}}
+ }
+}
+```
+
+Add `"escalation"` to the top-level `required` array. Bump to `1.3.0` in `contracts/CHANGELOG.md` and in `findings/run.py`'s `CONTRACT_VERSION`.
+
+- [ ] **Step 6: Wire it into run.py**
+
+Add `escalation` to the `from findings import ...` line. In `build_findings`, add after `"delay_series"`:
+
+```python
+        "escalation": escalation.compute(panel, sector_map(panel)),
+```
+
+In `deck_numbers`, add:
+
+```python
+    nums["escalation_flagged"] = sum(1 for r in findings["escalation"]["rows"] if r["escalate"])
+```
+
+- [ ] **Step 7: Run the full pipeline and both gates**
+
+Run:
+```bash
+python -m findings.run --panel data/out/panel.csv --out web/public/data --deck deck/numbers.json
+python tools/validate.py
+pytest -q
+```
+Expected: all three succeed. **Paste the output.** Then run the pipeline a second time and confirm `git diff --stat web/public/data` is empty — this is the determinism check required by AGENTS.md rule 5.
+
+- [ ] **Step 8: Commit — this is the numbers freeze**
+
+```bash
+git add findings/escalation.py tests/findings/test_escalation.py findings/run.py contracts/findings.schema.json contracts/CHANGELOG.md web/public/data deck/numbers.json docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
+git commit -m "task 25: escalation matrix over the reconstructed delay rate"
+```
+
+After this commit, `deck/numbers.json` is **frozen**. Task 20 writes the deck against it. Any later change to a published number requires re-running Task 20's slide checks.
+
+---
+
+### Task 24: The visual arbiter
+
+**Files:**
+- Create: `tools/routes.py`
+- Create: `docs/SCREEN-CHECKLIST.md`
+- Modify: `.gitignore`
+
+**Interfaces:**
+- Produces: `python tools/routes.py` serves `web/dist` on port 8080 and prints one URL per route to stdout.
+- Consumes: nothing.
+
+**No new dependency.** This deliberately does not install a headless browser — Playwright would need a runtime download, which AGENTS.md rule 7 forbids, and a lock re-freeze the schedule cannot absorb. The script serves and enumerates; whoever runs the task takes the screenshots with the browser tool they already have.
+
+- [ ] **Step 1: Write the route enumerator**
+
+Create `tools/routes.py`:
+
+```python
+"""Serve the built dashboard and print every route to screenshot. No new dependency.
+
+    python tools/routes.py            # serve on 8080 and list routes
+    python tools/routes.py --list     # list only, do not serve
+"""
+import argparse
+import functools
+import http.server
+import socketserver
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+DIST = ROOT / "web" / "dist"
+ROUTES = ["/", "/ledger", "/exits", "/fields", "/warning", "/predict", "/drivers",
+          "/assistant", "/model-card", "/project/705410"]
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--port", type=int, default=8080)
+    ap.add_argument("--list", action="store_true")
+    a = ap.parse_args(argv)
+    if not DIST.exists():
+        print(f"no build at {DIST}; run npm run build in web/ first", file=sys.stderr)
+        return 1
+    base = f"http://localhost:{a.port}"
+    for r in ROUTES:
+        print(f"{base}/#{r}")
+    print(f"\nchecklist: {ROOT / 'docs' / 'SCREEN-CHECKLIST.md'}")
+    if a.list:
+        return 0
+    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(DIST))
+    with socketserver.TCPServer(("", a.port), handler) as httpd:
+        print(f"\nserving {DIST} at {base} — ctrl-c to stop")
+        httpd.serve_forever()
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+```
+
+- [ ] **Step 2: Run it to verify it lists ten routes**
+
+Run: `python tools/routes.py --list`
+Expected: ten `http://localhost:8080/#/...` lines plus the checklist path, exit 0.
+
+- [ ] **Step 3: Write the checklist**
+
+Create `docs/SCREEN-CHECKLIST.md`:
+
+```markdown
+# Screen checklist
+
+Tasks 1-17 had `tools/validate.py` and `pytest -q` deciding whether output was correct.
+The screens had no arbiter, and came out as six identical cards per page. This is the
+arbiter. A screen task is not done until every route's screenshot has been checked
+against all six conditions and the screenshots are attached to the task.
+
+Run `python tools/routes.py`, open each URL at 1440x900, screenshot, then check:
+
+1. **No number wraps.** No figure breaks across lines. `₹ 37,10,641.55 cr` fits one line.
+2. **No dead column.** No table column shows the same value in every visible row.
+3. **Colour means severity.** critical/high/medium/ok are used only for severity.
+   No colour is decorative. A falling trend is never drawn in the `ok` green.
+4. **Model numbers are marked.** Every model-derived figure is in `#5B4B9A` and the
+   word "model" appears beside it.
+5. **One focal point.** The screen has a single thing the eye lands on first. Not six
+   equal cards.
+6. **Provenance.** Every displayed figure either traces to a page citation or is
+   explicitly labelled model-derived.
+
+Wording: the headline word is **contradictions**, never "impossibilities".
+```
+
+- [ ] **Step 4: Ignore the screenshot output directory**
+
+Append to `.gitignore`:
+
+```
+web/shots/
+```
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add tools/routes.py docs/SCREEN-CHECKLIST.md .gitignore docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
+git commit -m "task 24: route enumerator and the screen checklist"
+```
+
+---
+
+### Task 22: Frontend rebuild via an external AI tool
+
+**Files:**
+- Create: `docs/FRONTEND-BRIEF.md`
+- Modify: `web/src/**` (replaced by the external tool's output)
+- Modify: `web/dist/**` (rebuilt and committed, per the layout note in BUILD.md)
+
+**Interfaces:**
+- Consumes: `web/public/data/{projects,findings,models,model_card}.json` frozen by Task 25, and `contracts/*.schema.json`.
+- Produces: a `web/dist` that serves from `python -m http.server` with no network.
+
+**The handoff is one-way.** The external tool does not have the repo, the contracts, the tokens or the offline constraint. `docs/FRONTEND-BRIEF.md` carries all of it. Everything the tool cannot be trusted to preserve is checked mechanically in Step 4.
+
+- [ ] **Step 1: Write the brief**
+
+`docs/FRONTEND-BRIEF.md` is written in full in this session — see the file. Before handing it over, confirm it states: the ten routes; the exact token hex values; the exact JSON field names for `projects.json`, `findings.json` and `models.json`; the offline and no-CDN constraints; hash routing; Indian number formatting; the "contradictions" wording; the six checklist conditions; and the three reference sites.
+
+- [ ] **Step 2: Give the tool the brief and the real data**
+
+Hand over `docs/FRONTEND-BRIEF.md` plus the four JSON files from `web/public/data/`. Do not hand over a synthetic sample — the layout defects this task exists to fix (three-line currency wrapping, a constant risk column) only appear on real values.
+
+- [ ] **Step 3: Bring the output back into the repo**
+
+Replace `web/src/` with the tool's output. Keep `web/public/data/` exactly as Task 25 froze it — if the tool changed any JSON file, restore it with `git checkout -- web/public/data`. Then:
+
+```bash
+cd web && npm ci && npm run build
+```
+Expected: build succeeds and writes `web/dist`.
+
+- [ ] **Step 4: Run the acceptance checks — all four must pass**
+
+```bash
+# 1. Nothing external. The demo runs with Wi-Fi off.
+grep -rEoh "https?://[^\"' )]+" web/dist/assets/*.js web/dist/assets/*.css web/dist/index.html | sort -u
+```
+Expected: **no output**, or only URLs inside comments you have read and confirmed are never fetched. Any `fonts.googleapis.com`, `cdn.`, or `unpkg` hit is a failure — the fonts must come from bundled `@fontsource`.
+
+```bash
+# 2. Every route renders. Serve and walk all ten.
+python tools/routes.py
+```
+Expected: all ten URLs render without a blank screen or a console error.
+
+```bash
+# 3. The contract guard still works. Break a file on purpose.
+cp web/dist/data/findings.json /tmp/findings.bak && echo '{"meta":{}}' > web/dist/data/findings.json
+```
+Expected: the app refuses to render and names the failing key (D20). Then restore: `cp /tmp/findings.bak web/dist/data/findings.json`. If the app renders anyway, contract validation was dropped and must be restored before this task is done.
+
+```bash
+# 4. No hardcoded data numbers. AGENTS.md rule 4.
+grep -rEn "1775|1101|967|443|1289|3710641|340503" web/src/ | grep -v "\.json"
+```
+Expected: **no output**. Every number comes from JSON at runtime.
+
+- [ ] **Step 5: Run the screen checklist**
+
+Run `python tools/routes.py`, screenshot all ten routes at 1440×900, and check each against `docs/SCREEN-CHECKLIST.md`. Attach the screenshots to the task. A route failing any of the six conditions goes back to the external tool with the specific condition quoted.
+
+- [ ] **Step 6: Run the repo gates**
+
+```bash
+python tools/validate.py
+pytest -q
+```
+Expected: both pass. **Paste the output.** `validate.py` enforces the web-code literal allowlist (`100`, `1000`, `200`, `404` only, pixel sizes written with `px`), so a violation here means the external tool introduced a magic number.
+
+- [ ] **Step 7: Commit**
+
+```bash
+git add web/ docs/FRONTEND-BRIEF.md docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
+git commit -m "task 22: rebuilt surface, contract guard and offline build verified"
+```
+
+---
+
+## Self-review notes
+
+- **Spec coverage.** §2.1 → Task 21 Steps 10–11. §2.2 → Task 21 Steps 1–4. §2.3, §2.4 → Task 22 via the brief and checklist conditions 1, 2, 3, 5. §2.5 preserved: `detect()` is untouched and Task 21 Step 9 asserts it. §5 Task 21 items 1–4 → Task 21. §5 Task 22 → Task 22. §5 Task 23 → Task 23. §5 Task 24 → Task 24. §5 Task 25 → Task 25. §6 order → §Order. §7 → the gate step of every task. §8, §9, §10 are Window 2 and reference material, no task.
+- **Deviation from the spec, recorded.** The spec's Task 24 called for `tools/shots.py` capturing screenshots. That needs a headless browser, which means a runtime download (AGENTS.md rule 7) and a lock re-freeze (rule 9). Replaced with `tools/routes.py`, which serves and enumerates while a human or agent screenshots. Same arbiter, no dependency.
+- **Deviation from the spec, recorded.** The spec's Task 22 built the surface in-repo. Ranvir is using an external AI frontend tool, so Task 22 became brief-plus-integration with four mechanical acceptance checks standing in for the in-repo review.
+- **Type consistency.** `classify(doc_original, doc_revised, snapshot)` is defined in Task 23 Step 3 and consumed with the same signature in Task 25 Step 3. `collapse(flags)` is defined in Task 21 Step 3 and consumed in Task 21 Step 11 only. `whipple_index`/`whipple_band` are defined and consumed inside Task 21.
+- **Contract version chain.** 1.0.0 → 1.1.0 (Task 21) → 1.2.0 (Task 23) → 1.3.0 (Task 25). Each task bumps `CONTRACT_VERSION` in `findings/run.py` and adds a `CHANGELOG.md` entry.
