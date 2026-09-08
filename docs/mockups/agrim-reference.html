@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AGRIM — corrected reference mockup</title>
+<!--
+  AGRIM corrected reference mockup. Three screens: Overview, Project evidence, Exit Ledger.
+
+  This file is a DESIGN REFERENCE for the React port, not the app. It is deliberately
+  self-contained: no CDN, no Google Fonts, no external anything, so it opens with Wi-Fi off
+  exactly like the real demo must.
+
+  Every number carries data-bind="<json path>" naming where the real value comes from.
+  Values shown are real where this session verified them; where a value was not verified it
+  renders as an em dash with its bind path, never as an invented number. Do not replace an
+  em dash with a plausible-looking figure - wire it to the JSON.
+
+  Fonts: the real app bundles IBM Plex Sans/Mono via @fontsource. This reference falls back
+  to system stacks so it needs no network. Keep tabular numerals on every figure.
+-->
+<style>
+:root{
+  /* BUILD.md section 8 tokens. Do not substitute. */
+  --ground:#F4F6F8; --surface:#FFFFFF; --ink:#0E1A2B; --muted:#4B5A6B; --line:#D5DCE4;
+  --accent:#1F5FA8; --critical:#B42318; --high:#C2410C; --medium:#B7791F; --ok:#1E7B4F;
+  --model:#5B4B9A;
+  --critical-bg:#FBEAE8; --high-bg:#FDEDE3; --medium-bg:#FBF3E2; --ok-bg:#E7F3EC;
+  --model-bg:#EEEBF6; --accent-bg:#E8EFF7;
+  --sans:"IBM Plex Sans",ui-sans-serif,system-ui,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px;
+  --rail:240px; --head:56px;
+}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.01em}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+button{font:inherit;cursor:pointer}
+
+/* ---------- chrome ---------- */
+header.top{position:fixed;inset:0 0 auto 0;height:var(--head);z-index:50;background:var(--surface);
+  border-bottom:1px solid var(--line);display:flex;align-items:center;gap:var(--s3);padding:0 var(--s3)}
+.brand{display:flex;align-items:center;gap:var(--s2);padding-right:var(--s3);border-right:1px solid var(--line)}
+.mark{height:26px;padding:0 var(--s2);background:var(--ink);color:#fff;font-weight:600;font-size:14px;
+  letter-spacing:.08em;display:flex;align-items:center;border-radius:2px}
+.brand small{display:block;font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.2}
+select,input[type=search]{font:inherit;height:30px;border:1px solid var(--line);border-radius:3px;
+  background:var(--surface);color:var(--ink);padding:0 var(--s2)}
+input[type=search]{font-family:var(--mono);font-size:12px;width:250px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:3px;
+  font-family:var(--mono);font-size:11px;border:1px solid var(--line);background:var(--surface);color:var(--muted)}
+.grow{flex:1}
+.btn{height:30px;padding:0 var(--s3);border:1px solid var(--line);border-radius:3px;background:var(--surface);
+  color:var(--ink);font-size:12px;font-weight:500;display:inline-flex;align-items:center;gap:6px;
+  transition:background .15s ease}
+.btn:hover{background:var(--ground)}
+.btn-primary{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn-primary:hover{background:#1c2c42}
+
+aside.rail{position:fixed;top:var(--head);bottom:0;left:0;width:var(--rail);background:var(--surface);
+  border-right:1px solid var(--line);z-index:40;overflow-y:auto;padding:var(--s3) 0}
+.railgroup{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--muted);
+  text-transform:uppercase;padding:0 var(--s3);margin:var(--s4) 0 var(--s1)}
+.railgroup:first-child{margin-top:0}
+.rail a{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);
+  padding:7px var(--s3);color:var(--ink);text-decoration:none;font-size:13px;border-left:3px solid transparent}
+.rail a:hover{background:var(--ground)}
+.rail a[aria-current=page]{background:var(--accent-bg);border-left-color:var(--accent);font-weight:600}
+.rail a .lbl{display:flex;align-items:center;gap:var(--s2);min-width:0}
+.count{font-family:var(--mono);font-size:11px;color:var(--muted)}
+
+main{margin-left:var(--rail);padding:calc(var(--head) + var(--s4)) var(--s4) var(--s6);max-width:1440px}
+.screen{display:none}
+.screen.on{display:block}
+
+/* ---------- shared blocks ---------- */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:3px}
+.panel > h2, .panelhead{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);
+  padding:var(--s2) var(--s3);border-bottom:1px solid var(--line);font-size:13px;font-weight:600}
+.panelbody{padding:var(--s3)}
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.note{font-size:12px;color:var(--muted)}
+.grid{display:grid;gap:var(--s3)}
+.stack{display:flex;flex-direction:column;gap:var(--s3)}
+
+/* severity is encoded twice: colour AND word. Never colour alone. */
+.sev{display:inline-flex;align-items:center;gap:5px;padding:2px 7px;border-radius:3px;
+  font-family:var(--mono);font-size:11px;font-weight:500;border:1px solid transparent;white-space:nowrap}
+.sev::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.sev-critical{background:var(--critical-bg);color:var(--critical);border-color:#EBC4BF}
+.sev-high{background:var(--high-bg);color:var(--high);border-color:#F0CDB4}
+.sev-medium{background:var(--medium-bg);color:var(--medium);border-color:#EBDCB6}
+.sev-low,.sev-info{background:var(--ground);color:var(--muted);border-color:var(--line)}
+.sev-ok{background:var(--ok-bg);color:var(--ok);border-color:#BFDCCC}
+.sev-model{background:var(--model-bg);color:var(--model);border-color:#CFC7E4}
+
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);font-weight:600;padding:var(--s2) var(--s3);border-bottom:1px solid var(--line);
+  background:var(--ground);white-space:nowrap}
+td{padding:9px var(--s3);border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:var(--ground)}
+.r{text-align:right}
+.dash{color:var(--muted)}
+
+/* ---------- overview ---------- */
+.verdict{padding:var(--s4) var(--s4) var(--s3)}
+.verdict p{margin:0;font-size:20px;line-height:1.45;max-width:70ch;letter-spacing:-.01em}
+.verdict .caveat{margin-top:var(--s2);font-size:12px;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.tile{background:var(--surface);padding:var(--s3);display:flex;flex-direction:column;gap:2px;min-width:0}
+.tile .k{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tile .v{font-family:var(--mono);font-size:22px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.tile .v.model{color:var(--model)}
+.tile .sub{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.bars{display:flex;flex-direction:column;gap:7px}
+.barrow{display:grid;grid-template-columns:1fr 56px;align-items:center;gap:var(--s2);font-size:12px}
+.barrow .track{grid-column:1/-1;height:6px;background:var(--ground);border-radius:2px;overflow:hidden}
+.barrow .fill{height:100%;background:var(--critical)}
+.barrow .fill.model{background:var(--model)}
+
+/* ---------- project evidence ---------- */
+.evidence{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s3)}
+@media (max-width:1200px){.evidence{grid-template-columns:1fr}}
+.claim{font-size:17px;line-height:1.45;margin:0 0 var(--s2)}
+.claim b{font-family:var(--mono);font-weight:600}
+.pagefig{margin:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--ground)}
+.pagefig img{display:block;width:100%;height:auto}
+.pagefig .ph{aspect-ratio:5/4;display:flex;align-items:center;justify-content:center;flex-direction:column;
+  gap:6px;color:var(--muted);font-family:var(--mono);font-size:11px;text-align:center;padding:var(--s3)}
+.pagefig figcaption{padding:6px var(--s2);border-top:1px solid var(--line);background:var(--surface);
+  font-family:var(--mono);font-size:11px;color:var(--muted)}
+.sparkwrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+@media (max-width:900px){.sparkwrap{grid-template-columns:1fr}}
+.shap{display:flex;flex-direction:column;gap:5px;font-family:var(--mono);font-size:11px}
+.shaprow{display:grid;grid-template-columns:150px 1fr 62px;align-items:center;gap:var(--s2)}
+.shaprow .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+.shapbar{position:relative;height:12px;background:var(--ground);border-radius:2px}
+.shapbar i{position:absolute;top:0;bottom:0;background:var(--model);display:block}
+.shapbar .zero{position:absolute;top:-2px;bottom:-2px;left:50%;width:1px;background:var(--line)}
+
+/* ---------- exits ---------- */
+.pairchart{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3);align-items:end;
+  padding:var(--s3);border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+.pair{display:flex;flex-direction:column;gap:var(--s2);align-items:center}
+.pairbars{display:flex;align-items:flex-end;gap:6px;height:120px}
+.pairbars i{width:20px;border-radius:2px 2px 0 0;display:block}
+.pairbars .exit{background:var(--critical)}
+.pairbars .enter{background:var(--accent)}
+.pairbars .comm{background:var(--muted)}
+.pairlabel{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center}
+.legend{display:flex;gap:var(--s3);flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:10px;height:10px;border-radius:2px;display:block}
+.filters{display:flex;gap:var(--s2);flex-wrap:wrap}
+.pill{border:1px solid var(--line);background:var(--surface);border-radius:3px;padding:5px 10px;
+  font-family:var(--mono);font-size:11px;display:inline-flex;align-items:center;gap:6px;color:var(--ink)}
+.pill[aria-pressed=true]{background:var(--accent-bg);border-color:var(--accent);color:var(--accent);font-weight:600}
+.timeline{list-style:none;margin:0;padding:0 0 0 var(--s4);border-left:1px solid var(--line)}
+.timeline li{position:relative;padding:0 0 var(--s3) var(--s3)}
+.timeline li::before{content:"";position:absolute;left:calc(-1 * var(--s4) - 4px);top:5px;width:9px;height:9px;
+  border-radius:50%;background:var(--line);border:2px solid var(--surface)}
+.timeline li.gone::before{background:var(--critical)}
+.timeline li.here::before{background:var(--accent)}
+
+svg.ico{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<svg class="sr" aria-hidden="true"><defs>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></symbol>
+<symbol id="i-rule" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M17 15l2.5 2.5L23 13"/></symbol>
+<symbol id="i-exit" viewBox="0 0 24 24"><path d="M14 4h4a2 2 0 012 2v12a2 2 0 01-2 2h-4"/><path d="M9 16l-4-4 4-4M5 12h11"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+<symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17.5v.01"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+<symbol id="i-tune" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-8 8H4l2-3a8 8 0 1115-5z"/></symbol>
+<symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11M8 11l4 4 4-4M4 19h16"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+</defs></svg>
+
+<header class="top">
+  <div class="brand">
+    <span class="mark">AGRIM</span>
+    <span><strong style="font-size:11px;letter-spacing:.04em">IPMD</strong><small>prototype</small></span>
+  </div>
+
+  <label class="sr" for="persona">View</label>
+  <select id="persona">
+    <option>National view — all sectors</option>
+    <option>Sector view — Railways</option>
+    <option>Sector view — Road Transport &amp; Highways</option>
+  </select>
+
+  <span class="chip" title="Rows parsed from the five published Flash Reports">
+    <span data-bind="findings.meta.snapshots.length">5</span>&nbsp;reports
+    <span aria-hidden="true">·</span>
+    <span class="num" data-bind="sum(findings.meta.coverage[].rows_parsed)">8,837</span>&nbsp;rows
+    <span aria-hidden="true">·</span>
+    <span class="num" data-bind="mean(findings.meta.coverage[].pct)">98.3%</span>&nbsp;parsed
+  </span>
+
+  <label class="sr" for="q">Search projects</label>
+  <input id="q" type="search" placeholder="Project code or name…"/>
+
+  <span class="grow"></span>
+  <button class="btn btn-primary" type="button"><svg class="ico"><use href="#i-dl"/></svg>Export review pack</button>
+</header>
+
+<aside class="rail">
+  <div class="railgroup">Audit</div>
+  <a href="#/" data-screen="overview" aria-current="page"><span class="lbl"><svg class="ico"><use href="#i-grid"/></svg>Overview</span></a>
+  <a href="#/ledger"><span class="lbl"><svg class="ico"><use href="#i-rule"/></svg>Contradiction Ledger</span><span class="count num" data-bind="findings.meta.headline.contradictions_arithmetic">967</span></a>
+  <a href="#/exits" data-screen="exits"><span class="lbl"><svg class="ico"><use href="#i-exit"/></svg>Exit Ledger</span><span class="count num" data-bind="findings.meta.headline.exits_total">443</span></a>
+  <a href="#/fields"><span class="lbl"><svg class="ico"><use href="#i-check"/></svg>Field Audit</span></a>
+
+  <div class="railgroup">Outlook</div>
+  <a href="#/warning"><span class="lbl"><svg class="ico"><use href="#i-warn"/></svg>Early Warning</span><span class="count num" data-bind="findings.meta.headline.unreachable_total">1,289</span></a>
+  <a href="#/predict"><span class="lbl"><svg class="ico"><use href="#i-trend"/></svg>Predictions</span></a>
+  <a href="#/drivers"><span class="lbl"><svg class="ico"><use href="#i-tune"/></svg>Drivers &amp; Benchmark</span></a>
+
+  <div class="railgroup">About</div>
+  <a href="#/project/705410" data-screen="project"><span class="lbl"><svg class="ico"><use href="#i-doc"/></svg>Project (example)</span></a>
+  <a href="#/assistant"><span class="lbl"><svg class="ico"><use href="#i-chat"/></svg>Assistant</span></a>
+  <a href="#/model-card"><span class="lbl"><svg class="ico"><use href="#i-doc"/></svg>Model Card</span></a>
+</aside>
+
+<main>
+
+<!-- ═══════════════════ SCREEN 1 — OVERVIEW ═══════════════════ -->
+<section class="screen on" id="s-overview" aria-labelledby="ov-h">
+  <div class="panel" style="margin-bottom:var(--s3)">
+    <div class="verdict">
+      <p class="eyebrow" style="margin-bottom:var(--s2)">Five Flash Reports · December 2025 to July 2026</p>
+      <h1 id="ov-h" style="font-size:20px;line-height:1.45;font-weight:600;max-width:70ch">
+        Across five published reports,
+        <span class="num" data-bind="findings.meta.headline.contradictions_arithmetic">967</span>
+        figures contradict the figure the same office published the month before.
+        Every one cites the page it came from.
+      </h1>
+      <p class="caveat">A contradiction is not an allegation. These are differences between two published
+        documents; the reason for a difference is not stated in either of them.</p>
+    </div>
+  </div>
+
+  <div class="tiles" style="margin-bottom:var(--s3)">
+    <div class="tile">
+      <span class="k">Projects · latest report</span>
+      <span class="v num" data-bind="findings.meta.headline.projects_latest">1,775</span>
+      <span class="sub">July 2026 panel</span>
+    </div>
+    <div class="tile">
+      <span class="k">Revised cost</span>
+      <span class="v num" data-bind="findings.meta.headline.cost_revised_total_cr">₹ 37.10 L cr</span>
+      <span class="sub num" title="₹ 37,10,641.55 crore">₹ 37,10,641.55 cr</span>
+    </div>
+    <div class="tile">
+      <span class="k">Recorded overrun</span>
+      <span class="v num" data-bind="findings.meta.headline.overrun_total_cr">₹ 3.41 L cr</span>
+      <span class="sub num">₹ 3,40,503.33 cr · revised − original</span>
+    </div>
+    <div class="tile">
+      <span class="k">Contradictions</span>
+      <span class="v num" data-bind="findings.meta.headline.contradictions_arithmetic">967</span>
+      <span class="sub">rule-based · 5 types</span>
+    </div>
+    <div class="tile">
+      <span class="k">Left the panel</span>
+      <span class="v num" data-bind="findings.meta.headline.exits_total">443</span>
+      <span class="sub">present one month, absent the next</span>
+    </div>
+    <div class="tile">
+      <span class="k">Unreachable dates</span>
+      <span class="v num" data-bind="findings.meta.headline.unreachable_total">1,289</span>
+      <span class="sub">at each project's own reported pace</span>
+    </div>
+    <div class="tile">
+      <span class="k">Statistical anomalies</span>
+      <span class="v num model" data-bind="findings.meta.headline.statistical_anomalies">134</span>
+      <span class="sub">model · isolation forest</span>
+    </div>
+    <div class="tile">
+      <span class="k">Watchlist</span>
+      <span class="v num model" data-bind="findings.meta.headline.watchlist_size">100</span>
+      <span class="sub">model · highest slip probability</span>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start">
+
+    <div class="panel">
+      <div class="panelhead">
+        <span>Contradictions by type</span>
+        <span class="note">rule-based</span>
+      </div>
+      <div class="panelbody bars">
+        <div class="barrow"><span>Spend exceeds revised sanctioned cost</span><span class="num r" data-bind="by_type.EXP_GT_REVISED_COST">331</span><span class="track"><i class="fill" style="width:100%"></i></span></div>
+        <div class="barrow"><span>Money spent, zero progress reported</span><span class="num r" data-bind="by_type.ZERO_PROG_NONZERO_EXP">285</span><span class="track"><i class="fill" style="width:86%"></i></span></div>
+        <div class="barrow"><span>Cumulative expenditure fell</span><span class="num r" data-bind="by_type.EXP_DECREASE">185</span><span class="track"><i class="fill" style="width:56%"></i></span></div>
+        <div class="barrow"><span>Physical progress went backwards</span><span class="num r" data-bind="by_type.PROG_DECREASE">158</span><span class="track"><i class="fill" style="width:48%"></i></span></div>
+        <div class="barrow"><span>Completion date precedes approval</span><span class="num r" data-bind="by_type.DOC_BEFORE_APPROVAL">8</span><span class="track"><i class="fill" style="width:2%"></i></span></div>
+        <div class="barrow" style="padding-top:var(--s2);border-top:1px solid var(--line);margin-top:var(--s1)">
+          <span style="color:var(--model)">Statistical anomaly <span class="sev sev-model" style="margin-left:4px">model</span></span>
+          <span class="num r" style="color:var(--model)" data-bind="by_type.STAT_ANOMALY">134</span>
+          <span class="track"><i class="fill model" style="width:40%"></i></span>
+        </div>
+      </div>
+      <div class="panelbody" style="border-top:1px solid var(--line)">
+        <p class="note" style="margin:0">Isolation-forest anomalies are listed separately and never counted as
+          contradictions. Rule-based and model-derived findings are never combined into one number.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panelhead">
+        <span>Flagged projects by sector</span>
+        <span class="note"><span class="num" data-bind="findings.by_sector.length">22</span> sectors · agency-string rollup</span>
+      </div>
+      <div class="panelbody" style="padding:0">
+        <table>
+          <thead><tr>
+            <th scope="col">Sector</th>
+            <th scope="col" class="r">Flagged / monitored</th>
+            <th scope="col" class="r">Red band</th>
+          </tr></thead>
+          <tbody data-bind="findings.by_sector[]">
+            <tr><td>Railways</td><td class="r num">— / —</td><td class="r num">—</td></tr>
+            <tr><td>Road Transport &amp; Highways</td><td class="r num">— / —</td><td class="r num">—</td></tr>
+            <tr><td>Petroleum &amp; Natural Gas</td><td class="r num">— / —</td><td class="r num">—</td></tr>
+            <tr><td>Coal</td><td class="r num">— / —</td><td class="r num">—</td></tr>
+            <tr><td>Power</td><td class="r num">— / —</td><td class="r num">—</td></tr>
+            <tr><td>Aviation &amp; Aviation Infrastructure</td><td class="r num">25 monitored</td><td class="r num">5</td></tr>
+            <tr><td>Telecommunication</td><td class="r num">— / —</td><td class="r num">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panelbody" style="border-top:1px solid var(--line)">
+        <p class="note" style="margin:0">Sector is derived from the agency string the report prints. It is a
+          rollup, not the ministry taxonomy — rows do not map one-to-one onto the 17 official ministries.
+          Counts bind to <code class="num">findings.by_sector[]</code>; the em dashes are unbound, not zero.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:var(--s3)">
+    <div class="panelhead"><span>Where the map goes</span></div>
+    <div class="panelbody">
+      <p class="note" style="margin:0 0 var(--s2)">The India choropleth binds to
+        <code class="num">findings.by_state[]</code> (<span class="num">94</span> entries) and must render from the
+        bundled DataMeet GeoJSON, not hand-drawn paths. Post-2019 Jammu &amp; Kashmir and Ladakh boundaries are
+        verified before it ships. A hand-approximated outline of India is not acceptable in a government room.</p>
+      <div style="height:220px;border:1px dashed var(--line);border-radius:3px;display:flex;
+        align-items:center;justify-content:center;color:var(--muted);font-family:var(--mono);font-size:12px">
+        ECharts geo map · registerMap('india', DataMeet GeoJSON)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SCREEN 2 — PROJECT EVIDENCE ═══════════════════ -->
+<section class="screen" id="s-project" aria-labelledby="pr-h">
+
+  <div class="panel" style="margin-bottom:var(--s3)">
+    <div class="panelbody">
+      <p class="eyebrow" style="margin:0 0 4px">
+        <span class="num">705410</span> · CAOC/NR NR mor · Multi-States (Himachal Pradesh, Punjab) · Railways
+      </p>
+      <h1 id="pr-h" style="font-size:20px">Nangal Dam-Talwara 83.74 km — New broad gauge line</h1>
+      <p class="note" style="margin:6px 0 var(--s3)">
+        Seen <span class="num">2025-12</span> → <span class="num">2026-07</span> · ongoing ·
+        stated completion <span class="num">Dec 2027</span> (revised from <span class="num">Dec 2025</span>)
+      </p>
+      <div style="display:flex;gap:var(--s2);flex-wrap:wrap">
+        <span class="sev sev-critical">critical · rule score <span class="num">100</span></span>
+        <span class="sev sev-model">model · slip probability <span class="num">1%</span></span>
+        <span class="sev sev-low">9 flags</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGNATURE MOMENT: the claim, and the page it came from, side by side -->
+  <div class="panel" style="margin-bottom:var(--s3)">
+    <div class="panelhead">
+      <span>Highest-severity finding</span>
+      <span class="sev sev-critical">critical</span>
+    </div>
+    <div class="panelbody">
+      <p class="claim">
+        Cumulative expenditure falls from <b>₹ 89,486.62 cr</b> in <b>December 2025</b>
+        to <b>₹ 2,384.29 cr</b> in <b>April 2026</b>. A cumulative field cannot decrease.
+      </p>
+      <p class="note" style="margin:0 0 var(--s3)">
+        A contradiction is not an allegation. Both figures below are as printed by MoSPI.
+      </p>
+
+      <div class="evidence">
+        <figure class="pagefig">
+          <div class="ph">
+            <svg class="ico" style="width:24px;height:24px"><use href="#i-doc"/></svg>
+            /pages/2025-12/p74.png
+            <span>rendered page image, shown at readable size</span>
+          </div>
+          <figcaption>Flash Report December 2025 · page <span class="num">74</span> · expenditure <span class="num">₹ 89,486.62 cr</span></figcaption>
+        </figure>
+        <figure class="pagefig">
+          <div class="ph">
+            <svg class="ico" style="width:24px;height:24px"><use href="#i-doc"/></svg>
+            /pages/2026-04/p88.png
+            <span>rendered page image, shown at readable size</span>
+          </div>
+          <figcaption>Flash Report April 2026 · page <span class="num">88</span> · expenditure <span class="num">₹ 2,384.29 cr</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- Report-to-report reconciliation. NOT an agency portal - we do not have one. -->
+  <div class="panel" style="margin-bottom:var(--s3)">
+    <div class="panelhead">
+      <span>As printed, report by report</span>
+      <span class="note">every value from <code class="num">projects[].snapshots[]</code></span>
+    </div>
+    <table>
+      <thead><tr>
+        <th scope="col">Report</th><th scope="col" class="r">Page</th>
+        <th scope="col">Original DoC</th><th scope="col">Revised DoC</th>
+        <th scope="col" class="r">Original cost</th><th scope="col" class="r">Revised cost</th>
+        <th scope="col" class="r">Expenditure</th><th scope="col" class="r">Progress</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">2025-12</td><td class="r num">74</td><td class="num">2025-12</td><td class="dash">—</td>
+            <td class="r num">₹ 2,018.00 cr</td><td class="r num">₹ 2,018.00 cr</td>
+            <td class="r num">₹ 89,486.62 cr</td><td class="r num">84.0%</td></tr>
+        <tr><td class="num">2026-04</td><td class="r num">88</td><td class="num">2025-12</td><td class="num">2027-12</td>
+            <td class="r num">₹ 2,018.00 cr</td><td class="r num">₹ 2,018.00 cr</td>
+            <td class="r num">₹ 2,384.29 cr</td><td class="r num">84.0%</td></tr>
+        <tr><td class="num">2026-05</td><td class="r num">88</td><td class="num">2025-12</td><td class="num">2027-12</td>
+            <td class="r num">₹ 2,018.00 cr</td><td class="r num">₹ 2,018.00 cr</td>
+            <td class="r num">₹ 2,398.08 cr</td><td class="r num">84.0%</td></tr>
+        <tr><td class="num">2026-06</td><td class="r num">91</td><td class="num">2025-12</td><td class="num">2027-12</td>
+            <td class="r num">₹ 2,018.00 cr</td><td class="r num">₹ 2,018.00 cr</td>
+            <td class="r num">₹ 2,398.08 cr</td><td class="r num">84.0%</td></tr>
+        <tr><td class="num">2026-07</td><td class="r num">88</td><td class="num">2025-12</td><td class="num">2027-12</td>
+            <td class="r num">₹ 2,018.00 cr</td><td class="r num">₹ 4,076.15 cr</td>
+            <td class="r num">₹ 2,398.08 cr</td><td class="r num">84.0%</td></tr>
+      </tbody>
+    </table>
+    <div class="panelbody" style="border-top:1px solid var(--line)">
+      <p class="note" style="margin:0">An empty cell means the report did not print a value. It never means zero.</p>
+    </div>
+  </div>
+
+  <div class="sparkwrap" style="margin-bottom:var(--s3)">
+    <div class="panel">
+      <div class="panelhead"><span>Physical progress</span><span class="note">% · 5 reports</span></div>
+      <div class="panelbody">
+        <svg viewBox="0 0 320 90" width="100%" height="90" role="img"
+             aria-label="Physical progress flat at 84 percent across all five reports, model forecast 84 percent">
+          <line x1="8" y1="70" x2="312" y2="70" stroke="#D5DCE4"/>
+          <polyline points="20,26 92,26 164,26 236,26 284,26" fill="none" stroke="#0E1A2B" stroke-width="2"/>
+          <polyline points="284,26 306,26" fill="none" stroke="#5B4B9A" stroke-width="2" stroke-dasharray="4 3"/>
+          <circle cx="306" cy="26" r="3" fill="#5B4B9A"/>
+        </svg>
+        <p class="note" style="margin:6px 0 0">Flat at <span class="num">84.0%</span> for eight months.
+          Dashed tail is the <span style="color:var(--model)">model</span> forecast.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panelhead"><span>Cumulative expenditure</span><span class="note">₹ cr · 5 reports</span></div>
+      <div class="panelbody">
+        <svg viewBox="0 0 320 90" width="100%" height="90" role="img"
+             aria-label="Cumulative expenditure collapses from 89,486 crore to 2,384 crore between December 2025 and April 2026, then flat">
+          <line x1="8" y1="70" x2="312" y2="70" stroke="#D5DCE4"/>
+          <polyline points="20,14 92,68 164,68 236,68 284,68" fill="none" stroke="#0E1A2B" stroke-width="2"/>
+          <circle cx="20" cy="14" r="3.5" fill="#B42318"/>
+          <circle cx="92" cy="68" r="3.5" fill="#B42318"/>
+        </svg>
+        <p class="note" style="margin:6px 0 0">The collapse is drawn in neutral ink with the two contradicting
+          points marked in <span style="color:var(--critical)">critical</span>. Never the ok green.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
+    <div class="panel">
+      <div class="panelhead"><span>Remaining flags</span><span class="note num">8 more</span></div>
+      <div class="panelbody stack" style="gap:var(--s2);font-size:13px">
+        <div style="display:flex;gap:var(--s2)">
+          <span class="sev sev-medium">medium</span>
+          <span>Cumulative expenditure <span class="num">₹ 2,398.08 cr</span> exceeds the revised cost
+            <span class="num">₹ 2,018.00 cr</span>.
+            <span class="note">2026-04 → 2026-07 · 4 reports · pages 88, 88, 91, 88</span></span>
+        </div>
+        <div style="display:flex;gap:var(--s2)">
+          <span class="sev sev-critical">critical</span>
+          <span>At its own reported pace (<span class="num">0.26</span> pt/month) this project needs
+            <span class="num">61</span> months; its stated date leaves <span class="num">17</span>.
+            <span class="note">2025-12 · page 74</span></span>
+        </div>
+        <div style="display:flex;gap:var(--s2)">
+          <span class="sev sev-info">info</span>
+          <span>Revised cost changed from <span class="num">₹ 2,018.00 cr</span> to
+            <span class="num">₹ 4,076.15 cr</span> between 2026-06 and 2026-07.
+            <span class="note">pages 91, 88</span></span>
+        </div>
+        <p class="note" style="margin:var(--s2) 0 0;padding-top:var(--s2);border-top:1px solid var(--line)">
+          Repeated flags are collapsed into one row with a month range. Every page citation is kept.</p>
+      </div>
+    </div>
+
+    <div class="panel" style="border-color:#CFC7E4">
+      <div class="panelhead" style="color:var(--model)">
+        <span>Outlook</span><span class="sev sev-model">model</span>
+      </div>
+      <div class="panelbody stack" style="font-size:13px">
+        <div>Chance a revised completion date is filed next report:
+          <b class="num" style="color:var(--model)">1%</b>
+          <span class="note">· rank <span class="num">1,681</span> of 1,732</span></div>
+
+        <div class="shap" role="group" aria-label="Top five model factors">
+          <div class="shaprow"><span class="name">physical_progress_pct</span>
+            <span class="shapbar"><span class="zero"></span><i style="right:50%;width:23%"></i></span>
+            <span class="r">−0.94</span></div>
+          <div class="shaprow"><span class="name">cost_overrun_pct</span>
+            <span class="shapbar"><span class="zero"></span><i style="right:50%;width:19%"></i></span>
+            <span class="r">−0.76</span></div>
+          <div class="shaprow"><span class="name">exp_share</span>
+            <span class="shapbar"><span class="zero"></span><i style="right:50%;width:9%"></i></span>
+            <span class="r">−0.36</span></div>
+          <div class="shaprow"><span class="name">agency_prior_slip_rate</span>
+            <span class="shapbar"><span class="zero"></span><i style="left:50%;width:7%"></i></span>
+            <span class="r">+0.27</span></div>
+          <div class="shaprow"><span class="name">unreachable_ratio</span>
+            <span class="shapbar"><span class="zero"></span><i style="right:50%;width:5%"></i></span>
+            <span class="r">−0.20</span></div>
+        </div>
+        <p class="note" style="margin:0">Bars are SHAP contributions about a zero line: right increases the
+          predicted probability, left decreases it.</p>
+
+        <div style="padding-top:var(--s2);border-top:1px solid var(--line)">
+          Cost overrun against comparable projects:
+          <b class="num" style="color:var(--critical)">+11.5%</b>
+          <span class="note">· peers expected <span class="num">90.5%</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SCREEN 3 — EXIT LEDGER ═══════════════════ -->
+<section class="screen" id="s-exits" aria-labelledby="ex-h">
+
+  <div class="panel" style="margin-bottom:var(--s3)">
+    <div class="panelbody">
+      <p class="eyebrow" style="margin:0 0 4px">Audit · panel composition</p>
+      <h1 id="ex-h" style="font-size:20px">Exit Ledger</h1>
+      <p style="margin:var(--s2) 0 0;max-width:75ch;font-size:14px">
+        Projects present in one report and absent from the next. These are net changes in the published
+        panel. The reason a project leaves — commissioned, re-scoped, transferred, or dropped — is not
+        printed in either report, so rows are classified only by the last physical progress the reports
+        actually showed. No row is described as cancelled.
+      </p>
+      <p class="note" style="margin:var(--s2) 0 0">
+        <span class="num" data-bind="findings.meta.headline.exits_total">443</span> exits across four month pairs.
+        Where a report prints its own commissioned count, it is shown beside our exit count for comparison.
+      </p>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:var(--s3)">
+    <div class="panelhead">
+      <span>Panel flow, month pair by month pair</span>
+      <span class="legend">
+        <span><i style="background:var(--critical)"></i>left the panel</span>
+        <span><i style="background:var(--accent)"></i>entered</span>
+        <span><i style="background:var(--muted)"></i>commissioned, as printed</span>
+      </span>
+    </div>
+    <div class="panelbody">
+      <div class="pairchart" data-bind="findings.exits.pairs[]">
+        <div class="pair"><div class="pairbars"><i class="exit" style="height:20%"></i><i class="enter" style="height:8%"></i><i class="comm" style="height:4%"></i></div><span class="pairlabel">2025-12 → 2026-04<br/><span class="dash">— / — / —</span></span></div>
+        <div class="pair"><div class="pairbars"><i class="exit" style="height:44%"></i><i class="enter" style="height:12%"></i><i class="comm" style="height:6%"></i></div><span class="pairlabel">2026-04 → 2026-05<br/><span class="dash">— / — / 9</span></span></div>
+        <div class="pair"><div class="pairbars"><i class="exit" style="height:56%"></i><i class="enter" style="height:18%"></i><i class="comm" style="height:9%"></i></div><span class="pairlabel">2026-05 → 2026-06<br/><span class="dash">— / — / —</span></span></div>
+        <div class="pair"><div class="pairbars"><i class="exit" style="height:38%"></i><i class="enter" style="height:10%"></i><i class="comm" style="height:5%"></i></div><span class="pairlabel">2026-06 → 2026-07<br/><span class="dash">— / — / —</span></span></div>
+      </div>
+      <p class="note" style="margin:var(--s3) 0 0">Bar heights above are illustrative proportions only — the
+        React build reads <code class="num">findings.exits.pairs[].exited / .entered / .commissioned_printed</code>
+        and scales to the real maximum. Do not ship these heights.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panelhead">
+      <span>Projects that left, by last observed progress</span>
+      <button class="btn" type="button"><svg class="ico"><use href="#i-dl"/></svg>Download this table (CSV)</button>
+    </div>
+    <div class="panelbody" style="border-bottom:1px solid var(--line)">
+      <div class="filters">
+        <button class="pill" type="button" aria-pressed="true">All exits <span class="num" data-bind="exits.rows.length">443</span></button>
+        <button class="pill" type="button" aria-pressed="false"><span class="sev sev-critical" style="padding:0;border:0;background:none">&lt;50% when last seen</span> <span class="num dash">—</span></button>
+        <button class="pill" type="button" aria-pressed="false"><span class="sev sev-medium" style="padding:0;border:0;background:none">50–95% when last seen</span> <span class="num dash">—</span></button>
+        <button class="pill" type="button" aria-pressed="false"><span class="sev sev-low" style="padding:0;border:0;background:none">≥95% when last seen</span> <span class="num dash">—</span></button>
+      </div>
+      <p class="note" style="margin:var(--s2) 0 0">A project last seen at ≥95% is not necessarily a success —
+        it may have been commissioned, or it may have stopped being reported. The band describes the last
+        printed number, nothing more, which is why none of these bands is coloured as good.</p>
+    </div>
+    <table>
+      <thead><tr>
+        <th scope="col">Project</th>
+        <th scope="col">Last seen</th>
+        <th scope="col" class="r">Progress</th>
+        <th scope="col" class="r">Expenditure</th>
+        <th scope="col" class="r">Revised cost</th>
+        <th scope="col">Band</th>
+        <th scope="col" class="r">Page</th>
+      </tr></thead>
+      <tbody data-bind="findings.exits.rows[]">
+        <tr>
+          <td><span class="num" style="color:var(--muted)">—</span> Bound from <code class="num">exits.rows[].project_name</code></td>
+          <td class="num">—</td><td class="r num">—</td><td class="r num">—</td><td class="r num">—</td>
+          <td><span class="sev sev-low">partition</span></td><td class="r num">—</td>
+        </tr>
+        <tr>
+          <td colspan="7" class="note" style="padding:var(--s4);text-align:center">
+            443 rows render here through TanStack Table + TanStack Virtual, sorted and filtered client-side.
+            No sample rows are shown in this reference because inventing project names in an audit tool is
+            the one thing this interface exists to argue against.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<script>
+// Hash routing, matching the real app's HashRouter. Three screens are in this reference.
+(function () {
+  var map = { '#/': 'overview', '#/exits': 'exits', '#/project/705410': 'project' };
+  function show() {
+    var name = map[location.hash] || 'overview';
+    document.querySelectorAll('.screen').forEach(function (s) {
+      s.classList.toggle('on', s.id === 's-' + name);
+    });
+    document.querySelectorAll('.rail a').forEach(function (a) {
+      if (a.dataset.screen === name) { a.setAttribute('aria-current', 'page'); }
+      else { a.removeAttribute('aria-current'); }
+    });
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+})();
+</script>
+</body>
+</html>
