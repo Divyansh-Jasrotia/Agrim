@@ -130,15 +130,21 @@ A scanning laser over an evidence document reads as theatre. The evidence is the
 
 Execution order, not numeric order. Today is Wed 9 Sept; the round is Sat 12 Sept.
 
+**Status as of 9 Sept, verified.** Tasks 1-20 are all complete and merged to `main` (PR #2, commit `3802930`). The relay plan shows 124 of 126 checkboxes ticked; the two open items are human tasks - fill the official PPTX template by hand, and rehearse on a cold machine. Tasks 18, 19 and 20 landed on the evening of 8 Sept, so **the deck already exists** and `tools/slides.py` renders `deck/slides.md` from `deck/numbers.json` automatically.
+
+That last fact removes the original reason for a hard numbers freeze: the deck is generated, not hand-written, so a numbers change re-renders rather than invalidating hours of work. The freeze still applies to the PPTX that gets filled in by hand.
+
 | When | Tasks | Gate |
 |---|---|---|
-| Wed 9 | 21 → 23 → 25 | Full run, `validate.py` + `pytest -q` pasted, `deck/numbers.json` regenerated. **Numbers frozen Wednesday night.** |
-| Wed 9 evening | 24 | Checklist written; hand `docs/FRONTEND-BRIEF.md` to the external tool the moment Task 22 Step 1 lands |
+| Wed 9 | 21 -> 23 -> 25 | Full run, `validate.py` + `pytest -q` pasted, `deck/numbers.json` regenerated, `python tools/slides.py` re-run |
+| Wed 9 evening | 24 | Checklist written; hand the brief, the mockup and the JSON to the external frontend tool |
 | Thu 10 | 22 | Every route passes the checklist; no external URL in `web/dist` |
-| Thu 10 evening | Existing Task 20 — deck and pitch against frozen numbers | Six slides exported to PDF once |
-| Fri 11 | Existing Tasks 18, 19 if green; cold-machine rehearsal twice | Bug fixes only |
+| Thu 10 evening | Re-run `tools/slides.py`, fill the official PPTX by hand, export to PDF once | Relay plan Task 20 Step 3 |
+| Fri 11 | Cold-machine rehearsal twice, Wi-Fi off, fresh clone, `RUN_DEMO.bat`. Three timed pitch runs. | Relay plan Task 20 Step 5. Bug fixes only |
 
-**Cut line.** Wednesday 22:00: if Task 23 or 25 is not producing a number you would defend to a MoSPI officer, drop it and make it a "next step" slide — neither may delay the numbers freeze. Thursday 22:00, in order: Task 19 briefs → Task 18's India map → Task 22's CSV-export affordance. **Never cut:** Task 21, Task 22's Project evidence block, the deck, the rehearsal.
+**Cut line.** Wednesday 22:00: if Task 23 or 25 is not producing a number you would defend to a MoSPI officer, drop it and make it a "next step" line on the slide. Thursday 22:00: Task 22's CSV-export affordance. **Never cut:** Task 21, Task 22's Project evidence block, the PPTX, the rehearsal.
+
+**Task 22 now carries the only real risk.** Tasks 18-20 already shipped a working, committed `web/dist` that runs offline. Replacing `web/src` with external output can regress a demo that currently works. Do Task 22 on its own branch, keep the working build recoverable with `git checkout main -- web/dist`, and do not merge until all six acceptance checks in Step 4 pass.
 
 ---
 
@@ -152,6 +158,7 @@ Execution order, not numeric order. Today is Wed 9 Sept; the round is Sat 12 Sep
 - Modify: `contracts/findings.schema.json`
 - Modify: `contracts/CHANGELOG.md`
 - Modify: `tests/findings/test_contradictions.py` (two existing assertions change; see Step 6)
+- Modify: `tools/slides.py` (the deck template quotes the wrong number; see Step 11b)
 - Test: `tests/findings/test_field_audit_whipple.py`
 
 **Interfaces:**
@@ -429,6 +436,32 @@ In `deck_numbers`, add after the existing `contradictions_total` entry:
             "contradictions_arithmetic": h["contradictions_arithmetic"], "statistical_anomalies": h["statistical_anomalies"],
 ```
 
+- [ ] **Step 11b: Fix the deck slide, which currently contradicts itself**
+
+`tools/slides.py` renders `deck/slides.md` from `deck/numbers.json`. Its slide 2 template reads:
+
+> we found `{contradictions_total}` arithmetic impossibilities in the Ministry's own published numbers
+
+and later on the same slide:
+
+> `{count_STAT_ANOMALY}` statistical outliers from an isolation forest - model output, shown beside the rule-based ledger and never counted into its total
+
+`contradictions_total` is 1,101 and **does** include the 134 anomalies, so the slide asserts something the number disproves. This is on a judge-facing slide.
+
+Two changes to the `TEMPLATE` string:
+
+1. Replace `{contradictions_total}` with `{contradictions_arithmetic}` in the slide-2 line.
+2. Replace the words "arithmetic impossibilities" with "contradictions", per the wording decision in Global Constraints. Search the whole file - the phrase may appear more than once.
+
+Then re-render and confirm the slide is self-consistent:
+
+```bash
+python tools/slides.py
+pytest tests/tools/test_slides.py -q
+grep -n "impossibilit" deck/slides.md tools/slides.py deck/pitch.md
+```
+Expected: `slides.py` writes the file, the test passes, and the grep returns **no output**. If `test_slides.py` reports a leftover `{...}` placeholder, the key is missing from `deck/numbers.json` - add it in `deck_numbers()` in Step 11, never by typing the number into the slide.
+
 - [ ] **Step 12: Run the full pipeline and both gates**
 
 Run:
@@ -442,7 +475,7 @@ Expected: the run prints a project count and a contradictions count; `validate.p
 - [ ] **Step 13: Commit**
 
 ```bash
-git add findings/collapse.py findings/field_audit.py findings/run.py contracts/findings.schema.json contracts/CHANGELOG.md tests/findings/test_collapse.py tests/findings/test_field_audit_whipple.py web/public/data deck/numbers.json docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
+git add findings/collapse.py findings/field_audit.py findings/run.py tools/slides.py contracts/findings.schema.json contracts/CHANGELOG.md tests/findings/test_collapse.py tests/findings/test_field_audit_whipple.py web/public/data deck/numbers.json deck/slides.md docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
 git commit -m "task 21: split the contradictions headline, collapse repeat flags, denominators, Whipple index"
 ```
 
