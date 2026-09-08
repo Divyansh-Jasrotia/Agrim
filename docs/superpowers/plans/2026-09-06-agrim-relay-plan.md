@@ -4569,7 +4569,7 @@ gh pr create --title "Task 16: ledger + project" --body "<paste outputs>"
 - Consumes: `findings.exits|early_warning|field_audit|by_sector|by_state`, `models.m1_slip|m2_progress|m3_drivers`, `projects[].ml`.
 - Produces: the five routes.
 
-- [ ] **Step 1: Exits**
+- [x] **Step 1: Exits**
 
 `web/src/screens/Exits.tsx`:
 ```tsx
@@ -4620,7 +4620,7 @@ export function Exits() {
 }
 ```
 
-- [ ] **Step 2: Early Warning**
+- [x] **Step 2: Early Warning**
 
 `web/src/screens/Warning.tsx`:
 ```tsx
@@ -4667,7 +4667,7 @@ export function Warning() {
 }
 ```
 
-- [ ] **Step 3: Field Audit**
+- [x] **Step 3: Field Audit**
 
 `web/src/screens/Fields.tsx`:
 ```tsx
@@ -4707,7 +4707,7 @@ export function Fields() {
 }
 ```
 
-- [ ] **Step 4: Predictions**
+- [x] **Step 4: Predictions**
 
 `web/src/screens/Predict.tsx`:
 ```tsx
@@ -4782,7 +4782,7 @@ export function Predict() {
 }
 ```
 
-- [ ] **Step 5: Drivers & Benchmark**
+- [x] **Step 5: Drivers & Benchmark**
 
 `web/src/screens/Drivers.tsx`:
 ```tsx
@@ -4850,7 +4850,7 @@ export function Drivers() {
 }
 ```
 
-- [ ] **Step 6: Wire the routes, build, commit**
+- [x] **Step 6: Wire the routes, build, commit**
 
 In `web/src/App.tsx` import `Exits`, `Warning`, `Fields`, `Predict`, `Drivers` from `./screens/...` and replace the five placeholder routes.
 
