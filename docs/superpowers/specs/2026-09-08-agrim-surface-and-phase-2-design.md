@@ -91,13 +91,26 @@ The Standing Committee on Finance recorded 1,105 of 1,702 projects delayed (65%)
 
 ### 3.5 The photo and complaint layer is out of scope for the build
 
-Rejected for Window 1 and for the Window 2 build, in its collect-photos form, on three grounds:
+Rejected for Window 1 and for the Window 2 build, in its collect-photos form, on four grounds:
 
 1. **Not novel.** Bhuvan (NRSC/ISRO) already runs geo-tagged photo capture for MGNREGA at three construction stages, with block-level GIS supervisor validation and public publication, past one crore assets — plus PMAY-G's AwaasApp, which gates instalment release on foundation / lintel / roof photographs. **[from research]**
+
+   Two closer precedents kill the "we would bind citizen evidence to the official works record" claim specifically. **Janmanrega** (MoRD with NIC and NRSC, launched 19 June 2017) already lets citizens locate any of roughly 1.78 crore geo-tagged MGNREGA assets on the Bhuvan map, with their two official photographs, and file feedback against that specific asset. **Meri Sadak** routes PMGSY citizen photo feedback into OMMAS — the official PMGSY works MIS — where State Quality Coordinators must dispose of it within 7 to 60 days. Integration with the works database was solved years ago; **uptake and consequence were not.** **[from research]**
+
 2. **Not a differentiator here.** A rival SIH26103 prototype already ships geo-tagged photographs and a citizen auditor role. **[from research]**
+
+   Worse: **SIH 2025 problem statement SIH25031 (Government of Jharkhand) was "Crowdsourced Civic Issue Reporting and Resolution System"** — submit reports with photos, location data and descriptions, plus a government dashboard to manage and resolve them. The pattern has already been an SIH problem statement in its own right, and SIH 2026 carries adjacent crowdsourcing statements. Judges have watched this build repeatedly. **[from research]**
 3. **Documented to fail, from primary audit text.** CAG, Audit Report (Local Bodies) for the year ended March 2017, Chapter II, on Bhuvan geo-tagged photographs: in one gram panchayat "same photograph was uploaded for two different works", and in three others "the photograph uploaded in the portal was different from the actual worksite", concluding "This indicated that the MIS data was unreliable." Separately, photographs were missing on 4.33 lakh job cards across seven states, and the Ministry of Rural Development added manual physical verification behind NMMS app photos in July 2025 after documented misuse. **[from research, quoted verbatim from the CAG PDF by the research agent]**
 
-**The surviving form, for Window 2 as a concept slide only:** photo *integrity* rather than photo collection — duplicate-image detection, EXIF and geo cross-validation, and reconciliation of existing scheme photo evidence against reported physical progress. No deployed system links field photographs back to financial and physical progress reconciliation. This is a slide, not a build, and it carries the CAG finding as its justification.
+4. **The literature says the technology is not the binding constraint.** A review of 23 ICT citizen-voice platforms across the global South found they raised government *capacity* to respond but had yet to influence *willingness* to do so — what matters is institutional design, not technological design. Every system in this section fails at the same joint: **the report carries no consequence.** **[from research]**
+
+**The surviving form, for Window 2 as a concept slide only.** Not photo collection — photo *integrity* and *discrepancy*:
+
+- **The discrepancy record.** Citizen or scheme photo evidence at date *t* against the department's own claimed physical progress at *t*, surfaced as "N of M works have field evidence contradicting the reported milestone." The complaint systems and the works MIS are separate stores everywhere, so nobody computes this. A second research thread reached this conclusion independently of the first: it is the one genuinely open lane. **[from research]**
+- **Attack the closure side, not the intake side.** The documented, repeated fraud is *fake resolution photos* — Swachhata complaints closed with unrelated images, and a Karnataka RDPR circular ordering daily cross-checks against fake NMMS photographs under threat of disciplinary action. Perceptual-hash detection of recycled and duplicated closure photos is the unbuilt artifact, not another upload form. **[from research]**
+- **Make silence visible.** Report density per ward normalised by population, because the elite-capture finding says zero reports means excluded, not fine.
+
+This is a slide, not a build. It carries the CAG finding as its justification, and it must **state the prior art explicitly** — Janmanrega, Meri Sadak, Swachhata and SIH25031 by name. Claiming novelty on citizen photo reporting to a jury that may include officials who ran those systems costs more than naming the narrow delta.
 
 ---
 
@@ -225,7 +238,7 @@ Specced separately once Window 1 is committed. Four candidates, ranked:
 1. **The six-slide national PDF**, positioned against PAIMANA's own published roadmap: the incumbent has scheduled AI-driven forecasting and ML overrun prediction and has not shipped them.
 2. **AGRIM's panel as an MCP server**, mirroring MoSPI's own open-sourced eSankhyiki MCP server (MIT, February 2026). **[from research]** The most on-brand available form of outcome (h) — the sponsor has already committed to AI-ready structured access to its statistics — and no rival repository inspected does it.
 3. **The parsed panel committed as a citable open dataset.** No published academic panel analysis of this data was found, so the dataset is itself a contribution. **[unverified — absence of evidence, not evidence of absence]**
-4. **Photo integrity as a concept slide**, per §3.5: duplicate detection, EXIF and geo cross-validation, and reconciliation of existing scheme photo evidence against reported physical progress, justified by the CAG finding.
+4. **Photo integrity as a concept slide**, per §3.5: the discrepancy record (field evidence against claimed progress), recycled-closure-photo detection, and report-density-per-ward to make silence visible. Justified by the CAG finding, and it must name Janmanrega, Meri Sadak, Swachhata and SIH25031 as prior art rather than claim novelty.
 
 ---
 
