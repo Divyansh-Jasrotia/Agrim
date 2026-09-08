@@ -21,7 +21,7 @@ export function IndiaMap() {
     const chart = echarts.init(ref.current);
     const max = Math.max(1, ...data.map((d) => d.value));
     chart.setOption({
-      tooltip: { formatter: (p: { name: string; data?: { value: number; projects: number } }) => `${p.name}<br/>${p.data?.value ?? 0} flagged of ${p.data?.projects ?? 0} projects` },
+      tooltip: { formatter: (p: { name: string; data?: { value: number; projects: number } }) => p.data ? `${p.name}<br/>${p.data.value} flagged of ${p.data.projects} projects` : `${p.name} — no matching data in this report` },
       visualMap: { min: 0, max, left: 0, bottom: 0, text: ["flagged", ""], inRange: { color: ["#EAF0F6", "#1F5FA8", "#B42318"] }, calculable: false },
       series: [{ type: "map", map: "india", roam: false, data, itemStyle: { borderColor: "#FFFFFF" }, emphasis: { label: { show: true, fontSize: 10 } } }],
     });
