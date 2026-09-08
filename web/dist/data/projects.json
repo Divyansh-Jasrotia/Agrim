@@ -4854,7 +4854,7 @@
    {
     "after": 92.0,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 1226598954587786 months; its own stated date 2026-12 leaves 5.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -4930,7 +4930,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 1226598954587786 months; its own stated date 2026-12 leaves 5."
+    "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met."
    ],
    "score": 40
   },
@@ -5901,7 +5901,7 @@
    {
     "after": 90.0,
     "before": "2026-10",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 1833126005344383 months; its own stated date 2026-10 leaves 3.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-10 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -5979,7 +5979,7 @@
    "reasons": [
     "Revised completion date changed from 2026-03 to 2026-08 between 2025-12 and 2026-04.",
     "Revised completion date changed from 2026-08 to 2026-10 between 2026-04 and 2026-05.",
-    "At its own reported pace (0.00 pt/month), this project needs 1833126005344383 months; its own stated date 2026-10 leaves 3."
+    "No reported progress over 7 months; at this pace the stated date 2026-10 cannot be met."
    ],
    "score": 60
   },
@@ -14437,7 +14437,7 @@
    {
     "after": 50.0,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 65301470544833440 months; its own stated date 2026-12 leaves 6.",
+    "detail": "No reported progress over 6 months; at this pace the stated date 2026-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -14469,7 +14469,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 65301470544833440 months; its own stated date 2026-12 leaves 6."
+    "No reported progress over 6 months; at this pace the stated date 2026-12 cannot be met."
    ],
    "score": 40
   },
@@ -26658,7 +26658,7 @@
    {
     "after": 93.0,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 1574381183792302 months; its own stated date 2026-12 leaves 6.",
+    "detail": "No reported progress over 6 months; at this pace the stated date 2026-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -26690,7 +26690,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 1574381183792302 months; its own stated date 2026-12 leaves 6."
+    "No reported progress over 6 months; at this pace the stated date 2026-12 cannot be met."
    ],
    "score": 40
   },
@@ -30256,7 +30256,7 @@
    {
     "after": 5.0,
     "before": "2028-02",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 947811807819221248 months; its own stated date 2028-02 leaves 19.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2028-02 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -30333,7 +30333,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2028-01 to 2028-02 between 2025-12 and 2026-04.",
-    "At its own reported pace (0.00 pt/month), this project needs 947811807819221248 months; its own stated date 2028-02 leaves 19."
+    "No reported progress over 7 months; at this pace the stated date 2028-02 cannot be met."
    ],
    "score": 50
   },
@@ -47721,7 +47721,7 @@
    {
     "after": 20.0,
     "before": "2027-03",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 199539327961941312 months; its own stated date 2027-03 leaves 8.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2027-03 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -47797,7 +47797,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 199539327961941312 months; its own stated date 2027-03 leaves 8."
+    "No reported progress over 7 months; at this pace the stated date 2027-03 cannot be met."
    ],
    "score": 40
   },
@@ -53947,7 +53947,7 @@
    {
     "after": 97.0,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 667225545800878 months; its own stated date 2026-12 leaves 5.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -54024,7 +54024,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2025-12 to 2026-12 between 2025-12 and 2026-04.",
-    "At its own reported pace (0.00 pt/month), this project needs 667225545800878 months; its own stated date 2026-12 leaves 5."
+    "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met."
    ],
    "score": 50
   },
@@ -54802,7 +54802,7 @@
    {
     "after": 97.0,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 667225545800878 months; its own stated date 2026-12 leaves 5.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -54898,7 +54898,7 @@
     "Revised completion date changed from 2025-12 to 2026-12 between 2026-04 and 2026-05.",
     "Cumulative expenditure ₹261.82 cr exceeds the revised cost ₹230.06 cr in 2026-05.",
     "Cumulative expenditure ₹261.82 cr exceeds the revised cost ₹230.06 cr in 2026-06.",
-    "At its own reported pace (0.00 pt/month), this project needs 667225545800878 months; its own stated date 2026-12 leaves 5.",
+    "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
     "Cumulative expenditure ₹261.82 cr exceeds the revised cost ₹230.06 cr in 2026-07."
    ],
    "score": 100
@@ -55045,7 +55045,7 @@
    {
     "after": 95.0,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 957910679278520 months; its own stated date 2026-12 leaves 5.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -55141,7 +55141,7 @@
     "Revised completion date changed from 2025-12 to 2026-12 between 2026-04 and 2026-05.",
     "Cumulative expenditure ₹346.46 cr exceeds the revised cost ₹305.19 cr in 2026-05.",
     "Cumulative expenditure ₹346.46 cr exceeds the revised cost ₹305.19 cr in 2026-06.",
-    "At its own reported pace (0.00 pt/month), this project needs 957910679278520 months; its own stated date 2026-12 leaves 5.",
+    "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
     "Cumulative expenditure ₹346.46 cr exceeds the revised cost ₹305.19 cr in 2026-07."
    ],
    "score": 100
@@ -55678,7 +55678,7 @@
    {
     "after": 89.0,
     "before": "2026-09",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 2306997632146976 months; its own stated date 2026-09 leaves 2.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -55754,7 +55754,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 2306997632146976 months; its own stated date 2026-09 leaves 2."
+    "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met."
    ],
    "score": 40
   },
@@ -69679,7 +69679,7 @@
    {
     "after": 8.0,
     "before": "2028-03",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 500180044977430400 months; its own stated date 2028-03 leaves 21.",
+    "detail": "No reported progress over 6 months; at this pace the stated date 2028-03 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -69711,7 +69711,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 500180044977430400 months; its own stated date 2028-03 leaves 21."
+    "No reported progress over 6 months; at this pace the stated date 2028-03 cannot be met."
    ],
    "score": 40
   },
@@ -89831,7 +89831,7 @@
    {
     "after": 6.0,
     "before": "2028-02",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 226097350131884064 months; its own stated date 2028-02 leaves 19.",
+    "detail": "No reported progress over 2 months; at this pace the stated date 2028-02 cannot be met.",
     "from_snapshot": "2026-05",
     "severity": "critical",
     "sources": [
@@ -89899,7 +89899,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 226097350131884064 months; its own stated date 2028-02 leaves 19."
+    "No reported progress over 2 months; at this pace the stated date 2028-02 cannot be met."
    ],
    "score": 40
   },
@@ -92066,7 +92066,7 @@
    {
     "after": 60.0,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 104067286563096576 months; its own stated date 2026-12 leaves 5.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -92144,7 +92144,7 @@
    "reasons": [
     "Revised completion date changed from none to 2026-06 between 2025-12 and 2026-04.",
     "Revised completion date changed from 2026-06 to 2026-12 between 2026-05 and 2026-06.",
-    "At its own reported pace (0.00 pt/month), this project needs 104067286563096576 months; its own stated date 2026-12 leaves 5."
+    "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met."
    ],
    "score": 60
   },
@@ -93890,7 +93890,7 @@
    {
     "after": 96.0,
     "before": "2026-09",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 1303966855707291 months; its own stated date 2026-09 leaves 2.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -93969,7 +93969,7 @@
     "Revised completion date changed from none to 2026-05 between 2025-12 and 2026-04.",
     "Revised completion date changed from 2026-05 to 2026-08 between 2026-04 and 2026-05.",
     "Revised completion date changed from 2026-08 to 2026-09 between 2026-05 and 2026-06.",
-    "At its own reported pace (0.00 pt/month), this project needs 1303966855707291 months; its own stated date 2026-09 leaves 2."
+    "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met."
    ],
    "score": 70
   },
@@ -247269,7 +247269,7 @@
    {
     "after": 94.25,
     "before": "2026-07",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 2368883218477101 months; its own stated date 2026-07 leaves 1.",
+    "detail": "No reported progress over 2 months; at this pace the stated date 2026-07 cannot be met.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -247297,7 +247297,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 2368883218477101 months; its own stated date 2026-07 leaves 1."
+    "No reported progress over 2 months; at this pace the stated date 2026-07 cannot be met."
    ],
    "score": 40
   },
@@ -264488,7 +264488,7 @@
    {
     "after": 82.0,
     "before": "2026-08",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 12670607489106828 months; its own stated date 2026-08 leaves 1.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-08 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -264562,7 +264562,7 @@
    "reasons": [
     "Revised completion date changed from 2026-03 to 2026-06 between 2025-12 and 2026-04.",
     "Revised completion date changed from 2026-06 to 2026-08 between 2026-04 and 2026-06.",
-    "At its own reported pace (0.00 pt/month), this project needs 12670607489106828 months; its own stated date 2026-08 leaves 1."
+    "No reported progress over 7 months; at this pace the stated date 2026-08 cannot be met."
    ],
    "score": 60
   },
@@ -264787,7 +264787,7 @@
    {
     "after": 88.0,
     "before": "2026-09",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 4608638140495360 months; its own stated date 2026-09 leaves 2.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -264860,7 +264860,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2026-03 to 2026-09 between 2025-12 and 2026-04.",
-    "At its own reported pace (0.00 pt/month), this project needs 4608638140495360 months; its own stated date 2026-09 leaves 2."
+    "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met."
    ],
    "score": 50
   },
@@ -266145,7 +266145,7 @@
    {
     "after": 75.0,
     "before": "2026-08",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 881123338737831296 months; its own stated date 2026-08 leaves 1.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-08 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -266219,7 +266219,7 @@
    "reasons": [
     "Revised completion date changed from 2026-03 to 2026-06 between 2025-12 and 2026-04.",
     "Revised completion date changed from 2026-06 to 2026-08 between 2026-04 and 2026-06.",
-    "At its own reported pace (0.00 pt/month), this project needs 881123338737831296 months; its own stated date 2026-08 leaves 1."
+    "No reported progress over 7 months; at this pace the stated date 2026-08 cannot be met."
    ],
    "score": 60
   },
@@ -267107,7 +267107,7 @@
    {
     "after": 99.0,
     "before": "2026-08",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 658358997267173 months; its own stated date 2026-08 leaves 1.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-08 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -267181,7 +267181,7 @@
    "reasons": [
     "Revised completion date changed from 2026-02 to 2026-06 between 2025-12 and 2026-04.",
     "Revised completion date changed from 2026-06 to 2026-08 between 2026-04 and 2026-06.",
-    "At its own reported pace (0.00 pt/month), this project needs 658358997267173 months; its own stated date 2026-08 leaves 1."
+    "No reported progress over 7 months; at this pace the stated date 2026-08 cannot be met."
    ],
    "score": 60
   },
@@ -271416,7 +271416,7 @@
    {
     "after": 2.04,
     "before": "2027-03",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 1050045755481531648 months; its own stated date 2027-03 leaves 9.",
+    "detail": "No reported progress over 2 months; at this pace the stated date 2027-03 cannot be met.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -271444,7 +271444,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 1050045755481531648 months; its own stated date 2027-03 leaves 9."
+    "No reported progress over 2 months; at this pace the stated date 2027-03 cannot be met."
    ],
    "score": 40
   },
@@ -277573,7 +277573,7 @@
    {
     "after": 88.0,
     "before": "2026-10",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 182318007354616288 months; its own stated date 2026-10 leaves 3.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-10 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -277650,7 +277650,7 @@
    "band": "amber",
    "reasons": [
     "Revised cost changed from ₹1,214.69 cr to ₹1,194.59 cr between 2026-06 and 2026-07.",
-    "At its own reported pace (0.00 pt/month), this project needs 182318007354616288 months; its own stated date 2026-10 leaves 3."
+    "No reported progress over 7 months; at this pace the stated date 2026-10 cannot be met."
    ],
    "score": 45
   },
@@ -285460,7 +285460,7 @@
    {
     "after": 51.0,
     "before": "2029-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 131037887192452128 months; its own stated date 2029-12 leaves 42.",
+    "detail": "No reported progress over 6 months; at this pace the stated date 2029-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -285492,7 +285492,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 131037887192452128 months; its own stated date 2029-12 leaves 42."
+    "No reported progress over 6 months; at this pace the stated date 2029-12 cannot be met."
    ],
    "score": 40
   },
@@ -291170,7 +291170,7 @@
    {
     "after": 17.0,
     "before": "2030-12",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 293538080422846208 months; its own stated date 2030-12 leaves 54.",
+    "detail": "No reported progress over 6 months; at this pace the stated date 2030-12 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -291202,7 +291202,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.00 pt/month), this project needs 293538080422846208 months; its own stated date 2030-12 leaves 54."
+    "No reported progress over 6 months; at this pace the stated date 2030-12 cannot be met."
    ],
    "score": 40
   },
@@ -299614,7 +299614,7 @@
    {
     "after": 2.0,
     "before": "2033-09",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 2504318851278280704 months; its own stated date 2033-09 leaves 86.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2033-09 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -299692,7 +299692,7 @@
    "reasons": [
     "Cumulative expenditure falls from ₹8.89 cr in 2026-04 to ₹8.87 cr in 2026-05; a cumulative field cannot decrease.",
     "Revised completion date changed from 2033-09 to none between 2026-06 and 2026-07.",
-    "At its own reported pace (0.00 pt/month), this project needs 2504318851278280704 months; its own stated date 2033-09 leaves 86."
+    "No reported progress over 7 months; at this pace the stated date 2033-09 cannot be met."
    ],
    "score": 70
   },
@@ -307987,7 +307987,7 @@
    {
     "after": 98.0,
     "before": "2026-09",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 385855233652308 months; its own stated date 2026-09 leaves 2.",
+    "detail": "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -308064,7 +308064,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2026-06 to 2026-09 between 2026-06 and 2026-07.",
-    "At its own reported pace (0.00 pt/month), this project needs 385855233652308 months; its own stated date 2026-09 leaves 2."
+    "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met."
    ],
    "score": 50
   },

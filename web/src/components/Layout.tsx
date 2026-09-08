@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useBundle } from "../data/store";
+import { ExportButton } from "./ExportButton";
 
 const GROUPS: { title: string; items: [string, string][] }[] = [
   { title: "Audit", items: [["/", "Overview"], ["/ledger", "Contradiction Ledger"], ["/exits", "Exit Ledger"], ["/fields", "Field Audit"]] },
@@ -40,7 +41,7 @@ export function Layout() {
             </span>
           )}
           <div className="flex-1" />
-          <div id="header-actions" className="flex items-center gap-2" />
+          {bundle && <ExportButton />}
         </header>
         <main className="mx-auto w-full max-w-[1440px] flex-1 p-4">
           {error && <div className="rounded border border-critical bg-surface p-4 text-critical">Data failed to load: {error}</div>}
