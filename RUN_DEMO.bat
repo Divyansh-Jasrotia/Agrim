@@ -5,7 +5,18 @@ if not exist web\dist\index.html (
   pause
   exit /b 1
 )
-start "AGRIM demo server - close this window or press Ctrl+C to stop" python -m http.server 8080 -d web\dist
+REM Fail fast and say why, instead of starting a server that cannot come up and then
+REM waiting out the 30-second poll before admitting it.
+python --version >nul 2>&1
+if errorlevel 1 (
+  echo Python was not found on PATH. This script serves web\dist with Python's http.server.
+  echo Install Python 3, or serve web\dist with any other static file server.
+  pause
+  exit /b 1
+)
+REM -b 127.0.0.1 binds to loopback only. Without it http.server listens on every interface,
+REM which puts the demo on the venue wifi for anyone on the same network.
+start "AGRIM demo server - close this window or press Ctrl+C to stop" python -m http.server 8080 -b 127.0.0.1 -d web\dist
 echo Waiting for the server to start...
 set tries=0
 :wait

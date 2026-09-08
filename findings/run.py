@@ -73,6 +73,12 @@ def build_findings(panel, projects, flags, ex, ew, aggregates, models):
     cost_rev = sum(r["cost_revised_cr"] or 0 for r in latest_rows)
     overrun = sum((r["cost_revised_cr"] - r["cost_original_cr"]) for r in latest_rows if r["cost_revised_cr"] is not None and r["cost_original_cr"] is not None)
     c_rows = [f for f in flags if f["type"] in ARITH or f["type"] == "STAT_ANOMALY"]
+    # The ledger shows both, but the headline counts only the rule-based arithmetic
+    # contradictions. STAT_ANOMALY rows come from the M4 isolation forest; counting them
+    # as "arithmetic impossibilities" would blend F4-style rule output with model output,
+    # which is exactly what this project says it never does. The model count stays
+    # visible and separate as contradictions.by_type[STAT_ANOMALY] — C2.
+    rule_rows = [f for f in c_rows if f["type"] in ARITH]
     by = {p["project_code"]: p for p in projects}
     contradiction_rows = [{"project_code": f["project_code"], "project_name": by[f["project_code"]]["project_name"], **_strip(f)} for f in c_rows]
     by_type = Counter(f["type"] for f in c_rows)
@@ -101,7 +107,7 @@ def build_findings(panel, projects, flags, ex, ew, aggregates, models):
     findings = {
         "meta": {"contract_version": CONTRACT_VERSION, "generated_at": generated_at(), "snapshots": snapshots_present(panel), "coverage": coverage,
                  "headline": {"projects_latest": len(latest_rows), "cost_revised_total_cr": round(cost_rev, 2), "overrun_total_cr": round(overrun, 2),
-                              "contradictions_total": len(c_rows), "exits_total": sum(p["exited"] for p in ex["pairs"]),
+                              "contradictions_total": len(rule_rows), "exits_total": sum(p["exited"] for p in ex["pairs"]),
                               "unreachable_total": sum(1 for f in flags if f["type"] == "DOC_UNREACHABLE"), "watchlist_size": len(watch)}},
         "contradictions": {"by_type": [{"type": t, "count": n} for t, n in sorted(by_type.items())], "rows": contradiction_rows},
         "exits": {"pairs": ex["pairs"], "rows": ex["rows"]},
@@ -138,7 +144,7 @@ def deck_numbers(findings, models):
     h = findings["meta"]["headline"]
     nums = {"projects_latest": h["projects_latest"], "cost_revised_total_cr": h["cost_revised_total_cr"], "overrun_total_cr": h["overrun_total_cr"],
             "contradictions_total": h["contradictions_total"], "exits_total": h["exits_total"], "unreachable_total": h["unreachable_total"],
-            "latest_snapshot": findings["meta"]["snapshots"][-1]}
+            "latest_snapshot": findings["meta"]["snapshots"][-1], "first_snapshot": findings["meta"]["snapshots"][0]}
     for c in findings["meta"]["coverage"]:
         if c["pct"] is not None:
             nums[f"coverage_pct_{c['snapshot']}"] = c["pct"]
@@ -179,7 +185,7 @@ def main(argv=None):
     if a.deck:
         write_json(a.deck, deck_numbers(findings, models))
     h = findings["meta"]["headline"]
-    print(f"wrote {out}: {len(projects)} projects, {h['contradictions_total']} contradictions, {h['exits_total']} exits, {h['unreachable_total']} unreachable")
+    print(f"wrote {out}: {len(projects)} projects, {h['contradictions_total']} rule-based contradictions, {h['exits_total']} exits, {h['unreachable_total']} unreachable")
     return 0
 
 

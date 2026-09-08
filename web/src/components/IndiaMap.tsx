@@ -2,9 +2,9 @@ import * as echarts from "echarts";
 import { useEffect, useRef } from "react";
 import geo from "../assets/india_states.geo.json";
 import { useBundle } from "../data/store";
+import { num, pct } from "../lib/format";
+import { mapCoverage, mapNames, norm } from "../lib/statemap";
 
-const NAME_PROP = "ST_NM";
-const norm = (s: string) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z]/g, "");
 let registered = false;
 
 export function IndiaMap() {
@@ -12,12 +12,8 @@ export function IndiaMap() {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!ref.current || !bundle) return;
-    const g = geo as unknown as { features: { properties: Record<string, string> }[] };
     if (!registered) { echarts.registerMap("india", geo as never); registered = true; }
-    const names = new Map(g.features.map((f) => [norm(f.properties[NAME_PROP]), f.properties[NAME_PROP]]));
-    const unmatched: string[] = [];
-    const data = bundle.findings.by_state.map((s) => { const n = names.get(norm(s.key)); if (!n) unmatched.push(s.key); return { name: n ?? s.key, value: s.flagged, projects: s.projects }; });
-    if (unmatched.length) console.warn("states not matched to map:", unmatched);
+    const data = bundle.findings.by_state.map((s) => { const n = mapNames.get(norm(s.key)); return { name: n ?? s.key, value: s.flagged, projects: s.projects }; });
     const chart = echarts.init(ref.current);
     const max = Math.max(1, ...data.map((d) => d.value));
     chart.setOption({
@@ -29,5 +25,19 @@ export function IndiaMap() {
     window.addEventListener("resize", onResize);
     return () => { window.removeEventListener("resize", onResize); chart.dispose(); };
   }, [bundle]);
-  return <div ref={ref} style={{ height: "420px" }} />;
+  // A material share of the panel has no polygon to sit on. A viewer looking at the map has to be
+  // able to see that from the map, not from a console warning they will never open.
+  const cov = bundle ? mapCoverage(bundle.findings.by_state) : null;
+  return (
+    <>
+      <div ref={ref} style={{ height: "420px" }} />
+      {cov && cov.offMapProjects > 0 && (
+        <p className="mt-1 text-xs text-muted">
+          Not drawn on this map: {num(cov.offMapProjects)} of {num(cov.projects)} projects ({pct(100 * cov.offMapShare)}), including {num(cov.offMapFlagged)} that carry a flag.
+          {" "}{num(cov.aggregateProjects)} of them are reported against several states at once, or as PAN India or Offshore, and have no single polygon;
+          {" "}{num(cov.namedProjects)} sit under {num(cov.namedKeys.length)} territory names this map asset does not carry. Their numbers are in every table on the other screens.
+        </p>
+      )}
+    </>
+  );
 }

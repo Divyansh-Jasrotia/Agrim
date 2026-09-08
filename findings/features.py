@@ -38,6 +38,17 @@ def _upto(rs, t0):
 
 
 def _ratio(rs_upto):
+    # BUG (known, deliberately NOT fixed here): this `v <= 0` guard is the same denormal
+    # hole that early_warning.assess() closed with ZERO_VELOCITY_EPS. np.polyfit on flat
+    # progress returns ~1e-16 rather than exact 0.0, so that residue passes `v <= 0` and
+    # the set-B feature `unreachable_ratio` can be ~1e17 where early_warning reports None.
+    # The two therefore disagree on the same projects, by design of this note and not by
+    # oversight. Fixing it changes the feature matrix and so re-fits M1/M2/M3/M4 and moves
+    # every number in models.json and model_card.json; that is out of scope for a
+    # presentation fix and is held for a change that can re-baseline the models properly.
+    # Do not "tidy" this into ZERO_VELOCITY_EPS without regenerating and re-reviewing the
+    # model outputs. HistGradientBoosting splits on rank, so a huge finite value behaves
+    # like a large-value bucket; the logistic set-B model is the one this actually distorts.
     last = rs_upto[-1]
     prog, doc = last["physical_progress_pct"], doc_current(last)
     v = velocity(rs_upto)

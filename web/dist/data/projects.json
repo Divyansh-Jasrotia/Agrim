@@ -2105,7 +2105,7 @@
    {
     "after": 0.5,
     "before": "2030-03",
-    "detail": "At its own reported pace (0.07 pt/month), this project needs 1467 months; its own stated date 2030-03 leaves 44.",
+    "detail": "At its own reported pace (0.06781 pt/month) the stated date 2030-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -2184,7 +2184,7 @@
     "Revised completion date changed from 2027-04 to 2030-03 between 2026-04 and 2026-05.",
     "Physical progress falls from 0.3% in 2026-04 to 0% in 2026-05.",
     "Physical progress is 0% while cumulative expenditure is ₹0.94 cr in 2026-05.",
-    "At its own reported pace (0.07 pt/month), this project needs 1467 months; its own stated date 2030-03 leaves 44."
+    "At its own reported pace (0.06781 pt/month) the stated date 2030-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 70
   },
@@ -6392,7 +6392,7 @@
    {
     "after": 16.77,
     "before": "2032-03",
-    "detail": "At its own reported pace (0.12 pt/month), this project needs 717 months; its own stated date 2032-03 leaves 68.",
+    "detail": "At its own reported pace (0.116 pt/month) the stated date 2032-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -6487,7 +6487,7 @@
   "risk": {
    "band": "red",
    "reasons": [
-    "At its own reported pace (0.12 pt/month), this project needs 717 months; its own stated date 2032-03 leaves 68.",
+    "At its own reported pace (0.116 pt/month) the stated date 2032-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Cumulative expenditure falls from ₹17.40 cr in 2026-06 to ₹17.03 cr in 2026-07; a cumulative field cannot decrease."
    ],
    "score": 60
@@ -7295,7 +7295,7 @@
    {
     "after": 75.15,
     "before": "2027-03",
-    "detail": "At its own reported pace (0.02 pt/month), this project needs 1099 months; its own stated date 2027-03 leaves 8.",
+    "detail": "At its own reported pace (0.0226 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -7372,7 +7372,7 @@
    "band": "red",
    "reasons": [
     "Cumulative expenditure falls from ₹325.40 cr in 2026-05 to ₹324.92 cr in 2026-06; a cumulative field cannot decrease.",
-    "At its own reported pace (0.02 pt/month), this project needs 1099 months; its own stated date 2027-03 leaves 8."
+    "At its own reported pace (0.0226 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 60
   },
@@ -8806,7 +8806,7 @@
    {
     "after": 75.61,
     "before": "2027-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.06658 pt/month); the stated date 2027-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -8903,7 +8903,7 @@
    "reasons": [
     "Physical progress falls from 78.25% in 2026-04 to 76.99% in 2026-05.",
     "Physical progress falls from 76.99% in 2026-05 to 75.61% in 2026-06.",
-    "No reported progress over 7 months; at this pace the stated date 2027-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.06658 pt/month); the stated date 2027-03 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹489.20 cr in 2026-06 to ₹488.71 cr in 2026-07; a cumulative field cannot decrease."
    ],
    "score": 90
@@ -12650,7 +12650,7 @@
    {
     "after": 1.0,
     "before": "2029-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2029-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.1034 pt/month); the stated date 2029-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -12746,7 +12746,7 @@
    "band": "red",
    "reasons": [
     "Cumulative expenditure falls from ₹511.08 cr in 2025-12 to ₹492.30 cr in 2026-04; a cumulative field cannot decrease.",
-    "No reported progress over 7 months; at this pace the stated date 2029-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.1034 pt/month); the stated date 2029-03 cannot be met at a negative pace.",
     "Physical progress falls from 4.2% in 2026-06 to 1% in 2026-07."
    ],
    "score": 75
@@ -13741,7 +13741,7 @@
    {
     "after": 49.0,
     "before": "2028-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-1.329 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -13880,7 +13880,7 @@
     "Cumulative expenditure ₹1,066.85 cr exceeds the revised cost ₹1,000.00 cr in 2026-05.",
     "Cumulative expenditure ₹1,066.85 cr exceeds the revised cost ₹1,000.00 cr in 2026-06.",
     "Revised cost changed from ₹1,000.00 cr to ₹2,153.91 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-1.329 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹1,066.85 cr in 2026-06 to ₹925.70 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 76% in 2026-06 to 49% in 2026-07."
    ],
@@ -14049,7 +14049,7 @@
    {
     "after": 80.0,
     "before": "2027-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.3438 pt/month); the stated date 2027-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -14145,7 +14145,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹735.20 cr to ₹802.45 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2027-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.3438 pt/month); the stated date 2027-03 cannot be met at a negative pace.",
     "Physical progress falls from 84.2% in 2026-06 to 80% in 2026-07."
    ],
    "score": 60
@@ -14766,7 +14766,7 @@
    {
     "after": 16.0,
     "before": "2028-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.3969 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -14882,7 +14882,7 @@
    "reasons": [
     "Physical progress falls from 19% in 2025-12 to 16.5% in 2026-04.",
     "Revised cost changed from ₹3,631.00 cr to ₹3,631.34 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.3969 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹1,335.29 cr in 2026-06 to ₹1,175.82 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 16.85% in 2026-06 to 16% in 2026-07."
    ],
@@ -15257,7 +15257,7 @@
    {
     "after": 89.0,
     "before": "2027-04",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-04 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.4523 pt/month); the stated date 2027-04 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -15373,7 +15373,7 @@
    "reasons": [
     "Revised completion date changed from 2025-12 to 2027-04 between 2025-12 and 2026-04.",
     "Physical progress falls from 97.6% in 2026-05 to 96.17% in 2026-06.",
-    "No reported progress over 7 months; at this pace the stated date 2027-04 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.4523 pt/month); the stated date 2027-04 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹1,691.27 cr in 2026-06 to ₹1,369.01 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 96.17% in 2026-06 to 89% in 2026-07."
    ],
@@ -15461,7 +15461,7 @@
    {
     "after": 2.0,
     "before": "2028-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-4.567 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -15576,7 +15576,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹5,932.00 cr to ₹5,906.03 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-4.567 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹3,119.31 cr in 2026-06 to ₹2,535.68 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 55.02% in 2026-06 to 2% in 2026-07."
    ],
@@ -16631,7 +16631,7 @@
    {
     "after": 19.02,
     "before": "2028-03",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 26871 months; its own stated date 2028-03 leaves 20.",
+    "detail": "At its own reported pace (0.003014 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -16708,7 +16708,7 @@
    "band": "red",
    "reasons": [
     "Cumulative expenditure falls from ₹174.62 cr in 2026-04 to ₹174.55 cr in 2026-05; a cumulative field cannot decrease.",
-    "At its own reported pace (0.00 pt/month), this project needs 26871 months; its own stated date 2028-03 leaves 20."
+    "At its own reported pace (0.003014 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 60
   },
@@ -17890,7 +17890,7 @@
    {
     "after": 28.0,
     "before": "2029-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2029-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-9.118 pt/month); the stated date 2029-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -17969,7 +17969,7 @@
     "Revised cost changed from ₹1,856.36 cr to ₹3,800.00 cr between 2025-12 and 2026-04.",
     "Revised completion date changed from 2026-04 to 2029-03 between 2025-12 and 2026-04.",
     "Physical progress falls from 84.87% in 2026-04 to 23.5% in 2026-05.",
-    "No reported progress over 7 months; at this pace the stated date 2029-03 cannot be met."
+    "Reported progress moved backwards over 7 months (-9.118 pt/month); the stated date 2029-03 cannot be met at a negative pace."
    ],
    "score": 70
   },
@@ -19930,7 +19930,7 @@
    {
     "after": 76.07,
     "before": "2029-07",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2029-07 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.148 pt/month); the stated date 2029-07 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -20011,7 +20011,7 @@
     "Cumulative expenditure falls from ₹7,791.33 cr in 2026-05 to ₹7,766.24 cr in 2026-06; a cumulative field cannot decrease.",
     "Physical progress falls from 77% in 2026-05 to 75.81% in 2026-06.",
     "Revised completion date changed from 2029-04 to 2029-07 between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2029-07 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.148 pt/month); the stated date 2029-07 cannot be met at a negative pace."
    ],
    "score": 100
   },
@@ -28000,7 +28000,7 @@
    {
     "after": 6.59,
     "before": "2031-09",
-    "detail": "At its own reported pace (0.06 pt/month), this project needs 1483 months; its own stated date 2031-09 leaves 62.",
+    "detail": "At its own reported pace (0.063 pt/month) the stated date 2031-09 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -28072,7 +28072,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.06 pt/month), this project needs 1483 months; its own stated date 2031-09 leaves 62."
+    "At its own reported pace (0.063 pt/month) the stated date 2031-09 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -28558,7 +28558,7 @@
    {
     "after": 0.0,
     "before": "2027-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-3.729 pt/month); the stated date 2027-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -28684,7 +28684,7 @@
    "band": "red",
    "reasons": [
     "Physical progress falls from 25% in 2025-12 to 3.03% in 2026-04.",
-    "No reported progress over 7 months; at this pace the stated date 2027-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-3.729 pt/month); the stated date 2027-03 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹347.98 cr in 2026-05 to ₹149.34 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 3.04% in 2026-05 to 0% in 2026-07.",
     "Physical progress is 0% while cumulative expenditure is ₹149.34 cr in 2026-07."
@@ -35787,7 +35787,7 @@
    {
     "after": 7.2,
     "before": "2027-06",
-    "detail": "At its own reported pace (0.03 pt/month), this project needs 3079 months; its own stated date 2027-06 leaves 11.",
+    "detail": "At its own reported pace (0.03014 pt/month) the stated date 2027-06 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -35863,7 +35863,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.03 pt/month), this project needs 3079 months; its own stated date 2027-06 leaves 11."
+    "At its own reported pace (0.03014 pt/month) the stated date 2027-06 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -41049,7 +41049,7 @@
    {
     "after": 16.79,
     "before": "2028-03",
-    "detail": "At its own reported pace (0.12 pt/month), this project needs 699 months; its own stated date 2028-03 leaves 20.",
+    "detail": "At its own reported pace (0.119 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -41125,7 +41125,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.12 pt/month), this project needs 699 months; its own stated date 2028-03 leaves 20."
+    "At its own reported pace (0.119 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -41927,7 +41927,7 @@
    {
     "after": 58.2,
     "before": "2028-03",
-    "detail": "At its own reported pace (0.03 pt/month), this project needs 1387 months; its own stated date 2028-03 leaves 20.",
+    "detail": "At its own reported pace (0.03014 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -42003,7 +42003,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.03 pt/month), this project needs 1387 months; its own stated date 2028-03 leaves 20."
+    "At its own reported pace (0.03014 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -42070,7 +42070,7 @@
    {
     "after": 41.29,
     "before": "2029-03",
-    "detail": "At its own reported pace (0.04 pt/month), this project needs 1344 months; its own stated date 2029-03 leaves 32.",
+    "detail": "At its own reported pace (0.0437 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -42146,7 +42146,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.04 pt/month), this project needs 1344 months; its own stated date 2029-03 leaves 32."
+    "At its own reported pace (0.0437 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -42213,7 +42213,7 @@
    {
     "after": 17.78,
     "before": "2027-03",
-    "detail": "At its own reported pace (0.12 pt/month), this project needs 700 months; its own stated date 2027-03 leaves 8.",
+    "detail": "At its own reported pace (0.1175 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -42289,7 +42289,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.12 pt/month), this project needs 700 months; its own stated date 2027-03 leaves 8."
+    "At its own reported pace (0.1175 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -43131,7 +43131,7 @@
    {
     "after": 11.2,
     "before": "2029-03",
-    "detail": "At its own reported pace (0.03 pt/month), this project needs 2947 months; its own stated date 2029-03 leaves 32.",
+    "detail": "At its own reported pace (0.03014 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -43207,7 +43207,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.03 pt/month), this project needs 2947 months; its own stated date 2029-03 leaves 32."
+    "At its own reported pace (0.03014 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -43274,7 +43274,7 @@
    {
     "after": 24.17,
     "before": "2027-03",
-    "detail": "At its own reported pace (0.03 pt/month), this project needs 2960 months; its own stated date 2027-03 leaves 8.",
+    "detail": "At its own reported pace (0.02562 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -43350,7 +43350,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.03 pt/month), this project needs 2960 months; its own stated date 2027-03 leaves 8."
+    "At its own reported pace (0.02562 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -43742,7 +43742,7 @@
    {
     "after": 2.01,
     "before": "2029-03",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 65030 months; its own stated date 2029-03 leaves 32.",
+    "detail": "At its own reported pace (0.001507 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -43819,7 +43819,7 @@
    "band": "red",
    "reasons": [
     "Cumulative expenditure falls from ₹62.03 cr in 2026-05 to ₹62.01 cr in 2026-06; a cumulative field cannot decrease.",
-    "At its own reported pace (0.00 pt/month), this project needs 65030 months; its own stated date 2029-03 leaves 32."
+    "At its own reported pace (0.001507 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 60
   },
@@ -43905,7 +43905,7 @@
    {
     "after": 8.44,
     "before": "2027-03",
-    "detail": "At its own reported pace (0.07 pt/month), this project needs 1381 months; its own stated date 2027-03 leaves 8.",
+    "detail": "At its own reported pace (0.0663 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -43982,7 +43982,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from none to 2027-03 between 2026-05 and 2026-06.",
-    "At its own reported pace (0.07 pt/month), this project needs 1381 months; its own stated date 2027-03 leaves 8."
+    "At its own reported pace (0.0663 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -44269,7 +44269,7 @@
    {
     "after": 9.39,
     "before": "2028-03",
-    "detail": "At its own reported pace (0.06 pt/month), this project needs 1542 months; its own stated date 2028-03 leaves 20.",
+    "detail": "At its own reported pace (0.05877 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -44345,7 +44345,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.06 pt/month), this project needs 1542 months; its own stated date 2028-03 leaves 20."
+    "At its own reported pace (0.05877 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -51233,7 +51233,7 @@
    {
     "after": 0.05,
     "before": "2037-03",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 13266 months; its own stated date 2037-03 leaves 128.",
+    "detail": "At its own reported pace (0.007534 pt/month) the stated date 2037-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -51309,7 +51309,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.01 pt/month), this project needs 13266 months; its own stated date 2037-03 leaves 128."
+    "At its own reported pace (0.007534 pt/month) the stated date 2037-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -51924,7 +51924,7 @@
    {
     "after": 0.23,
     "before": "2037-03",
-    "detail": "At its own reported pace (0.03 pt/month), this project needs 2867 months; its own stated date 2037-03 leaves 128.",
+    "detail": "At its own reported pace (0.03479 pt/month) the stated date 2037-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -52001,7 +52001,7 @@
    "band": "amber",
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹10.90 cr in 2025-12.",
-    "At its own reported pace (0.03 pt/month), this project needs 2867 months; its own stated date 2037-03 leaves 128."
+    "At its own reported pace (0.03479 pt/month) the stated date 2037-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 45
   },
@@ -52517,7 +52517,7 @@
    {
     "after": 23.75,
     "before": "2033-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2033-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-1.426 pt/month); the stated date 2033-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -52612,7 +52612,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "No reported progress over 7 months; at this pace the stated date 2033-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-1.426 pt/month); the stated date 2033-03 cannot be met at a negative pace.",
     "Physical progress falls from 40.34% in 2026-06 to 23.75% in 2026-07."
    ],
    "score": 55
@@ -52747,7 +52747,7 @@
    {
     "after": 32.99,
     "before": "2029-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2029-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.03418 pt/month); the stated date 2029-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -52825,7 +52825,7 @@
    "reasons": [
     "Physical progress falls from 34.18% in 2026-04 to 32.62% in 2026-05.",
     "Revised cost changed from ₹414.37 cr to ₹372.06 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2029-03 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.03418 pt/month); the stated date 2029-03 cannot be met at a negative pace."
    ],
    "score": 60
   },
@@ -55821,7 +55821,7 @@
    {
     "after": 0.0,
     "before": "2028-07",
-    "detail": "At its own reported pace (0.04 pt/month), this project needs 2655 months; its own stated date 2028-07 leaves 24.",
+    "detail": "At its own reported pace (0.03767 pt/month) the stated date 2028-07 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -55931,7 +55931,7 @@
   "risk": {
    "band": "red",
    "reasons": [
-    "At its own reported pace (0.04 pt/month), this project needs 2655 months; its own stated date 2028-07 leaves 24.",
+    "At its own reported pace (0.03767 pt/month) the stated date 2028-07 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Physical progress falls from 5.5% in 2026-06 to 0% in 2026-07.",
     "Physical progress is 0% while cumulative expenditure is ₹55.91 cr in 2026-07."
    ],
@@ -56325,7 +56325,7 @@
    {
     "after": 3.0,
     "before": "2028-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.726 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -56421,7 +56421,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹12,333.60 cr to ₹12,333.57 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.726 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "Physical progress falls from 18% in 2026-06 to 3% in 2026-07."
    ],
    "score": 60
@@ -57337,7 +57337,7 @@
    {
     "after": 0.06,
     "before": "2029-04",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 9320 months; its own stated date 2029-04 leaves 34.",
+    "detail": "At its own reported pace (0.01072 pt/month) the stated date 2029-04 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -57370,7 +57370,7 @@
    "band": "amber",
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹48.35 cr in 2025-12.",
-    "At its own reported pace (0.01 pt/month), this project needs 9320 months; its own stated date 2029-04 leaves 34."
+    "At its own reported pace (0.01072 pt/month) the stated date 2029-04 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 45
   },
@@ -60611,7 +60611,7 @@
    {
     "after": 0.0,
     "before": "2029-04",
-    "detail": "At its own reported pace (0.00 pt/month), this project needs 26071 months; its own stated date 2029-04 leaves 33.",
+    "detail": "At its own reported pace (0.003836 pt/month) the stated date 2029-04 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -60726,7 +60726,7 @@
    "band": "red",
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹0.12 cr in 2025-12.",
-    "At its own reported pace (0.00 pt/month), this project needs 26071 months; its own stated date 2029-04 leaves 33.",
+    "At its own reported pace (0.003836 pt/month) the stated date 2029-04 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Cumulative expenditure falls from ₹62.20 cr in 2026-06 to ₹0.00 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 0.06% in 2026-06 to 0% in 2026-07."
    ],
@@ -60795,7 +60795,7 @@
    {
     "after": 2.6,
     "before": "2029-03",
-    "detail": "At its own reported pace (0.11 pt/month), this project needs 908 months; its own stated date 2029-03 leaves 33.",
+    "detail": "At its own reported pace (0.1072 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -60827,7 +60827,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.11 pt/month), this project needs 908 months; its own stated date 2029-03 leaves 33."
+    "At its own reported pace (0.1072 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -61181,7 +61181,7 @@
    {
     "after": 0.0,
     "before": "2027-03",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 9419 months; its own stated date 2027-03 leaves 8.",
+    "detail": "At its own reported pace (0.01062 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -61312,7 +61312,7 @@
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹28.44 cr in 2025-12.",
     "Cumulative expenditure falls from ₹208.59 cr in 2026-04 to ₹208.57 cr in 2026-05; a cumulative field cannot decrease.",
-    "At its own reported pace (0.01 pt/month), this project needs 9419 months; its own stated date 2027-03 leaves 8.",
+    "At its own reported pace (0.01062 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Cumulative expenditure falls from ₹208.57 cr in 2026-06 to ₹155.00 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 0.17% in 2026-06 to 0% in 2026-07.",
     "Physical progress is 0% while cumulative expenditure is ₹155.00 cr in 2026-07."
@@ -61397,7 +61397,7 @@
    {
     "after": 1.0,
     "before": "2028-03",
-    "detail": "At its own reported pace (0.10 pt/month), this project needs 975 months; its own stated date 2028-03 leaves 20.",
+    "detail": "At its own reported pace (0.1015 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -61493,7 +61493,7 @@
    "band": "red",
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹43.91 cr in 2025-12.",
-    "At its own reported pace (0.10 pt/month), this project needs 975 months; its own stated date 2028-03 leaves 20.",
+    "At its own reported pace (0.1015 pt/month) the stated date 2028-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Cumulative expenditure falls from ₹197.62 cr in 2026-06 to ₹174.30 cr in 2026-07; a cumulative field cannot decrease."
    ],
    "score": 65
@@ -61576,7 +61576,7 @@
    {
     "after": 0.0,
     "before": "2027-03",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 9419 months; its own stated date 2027-03 leaves 8.",
+    "detail": "At its own reported pace (0.01062 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -61706,7 +61706,7 @@
    "band": "red",
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹45.13 cr in 2025-12.",
-    "At its own reported pace (0.01 pt/month), this project needs 9419 months; its own stated date 2027-03 leaves 8.",
+    "At its own reported pace (0.01062 pt/month) the stated date 2027-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Cumulative expenditure falls from ₹206.02 cr in 2026-06 to ₹53.46 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 0.17% in 2026-06 to 0% in 2026-07.",
     "Physical progress is 0% while cumulative expenditure is ₹53.46 cr in 2026-07."
@@ -62499,7 +62499,7 @@
    {
     "after": 0.11,
     "before": "2030-03",
-    "detail": "At its own reported pace (0.02 pt/month), this project needs 6286 months; its own stated date 2030-03 leaves 44.",
+    "detail": "At its own reported pace (0.01589 pt/month) the stated date 2030-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -62575,7 +62575,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.02 pt/month), this project needs 6286 months; its own stated date 2030-03 leaves 44."
+    "At its own reported pace (0.01589 pt/month) the stated date 2030-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -64139,7 +64139,7 @@
    {
     "after": 12.0,
     "before": "2028-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.9171 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -64254,7 +64254,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹958.27 cr to ₹1,501.10 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.9171 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "Physical progress falls from 24% in 2026-06 to 12% in 2026-07."
    ],
    "score": 60
@@ -65721,7 +65721,7 @@
    {
     "after": 0.4,
     "before": "2030-03",
-    "detail": "At its own reported pace (0.06 pt/month), this project needs 1645 months; its own stated date 2030-03 leaves 44.",
+    "detail": "At its own reported pace (0.06055 pt/month) the stated date 2030-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -65797,7 +65797,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.06 pt/month), this project needs 1645 months; its own stated date 2030-03 leaves 44."
+    "At its own reported pace (0.06055 pt/month) the stated date 2030-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -66382,7 +66382,7 @@
    {
     "after": 21.29,
     "before": "2029-03",
-    "detail": "At its own reported pace (0.04 pt/month), this project needs 1801 months; its own stated date 2029-03 leaves 32.",
+    "detail": "At its own reported pace (0.0437 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -66458,7 +66458,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.04 pt/month), this project needs 1801 months; its own stated date 2029-03 leaves 32."
+    "At its own reported pace (0.0437 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -67375,7 +67375,7 @@
    {
     "after": 0.0,
     "before": "2027-02",
-    "detail": "At its own reported pace (0.04 pt/month), this project needs 2607 months; its own stated date 2027-02 leaves 7.",
+    "detail": "At its own reported pace (0.03836 pt/month) the stated date 2027-02 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -67486,7 +67486,7 @@
    "band": "red",
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹1.05 cr in 2025-12.",
-    "At its own reported pace (0.04 pt/month), this project needs 2607 months; its own stated date 2027-02 leaves 7.",
+    "At its own reported pace (0.03836 pt/month) the stated date 2027-02 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Physical progress falls from 0.6% in 2026-06 to 0% in 2026-07.",
     "Physical progress is 0% while cumulative expenditure is ₹64.04 cr in 2026-07."
    ],
@@ -72515,7 +72515,7 @@
    {
     "after": 2.2,
     "before": "2030-06",
-    "detail": "At its own reported pace (0.03 pt/month), this project needs 3245 months; its own stated date 2030-06 leaves 47.",
+    "detail": "At its own reported pace (0.03014 pt/month) the stated date 2030-06 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -72592,7 +72592,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2030-06 to none between 2026-06 and 2026-07.",
-    "At its own reported pace (0.03 pt/month), this project needs 3245 months; its own stated date 2030-06 leaves 47."
+    "At its own reported pace (0.03014 pt/month) the stated date 2030-06 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -75010,7 +75010,7 @@
    {
     "after": 57.0,
     "before": "2027-06",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-06 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.6575 pt/month); the stated date 2027-06 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -75087,7 +75087,7 @@
    "band": "amber",
    "reasons": [
     "Physical progress falls from 61% in 2026-04 to 57% in 2026-05.",
-    "No reported progress over 7 months; at this pace the stated date 2027-06 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.6575 pt/month); the stated date 2027-06 cannot be met at a negative pace."
    ],
    "score": 55
   },
@@ -117625,7 +117625,7 @@
    {
     "after": 21.03,
     "before": "2028-10",
-    "detail": "At its own reported pace (0.10 pt/month), this project needs 790 months; its own stated date 2028-10 leaves 27.",
+    "detail": "At its own reported pace (0.1 pt/month) the stated date 2028-10 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -117697,7 +117697,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.10 pt/month), this project needs 790 months; its own stated date 2028-10 leaves 27."
+    "At its own reported pace (0.1 pt/month) the stated date 2028-10 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -128662,7 +128662,7 @@
    {
     "after": 48.35,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.07 pt/month), this project needs 717 months; its own stated date 2026-12 leaves 5.",
+    "detail": "At its own reported pace (0.072 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -128735,7 +128735,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2026-08 to 2026-12 between 2026-06 and 2026-07.",
-    "At its own reported pace (0.07 pt/month), this project needs 717 months; its own stated date 2026-12 leaves 5."
+    "At its own reported pace (0.072 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -133892,7 +133892,7 @@
    {
     "after": 20.45,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.08 pt/month), this project needs 978 months; its own stated date 2026-12 leaves 6.",
+    "detail": "At its own reported pace (0.08133 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -133925,7 +133925,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from none to 2026-12 between 2026-05 and 2026-06.",
-    "At its own reported pace (0.08 pt/month), this project needs 978 months; its own stated date 2026-12 leaves 6."
+    "At its own reported pace (0.08133 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -155348,7 +155348,7 @@
    {
     "after": 31.08,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 4767 months; its own stated date 2026-12 leaves 6.",
+    "detail": "At its own reported pace (0.01446 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -155381,7 +155381,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from none to 2026-12 between 2026-05 and 2026-06.",
-    "At its own reported pace (0.01 pt/month), this project needs 4767 months; its own stated date 2026-12 leaves 6."
+    "At its own reported pace (0.01446 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -155729,7 +155729,7 @@
    {
     "after": 43.45,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.08 pt/month), this project needs 695 months; its own stated date 2026-12 leaves 6.",
+    "detail": "At its own reported pace (0.08133 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -155762,7 +155762,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from none to 2026-12 between 2026-05 and 2026-06.",
-    "At its own reported pace (0.08 pt/month), this project needs 695 months; its own stated date 2026-12 leaves 6."
+    "At its own reported pace (0.08133 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -159107,7 +159107,7 @@
    {
     "after": 51.14,
     "before": "2027-02",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-02 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.08747 pt/month); the stated date 2027-02 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -159185,7 +159185,7 @@
    "reasons": [
     "Revised completion date changed from 2026-04 to 2027-02 between 2025-12 and 2026-04.",
     "Physical progress falls from 49.88% in 2026-04 to 45.47% in 2026-05.",
-    "No reported progress over 7 months; at this pace the stated date 2027-02 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.08747 pt/month); the stated date 2027-02 cannot be met at a negative pace."
    ],
    "score": 65
   },
@@ -163163,7 +163163,7 @@
    {
     "after": 0.02,
     "before": "2028-05",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 9998 months; its own stated date 2028-05 leaves 22.",
+    "detail": "At its own reported pace (0.01 pt/month) the stated date 2028-05 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-05",
     "severity": "critical",
     "sources": [
@@ -163233,7 +163233,7 @@
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹25.21 cr in 2026-05.",
     "Physical progress is 0% while cumulative expenditure is ₹262.83 cr in 2026-06.",
-    "At its own reported pace (0.01 pt/month), this project needs 9998 months; its own stated date 2028-05 leaves 22."
+    "At its own reported pace (0.01 pt/month) the stated date 2028-05 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -173100,7 +173100,7 @@
    {
     "after": 99.2,
     "before": "2026-08",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2026-08 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.1205 pt/month); the stated date 2026-08 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -173181,7 +173181,7 @@
     "Revised completion date changed from 2026-05 to 2026-06 between 2026-04 and 2026-05.",
     "Revised completion date changed from 2026-06 to 2026-07 between 2026-05 and 2026-06.",
     "Revised completion date changed from 2026-07 to 2026-08 between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2026-08 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.1205 pt/month); the stated date 2026-08 cannot be met at a negative pace."
    ],
    "score": 95
   },
@@ -177324,7 +177324,7 @@
    {
     "after": 86.57,
     "before": "2026-12",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.06357 pt/month); the stated date 2026-12 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -177399,7 +177399,7 @@
     "Revised completion date changed from none to 2026-07 between 2025-12 and 2026-04.",
     "Physical progress falls from 87% in 2025-12 to 86.57% in 2026-04.",
     "Revised completion date changed from 2026-07 to 2026-12 between 2026-04 and 2026-06.",
-    "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.06357 pt/month); the stated date 2026-12 cannot be met at a negative pace."
    ],
    "score": 75
   },
@@ -178527,7 +178527,7 @@
    {
     "after": 96.22,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 630 months; its own stated date 2026-12 leaves 5.",
+    "detail": "At its own reported pace (0.006 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -178600,7 +178600,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2027-03 to 2026-12 between 2026-04 and 2026-05.",
-    "At its own reported pace (0.01 pt/month), this project needs 630 months; its own stated date 2026-12 leaves 5."
+    "At its own reported pace (0.006 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -188617,7 +188617,7 @@
    {
     "after": 0.1,
     "before": "2028-07",
-    "detail": "At its own reported pace (0.10 pt/month), this project needs 999 months; its own stated date 2028-07 leaves 24.",
+    "detail": "At its own reported pace (0.1 pt/month) the stated date 2028-07 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-06",
     "severity": "critical",
     "sources": [
@@ -188683,7 +188683,7 @@
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹218.27 cr in 2026-06.",
     "Revised completion date changed from none to 2028-07 between 2026-06 and 2026-07.",
-    "At its own reported pace (0.10 pt/month), this project needs 999 months; its own stated date 2028-07 leaves 24."
+    "At its own reported pace (0.1 pt/month) the stated date 2028-07 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 55
   },
@@ -191603,7 +191603,7 @@
    {
     "after": 37.27,
     "before": "2027-06",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 6970 months; its own stated date 2027-06 leaves 11.",
+    "detail": "At its own reported pace (0.009 pt/month) the stated date 2027-06 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -191676,7 +191676,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2026-05 to 2027-06 between 2026-04 and 2026-05.",
-    "At its own reported pace (0.01 pt/month), this project needs 6970 months; its own stated date 2027-06 leaves 11."
+    "At its own reported pace (0.009 pt/month) the stated date 2027-06 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -199202,7 +199202,7 @@
    {
     "after": 0.5,
     "before": "2028-05",
-    "detail": "At its own reported pace (0.14 pt/month), this project needs 697 months; its own stated date 2028-05 leaves 22.",
+    "detail": "At its own reported pace (0.1429 pt/month) the stated date 2028-05 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -199272,7 +199272,7 @@
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹65.67 cr in 2026-04.",
     "Physical progress is 0% while cumulative expenditure is ₹147.20 cr in 2026-06.",
-    "At its own reported pace (0.14 pt/month), this project needs 697 months; its own stated date 2028-05 leaves 22."
+    "At its own reported pace (0.1429 pt/month) the stated date 2028-05 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -213750,7 +213750,7 @@
    {
     "after": 59.88,
     "before": "2027-12",
-    "detail": "No reported progress over 3 months; at this pace the stated date 2027-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 3 months (-0.987 pt/month); the stated date 2027-12 cannot be met at a negative pace.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -213841,7 +213841,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "No reported progress over 3 months; at this pace the stated date 2027-12 cannot be met.",
+    "Reported progress moved backwards over 3 months (-0.987 pt/month); the stated date 2027-12 cannot be met at a negative pace.",
     "Physical progress falls from 63.17% in 2026-06 to 59.88% in 2026-07."
    ],
    "score": 55
@@ -221174,7 +221174,7 @@
    {
     "after": 1.0,
     "before": "2030-10",
-    "detail": "At its own reported pace (0.11 pt/month), this project needs 913 months; its own stated date 2030-10 leaves 52.",
+    "detail": "At its own reported pace (0.1084 pt/month) the stated date 2030-10 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -221206,7 +221206,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.11 pt/month), this project needs 913 months; its own stated date 2030-10 leaves 52."
+    "At its own reported pace (0.1084 pt/month) the stated date 2030-10 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -222074,7 +222074,7 @@
    {
     "after": 1.2,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.03 pt/month), this project needs 3278 months; its own stated date 2026-12 leaves 5.",
+    "detail": "At its own reported pace (0.03014 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -222150,7 +222150,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.03 pt/month), this project needs 3278 months; its own stated date 2026-12 leaves 5."
+    "At its own reported pace (0.03014 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -224724,7 +224724,7 @@
    {
     "after": 5.65,
     "before": "2028-12",
-    "detail": "At its own reported pace (0.10 pt/month), this project needs 934 months; its own stated date 2028-12 leaves 29.",
+    "detail": "At its own reported pace (0.101 pt/month) the stated date 2028-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -224798,7 +224798,7 @@
    "reasons": [
     "Cumulative expenditure falls from ₹256.11 cr in 2026-05 to ₹253.96 cr in 2026-06; a cumulative field cannot decrease.",
     "Revised cost changed from ₹12,014.90 cr to ₹12,014.91 cr between 2026-06 and 2026-07.",
-    "At its own reported pace (0.10 pt/month), this project needs 934 months; its own stated date 2028-12 leaves 29."
+    "At its own reported pace (0.101 pt/month) the stated date 2028-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 65
   },
@@ -230242,7 +230242,7 @@
    {
     "after": 77.57,
     "before": "2026-12",
-    "detail": "No reported progress over 3 months; at this pace the stated date 2026-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 3 months (-1.497 pt/month); the stated date 2026-12 cannot be met at a negative pace.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -230315,7 +230315,7 @@
    "band": "amber",
    "reasons": [
     "Physical progress falls from 82.56% in 2026-04 to 77.57% in 2026-05.",
-    "No reported progress over 3 months; at this pace the stated date 2026-12 cannot be met."
+    "Reported progress moved backwards over 3 months (-1.497 pt/month); the stated date 2026-12 cannot be met at a negative pace."
    ],
    "score": 55
   },
@@ -236022,7 +236022,7 @@
    {
     "after": 17.24,
     "before": "2029-03",
-    "detail": "At its own reported pace (0.11 pt/month), this project needs 766 months; its own stated date 2029-03 leaves 32.",
+    "detail": "At its own reported pace (0.108 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -236095,7 +236095,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2027-11 to 2029-03 between 2026-04 and 2026-05.",
-    "At its own reported pace (0.11 pt/month), this project needs 766 months; its own stated date 2029-03 leaves 32."
+    "At its own reported pace (0.108 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -240743,7 +240743,7 @@
    {
     "after": 12.98,
     "before": "2026-12",
-    "detail": "At its own reported pace (0.14 pt/month), this project needs 640 months; its own stated date 2026-12 leaves 5.",
+    "detail": "At its own reported pace (0.136 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -240815,7 +240815,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.14 pt/month), this project needs 640 months; its own stated date 2026-12 leaves 5."
+    "At its own reported pace (0.136 pt/month) the stated date 2026-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -253120,7 +253120,7 @@
    {
     "after": 1.12,
     "before": "2029-07",
-    "detail": "At its own reported pace (0.10 pt/month), this project needs 992 months; its own stated date 2029-07 leaves 36.",
+    "detail": "At its own reported pace (0.09973 pt/month) the stated date 2029-07 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -253198,7 +253198,7 @@
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹27.81 cr in 2026-06.",
     "Revised cost changed from ₹1,264.00 cr to ₹2,006.07 cr between 2026-06 and 2026-07.",
-    "At its own reported pace (0.10 pt/month), this project needs 992 months; its own stated date 2029-07 leaves 36."
+    "At its own reported pace (0.09973 pt/month) the stated date 2029-07 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -260775,7 +260775,7 @@
    {
     "after": 81.47,
     "before": "2027-01",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-01 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.1212 pt/month); the stated date 2027-01 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -260855,7 +260855,7 @@
     "Revised completion date changed from 2026-05 to 2027-01 between 2026-04 and 2026-05.",
     "Cumulative expenditure falls from ₹1,457.51 cr in 2026-04 to ₹1,100.41 cr in 2026-05; a cumulative field cannot decrease.",
     "Physical progress falls from 83% in 2026-04 to 81.2% in 2026-05.",
-    "No reported progress over 7 months; at this pace the stated date 2027-01 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.1212 pt/month); the stated date 2027-01 cannot be met at a negative pace."
    ],
    "score": 90
   },
@@ -270643,7 +270643,7 @@
    {
     "after": 40.0,
     "before": "2028-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.004795 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -270758,7 +270758,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹2,555.00 cr to ₹2,700.43 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.004795 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "Physical progress falls from 61.9% in 2026-06 to 40% in 2026-07."
    ],
    "score": 60
@@ -271061,7 +271061,7 @@
    {
     "after": 45.0,
     "before": "2029-12",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2029-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-5.315 pt/month); the stated date 2029-12 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -271198,7 +271198,7 @@
     "Physical progress falls from 81% in 2025-12 to 43% in 2026-04.",
     "Cumulative expenditure ₹6,748.90 cr exceeds the revised cost ₹6,663.00 cr in 2026-06.",
     "Revised cost changed from ₹6,663.00 cr to ₹15,310.23 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2029-12 cannot be met.",
+    "Reported progress moved backwards over 7 months (-5.315 pt/month); the stated date 2029-12 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹6,748.90 cr in 2026-06 to ₹6,719.53 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 46.5% in 2026-06 to 45% in 2026-07."
    ],
@@ -272550,7 +272550,7 @@
    {
     "after": 80.0,
     "before": "2027-12",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-1.416 pt/month); the stated date 2027-12 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -272628,7 +272628,7 @@
    "reasons": [
     "Physical progress falls from 93.1% in 2026-05 to 80% in 2026-06.",
     "Revised cost changed from ₹11,775.00 cr to ₹11,775.05 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2027-12 cannot be met."
+    "Reported progress moved backwards over 7 months (-1.416 pt/month); the stated date 2027-12 cannot be met at a negative pace."
    ],
    "score": 60
   },
@@ -273971,7 +273971,7 @@
    {
     "after": 75.0,
     "before": "2028-09",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-09 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.5616 pt/month); the stated date 2028-09 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -274086,7 +274086,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹6,499.86 cr to ₹13,314.47 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-09 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.5616 pt/month); the stated date 2028-09 cannot be met at a negative pace.",
     "Physical progress falls from 83% in 2026-06 to 75% in 2026-07."
    ],
    "score": 60
@@ -274173,7 +274173,7 @@
    {
     "after": 34.0,
     "before": "2026-12",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.3767 pt/month); the stated date 2026-12 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -274269,7 +274269,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹1,039.13 cr to ₹1,015.07 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.3767 pt/month); the stated date 2026-12 cannot be met at a negative pace.",
     "Physical progress falls from 45% in 2026-06 to 34% in 2026-07."
    ],
    "score": 60
@@ -276030,7 +276030,7 @@
    {
     "after": 65.0,
     "before": "2028-02",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-02 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.2568 pt/month); the stated date 2028-02 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -276164,7 +276164,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹2,496.00 cr to ₹4,612.00 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-02 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.2568 pt/month); the stated date 2028-02 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹1,943.23 cr in 2026-06 to ₹1,906.63 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 73% in 2026-06 to 65% in 2026-07."
    ],
@@ -276252,7 +276252,7 @@
    {
     "after": 35.0,
     "before": "2027-01",
-    "detail": "At its own reported pace (0.10 pt/month), this project needs 683 months; its own stated date 2027-01 leaves 6.",
+    "detail": "At its own reported pace (0.09521 pt/month) the stated date 2027-01 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -276367,7 +276367,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹1,649.00 cr to ₹1,710.44 cr between 2026-06 and 2026-07.",
-    "At its own reported pace (0.10 pt/month), this project needs 683 months; its own stated date 2027-01 leaves 6.",
+    "At its own reported pace (0.09521 pt/month) the stated date 2027-01 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Cumulative expenditure falls from ₹809.24 cr in 2026-06 to ₹797.37 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 36.5% in 2026-06 to 35% in 2026-07."
    ],
@@ -277942,7 +277942,7 @@
    {
     "after": 55.0,
     "before": "2027-12",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.1027 pt/month); the stated date 2027-12 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -278020,7 +278020,7 @@
    "reasons": [
     "Physical progress falls from 55% in 2026-04 to 50% in 2026-05.",
     "Revised cost changed from ₹2,506.68 cr to ₹2,509.24 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2027-12 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.1027 pt/month); the stated date 2027-12 cannot be met at a negative pace."
    ],
    "score": 60
   },
@@ -278372,7 +278372,7 @@
    {
     "after": 90.0,
     "before": "2026-12",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.1212 pt/month); the stated date 2026-12 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -278488,7 +278488,7 @@
    "reasons": [
     "Physical progress falls from 94.94% in 2026-05 to 92.55% in 2026-06.",
     "Revised cost changed from ₹1,547.00 cr to ₹1,547.38 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2026-12 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.1212 pt/month); the stated date 2026-12 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹1,403.90 cr in 2026-06 to ₹1,382.17 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 92.55% in 2026-06 to 90% in 2026-07."
    ],
@@ -278758,7 +278758,7 @@
    {
     "after": 56.0,
     "before": "2028-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-1.481 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -278855,7 +278855,7 @@
    "reasons": [
     "Physical progress falls from 75.19% in 2026-05 to 67.67% in 2026-06.",
     "Revised cost changed from ₹2,362.00 cr to ₹2,462.17 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-1.481 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "Physical progress falls from 67.67% in 2026-06 to 56% in 2026-07."
    ],
    "score": 75
@@ -278961,7 +278961,7 @@
    {
     "after": 25.0,
     "before": "2028-03",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-2.877 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -279077,7 +279077,7 @@
    "reasons": [
     "Revised completion date changed from 2026-03 to 2028-03 between 2025-12 and 2026-04.",
     "Revised cost changed from ₹810.02 cr to ₹928.54 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2028-03 cannot be met.",
+    "Reported progress moved backwards over 7 months (-2.877 pt/month); the stated date 2028-03 cannot be met at a negative pace.",
     "Physical progress falls from 59% in 2026-06 to 25% in 2026-07."
    ],
    "score": 70
@@ -280670,7 +280670,7 @@
    {
     "after": 23.0,
     "before": "2027-12",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-6.027 pt/month); the stated date 2027-12 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -280748,7 +280748,7 @@
    "reasons": [
     "Physical progress falls from 63% in 2025-12 to 23% in 2026-04.",
     "Revised cost changed from ₹667.00 cr to ₹701.88 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2027-12 cannot be met."
+    "Reported progress moved backwards over 7 months (-6.027 pt/month); the stated date 2027-12 cannot be met at a negative pace."
    ],
    "score": 60
   },
@@ -284446,7 +284446,7 @@
    {
     "after": 84.0,
     "before": "2026-09",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.9795 pt/month); the stated date 2026-09 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -284585,7 +284585,7 @@
     "Cumulative expenditure ₹1,850.38 cr exceeds the revised cost ₹1,248.00 cr in 2026-05.",
     "Cumulative expenditure ₹1,850.38 cr exceeds the revised cost ₹1,248.00 cr in 2026-06.",
     "Revised cost changed from ₹1,248.00 cr to ₹2,300.00 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2026-09 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.9795 pt/month); the stated date 2026-09 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹1,850.38 cr in 2026-06 to ₹1,839.46 cr in 2026-07; a cumulative field cannot decrease.",
     "Physical progress falls from 95% in 2026-06 to 84% in 2026-07."
    ],
@@ -285771,7 +285771,7 @@
    {
     "after": 1.0,
     "before": "2029-12",
-    "detail": "At its own reported pace (0.07 pt/month), this project needs 1378 months; its own stated date 2029-12 leaves 41.",
+    "detail": "At its own reported pace (0.07185 pt/month) the stated date 2029-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -285867,7 +285867,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹748.00 cr to ₹747.91 cr between 2026-06 and 2026-07.",
-    "At its own reported pace (0.07 pt/month), this project needs 1378 months; its own stated date 2029-12 leaves 41.",
+    "At its own reported pace (0.07185 pt/month) the stated date 2029-12 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Physical progress falls from 2.13% in 2026-06 to 1% in 2026-07."
    ],
    "score": 60
@@ -285973,7 +285973,7 @@
    {
     "after": 6.0,
     "before": "2033-07",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2033-07 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-2.096 pt/month); the stated date 2033-07 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -286066,7 +286066,7 @@
    "reasons": [
     "Physical progress falls from 23.1% in 2026-04 to 7.5% in 2026-05.",
     "Revised cost changed from ₹2,344.00 cr to ₹2,343.64 cr between 2026-05 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2033-07 cannot be met.",
+    "Reported progress moved backwards over 7 months (-2.096 pt/month); the stated date 2033-07 cannot be met at a negative pace.",
     "Physical progress falls from 7.5% in 2026-05 to 6% in 2026-07."
    ],
    "score": 75
@@ -286237,7 +286237,7 @@
    {
     "after": 95.0,
     "before": "2026-11",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2026-11 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.589 pt/month); the stated date 2026-11 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -286334,7 +286334,7 @@
    "reasons": [
     "Physical progress falls from 99% in 2025-12 to 94% in 2026-04.",
     "Revised cost changed from ₹967.06 cr to ₹540.00 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2026-11 cannot be met.",
+    "Reported progress moved backwards over 7 months (-0.589 pt/month); the stated date 2026-11 cannot be met at a negative pace.",
     "Cumulative expenditure falls from ₹405.39 cr in 2026-06 to ₹326.20 cr in 2026-07; a cumulative field cannot decrease."
    ],
    "score": 80
@@ -286585,7 +286585,7 @@
    {
     "after": 0.0,
     "before": "2027-12",
-    "detail": "No reported progress over 2 months; at this pace the stated date 2027-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 2 months (-0.15 pt/month); the stated date 2027-12 cannot be met at a negative pace.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -286647,7 +286647,7 @@
   "risk": {
    "band": "red",
    "reasons": [
-    "No reported progress over 2 months; at this pace the stated date 2027-12 cannot be met.",
+    "Reported progress moved backwards over 2 months (-0.15 pt/month); the stated date 2027-12 cannot be met at a negative pace.",
     "Physical progress falls from 0.3% in 2026-05 to 0% in 2026-06.",
     "Physical progress is 0% while cumulative expenditure is ₹3.64 cr in 2026-06."
    ],
@@ -289450,7 +289450,7 @@
    {
     "after": 56.0,
     "before": "2027-06",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-06 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-0.1233 pt/month); the stated date 2027-06 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -289527,7 +289527,7 @@
    "band": "amber",
    "reasons": [
     "Physical progress falls from 57% in 2025-12 to 54% in 2026-04.",
-    "No reported progress over 7 months; at this pace the stated date 2027-06 cannot be met."
+    "Reported progress moved backwards over 7 months (-0.1233 pt/month); the stated date 2027-06 cannot be met at a negative pace."
    ],
    "score": 55
   },
@@ -291081,7 +291081,7 @@
    {
     "after": 32.2,
     "before": "2029-03",
-    "detail": "At its own reported pace (0.03 pt/month), this project needs 2010 months; its own stated date 2029-03 leaves 33.",
+    "detail": "At its own reported pace (0.03373 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -291113,7 +291113,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.03 pt/month), this project needs 2010 months; its own stated date 2029-03 leaves 33."
+    "At its own reported pace (0.03373 pt/month) the stated date 2029-03 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 40
   },
@@ -292330,7 +292330,7 @@
    {
     "after": 38.0,
     "before": "2026-10",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2026-10 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-1.394 pt/month); the stated date 2026-10 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -292426,7 +292426,7 @@
    "band": "red",
    "reasons": [
     "Revised cost changed from ₹645.00 cr to ₹485.58 cr between 2026-06 and 2026-07.",
-    "No reported progress over 7 months; at this pace the stated date 2026-10 cannot be met.",
+    "Reported progress moved backwards over 7 months (-1.394 pt/month); the stated date 2026-10 cannot be met at a negative pace.",
     "Physical progress falls from 56.9% in 2026-06 to 38% in 2026-07."
    ],
    "score": 60
@@ -295516,7 +295516,7 @@
    {
     "after": 45.0,
     "before": "2027-03",
-    "detail": "No reported progress over 3 months; at this pace the stated date 2027-03 cannot be met.",
+    "detail": "Reported progress moved backwards over 3 months (-4.2 pt/month); the stated date 2027-03 cannot be met at a negative pace.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -295607,7 +295607,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "No reported progress over 3 months; at this pace the stated date 2027-03 cannot be met.",
+    "Reported progress moved backwards over 3 months (-4.2 pt/month); the stated date 2027-03 cannot be met at a negative pace.",
     "Physical progress falls from 59% in 2026-06 to 45% in 2026-07."
    ],
    "score": 55
@@ -297255,7 +297255,7 @@
    {
     "after": 78.0,
     "before": "2026-12",
-    "detail": "No reported progress over 3 months; at this pace the stated date 2026-12 cannot be met.",
+    "detail": "Reported progress moved backwards over 3 months (-1.8 pt/month); the stated date 2026-12 cannot be met at a negative pace.",
     "from_snapshot": "2026-04",
     "severity": "critical",
     "sources": [
@@ -297346,7 +297346,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "No reported progress over 3 months; at this pace the stated date 2026-12 cannot be met.",
+    "Reported progress moved backwards over 3 months (-1.8 pt/month); the stated date 2026-12 cannot be met at a negative pace.",
     "Physical progress falls from 84% in 2026-06 to 78% in 2026-07."
    ],
    "score": 55
@@ -299778,7 +299778,7 @@
    {
     "after": 3.4,
     "before": "2031-09",
-    "detail": "At its own reported pace (0.06 pt/month), this project needs 1603 months; its own stated date 2031-09 leaves 62.",
+    "detail": "At its own reported pace (0.06027 pt/month) the stated date 2031-09 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -299855,7 +299855,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2031-09 to none between 2026-06 and 2026-07.",
-    "At its own reported pace (0.06 pt/month), this project needs 1603 months; its own stated date 2031-09 leaves 62."
+    "At its own reported pace (0.06027 pt/month) the stated date 2031-09 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -299941,7 +299941,7 @@
    {
     "after": 3.0,
     "before": "2031-06",
-    "detail": "At its own reported pace (0.14 pt/month), this project needs 674 months; its own stated date 2031-06 leaves 59.",
+    "detail": "At its own reported pace (0.1438 pt/month) the stated date 2031-06 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -300018,7 +300018,7 @@
    "band": "amber",
    "reasons": [
     "Revised completion date changed from 2031-06 to none between 2026-06 and 2026-07.",
-    "At its own reported pace (0.14 pt/month), this project needs 674 months; its own stated date 2031-06 leaves 59."
+    "At its own reported pace (0.1438 pt/month) the stated date 2031-06 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 50
   },
@@ -300157,7 +300157,7 @@
    {
     "after": 0.6,
     "before": "2034-09",
-    "detail": "At its own reported pace (0.09 pt/month), this project needs 1099 months; its own stated date 2034-09 leaves 98.",
+    "detail": "At its own reported pace (0.09041 pt/month) the stated date 2034-09 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -300237,7 +300237,7 @@
     "Revised completion date changed from 2032-03 to 2034-09 between 2025-12 and 2026-04.",
     "Cumulative expenditure falls from ₹4.32 cr in 2026-04 to ₹4.30 cr in 2026-05; a cumulative field cannot decrease.",
     "Revised completion date changed from 2034-09 to none between 2026-06 and 2026-07.",
-    "At its own reported pace (0.09 pt/month), this project needs 1099 months; its own stated date 2034-09 leaves 98."
+    "At its own reported pace (0.09041 pt/month) the stated date 2034-09 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected."
    ],
    "score": 85
   },
@@ -304358,7 +304358,7 @@
    {
     "after": 3.0,
     "before": "2027-02",
-    "detail": "At its own reported pace (0.05 pt/month), this project needs 1770 months; its own stated date 2027-02 leaves 7.",
+    "detail": "At its own reported pace (0.05479 pt/month) the stated date 2027-02 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -304453,7 +304453,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "At its own reported pace (0.05 pt/month), this project needs 1770 months; its own stated date 2027-02 leaves 7.",
+    "At its own reported pace (0.05479 pt/month) the stated date 2027-02 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Physical progress falls from 11% in 2026-06 to 3% in 2026-07."
    ],
    "score": 55
@@ -304521,7 +304521,7 @@
    {
     "after": 10.0,
     "before": "2026-11",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2026-11 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-5.846 pt/month); the stated date 2026-11 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -304612,7 +304612,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "No reported progress over 7 months; at this pace the stated date 2026-11 cannot be met.",
+    "Reported progress moved backwards over 7 months (-5.846 pt/month); the stated date 2026-11 cannot be met at a negative pace.",
     "Physical progress falls from 66% in 2026-05 to 10% in 2026-07."
    ],
    "score": 55
@@ -304670,7 +304670,7 @@
    {
     "after": 5.0,
     "before": "2027-01",
-    "detail": "No reported progress over 7 months; at this pace the stated date 2027-01 cannot be met.",
+    "detail": "Reported progress moved backwards over 7 months (-1.534 pt/month); the stated date 2027-01 cannot be met at a negative pace.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -304765,7 +304765,7 @@
   "risk": {
    "band": "amber",
    "reasons": [
-    "No reported progress over 7 months; at this pace the stated date 2027-01 cannot be met.",
+    "Reported progress moved backwards over 7 months (-1.534 pt/month); the stated date 2027-01 cannot be met at a negative pace.",
     "Physical progress falls from 36% in 2026-06 to 5% in 2026-07."
    ],
    "score": 55
@@ -308745,7 +308745,7 @@
    {
     "after": 0.0,
     "before": "2030-01",
-    "detail": "At its own reported pace (0.01 pt/month), this project needs 16222 months; its own stated date 2030-01 leaves 42.",
+    "detail": "At its own reported pace (0.006164 pt/month) the stated date 2030-01 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "from_snapshot": "2025-12",
     "severity": "critical",
     "sources": [
@@ -308856,7 +308856,7 @@
    "band": "red",
    "reasons": [
     "Physical progress is 0% while cumulative expenditure is ₹1.19 cr in 2025-12.",
-    "At its own reported pace (0.01 pt/month), this project needs 16222 months; its own stated date 2030-01 leaves 42.",
+    "At its own reported pace (0.006164 pt/month) the stated date 2030-01 cannot be met: finishing would take more than 50 years, so no meaningful completion month is projected.",
     "Physical progress falls from 0.1% in 2026-06 to 0% in 2026-07.",
     "Physical progress is 0% while cumulative expenditure is ₹26.52 cr in 2026-07."
    ],

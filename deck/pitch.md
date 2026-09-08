@@ -1,13 +1,13 @@
 # AGRIM — 3-minute pitch (one presenter; operator drives the demo silently)
 
 ## 0:00–0:20 — The fact
-"In the Ministry's own April report, project {opener_code} shows cumulative expenditure falling — from ₹{opener_before_cr} crore to ₹{opener_after_cr} crore. That is a field that can only go up. Nobody flagged it. It is one of {contradictions_total} arithmetic impossibilities we found across the reports — {count_EXP_DECREASE} of them this same kind."
+"In the Ministry's own April report, project {opener_code} shows cumulative expenditure falling — from ₹{opener_before_cr} crore to ₹{opener_after_cr} crore. That is a field that can only go up. Nobody flagged it. It is one of {contradictions_total} arithmetic impossibilities we found across the five reports we parsed — {count_EXP_DECREASE} of them this same kind."
 (Operator: `#/ledger?type=EXP_DECREASE`, then `#/project/{opener_code}`, then Source page. The presenter reads `opener_before_cr`, `opener_after_cr`, `contradictions_total` and `count_EXP_DECREASE` aloud in words, taken from `deck/slides.md`.)
 
 ## 0:20–1:35 — The demo
 - Ledger → project page → source PDF page ("their own PDF").
 - Outlook card: "and the model's separate view, with its five reasons — never blended with the risk score above it."
-- `#/predict`: "We trained on December to June and tested on July, a report the model never saw. Gradient boosting against logistic regression, side by side. The audit features added this much."
+- `#/predict`: "We trained on December to June and tested on July, a report the model never saw. Gradient boosting against logistic regression on the same features, side by side — that is where the gain is. The audit features are the row below: on this pair they cost nothing and added nothing, and we left the number on the screen rather than quote the one that flatters us."
 - `#/exits`: "{exits_total} projects left the panel. Leaving the panel is a change in what got published, not proof of why — the report prints how many were newly commissioned in the same window."
 - `#/assistant`, question 8.
 

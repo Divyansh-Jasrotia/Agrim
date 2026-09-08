@@ -47,12 +47,16 @@ export function Assistant() {
         </div>
         {live ? (
           <div className="rounded border border-model bg-surface p-4">
-            <div className="text-xs uppercase text-model">Ask the local model (Ollama detected) · grounded on the project you typed above</div>
+            {/* The briefs pipeline checks every digit of generated text against the ledger before it
+                ships. This box does not: it prints whatever the local model returns. Saying so is the
+                honest option; claiming a grounding check the code does not run is not. */}
+            <div className="text-xs uppercase text-model">Ask the local model (Ollama detected) · unverified model output</div>
+            <p className="mt-1 text-xs text-muted">The project you typed above is passed to the model as facts, but the reply is printed as the model wrote it. It is not checked against the ledger, unlike the answer above and unlike the written briefs, whose numbers are verified digit by digit at build time. Treat anything here as a draft to check, not as a finding.</p>
             <textarea value={q} onChange={(e) => setQ(e.target.value)} className="mt-2 w-full rounded border border-line p-2 text-sm" rows={3} placeholder="Why does this project look risky?" />
             <button onClick={ask} className="mt-2 rounded bg-model px-3 py-1 text-sm text-white">Ask</button>
-            {a && <p className="mt-2 text-sm">{a}</p>}
+            {a && <p className="mt-2 border-l-2 border-model pl-2 text-sm">{a}</p>}
           </div>
-        ) : <div className="text-xs text-muted">Live model mode is off (no local Ollama detected). Every answer above is computed from the ledger and cannot hallucinate.</div>}
+        ) : <div className="text-xs text-muted">Live model mode is off (no local Ollama detected). The answer above is computed from the ledger by the findings pipeline and contains no generated text.</div>}
       </div>
     </div>
   );
