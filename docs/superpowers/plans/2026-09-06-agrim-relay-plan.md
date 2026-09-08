@@ -3332,7 +3332,7 @@ gh pr create --title "Task 11: M1" --body "<paste outputs>"
 - Consumes: Task 10 frames; Task 7 `early_warning` flags.
 - Produces: `findings.models.m2_progress.run(panel, flags, frames, pair_list, test_pair="P4") -> (m2_json, per_project)` with `per_project[code] = {"progress_next_pred", "expected_completion", "expected_delay_months"}` for every project present at the latest snapshot.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/models/test_m2.py`:
 ```python
@@ -3358,11 +3358,11 @@ def test_m2_baselines_winner_and_outlook(synth):
     assert any(p["expected_delay_months"] is not None for p in per.values())
 ```
 
-- [ ] **Step 2: Run to verify failure**
+- [x] **Step 2: Run to verify failure**
 
 Run: `pytest tests/models/test_m2.py -q` → import error.
 
-- [ ] **Step 3: Write `findings/models/m2_progress.py`**
+- [x] **Step 3: Write `findings/models/m2_progress.py`**
 
 ```python
 """M2: next-month physical progress (points/month) vs no-change and the project's own velocity; then a per-project outlook."""
@@ -3454,7 +3454,7 @@ def run(panel, flags, frames, pair_list, test_pair="P4"):
     return m2, per
 ```
 
-- [ ] **Step 4: Run tests, gate, commit**
+- [x] **Step 4: Run tests, gate, commit**
 
 Run: `pytest tests/models/test_m2.py -q` → 1 passed. `python tools/validate.py` → PASS.
 

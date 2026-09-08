@@ -12,3 +12,4 @@ Task 08 — Agent — 2026-09-07 22:15 — completed (composite risk score F4, f
 Task 09 — Agent — 2026-09-07 22:45 — completed (assembled JSON, assistant, golden fixtures, page rendering, validate PASS)
 Task 10 — Agent — 2026-09-07 22:56 — completed (feature builder sets A & B, temporal leakage guard, 46 tests green, validate PASS)
 Task 11 — Agent — 2026-09-08 12:27 — completed (M1 slip classifier: HGB vs LR, sets A/B, shuffle control, SHAP factors, watchlist, 47 tests green, validate PASS)
+Task 12 — Agent — 2026-09-08 12:47 — completed (M2 progress forecaster vs ZERO/OWN_VELOCITY baselines, simulation outlook, agreement with F3, 48 tests green, validate PASS)
