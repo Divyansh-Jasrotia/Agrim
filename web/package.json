@@ -1,0 +1,40 @@
+{
+  "name": "agrim-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-contracts.mjs",
+    "types": "json2ts -i src/contracts/projects.schema.json -o src/types/projects.d.ts && json2ts -i src/contracts/findings.schema.json -o src/types/findings.d.ts && json2ts -i src/contracts/models.schema.json -o src/types/models.d.ts && json2ts -i src/contracts/briefs.schema.json -o src/types/briefs.d.ts && json2ts -i src/contracts/model_card.schema.json -o src/types/model_card.d.ts",
+    "predev": "npm run sync && npm run types",
+    "prebuild": "npm run sync && npm run types",
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/check-dist.mjs",
+    "preview": "vite preview",
+    "lint": "oxlint"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@tanstack/react-table": "^8.21.3",
+    "@tanstack/react-virtual": "^3.14.11",
+    "ajv": "^8.20.0",
+    "echarts": "^6.1.0",
+    "lucide-react": "^1.42.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^6.30.6",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "json-schema-to-typescript": "^16.0.0",
+    "oxlint": "^1.79.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2"
+  }
+}

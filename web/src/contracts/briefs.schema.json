@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Briefs",
+  "type": "array",
+  "items": {"type": "object", "additionalProperties": false,
+    "required": ["project_code", "brief", "model", "seed", "generated_at", "grounded", "attempts", "facts_hash"],
+    "properties": {"project_code": {"type": "string"}, "brief": {"type": "string", "minLength": 1}, "model": {"type": "string"}, "seed": {"type": "integer"}, "generated_at": {"type": "string"}, "grounded": {"type": "boolean"}, "attempts": {"type": "integer"}, "facts_hash": {"type": "string"}}}
+}

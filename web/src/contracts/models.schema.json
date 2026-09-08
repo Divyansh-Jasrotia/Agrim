@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Models",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "m1_slip", "m2_progress", "m3_drivers", "m4_anomaly"],
+  "$defs": {
+    "Point": {"type": "object", "additionalProperties": false, "required": ["x", "y"], "properties": {"x": {"type": "number"}, "y": {"type": "number"}}},
+    "Named": {"type": "object", "additionalProperties": false, "required": ["feature", "value"], "properties": {"feature": {"type": "string"}, "value": {"type": "number"}}}
+  },
+  "properties": {
+    "meta": {"type": "object", "additionalProperties": false,
+      "required": ["contract_version", "generated_at", "sklearn_version", "random_state", "omp_threads", "pairs", "test_pair", "train_pairs"],
+      "properties": {"contract_version": {"type": "string"}, "generated_at": {"type": "string"}, "sklearn_version": {"type": "string"}, "random_state": {"type": "integer"}, "omp_threads": {"type": "integer"},
+        "pairs": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "from", "to", "gap_months", "n", "positives", "censored_exits"],
+          "properties": {"id": {"type": "string"}, "from": {"type": "string"}, "to": {"type": "string"}, "gap_months": {"type": "integer"}, "n": {"type": "integer"}, "positives": {"type": "integer"}, "censored_exits": {"type": "integer"}}}},
+        "test_pair": {"type": "string"}, "train_pairs": {"type": "array", "items": {"type": "string"}}}},
+    "m1_slip": {"type": "object", "additionalProperties": false, "required": ["feature_sets", "results", "importance_HGB_B", "coefficients_LR_A", "watchlist"],
+      "properties": {
+        "feature_sets": {"type": "object", "additionalProperties": false, "required": ["A", "B"], "properties": {"A": {"type": "array", "items": {"type": "string"}}, "B": {"type": "array", "items": {"type": "string"}}}},
+        "results": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+          "required": ["model_id", "test_pair", "n", "positives", "base_rate", "pr_auc", "roc_auc", "precision_at_100", "recall_at_100", "lift_at_100", "calibration", "pr_curve"],
+          "properties": {"model_id": {"type": "string"}, "test_pair": {"type": "string"}, "n": {"type": "integer"}, "positives": {"type": "integer"}, "base_rate": {"type": "number"}, "pr_auc": {"type": "number"}, "roc_auc": {"type": ["number", "null"]}, "precision_at_100": {"type": "number"}, "recall_at_100": {"type": "number"}, "lift_at_100": {"type": ["number", "null"]},
+            "calibration": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["bin", "mean_pred", "mean_obs", "n"], "properties": {"bin": {"type": "integer"}, "mean_pred": {"type": ["number", "null"]}, "mean_obs": {"type": ["number", "null"]}, "n": {"type": "integer"}}}},
+            "pr_curve": {"type": "array", "items": {"$ref": "#/$defs/Point"}}}}},
+        "importance_HGB_B": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["feature", "mean", "std"], "properties": {"feature": {"type": "string"}, "mean": {"type": "number"}, "std": {"type": "number"}}}},
+        "coefficients_LR_A": {"type": "array", "items": {"$ref": "#/$defs/Named"}},
+        "watchlist": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["project_code", "slip_prob", "slip_rank"], "properties": {"project_code": {"type": "string"}, "slip_prob": {"type": "number"}, "slip_rank": {"type": "integer"}}}}}},
+    "m2_progress": {"type": "object", "additionalProperties": false, "required": ["results", "winner", "agreement_with_F3"],
+      "properties": {
+        "results": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["model_id", "test_pair", "n", "mae", "median_ae"], "properties": {"model_id": {"type": "string"}, "test_pair": {"type": "string"}, "n": {"type": "integer"}, "mae": {"type": "number"}, "median_ae": {"type": "number"}}}},
+        "winner": {"type": "string"},
+        "agreement_with_F3": {"type": "object", "additionalProperties": false, "required": ["n", "share_same_direction"], "properties": {"n": {"type": "integer"}, "share_same_direction": {"type": ["number", "null"]}}}}},
+    "m3_drivers": {"type": "object", "additionalProperties": false, "required": ["snapshot", "n", "results", "partial_dependence", "sector_effects", "coefficients_OLS"],
+      "properties": {"snapshot": {"type": "string"}, "n": {"type": "integer"},
+        "results": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["target", "model_id", "cv_r2", "cv_mae"], "properties": {"target": {"type": "string"}, "model_id": {"type": "string"}, "cv_r2": {"type": "number"}, "cv_mae": {"type": "number"}}}},
+        "partial_dependence": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["target", "feature", "grid", "values"], "properties": {"target": {"type": "string"}, "feature": {"type": "string"}, "grid": {"type": "array", "items": {"type": "number"}}, "values": {"type": "array", "items": {"type": "number"}}}}},
+        "sector_effects": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["sector", "effect_cost_pct", "effect_time_months", "n"], "properties": {"sector": {"type": "string"}, "effect_cost_pct": {"type": "number"}, "effect_time_months": {"type": "number"}, "n": {"type": "integer"}}}},
+        "coefficients_OLS": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["target", "feature", "coef"], "properties": {"target": {"type": "string"}, "feature": {"type": "string"}, "coef": {"type": "number"}}}}}},
+    "m4_anomaly": {"type": "object", "additionalProperties": false, "required": ["n", "contamination", "flagged"],
+      "properties": {"n": {"type": "integer"}, "contamination": {"type": "string"},
+        "flagged": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["project_code", "pair", "score", "sources"],
+          "properties": {"project_code": {"type": "string"}, "pair": {"type": "string"}, "score": {"type": "number"}, "sources": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["snapshot", "page"], "properties": {"snapshot": {"type": "string"}, "page": {"type": "integer"}}}}}}}}}
+  }
+}
