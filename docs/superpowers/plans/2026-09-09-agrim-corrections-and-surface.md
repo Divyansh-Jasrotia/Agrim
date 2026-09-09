@@ -1121,27 +1121,27 @@ Paste both outputs. `validate.py` enforces the web-code literal allowlist (`100`
 
 Open `#/project/705410` in the reference mockup first. This screen gets 30 of the 95 demo seconds and is the one thing no rival entry has.
 
-- [ ] **Step 1: Fix the sparkline colour**
+- [x] **Step 1: Fix the sparkline colour**
 
 `Project.tsx` calls `Sparkline` with `color="#1E7B4F"` for expenditure. That is the `ok` token, so project 705410's collapse from ₹89,486.62 cr to ₹2,384.29 cr currently renders in the reassuring green. Use the ink token for the trend line and mark the two contradicting points in `--color-critical`. Colour encodes severity only; a trend line is not a severity.
 
-- [ ] **Step 2: Give SourcePage an inline variant**
+- [x] **Step 2: Give SourcePage an inline variant**
 
 Add `inline?: boolean`. When true, render a `<figure>` containing `<img src={`/pages/${snapshot}/p${page}.png`} alt="...">` at full container width, plus a `<figcaption>` naming the report, the page and the value read off it. Keep the existing chip as the default so other screens are untouched.
 
-- [ ] **Step 3: Create ShapBars**
+- [x] **Step 3: Create ShapBars**
 
 Replace the inline `Math.min(96, Math.abs(f.contribution) * 60)}px` divs. Bars diverge about a zero line: positive right, negative left, widths normalised to the largest absolute contribution in the set, all in `--color-model`. Caption: right increases the predicted probability, left decreases it.
 
-- [ ] **Step 4: Promote the evidence block**
+- [x] **Step 4: Promote the evidence block**
 
 Pick the highest-severity flag (`critical` > `high` > `medium` > `low` > `info`, ties broken by earliest `first_snapshot`) and render it **full width above everything else**: the `detail` sentence in display type, `<Caveat />`, then both `sources[]` page images side by side via `<SourcePage inline />`. Everything currently on the page moves below it at lower visual weight. One focal point, not six equal cards.
 
-- [ ] **Step 5: Show collapsed flags honestly**
+- [x] **Step 5: Show collapsed flags honestly**
 
 A flag with `occurrences > 1` renders its month range — `2026-04 → 2026-07 · 4 reports` — and lists every page in `sources[]`. One persisting condition, one row.
 
-- [ ] **Step 6: Build, screenshot, check, commit**
+- [x] **Step 6: Build, screenshot, check, commit**
 
 ```bash
 cd web && npm run build && cd .. && python tools/routes.py

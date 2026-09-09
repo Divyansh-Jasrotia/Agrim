@@ -1,9 +1,14 @@
 import { useParams } from "react-router-dom";
 import { Badge } from "../components/Badge";
+import { Caveat } from "../components/Caveat";
+import { ShapBars } from "../components/ShapBars";
 import { SourcePage } from "../components/SourcePage";
 import { Sparkline } from "../components/Sparkline";
 import { useBundle } from "../data/store";
 import { bandClass, crore, monthLabel, num, pct, sevClass, share } from "../lib/format";
+
+// Worst first. Matches the severity enum in the contract.
+const SEVERITY = ["critical", "high", "medium", "low", "info"];
 
 export function Project() {
   const { code } = useParams();
@@ -15,6 +20,15 @@ export function Project() {
   const labels = p.snapshots.map((s) => s.snapshot);
   const brief = bundle!.briefs?.find((b) => b.project_code === p.project_code) ?? null;
   const ml = p.ml;
+  // The one thing the eye should land on: the worst flag, promoted above everything else.
+  // Rank by severity, ties broken by the earliest report the condition appeared in.
+  const worst = p.flags.length
+    ? p.flags.slice().sort((a, b) =>
+        (SEVERITY.indexOf(a.severity) - SEVERITY.indexOf(b.severity))
+        || String(a.first_snapshot ?? a.to_snapshot).localeCompare(String(b.first_snapshot ?? b.to_snapshot)))[0]
+    : null;
+  const alertsFor = (types: string[]) =>
+    p.flags.filter((f) => types.includes(f.type)).flatMap((f) => f.sources.map((x) => x.snapshot));
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-start justify-between gap-2">
@@ -28,14 +42,42 @@ export function Project() {
           <SourcePage snapshot={last.snapshot} page={last.page} />
         </div>
       </div>
+      {/* The evidence, full width, above everything. One focal point, not six equal cards.
+          Both source pages are the real rendered pages, shown side by side. */}
+      {worst && (
+        <section className="rounded border border-critical bg-surface p-4">
+          <div className="flex items-baseline gap-2">
+            <Badge text={worst.severity} className={sevClass[worst.severity]} />
+            <span className="num text-xs text-muted">
+              {worst.type}
+              {(worst.occurrences ?? 1) > 1 && <> · {worst.first_snapshot ?? worst.to_snapshot} → {worst.to_snapshot} · {worst.occurrences} reports</>}
+            </span>
+          </div>
+          <p className="mt-2 max-w-4xl text-xl leading-snug">{worst.detail}</p>
+          <div className="mt-2"><Caveat /></div>
+          {worst.sources.length > 0 && (
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              {worst.sources.slice(0, 2).map((x) => (
+                <SourcePage key={`${x.snapshot}-${x.page}`} snapshot={x.snapshot} page={x.page} inline />
+              ))}
+            </div>
+          )}
+          {worst.sources.length > 2 && (
+            <p className="mt-2 text-xs text-muted">
+              Also printed on {worst.sources.slice(2).map((x) => `${x.snapshot} p.${x.page}`).join(", ")}.
+            </p>
+          )}
+        </section>
+      )}
+
       <div className="grid gap-4 lg:grid-cols-2">
         <div className="rounded border border-line bg-surface p-3">
           <div className="text-xs uppercase tracking-wide text-muted">Physical progress</div>
-          <Sparkline labels={labels} values={p.snapshots.map((s) => s.physical_progress_pct)} forecast={ml?.progress_next_pred ?? null} color="#1F5FA8" unit="%" />
+          <Sparkline labels={labels} values={p.snapshots.map((s) => s.physical_progress_pct)} forecast={ml?.progress_next_pred ?? null} unit="%" alertLabels={alertsFor(["PROG_DECREASE", "PROG_GT_100"])} />
         </div>
         <div className="rounded border border-line bg-surface p-3">
           <div className="text-xs uppercase tracking-wide text-muted">Cumulative expenditure (₹ cr)</div>
-          <Sparkline labels={labels} values={p.snapshots.map((s) => s.expenditure_cum_cr)} color="#1E7B4F" unit="₹ cr" />
+          <Sparkline labels={labels} values={p.snapshots.map((s) => s.expenditure_cum_cr)} unit="₹ cr" alertLabels={alertsFor(["EXP_DECREASE", "EXP_GT_REVISED_COST", "ZERO_PROG_NONZERO_EXP"])} />
         </div>
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
@@ -46,7 +88,17 @@ export function Project() {
             {p.flags.map((f, i) => (
               <li key={i} className="flex gap-2 text-sm">
                 <Badge text={f.severity} className={sevClass[f.severity]} />
-                <span>{f.detail} {f.sources.map((s) => <SourcePage key={`${s.snapshot}-${s.page}`} snapshot={s.snapshot} page={s.page} />)}</span>
+                <span>
+                  {f.detail}
+                  {/* One persisting condition is one row. The month range and every page it was
+                      printed on are shown, so collapsing never hides a citation. */}
+                  {(f.occurrences ?? 1) > 1 && (
+                    <span className="num ml-1 text-xs text-muted">
+                      {f.first_snapshot ?? f.to_snapshot} → {f.to_snapshot} · {f.occurrences} reports
+                    </span>
+                  )}{" "}
+                  {f.sources.map((s) => <SourcePage key={`${s.snapshot}-${s.page}`} snapshot={s.snapshot} page={s.page} />)}
+                </span>
               </li>
             ))}
           </ul>
@@ -57,15 +109,7 @@ export function Project() {
           {ml && (
             <div className="space-y-2 text-sm">
               <div>Chance a revised completion date is filed next report: <span className="num font-medium text-model">{share(ml.slip_prob)}</span>{ml.slip_rank != null && <span className="text-muted"> · rank {ml.slip_rank}</span>}</div>
-              <ul className="space-y-1">
-                {ml.slip_top_factors.map((f) => (
-                  <li key={f.feature} className="flex items-center gap-2">
-                    <span className="w-44 truncate text-muted" title={f.feature}>{f.feature}</span>
-                    <span className="h-2 rounded bg-model" style={{ width: `${Math.min(96, Math.abs(f.contribution) * 60)}px`, opacity: f.contribution >= 0 ? 1 : 0.4 }} />
-                    <span className="num text-xs">{f.contribution >= 0 ? "+" : ""}{f.contribution.toFixed(2)} · {f.value == null ? "—" : typeof f.value === "number" ? f.value.toFixed(1) : f.value}</span>
-                  </li>
-                ))}
-              </ul>
+              <ShapBars factors={ml.slip_top_factors} />
               <div>Expected completion at the winning method's pace: <span className="num">{monthLabel(ml.expected_completion)}</span>{ml.expected_delay_months != null && <span> · <span className={`num ${ml.expected_delay_months > 0 ? "text-critical" : "text-ok"}`}>{ml.expected_delay_months > 0 ? "+" : ""}{num(ml.expected_delay_months)} months</span> vs stated date</span>}</div>
               {ml.cost_overrun_residual_pct != null && <div>Cost overrun vs comparable projects: <span className={`num ${ml.cost_overrun_residual_pct > 0 ? "text-critical" : "text-ok"}`}>{ml.cost_overrun_residual_pct > 0 ? "+" : ""}{pct(ml.cost_overrun_residual_pct)}</span> (peers expected {pct(ml.peer_expected_cost_overrun_pct)})</div>}
               {ml.anomaly_flag && <div className="text-muted">Flagged as a statistical outlier by the anomaly model.</div>}

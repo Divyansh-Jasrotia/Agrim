@@ -20,3 +20,24 @@ export const sevClass: Record<string, string> = {
   critical: "bg-critical text-white", high: "bg-high text-white", medium: "bg-medium text-white", low: "bg-line text-ink", info: "bg-line text-muted",
 };
 export const bandClass: Record<string, string> = { red: "bg-critical text-white", amber: "bg-medium text-white", green: "bg-ok text-white" };
+
+// One CSV writer for every export, so the formula guard cannot be dropped by a new caller.
+// Excel and Sheets evaluate a cell starting with = + - or @ as a formula even inside quotes, so a
+// project name beginning with one of those would execute on open. A leading apostrophe forces the
+// cell to text and is stripped by the spreadsheet on display.
+const FORMULA = /^[=+\-@\t\r]/;
+export const csvCell = (v: unknown) => {
+  if (v == null) return "";                       // NULL stays an empty field. Never 0, never "NA".
+  const t = String(v);
+  return `"${(FORMULA.test(t) ? `'${t}` : t).replace(/"/g, '""')}"`;
+};
+export const toCsv = (rows: Record<string, unknown>[], cols: readonly string[]) =>
+  [cols.join(","), ...rows.map((r) => cols.map((c) => csvCell(r[c])).join(","))].join("\n");
+export const downloadCsv = (csv: string, filename: string) => {
+  const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+  const a = document.createElement("a");
+  a.href = url; a.download = filename; a.click();
+  // a.click() only queues the download. Revoking synchronously aborts it in Firefox, so defer the
+  // revoke past the current task and let the browser read the blob first.
+  setTimeout(() => URL.revokeObjectURL(url), 0);
+};
