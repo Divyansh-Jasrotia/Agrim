@@ -83,9 +83,10 @@
     "escalation": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["threshold_pct", "rows"],
+      "required": ["threshold_pct", "min_classifiable", "rows"],
       "properties": {
         "threshold_pct": {"type": "number"},
+  "min_classifiable": {"type": "integer"},
         "rows": {"type": "array", "items": {
           "type": "object", "additionalProperties": false,
           "required": ["key", "projects", "classifiable", "delayed", "delay_rate_pct", "first_rate_pct", "improving", "escalate"],

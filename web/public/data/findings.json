@@ -77879,12 +77879,13 @@
   ]
  },
  "escalation": {
+  "min_classifiable": 10,
   "rows": [
    {
     "classifiable": 1,
     "delay_rate_pct": 100.0,
     "delayed": 1,
-    "escalate": true,
+    "escalate": false,
     "first_rate_pct": 100.0,
     "improving": false,
     "key": "Inland Waterways",
@@ -77894,7 +77895,7 @@
     "classifiable": 1,
     "delay_rate_pct": 100.0,
     "delayed": 1,
-    "escalate": true,
+    "escalate": false,
     "first_rate_pct": null,
     "improving": null,
     "key": "Logistics Infrastructure",
@@ -77934,7 +77935,7 @@
     "classifiable": 6,
     "delay_rate_pct": 83.3333,
     "delayed": 5,
-    "escalate": true,
+    "escalate": false,
     "first_rate_pct": 71.4286,
     "improving": false,
     "key": "Metals & Mining",
@@ -77944,7 +77945,7 @@
     "classifiable": 4,
     "delay_rate_pct": 75.0,
     "delayed": 3,
-    "escalate": true,
+    "escalate": false,
     "first_rate_pct": 66.6667,
     "improving": false,
     "key": "Shipping",
@@ -85134,7 +85135,7 @@
   "whole_number_share": 0.3538
  },
  "meta": {
-  "contract_version": "1.4.0",
+  "contract_version": "1.5.0",
   "coverage": [
    {
     "pct": 96.62,
@@ -85172,7 +85173,7 @@
    "cost_revised_null": 0,
    "doc_null": 11
   },
-  "generated_at": "2026-09-09T07:31:16+00:00",
+  "generated_at": "2026-09-09T07:50:47+00:00",
   "headline": {
    "contradictions_arithmetic": 965,
    "contradictions_total": 965,

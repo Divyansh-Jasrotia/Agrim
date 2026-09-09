@@ -845,12 +845,13 @@
   ]
  },
  "escalation": {
+  "min_classifiable": 10,
   "rows": [
    {
     "classifiable": 1,
     "delay_rate_pct": 100.0,
     "delayed": 1,
-    "escalate": true,
+    "escalate": false,
     "first_rate_pct": 100.0,
     "improving": false,
     "key": "Civil Aviation",
@@ -860,7 +861,7 @@
     "classifiable": 1,
     "delay_rate_pct": 100.0,
     "delayed": 1,
-    "escalate": true,
+    "escalate": false,
     "first_rate_pct": 100.0,
     "improving": false,
     "key": "Urban Development",
@@ -1069,7 +1070,7 @@
   "whole_number_share": 1.0
  },
  "meta": {
-  "contract_version": "1.4.0",
+  "contract_version": "1.5.0",
   "coverage": [
    {
     "pct": 0.79,

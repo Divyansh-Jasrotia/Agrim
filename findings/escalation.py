@@ -11,6 +11,10 @@ from findings.delay_series import classify
 from findings.panel import series, snapshots_present
 
 THRESHOLD_PCT = 50.0
+# A percentage over a handful of projects is not a rate. Official statistics convention is to
+# suppress or flag a rate on a small denominator, so a rollup below this many classifiable
+# projects is still shown with its real numbers but is never flagged for escalation.
+MIN_CLASSIFIABLE = 10
 
 
 def _rate(delayed, classifiable):
@@ -47,6 +51,7 @@ def compute(panel, sectors):
         improving = None if first_rate is None or rate is None else rate < first_rate
         rows.append({"key": key, "projects": len(a["projects"]), "classifiable": c_last, "delayed": d_last,
                      "delay_rate_pct": rate, "first_rate_pct": first_rate, "improving": improving,
-                     "escalate": bool(rate is not None and rate > THRESHOLD_PCT and improving is not True)})
+                     "escalate": bool(rate is not None and rate > THRESHOLD_PCT and improving is not True
+                                      and c_last >= MIN_CLASSIFIABLE)})
     rows.sort(key=lambda r: (-(r["delay_rate_pct"] if r["delay_rate_pct"] is not None else -1), r["key"]))
-    return {"threshold_pct": THRESHOLD_PCT, "rows": rows}
+    return {"threshold_pct": THRESHOLD_PCT, "min_classifiable": MIN_CLASSIFIABLE, "rows": rows}

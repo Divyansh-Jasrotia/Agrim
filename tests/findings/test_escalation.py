@@ -1,3 +1,4 @@
+from findings import escalation
 from findings.escalation import compute
 from findings.panel import load_panel, sector_map
 
@@ -15,6 +16,25 @@ def test_rows_are_sorted_by_delay_rate_descending():
 def test_threshold_is_fifty_percent():
     panel = load_panel(FIX)
     assert compute(panel, sector_map(panel))["threshold_pct"] == 50.0
+
+
+def test_a_high_rate_over_too_few_projects_is_not_escalated(tmp_path):
+    """A rate on a handful of projects is not a rate. Show it, never flag it."""
+    csv = tmp_path / "panel.csv"
+    rows = []
+    sl = 0
+    for snapshot in ("2026-06", "2026-07"):
+        for i in range(escalation.MIN_CLASSIFIABLE - 1):   # every one of them overdue
+            sl += 1
+            rows.append(_row(snapshot, sl, str(100 + i), "Tiny", "2020-01"))
+    csv.write_text(NEWLINE.join([HEADER] + rows) + NEWLINE, encoding="utf-8")
+    panel = load_panel(str(csv))
+    out = compute(panel, sector_map(panel))
+    tiny = next(r for r in out["rows"] if r["key"] == "Tiny")
+    assert tiny["classifiable"] == escalation.MIN_CLASSIFIABLE - 1
+    assert tiny["delay_rate_pct"] == 100.0          # the rate is still reported honestly
+    assert tiny["escalate"] is False                # but it is never flagged
+    assert out["min_classifiable"] == escalation.MIN_CLASSIFIABLE
 
 
 def test_escalate_requires_both_a_high_rate_and_no_improvement():
