@@ -143,3 +143,19 @@ def test_normalize_real_multi_state_row_page_55_sl_17():
     assert row["state"] == "Multi-States (Karnataka, Maharashtra, Telangana, Uttar Pradesh)"
     assert row["cost_original_cr"] == 500.48 and row["physical_progress_pct"] == 78.0
     assert set(row["parse_flags"].split(";")) == {"MULTILINE_STATE", "NO_LEGACY_CODE", "NO_PMGID"}
+
+
+def test_epoch_date_is_null_not_a_date():
+    """The reports print 01/1900 as a date. It is the source system's zero date, not a month.
+
+    Real cells, July 2026 page 76: GMC Leh 707057 approval reads "10/2019 (01/1900)" and its
+    Orignal/Target DoC reads "01/1900"; GMC Handwara 707052 reads "NA (01/1900)".
+    """
+    assert parse_dates("01/1900") == (None, None, ["EPOCH_DATE"])
+    assert parse_dates("10/2019\n(01/1900)") == ("2019-10", None, ["EPOCH_DATE"])
+    assert parse_dates("NA\n(01/1900)") == (None, None, ["DATE_PARSE_FAIL", "EPOCH_DATE"])
+
+
+def test_epoch_date_does_not_disturb_real_dates():
+    assert parse_dates("11/2023 (01/2024)") == ("2023-11", "2024-01", [])
+    assert parse_dates("01/2000 (01/1901)") == ("2000-01", "1901-01", [])

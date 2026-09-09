@@ -7,6 +7,10 @@ COLUMNS = ["snapshot", "source_file", "source_sha256", "page", "sl_no", "project
 PAREN = re.compile(r"\(([^()]*)\)")
 CODE6 = re.compile(r"^\d{6}$")
 MONTH = re.compile(r"(\d{1,2})\s*/\s*(\d{4})")
+# The report itself prints 01/1900 in the date columns for some rows: the source
+# spreadsheet's zero date, not a month anyone typed. Read as a date it is ~1500 months
+# in the past, so it is normalised to NULL and flagged instead.
+EPOCH_YEAR = "1900"
 NUMBER = re.compile(r"\d[\d,]*\.?\d*")
 # The report prints a literal "-" (and "NA" in the approval column) where a value is not available.
 MISSING = {"", "-", "--", "NA", "N/A"}
@@ -67,7 +71,12 @@ def _ym(m):
 
 
 def parse_dates(cell):
-    """Returns (first_token, first_parenthesised_token, flags). Tokens are MM/YYYY -> YYYY-MM."""
+    """Returns (first_token, first_parenthesised_token, flags). Tokens are MM/YYYY -> YYYY-MM.
+
+    A token printed in EPOCH_YEAR is the source system's zero date, not a real month; it is
+    returned as NULL and flagged EPOCH_DATE. DATE_PARSE_FAIL still means only that no
+    unparenthesised month could be read at all, so the two stay distinguishable.
+    """
     text = cell or ""
     first = paren = None
     for m in MONTH.finditer(text):
@@ -79,6 +88,13 @@ def parse_dates(cell):
         elif not inside and first is None:
             first = v
     flags = [] if first is not None else ["DATE_PARSE_FAIL"]
+    epoch = [v for v in (first, paren) if v is not None and v.startswith(EPOCH_YEAR)]
+    if first is not None and first.startswith(EPOCH_YEAR):
+        first = None
+    if paren is not None and paren.startswith(EPOCH_YEAR):
+        paren = None
+    if epoch:
+        flags.append("EPOCH_DATE")
     return first, paren, flags
 
 

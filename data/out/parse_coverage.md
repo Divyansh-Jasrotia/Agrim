@@ -34,6 +34,7 @@
 - sum cost_revised_cr: 4,054,473.30
 - sum expenditure_cum_cr: 2,196,663.55
 - flag DATE_PARSE_FAIL: 19
+- flag EPOCH_DATE: 11
 - flag MULTILINE_STATE: 225
 - flag NO_LEGACY_CODE: 1847 (expected for this month)
 - flag NO_PMGID: 1847 (expected for this month)
@@ -43,6 +44,7 @@
 - sum cost_revised_cr: 3,710,641.55
 - sum expenditure_cum_cr: 1,926,099.57
 - flag DATE_PARSE_FAIL: 12
+- flag EPOCH_DATE: 11
 - flag MULTILINE_STATE: 203
 - flag NO_LEGACY_CODE: 1775 (expected for this month)
 - flag NO_PMGID: 1775 (expected for this month)
