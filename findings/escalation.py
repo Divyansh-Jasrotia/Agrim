@@ -19,6 +19,10 @@ def _rate(delayed, classifiable):
 
 def compute(panel, sectors):
     snaps = snapshots_present(panel)
+    # SPEC? "its rate in the first snapshot where it had classifiable projects" reads two ways.
+    # Literal reading taken: first is the panel's first snapshot, full stop. A rollup with no
+    # classifiable projects there gets first_rate_pct None and improving None, rather than
+    # scanning forward to the earliest snapshot that did have data.
     first, last = snaps[0], snaps[-1]
     agg = {}
     for code, rs in series(panel).items():
