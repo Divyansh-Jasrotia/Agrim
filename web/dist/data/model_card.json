@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-08T18:49:49+00:00",
+ "generated_at": "2026-09-09T07:50:47+00:00",
  "sections": [
   {
    "lines": [
@@ -42,10 +42,10 @@
   },
   {
    "lines": [
-    "LR_A: PR-AUC 0.347, precision@100 49.0%, recall@100 14.7%, lift@100 2.54 (n=1732, positives=334, base rate 19.3%)",
-    "HGB_A: PR-AUC 0.605, precision@100 94.0%, recall@100 28.1%, lift@100 4.87 (n=1732, positives=334, base rate 19.3%)",
+    "LR_A: PR-AUC 0.381, precision@100 54.0%, recall@100 16.2%, lift@100 2.8 (n=1732, positives=334, base rate 19.3%)",
+    "HGB_A: PR-AUC 0.606, precision@100 94.0%, recall@100 28.1%, lift@100 4.87 (n=1732, positives=334, base rate 19.3%)",
     "HGB_B: PR-AUC 0.587, precision@100 94.0%, recall@100 28.1%, lift@100 4.87 (n=1732, positives=334, base rate 19.3%)",
-    "HGB_B_SHUFFLED: PR-AUC 0.203, precision@100 22.0%, recall@100 6.6%, lift@100 1.14 (n=1732, positives=334, base rate 19.3%)"
+    "HGB_B_SHUFFLED: PR-AUC 0.202, precision@100 21.0%, recall@100 6.3%, lift@100 1.09 (n=1732, positives=334, base rate 19.3%)"
    ],
    "title": "M1 results on the held-out pair"
   },
@@ -62,8 +62,8 @@
    "lines": [
     "cost_overrun_pct / OLS: R² 0.152, MAE 19.79",
     "cost_overrun_pct / HGB: R² 0.154, MAE 18.09",
-    "time_overrun_months / OLS: R² 0.432, MAE 12.75",
-    "time_overrun_months / HGB: R² 0.536, MAE 9.50"
+    "time_overrun_months / OLS: R² 0.407, MAE 12.91",
+    "time_overrun_months / HGB: R² 0.555, MAE 9.42"
    ],
    "title": "M3 results (5-fold CV)"
   },

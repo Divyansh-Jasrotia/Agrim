@@ -54,6 +54,8 @@ export interface Flag {
   after: number | string | null;
   detail: string;
   sources: Source[];
+  first_snapshot?: string | null;
+  occurrences?: number;
 }
 export interface Source {
   snapshot: string;

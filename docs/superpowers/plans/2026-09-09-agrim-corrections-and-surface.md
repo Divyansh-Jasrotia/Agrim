@@ -1008,7 +1008,7 @@ git commit -m "task 24: route enumerator and the screen checklist"
 
 Open `docs/mockups/agrim-reference.html` at `#/` first. It is the target.
 
-- [ ] **Step 1: Add the abbreviated crore formatter**
+- [x] **Step 1: Add the abbreviated crore formatter**
 
 In `web/src/lib/format.ts`:
 
@@ -1022,7 +1022,7 @@ export const croreShort = (v: number | null | undefined) => {
 };
 ```
 
-- [ ] **Step 2: Give KPI a sub line and drop the font clamp**
+- [x] **Step 2: Give KPI a sub line and drop the font clamp**
 
 `KPI.tsx` currently shrinks the figure with `[font-size:clamp(1rem,1.4vw,1.5rem)]` so a long number fits. Replace that workaround: hold the display size and add an optional `sub` line beneath.
 
@@ -1040,7 +1040,7 @@ export function KPI({ label, value, sub, hint, model = false }:
 }
 ```
 
-- [ ] **Step 3: Create the caveat component**
+- [x] **Step 3: Create the caveat component**
 
 `web/src/components/Caveat.tsx`. One component, so the wording cannot drift between screens.
 
@@ -1055,7 +1055,7 @@ export function Caveat() {
 }
 ```
 
-- [ ] **Step 4: Create the CSV download button**
+- [x] **Step 4: Create the CSV download button**
 
 `web/src/components/CsvButton.tsx`. Takes already-shaped rows, builds a Blob, triggers a download. No new dependency.
 
@@ -1080,7 +1080,7 @@ export function CsvButton({ rows, filename }: { rows: Record<string, unknown>[];
 }
 ```
 
-- [ ] **Step 5: Restructure Overview**
+- [x] **Step 5: Restructure Overview**
 
 Match `#/` in the reference mockup:
 
@@ -1091,7 +1091,7 @@ Match `#/` in the reference mockup:
 5. **Top-20 table sorted by `p.ml.slip_prob` descending**, with the rule band as a badge rather than a numeric column. This kills the twenty-identical-`100` column from spec section 2.3.
 6. `<CsvButton>` on the table.
 
-- [ ] **Step 6: Build, screenshot, check**
+- [x] **Step 6: Build, screenshot, check**
 
 ```bash
 cd web && npm run build && cd .. && python tools/routes.py
@@ -1099,7 +1099,7 @@ cd web && npm run build && cd .. && python tools/routes.py
 
 Screenshot `#/` at 1440x900 and check all six conditions in `docs/SCREEN-CHECKLIST.md`. Attach the screenshot to the task.
 
-- [ ] **Step 7: Gates and commit**
+- [x] **Step 7: Gates and commit**
 
 ```bash
 python tools/validate.py && pytest -q
