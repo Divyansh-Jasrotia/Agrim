@@ -5,15 +5,25 @@ import { Badge } from "../components/Badge";
 import { DataTable } from "../components/DataTable";
 import { useBundle } from "../data/store";
 import { useEChart } from "../lib/echart";
-import { num, sevClass } from "../lib/format";
+import { num, pct, sevClass } from "../lib/format";
 import type { Findings } from "../types/findings";
 
 type Row = Findings["early_warning"]["rows"][number];
+type DelayRow = Findings["delay_series"]["rows"][number];
+// The band edges the April 2014 report itself printed.
+const BANDS: { key: keyof DelayRow & ("on_schedule" | "d_1_12" | "d_13_24" | "d_25_60" | "d_61_plus"); label: string }[] = [
+  { key: "on_schedule", label: "On schedule" },
+  { key: "d_1_12", label: "1–12 mo" },
+  { key: "d_13_24", label: "13–24 mo" },
+  { key: "d_25_60", label: "25–60 mo" },
+  { key: "d_61_plus", label: "61+ mo" },
+];
 
 export function Warning() {
   const { bundle, sector } = useBundle();
   const nav = useNavigate();
   const [tab, setTab] = useState<"unreachable" | "passed">("unreachable");
+  const ds = bundle!.findings.delay_series;
   const all = bundle!.findings.early_warning.rows.filter((r) => !sector || bundle!.byCode.get(r.project_code)?.sector === sector);
   // These rows carry two different findings. months_remaining <= 0 is the DOC_PASSED case: the date
   // the project states is already behind us. months_remaining > 0 is DOC_UNREACHABLE: the date is
@@ -69,6 +79,40 @@ export function Warning() {
       ) : (
         <p className="max-w-3xl text-xs text-muted">These projects report less than 100% progress against a completion date that is already in the past. The pace column is what they reported over the months observed; no ratio is computed, because there is no remaining time to compare it with.</p>
       )}
+      {/* The delay bands the Flash Reports used to publish, recomputed from the fields they still
+          publish. A continuity-of-series reconstruction, not an accusation. */}
+      <section className="rounded border border-line bg-surface p-3">
+        <div className="text-xs uppercase tracking-wide text-muted">Delay bands, reconstructed</div>
+        <p className="mt-1 max-w-3xl text-sm text-muted">
+          Earlier Flash Reports printed how many projects were behind schedule, in these bands. Later
+          reports stopped. These counts are recomputed from the completion dates the reports still
+          print, so the series continues. Projects with no original date are excluded and counted
+          separately rather than assumed to be on schedule.
+        </p>
+        <table className="mt-2 w-full text-sm">
+          <thead><tr className="text-left text-xs uppercase text-muted">
+            <th className="py-1">Report</th>
+            {BANDS.map((b) => <th key={b.key} className="py-1 text-right font-normal">{b.label}</th>)}
+            <th className="py-1 text-right font-normal">Classifiable</th>
+            <th className="py-1 text-right font-normal">No original date</th>
+          </tr></thead>
+          <tbody>
+            {ds.rows.map((r) => (
+              <tr key={r.snapshot} className="border-t border-line">
+                <td className="num py-1">{r.snapshot}</td>
+                {BANDS.map((b) => (
+                  <td key={b.key} className="num py-1 text-right">
+                    {num(r[b.key])}
+                    <span className="ml-1 text-xs text-muted">{r.classifiable ? pct((r[b.key] / r.classifiable) * 100, 0) : "—"}</span>
+                  </td>
+                ))}
+                <td className="num py-1 text-right">{num(r.classifiable)}</td>
+                <td className="num py-1 text-right text-muted">{num(r.doc_null)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
       <DataTable columns={tab === "unreachable" ? unreachableCols : passedCols} rows={rows} onRowClick={(r) => nav(`/project/${r.project_code}`)} height="560px" />
     </div>
   );

@@ -1163,23 +1163,23 @@ Screenshot `#/project/705410` and check the six conditions. Paste both gate outp
 
 Open `#/exits` in the reference mockup first.
 
-- [ ] **Step 1: Exit Ledger**
+- [x] **Step 1: Exit Ledger**
 
 Add the explanatory paragraph from the mockup: rows are classified only by the last physical progress the reports actually showed, and no row is described as cancelled. Make the partition chips **neutral** — a project last seen at 98% that then vanished is arguably the most suspicious row on the screen, so no band may be coloured as success. Scale the pair bars to `max(exited, entered, commissioned_printed)` across `findings.exits.pairs`, never to a hardcoded ceiling. Add `<CsvButton>`.
 
-- [ ] **Step 2: Early Warning gains the reconstructed delay series**
+- [x] **Step 2: Early Warning gains the reconstructed delay series**
 
 Render `findings.delay_series.rows` as a small multiple across the five snapshots with the five bands, and print `doc_null` beside every row as the excluded-for-NULL denominator. One interpretive sentence above it: these are the bands the Flash Reports used to publish, recomputed from the fields they still publish. Continuity-of-series reconstruction, never an accusation.
 
-- [ ] **Step 3: Drivers gains the escalation matrix**
+- [x] **Step 3: Drivers gains the escalation matrix**
 
 Render `findings.escalation.rows` as a table: rollup key, classifiable, delayed, delay rate, direction of travel, escalate flag. Read the threshold from `findings.escalation.threshold_pct`, never typed in. Footnote that the key is an agency-string rollup, not the 17 official ministries. **Cite no committee report number or date** — the attribution is unresolved per spec section 3.4, and the finding stands on the counts.
 
-- [ ] **Step 4: Field Audit names its statistic**
+- [x] **Step 4: Field Audit names its statistic**
 
 Call out `whipple_index` and `whipple_band` beside the terminal-digit histogram, with one line explaining that Benford's Law does not apply to a bounded 0–100 progress field and that Whipple's index is the conventional measure for digit heaping.
 
-- [ ] **Step 5: Build, screenshot all four, check, commit**
+- [x] **Step 5: Build, screenshot all four, check, commit**
 
 ```bash
 cd web && npm run build && cd .. && python tools/routes.py

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useBundle } from "../data/store";
 import { useEChart } from "../lib/echart";
-import { num } from "../lib/format";
+import { num, pct } from "../lib/format";
 
 const FEAT: Record<string, string> = { log_cost_original: "log(original cost)", age_months: "months since approval", physical_progress_pct: "physical progress %" };
 
@@ -22,6 +22,7 @@ export function Drivers() {
   const m = bundle!.models;
   if (!m) return <div className="rounded border border-line bg-surface p-6 text-muted">models.json is not present.</div>;
   const d = m.m3_drivers;
+  const esc = bundle!.findings.escalation;
   const secRef = useEChart({
     grid: { left: "22%", right: 16, top: 16, bottom: 28 }, tooltip: {},
     yAxis: { type: "category", data: d.sector_effects.map((s) => s.sector) }, xAxis: { type: "value", name: "cost overrun effect (pct points, OLS)" },
@@ -55,6 +56,48 @@ export function Drivers() {
         <div className="rounded border border-line bg-surface p-3"><div className="text-xs uppercase text-muted">Sector effects (OLS coefficients)</div><div ref={secRef} style={{ height: "280px" }} /></div>
         <div className="rounded border border-line bg-surface p-3"><div className="text-xs uppercase text-muted">Each project vs its peers (click a point in the table below to open)</div><div ref={scRef} style={{ height: "280px" }} /></div>
       </div>
+      {/* Rule-based, no model. Counts only. No committee report number or date is cited: the
+          attribution is unresolved, and the finding stands on the counts. */}
+      <section className="rounded border border-line bg-surface p-3">
+        <div className="mb-1 text-xs uppercase tracking-wide text-muted">Escalation matrix · rule-based</div>
+        <p className="mb-2 max-w-3xl text-sm text-muted">
+          A rollup is flagged when more than <span className="num">{pct(esc.threshold_pct, 0)}</span> of its
+          classifiable projects are behind their stated schedule and that share is no better than it was
+          in the first report parsed. Rollups with fewer than <span className="num">{num(esc.min_classifiable)}</span>{" "}
+          classifiable projects keep their numbers here but are never flagged: a share over a handful of
+          projects is not a rate.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead><tr className="text-left text-xs uppercase text-muted">
+              <th className="py-1">Rollup</th>
+              <th className="py-1 text-right font-normal">Classifiable</th>
+              <th className="py-1 text-right font-normal">Behind schedule</th>
+              <th className="py-1 text-right font-normal">Rate now</th>
+              <th className="py-1 text-right font-normal">First report</th>
+              <th className="py-1 text-right font-normal">Direction</th>
+              <th className="py-1 text-right font-normal">Flagged</th>
+            </tr></thead>
+            <tbody>{esc.rows.map((r) => (
+              <tr key={r.key} className="border-t border-line">
+                <td className="py-1">{r.key}</td>
+                <td className="num py-1 text-right">{num(r.classifiable)}</td>
+                <td className="num py-1 text-right">{num(r.delayed)}</td>
+                <td className="num py-1 text-right">{r.delay_rate_pct == null ? "—" : pct(r.delay_rate_pct)}</td>
+                <td className="num py-1 text-right text-muted">{r.first_rate_pct == null ? "—" : pct(r.first_rate_pct)}</td>
+                <td className="py-1 text-right">{r.improving == null ? <span className="text-muted">not comparable</span> : r.improving ? "improving" : "not improving"}</td>
+                <td className="py-1 text-right">{r.escalate ? <span className="font-medium text-critical">flagged</span> : <span className="text-muted">no</span>}</td>
+              </tr>
+            ))}</tbody>
+          </table>
+        </div>
+        <p className="mt-2 max-w-3xl text-xs text-muted">
+          The rollup key is the agency string printed in the report, grouped. It is not a mapping to the
+          official ministries, and one rollup may span several of them. &ldquo;Not comparable&rdquo; means the
+          rollup had no classifiable projects in the first report parsed, so there is nothing to compare
+          the current share with.
+        </p>
+      </section>
       <div className="rounded border border-line bg-surface p-3">
         <div className="mb-2 text-xs uppercase text-muted">Worst residuals · overrun beyond what comparable projects show</div>
         <table className="w-full text-sm"><tbody>{bundle!.projects.filter((p) => p.ml?.cost_overrun_residual_pct != null).sort((a, b) => (b.ml!.cost_overrun_residual_pct as number) - (a.ml!.cost_overrun_residual_pct as number)).slice(0, 15).map((p) => (
