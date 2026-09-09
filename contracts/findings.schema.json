@@ -3,7 +3,7 @@
   "title": "Findings",
   "type": "object",
   "additionalProperties": false,
-  "required": ["meta", "contradictions", "exits", "early_warning", "field_audit", "delay_series", "disclosure_lag", "by_state", "by_sector", "review_pack", "assistant"],
+  "required": ["meta", "contradictions", "exits", "early_warning", "field_audit", "delay_series", "escalation", "disclosure_lag", "by_state", "by_sector", "review_pack", "assistant"],
   "$defs": {
     "Source": {"type": "object", "additionalProperties": false, "required": ["snapshot", "page"],
       "properties": {"snapshot": {"type": "string"}, "page": {"type": "integer"}}},
@@ -78,6 +78,22 @@
             "d_1_12": {"type": "integer"}, "d_13_24": {"type": "integer"},
             "d_25_60": {"type": "integer"}, "d_61_plus": {"type": "integer"},
             "classifiable": {"type": "integer"}, "doc_null": {"type": "integer"}}}}
+      }
+    },
+    "escalation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["threshold_pct", "rows"],
+      "properties": {
+        "threshold_pct": {"type": "number"},
+        "rows": {"type": "array", "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["key", "projects", "classifiable", "delayed", "delay_rate_pct", "first_rate_pct", "improving", "escalate"],
+          "properties": {
+            "key": {"type": "string"}, "projects": {"type": "integer"},
+            "classifiable": {"type": "integer"}, "delayed": {"type": "integer"},
+            "delay_rate_pct": {"type": ["number", "null"]}, "first_rate_pct": {"type": ["number", "null"]},
+            "improving": {"type": ["boolean", "null"]}, "escalate": {"type": "boolean"}}}}
       }
     },
     "disclosure_lag": {"type": "object", "additionalProperties": false, "required": ["status", "median_lag_months", "rows"],

@@ -844,6 +844,101 @@
    }
   ]
  },
+ "escalation": {
+  "rows": [
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 100.0,
+    "delayed": 1,
+    "escalate": true,
+    "first_rate_pct": 100.0,
+    "improving": false,
+    "key": "Civil Aviation",
+    "projects": 1
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 100.0,
+    "delayed": 1,
+    "escalate": true,
+    "first_rate_pct": 100.0,
+    "improving": false,
+    "key": "Urban Development",
+    "projects": 1
+   },
+   {
+    "classifiable": 2,
+    "delay_rate_pct": 50.0,
+    "delayed": 1,
+    "escalate": false,
+    "first_rate_pct": 50.0,
+    "improving": false,
+    "key": "Road Transport and Highways",
+    "projects": 2
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": null,
+    "improving": null,
+    "key": "Coal",
+    "projects": 1
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Petroleum",
+    "projects": 2
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Power",
+    "projects": 1
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Railways",
+    "projects": 1
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Shipping and Ports",
+    "projects": 2
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Steel",
+    "projects": 1
+   }
+  ],
+  "threshold_pct": 50.0
+ },
  "exits": {
   "pairs": [
    {
@@ -974,7 +1069,7 @@
   "whole_number_share": 1.0
  },
  "meta": {
-  "contract_version": "1.3.0",
+  "contract_version": "1.4.0",
   "coverage": [
    {
     "pct": 0.79,

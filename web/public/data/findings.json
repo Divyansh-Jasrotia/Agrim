@@ -77878,6 +77878,231 @@
    }
   ]
  },
+ "escalation": {
+  "rows": [
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 100.0,
+    "delayed": 1,
+    "escalate": true,
+    "first_rate_pct": 100.0,
+    "improving": false,
+    "key": "Inland Waterways",
+    "projects": 2
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 100.0,
+    "delayed": 1,
+    "escalate": true,
+    "first_rate_pct": null,
+    "improving": null,
+    "key": "Logistics Infrastructure",
+    "projects": 2
+   },
+   {
+    "classifiable": 23,
+    "delay_rate_pct": 100.0,
+    "delayed": 23,
+    "escalate": true,
+    "first_rate_pct": 93.5484,
+    "improving": false,
+    "key": "Waste & Water",
+    "projects": 32
+   },
+   {
+    "classifiable": 30,
+    "delay_rate_pct": 90.0,
+    "delayed": 27,
+    "escalate": true,
+    "first_rate_pct": 87.1795,
+    "improving": false,
+    "key": "Water Resources",
+    "projects": 41
+   },
+   {
+    "classifiable": 25,
+    "delay_rate_pct": 84.0,
+    "delayed": 21,
+    "escalate": true,
+    "first_rate_pct": 64.0,
+    "improving": false,
+    "key": "Aviation & Aviation Infrastructure",
+    "projects": 26
+   },
+   {
+    "classifiable": 6,
+    "delay_rate_pct": 83.3333,
+    "delayed": 5,
+    "escalate": true,
+    "first_rate_pct": 71.4286,
+    "improving": false,
+    "key": "Metals & Mining",
+    "projects": 7
+   },
+   {
+    "classifiable": 4,
+    "delay_rate_pct": 75.0,
+    "delayed": 3,
+    "escalate": true,
+    "first_rate_pct": 66.6667,
+    "improving": false,
+    "key": "Shipping",
+    "projects": 10
+   },
+   {
+    "classifiable": 993,
+    "delay_rate_pct": 73.0111,
+    "delayed": 725,
+    "escalate": false,
+    "first_rate_pct": 83.4264,
+    "improving": true,
+    "key": "Roads & Highways",
+    "projects": 1184
+   },
+   {
+    "classifiable": 31,
+    "delay_rate_pct": 64.5161,
+    "delayed": 20,
+    "escalate": true,
+    "first_rate_pct": 58.6207,
+    "improving": false,
+    "key": "Education",
+    "projects": 31
+   },
+   {
+    "classifiable": 63,
+    "delay_rate_pct": 63.4921,
+    "delayed": 40,
+    "escalate": false,
+    "first_rate_pct": 65.0794,
+    "improving": true,
+    "key": "Transmission & Distribution",
+    "projects": 74
+   },
+   {
+    "classifiable": 39,
+    "delay_rate_pct": 58.9744,
+    "delayed": 23,
+    "escalate": false,
+    "first_rate_pct": 62.1622,
+    "improving": true,
+    "key": "Electricity Generation",
+    "projects": 44
+   },
+   {
+    "classifiable": 192,
+    "delay_rate_pct": 56.7708,
+    "delayed": 109,
+    "escalate": true,
+    "first_rate_pct": 52.1912,
+    "improving": false,
+    "key": "Railways",
+    "projects": 271
+   },
+   {
+    "classifiable": 33,
+    "delay_rate_pct": 54.5455,
+    "delayed": 18,
+    "escalate": false,
+    "first_rate_pct": 68.1818,
+    "improving": true,
+    "key": "Healthcare",
+    "projects": 49
+   },
+   {
+    "classifiable": 91,
+    "delay_rate_pct": 53.8462,
+    "delayed": 49,
+    "escalate": true,
+    "first_rate_pct": 52.6882,
+    "improving": false,
+    "key": "Oil & Gas",
+    "projects": 103
+   },
+   {
+    "classifiable": 12,
+    "delay_rate_pct": 41.6667,
+    "delayed": 5,
+    "escalate": false,
+    "first_rate_pct": 55.5556,
+    "improving": true,
+    "key": "Energy Storage",
+    "projects": 19
+   },
+   {
+    "classifiable": 30,
+    "delay_rate_pct": 40.0,
+    "delayed": 12,
+    "escalate": false,
+    "first_rate_pct": 56.0,
+    "improving": true,
+    "key": "Urban Public Transport",
+    "projects": 33
+   },
+   {
+    "classifiable": 31,
+    "delay_rate_pct": 38.7097,
+    "delayed": 12,
+    "escalate": false,
+    "first_rate_pct": 100.0,
+    "improving": true,
+    "key": "Telecommunication",
+    "projects": 33
+   },
+   {
+    "classifiable": 26,
+    "delay_rate_pct": 34.6154,
+    "delayed": 9,
+    "escalate": false,
+    "first_rate_pct": 21.0526,
+    "improving": false,
+    "key": "Steel",
+    "projects": 28
+   },
+   {
+    "classifiable": 115,
+    "delay_rate_pct": 33.0435,
+    "delayed": 38,
+    "escalate": false,
+    "first_rate_pct": 26.9565,
+    "improving": false,
+    "key": "Coal",
+    "projects": 121
+   },
+   {
+    "classifiable": 15,
+    "delay_rate_pct": 26.6667,
+    "delayed": 4,
+    "escalate": false,
+    "first_rate_pct": 50.0,
+    "improving": true,
+    "key": "Real Estate",
+    "projects": 15
+   },
+   {
+    "classifiable": 2,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Construction",
+    "projects": 2
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 100.0,
+    "improving": true,
+    "key": "Tourism, Hospitality & Wellness",
+    "projects": 1
+   }
+  ],
+  "threshold_pct": 50.0
+ },
  "exits": {
   "pairs": [
    {
@@ -84909,7 +85134,7 @@
   "whole_number_share": 0.3538
  },
  "meta": {
-  "contract_version": "1.3.0",
+  "contract_version": "1.4.0",
   "coverage": [
    {
     "pct": 96.62,
@@ -84947,7 +85172,7 @@
    "cost_revised_null": 0,
    "doc_null": 11
   },
-  "generated_at": "2026-09-09T01:37:38+00:00",
+  "generated_at": "2026-09-09T07:31:16+00:00",
   "headline": {
    "contradictions_arithmetic": 965,
    "contradictions_total": 965,

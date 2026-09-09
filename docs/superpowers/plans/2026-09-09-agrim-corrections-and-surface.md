@@ -718,7 +718,7 @@ git commit -m "task 23: reconstruct the discontinued delay bands across five sna
 
 **Rollup caveat.** `sector` comes from D15's agency-string rollup. Any screen showing this must say it is a rollup, not a mapping to the 17 official ministries.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/findings/test_escalation.py`:
 
@@ -762,12 +762,12 @@ def test_delayed_never_exceeds_classifiable():
         assert 0 <= r["delayed"] <= r["classifiable"] <= r["projects"]
 ```
 
-- [ ] **Step 2: Run it to make sure it fails**
+- [x] **Step 2: Run it to make sure it fails**
 
 Run: `pytest tests/findings/test_escalation.py -q`
 Expected: FAIL — `ModuleNotFoundError: No module named 'findings.escalation'`
 
-- [ ] **Step 3: Implement the minimal code to make the test pass**
+- [x] **Step 3: Implement the minimal code to make the test pass**
 
 Create `findings/escalation.py`:
 
@@ -822,12 +822,12 @@ def compute(panel, sectors):
     return {"threshold_pct": THRESHOLD_PCT, "rows": rows}
 ```
 
-- [ ] **Step 4: Run the tests and make sure they pass**
+- [x] **Step 4: Run the tests and make sure they pass**
 
 Run: `pytest tests/findings/test_escalation.py -q`
 Expected: PASS, 5 passed
 
-- [ ] **Step 5: Extend the contract**
+- [x] **Step 5: Extend the contract**
 
 In `contracts/findings.schema.json`, add to `properties`:
 
@@ -852,7 +852,7 @@ In `contracts/findings.schema.json`, add to `properties`:
 
 Add `"escalation"` to the top-level `required` array. Bump to `1.3.0` in `contracts/CHANGELOG.md` and in `findings/run.py`'s `CONTRACT_VERSION`.
 
-- [ ] **Step 6: Wire it into run.py**
+- [x] **Step 6: Wire it into run.py**
 
 Add `escalation` to the `from findings import ...` line. In `build_findings`, add after `"delay_series"`:
 
@@ -866,7 +866,7 @@ In `deck_numbers`, add:
     nums["escalation_flagged"] = sum(1 for r in findings["escalation"]["rows"] if r["escalate"])
 ```
 
-- [ ] **Step 7: Run the full pipeline and both gates**
+- [x] **Step 7: Run the full pipeline and both gates**
 
 Run:
 ```bash
@@ -876,7 +876,7 @@ pytest -q
 ```
 Expected: all three succeed. **Paste the output.** Then run the pipeline a second time and confirm `git diff --stat web/public/data` is empty — this is the determinism check required by AGENTS.md rule 5.
 
-- [ ] **Step 8: Commit — this is the numbers freeze**
+- [x] **Step 8: Commit — this is the numbers freeze**
 
 ```bash
 git add findings/escalation.py tests/findings/test_escalation.py findings/run.py contracts/findings.schema.json contracts/CHANGELOG.md web/public/data deck/numbers.json docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
