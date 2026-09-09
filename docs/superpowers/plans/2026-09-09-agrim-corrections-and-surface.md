@@ -900,7 +900,7 @@ After this commit, `deck/numbers.json` is **frozen**. Task 20 writes the deck ag
 
 **No new dependency.** This deliberately does not install a headless browser — Playwright would need a runtime download, which AGENTS.md rule 7 forbids, and a lock re-freeze the schedule cannot absorb. The script serves and enumerates; whoever runs the task takes the screenshots with the browser tool they already have.
 
-- [ ] **Step 1: Write the route enumerator**
+- [x] **Step 1: Write the route enumerator**
 
 Create `tools/routes.py`:
 
@@ -948,12 +948,12 @@ if __name__ == "__main__":
     sys.exit(main())
 ```
 
-- [ ] **Step 2: Run it to verify it lists ten routes**
+- [x] **Step 2: Run it to verify it lists ten routes**
 
 Run: `python tools/routes.py --list`
 Expected: ten `http://localhost:8080/#/...` lines plus the checklist path, exit 0.
 
-- [ ] **Step 3: Write the checklist**
+- [x] **Step 3: Write the checklist**
 
 Create `docs/SCREEN-CHECKLIST.md`:
 
@@ -981,7 +981,7 @@ Run `python tools/routes.py`, open each URL at 1440x900, screenshot, then check:
 Wording: the headline word is **contradictions**, never "impossibilities".
 ```
 
-- [ ] **Step 4: Ignore the screenshot output directory**
+- [x] **Step 4: Ignore the screenshot output directory**
 
 Append to `.gitignore`:
 
@@ -989,7 +989,7 @@ Append to `.gitignore`:
 web/shots/
 ```
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add tools/routes.py docs/SCREEN-CHECKLIST.md .gitignore docs/superpowers/plans/2026-09-09-agrim-corrections-and-surface.md
