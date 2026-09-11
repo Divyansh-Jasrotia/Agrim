@@ -7,3 +7,4 @@ web/.vite/
 data/out/tmp*/
 CONTEXT_*.md
 docs/superpowers/plans/.task-*
+web/shots/

@@ -3,7 +3,7 @@
   "title": "Findings",
   "type": "object",
   "additionalProperties": false,
-  "required": ["meta", "contradictions", "exits", "early_warning", "field_audit", "disclosure_lag", "by_state", "by_sector", "review_pack", "assistant"],
+  "required": ["meta", "contradictions", "exits", "early_warning", "field_audit", "delay_series", "escalation", "disclosure_lag", "by_state", "by_sector", "review_pack", "assistant"],
   "$defs": {
     "Source": {"type": "object", "additionalProperties": false, "required": ["snapshot", "page"],
       "properties": {"snapshot": {"type": "string"}, "page": {"type": "integer"}}},
@@ -13,7 +13,7 @@
   },
   "properties": {
     "meta": {"type": "object", "additionalProperties": false,
-      "required": ["contract_version", "generated_at", "snapshots", "coverage", "headline"],
+      "required": ["contract_version", "generated_at", "snapshots", "coverage", "headline", "denominators"],
       "properties": {
         "contract_version": {"type": "string"}, "generated_at": {"type": "string"},
         "snapshots": {"type": "array", "items": {"type": "string"}},
@@ -21,8 +21,18 @@
           "required": ["snapshot", "rows_parsed", "rows_printed", "pct"],
           "properties": {"snapshot": {"type": "string"}, "rows_parsed": {"type": "integer"}, "rows_printed": {"type": ["integer", "null"]}, "pct": {"type": ["number", "null"]}}}},
         "headline": {"type": "object", "additionalProperties": false,
-          "required": ["projects_latest", "cost_revised_total_cr", "overrun_total_cr", "contradictions_total", "exits_total", "unreachable_total", "watchlist_size"],
-          "properties": {"projects_latest": {"type": "integer"}, "cost_revised_total_cr": {"type": "number"}, "overrun_total_cr": {"type": "number"}, "contradictions_total": {"type": "integer"}, "exits_total": {"type": "integer"}, "unreachable_total": {"type": "integer"}, "watchlist_size": {"type": "integer"}}}}},
+          "required": ["projects_latest", "cost_revised_total_cr", "overrun_total_cr", "contradictions_total", "contradictions_arithmetic", "statistical_anomalies", "exits_total", "unreachable_total", "watchlist_size"],
+          "properties": {"projects_latest": {"type": "integer"}, "cost_revised_total_cr": {"type": "number"}, "overrun_total_cr": {"type": "number"}, "contradictions_total": {"type": "integer"}, "contradictions_arithmetic": {"type": "integer"}, "statistical_anomalies": {"type": "integer"}, "exits_total": {"type": "integer"}, "unreachable_total": {"type": "integer"}, "watchlist_size": {"type": "integer"}}},
+        "denominators": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["cost_revised_null", "cost_overrun_null", "doc_null"],
+          "properties": {
+            "cost_revised_null": {"type": "integer"},
+            "cost_overrun_null": {"type": "integer"},
+            "doc_null": {"type": "integer"}
+          }
+        }}},
     "contradictions": {"type": "object", "additionalProperties": false, "required": ["by_type", "rows"],
       "properties": {
         "by_type": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["type", "count"],
@@ -46,13 +56,47 @@
         "required": ["project_code", "project_name", "velocity_pct_per_month", "months_needed", "months_remaining", "ratio", "severity", "sources"],
         "properties": {"project_code": {"type": "string"}, "project_name": {"type": "string"}, "velocity_pct_per_month": {"type": ["number", "null"]}, "months_needed": {"type": ["number", "null"]}, "months_remaining": {"type": "integer"}, "ratio": {"type": ["number", "null"]}, "severity": {"type": "string"}, "sources": {"$ref": "#/$defs/Sources"}}}}}},
     "field_audit": {"type": "object", "additionalProperties": false,
-      "required": ["snapshot", "terminal_digit", "whole_number_share", "multiple_of_5_share", "multiple_of_10_share", "staleness_by_agency"],
+      "required": ["snapshot", "terminal_digit", "whole_number_share", "multiple_of_5_share", "multiple_of_10_share", "whipple_index", "whipple_band", "staleness_by_agency"],
       "properties": {"snapshot": {"type": "string"},
         "terminal_digit": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["digit", "count", "share"],
           "properties": {"digit": {"type": "integer"}, "count": {"type": "integer"}, "share": {"type": "number"}}}},
         "whole_number_share": {"type": "number"}, "multiple_of_5_share": {"type": "number"}, "multiple_of_10_share": {"type": "number"},
+        "whipple_index": {"type": ["number", "null"]}, "whipple_band": {"type": ["string", "null"]},
         "staleness_by_agency": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["agency_raw", "projects", "share_unchanged"],
           "properties": {"agency_raw": {"type": "string"}, "projects": {"type": "integer"}, "share_unchanged": {"type": "number"}}}}}},
+    "delay_series": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bands", "rows"],
+      "properties": {
+        "bands": {"type": "array", "items": {"type": "string"}},
+        "rows": {"type": "array", "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["snapshot", "on_schedule", "d_1_12", "d_13_24", "d_25_60", "d_61_plus", "classifiable", "doc_null"],
+          "properties": {
+            "snapshot": {"type": "string"}, "on_schedule": {"type": "integer"},
+            "d_1_12": {"type": "integer"}, "d_13_24": {"type": "integer"},
+            "d_25_60": {"type": "integer"}, "d_61_plus": {"type": "integer"},
+            "classifiable": {"type": "integer"}, "doc_null": {"type": "integer"}}}}
+      }
+    },
+    "escalation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["threshold_pct", "min_classifiable", "rows"],
+      "properties": {
+        "threshold_pct": {"type": "number"},
+  "min_classifiable": {"type": "integer"},
+        "rows": {"type": "array", "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["key", "projects", "classifiable", "delayed", "delay_rate_pct", "first_rate_pct", "improving", "escalate"],
+          "properties": {
+            "key": {"type": "string"}, "projects": {"type": "integer"},
+            "classifiable": {"type": "integer"}, "delayed": {"type": "integer"},
+            "delay_rate_pct": {"type": ["number", "null"]}, "first_rate_pct": {"type": ["number", "null"]},
+            "improving": {"type": ["boolean", "null"]}, "escalate": {"type": "boolean"}}}}
+      }
+    },
     "disclosure_lag": {"type": "object", "additionalProperties": false, "required": ["status", "median_lag_months", "rows"],
       "properties": {"status": {"type": "string", "enum": ["computed", "not_computed"]}, "median_lag_months": {"type": ["number", "null"]},
         "rows": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["project_code", "filed_at", "first_unreachable", "lag_months"],

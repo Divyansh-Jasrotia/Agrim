@@ -574,6 +574,67 @@
    }
   ]
  },
+ "delay_series": {
+  "bands": [
+   "on_schedule",
+   "d_1_12",
+   "d_13_24",
+   "d_25_60",
+   "d_61_plus"
+  ],
+  "rows": [
+   {
+    "classifiable": 10,
+    "d_13_24": 0,
+    "d_1_12": 2,
+    "d_25_60": 0,
+    "d_61_plus": 1,
+    "doc_null": 0,
+    "on_schedule": 7,
+    "snapshot": "2025-12"
+   },
+   {
+    "classifiable": 11,
+    "d_13_24": 0,
+    "d_1_12": 3,
+    "d_25_60": 0,
+    "d_61_plus": 1,
+    "doc_null": 0,
+    "on_schedule": 7,
+    "snapshot": "2026-04"
+   },
+   {
+    "classifiable": 10,
+    "d_13_24": 0,
+    "d_1_12": 3,
+    "d_25_60": 0,
+    "d_61_plus": 1,
+    "doc_null": 0,
+    "on_schedule": 6,
+    "snapshot": "2026-05"
+   },
+   {
+    "classifiable": 10,
+    "d_13_24": 0,
+    "d_1_12": 2,
+    "d_25_60": 0,
+    "d_61_plus": 1,
+    "doc_null": 0,
+    "on_schedule": 7,
+    "snapshot": "2026-06"
+   },
+   {
+    "classifiable": 10,
+    "d_13_24": 1,
+    "d_1_12": 1,
+    "d_25_60": 0,
+    "d_61_plus": 1,
+    "doc_null": 0,
+    "on_schedule": 7,
+    "snapshot": "2026-07"
+   }
+  ]
+ },
  "disclosure_lag": {
   "median_lag_months": 1.0,
   "rows": [
@@ -783,6 +844,102 @@
    }
   ]
  },
+ "escalation": {
+  "min_classifiable": 10,
+  "rows": [
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 100.0,
+    "delayed": 1,
+    "escalate": false,
+    "first_rate_pct": 100.0,
+    "improving": false,
+    "key": "Civil Aviation",
+    "projects": 1
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 100.0,
+    "delayed": 1,
+    "escalate": false,
+    "first_rate_pct": 100.0,
+    "improving": false,
+    "key": "Urban Development",
+    "projects": 1
+   },
+   {
+    "classifiable": 2,
+    "delay_rate_pct": 50.0,
+    "delayed": 1,
+    "escalate": false,
+    "first_rate_pct": 50.0,
+    "improving": false,
+    "key": "Road Transport and Highways",
+    "projects": 2
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": null,
+    "improving": null,
+    "key": "Coal",
+    "projects": 1
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Petroleum",
+    "projects": 2
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Power",
+    "projects": 1
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Railways",
+    "projects": 1
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Shipping and Ports",
+    "projects": 2
+   },
+   {
+    "classifiable": 1,
+    "delay_rate_pct": 0.0,
+    "delayed": 0,
+    "escalate": false,
+    "first_rate_pct": 0.0,
+    "improving": false,
+    "key": "Steel",
+    "projects": 1
+   }
+  ],
+  "threshold_pct": 50.0
+ },
  "exits": {
   "pairs": [
    {
@@ -908,10 +1065,12 @@
     "share": 0.1
    }
   ],
+  "whipple_band": "very rough",
+  "whipple_index": 200.0,
   "whole_number_share": 1.0
  },
  "meta": {
-  "contract_version": "1.0.0",
+  "contract_version": "1.5.0",
   "coverage": [
    {
     "pct": 0.79,
@@ -944,13 +1103,20 @@
     "snapshot": "2026-07"
    }
   ],
+  "denominators": {
+   "cost_overrun_null": 0,
+   "cost_revised_null": 0,
+   "doc_null": 0
+  },
   "generated_at": "fixture",
   "headline": {
+   "contradictions_arithmetic": 15,
    "contradictions_total": 15,
    "cost_revised_total_cr": 6580.0,
    "exits_total": 2,
    "overrun_total_cr": 930.0,
    "projects_latest": 10,
+   "statistical_anomalies": 0,
    "unreachable_total": 5,
    "watchlist_size": 0
   },

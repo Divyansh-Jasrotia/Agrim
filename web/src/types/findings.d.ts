@@ -23,9 +23,16 @@ export interface Findings {
       cost_revised_total_cr: number;
       overrun_total_cr: number;
       contradictions_total: number;
+      contradictions_arithmetic: number;
+      statistical_anomalies: number;
       exits_total: number;
       unreachable_total: number;
       watchlist_size: number;
+    };
+    denominators: {
+      cost_revised_null: number;
+      cost_overrun_null: number;
+      doc_null: number;
     };
   };
   contradictions: {
@@ -88,10 +95,39 @@ export interface Findings {
     whole_number_share: number;
     multiple_of_5_share: number;
     multiple_of_10_share: number;
+    whipple_index: number | null;
+    whipple_band: string | null;
     staleness_by_agency: {
       agency_raw: string;
       projects: number;
       share_unchanged: number;
+    }[];
+  };
+  delay_series: {
+    bands: string[];
+    rows: {
+      snapshot: string;
+      on_schedule: number;
+      d_1_12: number;
+      d_13_24: number;
+      d_25_60: number;
+      d_61_plus: number;
+      classifiable: number;
+      doc_null: number;
+    }[];
+  };
+  escalation: {
+    threshold_pct: number;
+    min_classifiable: number;
+    rows: {
+      key: string;
+      projects: number;
+      classifiable: number;
+      delayed: number;
+      delay_rate_pct: number | null;
+      first_rate_pct: number | null;
+      improving: boolean | null;
+      escalate: boolean;
     }[];
   };
   disclosure_lag: {

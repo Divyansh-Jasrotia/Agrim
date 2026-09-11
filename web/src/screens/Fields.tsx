@@ -30,6 +30,18 @@ export function Fields() {
         <div className="rounded border border-line bg-surface p-3"><div className="text-xs uppercase text-muted">Multiples of 5</div><div className="num text-2xl">{share(m5)}</div><div className="text-xs text-muted">of whole-number values · expected ≈ 20% of whole-number values</div></div>
         <div className="rounded border border-line bg-surface p-3"><div className="text-xs uppercase text-muted">Multiples of 10</div><div className="num text-2xl">{share(m10)}</div><div className="text-xs text-muted">of whole-number values · expected ≈ 10% of whole-number values</div></div>
       </div>
+      <div className="rounded border border-line bg-surface p-3">
+        <div className="text-xs uppercase tracking-wide text-muted">Whipple&rsquo;s index</div>
+        <div className="num text-2xl">{fa.whipple_index == null ? "—" : fa.whipple_index.toFixed(1)}
+          {fa.whipple_band && <span className="ml-2 text-base text-muted">{fa.whipple_band}</span>}</div>
+        <p className="mt-1 max-w-3xl text-xs text-muted">
+          The conventional measure of digit heaping. It compares how often a value ends in 0 or 5 with how
+          often it would if the last digit were evenly spread. An index of one hundred means no
+          preference; five hundred means every value sits on a 0 or a 5. The bands shown are the
+          standard ones. Benford&rsquo;s Law does not apply here: it describes the leading digits of
+          quantities spanning orders of magnitude, and physical progress is a bounded percentage.
+        </p>
+      </div>
       <p className="max-w-3xl text-xs text-muted">Each card compares like with like: the first is a share of every reported progress value, the second and third are shares of the whole-number values only, which is the denominator the ≈20% and ≈10% expectations are stated on. Reading a share of all values against an expectation stated per whole number understates the clustering.</p>
       <div className="rounded border border-line bg-surface p-3"><div ref={ref} style={{ height: "260px" }} /></div>
       <div className="rounded border border-line bg-surface p-3">

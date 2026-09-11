@@ -25,6 +25,8 @@
 
 html { color-scheme: light; }
 body { margin: 0; background: var(--color-ground); color: var(--color-ink); font-family: var(--font-sans); font-size: 15px; line-height: 1.5; }
-.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+/* A figure never breaks across lines. A wrapped number reads as two numbers, and a clipped
+   one reads as the wrong number, so numeric cells hold their line and the table scrolls. */
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
 a { color: var(--color-accent); }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
